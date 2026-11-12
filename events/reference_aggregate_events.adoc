@@ -1,0 +1,412 @@
+---
+permalink: events/reference_aggregate_events.html 
+sidebar: sidebar 
+keywords: aggregate events, impact, area, availability, capacity, configuration, performance 
+summary: アグリゲート イベントは、アグリゲートのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のアグリゲートイベントの詳細
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アグリゲート イベントは、アグリゲートのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+アスタリスク（*）は、EMSイベントがUnified Managerイベントに変換されたことを示します。
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+アグリゲートはオフライン（ocumEvtAggregateStateOffline）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲートで障害（ocumEvtAggregateStateFailed）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲートは制限状態（ocumEvtAggregateStateRestricted）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲートは再構築中（ocumEvtAggregateRaidStateReconstructing）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲートはデグレード状態（ocumEvtAggregateRaidStateDegraded）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+クラウド階層に一部到達可能（ocumEventCloudTierPartiallyReachable）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+クラウド階層に到達不能（ocumEventCloudTierUnreachable）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+集約の再配置のため、クラウド層へのアクセスが拒否されました *（arlNetraCaCheckFailed）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+ストレージフェイルオーバー中のアグリゲート再配置に対するクラウドティアアクセスが拒否されました *（gbNetraCaCheckFailed）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+MetroCluster で残ったアグリゲートあり（ocumEvtMetroClusterAggregateLeftBehind）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+MetroCluster アグリゲートのミラーリングがデグレード状態（ocumEvtMetroClusterAggregateMirrorDegraded）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+|===
+
+
+[[impact-area-capacity]]
+== 影響範囲：容量
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+アグリゲート スペースがほぼフル（ocumEvtAggregateNearlyFull）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート スペースがフル（ocumEvtAggregateFull）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+アグリゲートのフルまでの日数（ocumEvtAggregateDaysUntilFullSoon）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+アグリゲートがオーバーコミット（ocumEvtAggregateOvercommitted）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+アグリゲートがほぼオーバーコミット（ocumEvtAggregateAlmostOvercommitted）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲートの Snapshot リザーブがフル（ocumEvtAggregateSnapReserveFull）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲートの増加率 - 異常（ocumEvtAggregateGrowthRateAbnormal）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+|===
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+アグリゲートを検出（該当なし）
+ a| 
+イベント
+ a| 
+Aggregate
+ a| 
+情報
+
+
+
+ a| 
+アグリゲートの名前を変更（該当なし）
+ a| 
+イベント
+ a| 
+Aggregate
+ a| 
+情報
+
+
+
+ a| 
+アグリゲートを削除（該当なし）
+ a| 
+イベント
+ a| 
+ノード
+ a| 
+情報
+
+|===
+
+
+[[impact-area-performance]]
+== 影響範囲：パフォーマンス
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+アグリゲート IOPS の重大しきい値を超過（ocumAggregateIopsIncident）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲート IOPS の警告しきい値を超過（ocumAggregateIopsWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート MBps の重大しきい値を超過（ocumAggregateMbpsIncident）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲート MBps の警告しきい値を超過（ocumAggregateMbpsWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート レイテンシの重大しきい値を超過（ocumAggregateLatencyIncident）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲート レイテンシの警告しきい値を超過（ocumAggregateLatencyWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート使用済みパフォーマンス容量の重大しきい値を超過（ocumAggregatePerfCapacityUsedIncident）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲート使用済みパフォーマンス容量の警告しきい値を超過（ocumAggregatePerfCapacityUsedWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート利用率の重大しきい値を超過（ocumAggregateUtilizationIncident）
+ a| 
+インシデント
+ a| 
+Aggregate
+ a| 
+重大
+
+
+
+ a| 
+アグリゲート利用率の警告しきい値を超過（ocumAggregateUtilizationWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+利用率の高いアグリゲート ディスクのしきい値を超過（ocumAggregateDisksOverUtilizedWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+
+
+ a| 
+アグリゲート動的イベントのしきい値を超過（ocumAggregateDynamicEventWarning）
+ a| 
+リスク
+ a| 
+Aggregate
+ a| 
+警告
+
+|===

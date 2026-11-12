@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: MetroCluster構成では、データのミラーリングが可能で、サイト全体が利用できない状態になった場合にフェイルオーバーを開始する機能も利用できます。MetroCluster構成のクラスタ間のデータ ミラーリングのステータスは、「Normal」または「Mirroring Unavailable」のいずれかになります。これらのステータスを理解しておくと、MetroCluster構成を効率的に管理できます。 
+---
+= Active IQ Unified Manager における FC 経由の MetroCluster データミラーリングについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster over FC構成では、データのミラーリングが可能で、サイト全体が利用できない状態になった場合にフェイルオーバーを開始する機能もあります。MetroCluster over FC構成のクラスタ間のデータ ミラーリングのステータスは、「正常」または「ミラーリング利用不可」のいずれかになります。これらのステータスを理解しておくと、MetroCluster構成を効率的に管理できます。
+
+|===
+| データミラーリングの状態 | 説明 | アイコンが表示されます 
+
+
+ a| 
+平常時
+ a| 
+MetroCluster構成のクラスタ間のデータ ミラーリングが正常な状態です。
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["MetroCluster接続の最適アイコン"]
+
+
+
+ a| 
+ミラーリング利用不可
+ a| 
+スイッチオーバーが原因で、MetroCluster構成のクラスタ間のデータ ミラーリングが利用できない状態になっています。たとえば、災害によってパートナー クラスタが停止している、テスト目的で計画的スイッチオーバーを実行中などの状況が考えられます。
+ a| 
+スイッチオーバーでエラー：
+
+image::../media/metrocluster_connectivity_down.gif[MetroCluster接続ダウンアイコン]
+
+スイッチオーバー成功：
+
+image::../media/metrocluster_connectivity_failover.gif[MetroCluster接続フェイルオーバーアイコン]
+
+|===

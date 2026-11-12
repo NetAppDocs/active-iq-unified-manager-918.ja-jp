@@ -1,0 +1,67 @@
+---
+permalink: install-windows/qsg-windows.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, Windows QSG, quick installation, Windows installer 
+summary: Windowsプラットフォーム向けUnified Managerクイックスタートガイド。 
+---
+= Windows で Active IQ Unified Manager を使い始める
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストール パッケージをダウンロードしてUnified Managerをインストールすることで、データ ストレージの容量、可用性、パフォーマンス、保護の問題を監視してトラブルシューティングすることができます。
+
+
+
+[[system-requirements]]
+== システム要件
+
+* オペレーティング システム
++
+** Microsoft Windows Server 2019 Standard EditionおよびDatacenter Edition
+** Microsoft Windows Server 2022 Standard EditionおよびDatacenter Edition
++
+Unified Managerは、64ビットWindowsオペレーティング システムの次の言語版に対応しています。
+
+** 英語
+** 日本語
+** 簡体字中国語
+
+
+* RAM：12 GB
+* CPU：合計9572MHz
+* 空きディスク スペース：100GB（インストール ディレクトリ用）、50GB（MySQLデータ ディレクトリ用）
+
+
+詳細なシステム要件については、link:../install-windows/concept_requirements_for_installing_unified_manager.html["Unified Managerをインストールするための要件"]およびlink:http://mysupport.netapp.com/matrix["Interoperability Matrix"^]を参照してください。
+
+
+
+[[install-active-iq-unified-manager]]
+== Active IQ Unified Managerのインストール
+
+
+
+[[download-the-installer]]
+=== インストーラをダウンロードする
+
+.  `ActiveIQUnifiedManager-<version>.exe`インストールパッケージをダウンロードします。
+. インストール ファイルをターゲット システム上のディレクトリにコピーします。
+
+
+
+
+[[install-unified-manager]]
+=== Unified Managerをインストールする
+
+Unified Managerをインストールするには、Microsoft .NET 4.5.2以降のバージョンがインストールされていることを確認してください。Unified Managerは、インストールプロセスの一環として、必要に応じて他のサードパーティ製パッケージをインストールします。依存するソフトウェアパッケージの詳細については、link:../install-windows/reference_windows_software_and_installation_requirements.html["Windowsソフトウェアとインストールの要件"]を参照してください。
+
+. デフォルトのローカル管理者アカウントでWindowsにログインします。
+. インストール ファイルをダウンロードしたディレクトリで、Unified Manager実行可能ファイル（.exe）を管理者権限で実行します。
+. 画面の指示に従ってユーザ名とパスワードを入力し、Unified Managerメンテナンス ユーザを作成します。
+. [データベース接続]ウィザードで、MySQLのrootパスワードを入力します。
+. 画面の指示に従ってインストールを完了します。
+. インストールの最後に「完了」をクリックすると、Unified Manager の Web UI が表示されます。
+

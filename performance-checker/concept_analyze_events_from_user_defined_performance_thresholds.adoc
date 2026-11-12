@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_analyze_events_from_user_defined_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, user-defined, performance, thresholds 
+summary: ユーザ定義のパフォーマンスしきい値で生成されたイベントは、特定のストレージ オブジェクト（アグリゲートやボリュームなど）のパフォーマンス カウンタが、ポリシーに定義されたしきい値を超えた場合に発生します。これは、クラスタ オブジェクトでパフォーマンスの問題が発生していることを示しています。 
+---
+= Active IQ Unified Manager でユーザー定義のパフォーマンスしきい値からのイベントを分析する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユーザ定義のパフォーマンスしきい値で生成されたイベントは、特定のストレージ オブジェクト（アグリゲートやボリュームなど）のパフォーマンス カウンタが、ポリシーに定義されたしきい値を超えた場合に発生します。これは、クラスタ オブジェクトでパフォーマンスの問題が発生していることを示しています。
+
+[イベントの詳細]ページを使用してパフォーマンス イベントを分析し、必要に応じてイベントに対処してパフォーマンスを正常な状態に戻します。

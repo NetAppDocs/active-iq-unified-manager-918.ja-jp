@@ -1,0 +1,47 @@
+---
+permalink: install-linux/task_restart_unified_manager.html 
+sidebar: sidebar 
+keywords: restart, unified manager 
+summary: 設定を変更した場合、Unified Managerの再起動が必要になることがあります。 
+---
+= Active IQ Unified Manager の再起動
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定を変更した場合、Unified Managerの再起動が必要になることがあります。
+
+.開始する前に
+Unified ManagerがインストールされているRed Hat Enterprise Linuxサーバへのrootユーザ アクセスが必要です。
+
+.手順
+. Unified Managerサービスを再起動するサーバにrootユーザとしてログインします。
+. Unified Managerサービスと関連するMySQLサービスを次の順序で停止します。
++
+`systemctl stop ocieau`
+
++
+`systemctl stop ocie`
+
++
+`systemctl stop mysqld`
+
+. MySQLサービスとUnified Managerサービスを次の順序で開始します。
++
+`systemctl start mysqld`
+
++
+`systemctl start ocie`
+
++
+`systemctl start ocieau`
+
+
+
+[NOTE]
+====
+`mysqld` は、MySQLサーバーの起動と停止に必要なデーモンプログラムです。
+
+====

@@ -1,0 +1,37 @@
+---
+permalink: data-protection/reference_relationship_last_1_month_transfer_rate_view.html 
+sidebar: sidebar 
+keywords: relationship, 1 month, transfer rate, view 
+summary: 関係ページの「過去1か月間の転送速度」ビューには、非同期関係にあるボリュームの1日あたりのデータ転送量と転送時間が表示されます。 
+---
+= 関係の表示：過去 1 か月の転送レートビュー（Active IQ Unified Manager）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「関係：過去 1 か月間の転送速度」ビューを使用すると、非同期関係にあるボリュームについて、日々転送されるデータ量を分析できます。また、このページには、毎日の転送に関する詳細およびボリュームとStorage VMの転送処理を完了するために必要な時間が表示されます。
+
+ページ上部のコントロールを使用すると、特定のオブジェクトを検索したり、フィルターを作成して適用して表示データのリストを絞り込んだり、ページ上の列を追加/削除/並べ替えたり、ページ上のデータを.csv、.pdf、または.xlsxファイルにエクスポートしたりできます。ページをカスタマイズした後、結果をカスタムビューとして保存し、このデータのレポートを定期的に生成してメールで送信するようにスケジュール設定できます。例えば、ボリューム間の関係性を表示したい場合は、*ストレージ* > *ボリューム* > *関係性：過去 1 か月の転送レート* メニューにアクセスするか、*保護* > *関係性* > *関係性：過去 1 か月の転送レート* メニューにアクセスし、*フィルタ* を使用してボリュームのデータのみを表示できます。
+
+* *合計転送サイズ*
++
+ボリューム転送の合計サイズ（GB）が表示されます。
+
+* *日*
++
+ボリューム転送が開始された日にちが表示されます。
+
+* *終了時刻*
++
+ボリューム転送が終了した日時が表示されます。
+
+
+
+*関連情報*
+
+* *関係：MetroCluster*ビューに関する情報については、link:../storage-mgmt/task_monitor_metrocluster_configurations.html["MetroCluster構成の監視"]を参照してください。
+* 「関係性：過去1か月間の転送状況」の表示に関する情報については、link:../data-protection/reference_relationship_last_1_month_transfer_status_view.html["関係：過去 1 ヶ月の転送ステータス表示"]を参照してください。
+* 「関係：すべての関係」ビューに関する情報については、link:../data-protection/reference_relationship_last_1_month_transfer_rate_view.html["関係：過去1か月間の転送速度ビュー"]を参照してください。
+

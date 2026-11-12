@@ -1,0 +1,75 @@
+---
+permalink: api-automation/concept_api_url_and_categories.html 
+sidebar: sidebar 
+keywords: active iq, unified manager, api, access, categories 
+summary: Active IQ Unified Manager APIを使用すると、環境内のストレージオブジェクトを管理およびプロビジョニングできます。これらの機能の一部は、Unified Manager の Web UIからも実行できます。 
+---
+= Active IQ Unified Manager APIアクセスとカテゴリの管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Active IQ Unified Manager APIを使用すると、環境内のストレージオブジェクトを管理およびプロビジョニングできます。これらの機能の一部は、Unified Manager の Web UIからも実行できます。
+
+
+
+[[construct-a-url-to-directly-access-rest-apis]]
+== REST APIに直接アクセスするためのURLを構築する
+
+REST APIには、Python、C#、C{pp}、JavaScriptなどのプログラミング言語を介して直接アクセスできます。REST APIにアクセスするためのホスト名またはIPアドレスとURLを次の形式で入力してください
+
++https://<hostname>/api+
+
+[NOTE]
+====
+デフォルト ポートは443です。環境に応じてポートを設定できます。
+
+====
+
+
+[[access-the-online-api-documentation-page]]
+== オンラインAPIドキュメントページにアクセスしてください
+
+製品に同梱されている _API Documentation_ リファレンスコンテンツページにアクセスすると、APIドキュメントを表示したり、（例えば Swagger などのインターフェース上で）API呼び出しを手動で実行したりできます。このドキュメントは、*メニューバー* > *ヘルプボタン* > *API Documentation* の順にクリックすることでアクセスできます。
+
+または、以下の形式でホスト名またはIPアドレスとURLを入力して、REST APIページにアクセスします。
+
++https://<hostname>/docs/api/+
+
+
+
+[[categories]]
+== カテゴリ
+
+API呼び出しは、分野（カテゴリ）に基づいて機能別に分類されています。特定のAPIを検索するには、該当するAPIカテゴリをクリックします。
+
+Unified Managerに付属するREST APIを使用すると、管理、監視、およびプロビジョニング機能を実行できます。APIは以下のカテゴリに分類されます。
+
+* *データセンター*
++
+このカテゴリには、Work Flow AutomationやAnsibleなどのツールを使用したデータセンター ストレージの管理と分析に役立つAPIが含まれています。このカテゴリのREST APIは、データセンター内のクラスタ、ノード、アグリゲート、ボリューム、LUN、ファイル共有、ネームスペースなどの要素に関する情報を提供します。
+
+* *management-server*
++
+*management-server*カテゴリのAPIには、 `jobs, system,`および `events` APIが含まれます。ジョブとは、Unified Manager上のストレージオブジェクトまたはワークロードの管理に関連して、非同期実行がスケジュールされた操作のことです。 `events` APIはデータセンター内のイベントを返し、 `system` APIはUnified Managerインスタンスの詳細を返します。
+
+* *storage-provider*
++
+このカテゴリには、ファイル共有、LUN、パフォーマンス サービス レベル、およびストレージ効率化ポリシーの管理とプロビジョニングに必要なすべてのプロビジョニングAPIが含まれています。また、これらのAPIを使用してアクセス エンドポイントやActive Directoryを設定したり、ストレージ ワークロードにパフォーマンス サービス レベルとストレージ効率化ポリシーを割り当てたりできます。
+
+* *管理*
++
+このカテゴリには、管理タスクを実行するために使用するAPIが含まれています。バックアップ設定を管理したり、信頼ストアにあるUnified Managerデータソースの証明書を確認したり、ONTAPクラスタをUnified Managerのデータソースとして管理したりできます。
+
+* *ゲートウェイ*
++
+Unified ManagerでgatewayカテゴリのAPIを使用してONTAP REST APIを呼び出し、データセンター内のストレージ オブジェクトを管理できます。
+
+* *セキュリティ*
++
+このカテゴリには、Unified Managerユーザを管理するためのAPIが含まれています。
+
+

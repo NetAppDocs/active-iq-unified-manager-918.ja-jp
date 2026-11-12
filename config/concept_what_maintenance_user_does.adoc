@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_maintenance_user_does.html 
+sidebar: sidebar 
+keywords: what, maintenance, user does, installation, unified manager 
+summary: Unified ManagerをRed Hat Enterprise Linuxシステムにインストールする場合、インストール時にメンテナンス ユーザが作成されます。メンテナンス用ユーザー名は「umadmin」ユーザーです。メンテナンス ユーザは、Web UIでアプリケーション管理者のロールを割り当てられ、他のユーザを作成してロールを割り当てることができます。 
+---
+= Active IQ Unified Manager のメンテナンスユーザーについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerをRed Hat Enterprise Linuxシステムにインストールする場合、インストール時にメンテナンス ユーザが作成されます。メンテナンス用ユーザー名は「`umadmin`」ユーザーです。メンテナンスユーザーはWeb UIでアプリケーション管理者ロールを持ち、そのユーザーは後続のユーザーを作成してロールを割り当てることができます。
+
+メンテナンス ユーザまたはumadminユーザは、Unified Managerのメンテナンス コンソールにもアクセスできます。

@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_relationship_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, relationship, reports 
+summary: ボリューム関係インベントリ レポートでは、クラスタ内のストレージ インベントリの詳細を分析できるほか、ボリュームに必要な保護レベルを把握したり、障害の原因、パターン、スケジュールに基づいてボリュームの詳細をフィルタリングしたりすることができます。 
+---
+= Active IQ Unified Manager でボリューム関係レポートをカスタマイズする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム関係インベントリ レポートでは、クラスタ内のストレージ インベントリの詳細を分析できるほか、ボリュームに必要な保護レベルを把握したり、障害の原因、パターン、スケジュールに基づいてボリュームの詳細をフィルタリングしたりすることができます。

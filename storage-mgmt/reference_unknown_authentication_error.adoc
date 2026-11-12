@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/reference_unknown_authentication_error.html 
+sidebar: sidebar 
+keywords: unknown, authentication, error 
+summary: 不明な認証エラーのトラブルシューティングを行います。 
+---
+= Active IQ Unified Manager で不明な認証エラーを解決する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リモートユーザーまたはグループの追加、編集、削除、テストなど、認証関連の操作を実行しているときに、次のエラーメッセージが表示される場合があります： `Unknown authentication error.`
+
+*原因*
+
+この問題は、次のオプションの値が正しく設定されていない場合に発生する可能性があります。
+
+* Active Directory認証サービスの管理者名
+* OpenLDAP認証サービスのバインド識別名
+
+
+*対処方法*
+
+. 左側のナビゲーションペインで、*[全般]* > *[リモート認証]* をクリックします。
+. 選択した認証サービスに基づいて、管理者名またはバインド識別名に適切な情報を入力してください。
+. *認証テスト*をクリックすると、指定した情報を使用して認証をテストできます。
+. *保存*をクリックします。
+

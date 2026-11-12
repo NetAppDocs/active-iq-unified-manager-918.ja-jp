@@ -1,0 +1,110 @@
+---
+permalink: events/reference_snapmirror_and_vault_relationship_events.html 
+sidebar: sidebar 
+keywords: asynchronous, mirror, vault, relationship, events, impact area, protection 
+summary: 非同期ミラー バックアップ関係イベントは、非同期SnapMirror関係とバックアップ関係のステータス情報を提供します。これにより、潜在的な問題を監視できます。非同期ミラー バックアップ関係イベントは、ボリュームとStorage VMの両方の保護関係についてサポートされます。ただし、Storage VMディザスタ リカバリのバックアップ関係はサポートされません。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager における非同期ミラーと Vault の関係イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+非同期ミラー バックアップ関係イベントは、非同期SnapMirror関係とバックアップ関係のステータス情報を提供します。これにより、潜在的な問題を監視できます。非同期ミラー バックアップ関係イベントは、ボリュームとStorage VMの両方の保護関係についてサポートされます。ただし、Storage VMディザスタ リカバリのバックアップ関係はサポートされません。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-protection]]
+== 影響範囲：保護
+
+[NOTE]
+====
+SnapMirror関係とバックアップ関係のイベントは、Storage VMディザスタ リカバリで保護されているStorage VMについても生成されますが、コンスティチュエント オブジェクトの関係については生成されません。
+
+====
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+非同期ミラー バックアップは正常でない（ocumEvtMirrorVaultRelationshipUnhealthy）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+非同期ミラー バックアップを切断（ocumEvtMirrorVaultRelationshipStateBrokenoff）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+非同期ミラー バックアップの初期化失敗（ocumEvtMirrorVaultRelationshipInitializeFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+非同期ミラー バックアップの更新失敗（ocumEvtMirrorVaultRelationshipUpdateFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+非同期ミラー バックアップの遅延エラー（ocumEvtMirrorVaultRelationshipLagError）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+非同期ミラー バックアップの遅延警告（ocumEvtMirrorVaultRelationshipLagWarning）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+非同期ミラー バックアップの再同期失敗（ocumEvtMirrorVaultRelationshipResyncFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+|===
+[NOTE]
+====
+「SnapMirror 更新失敗」イベントは、Active IQポータル（Config Advisor）から生成されます。
+
+====

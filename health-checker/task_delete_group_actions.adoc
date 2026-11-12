@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_group_actions.html 
+sidebar: sidebar 
+keywords: delete, group actions 
+summary: 不要になったグループ操作は、Unified Managerから削除できます。 
+---
+= Active IQ Unified Manager でのグループアクションの削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったグループ操作は、Unified Managerから削除できます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+ボリューム健全性しきい値のグループ操作を削除すると、そのグループのストレージ オブジェクトにグローバルしきい値が適用されます。ストレージ オブジェクトに対して設定されたオブジェクトレベルの健全性しきい値には影響はありません。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *グループ*をクリックします。
+. 「グループアクション」タブで、削除するグループアクションを選択し、「削除」をクリックします。
+. 『警告』ダイアログボックスで、「はい」をクリックして削除を確定します。
+

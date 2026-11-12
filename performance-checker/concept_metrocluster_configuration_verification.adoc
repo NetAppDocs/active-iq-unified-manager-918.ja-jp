@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_verification.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, verification 
+summary: MetroCluster構成が正しくセットアップされていることを確認することで、MetroCluster構成におけるミラーリングされたワークロードのパフォーマンスの問題を防止できます。また、構成を変更するか、ソフトウェアまたはハードウェアのコンポーネントをアップグレードすることで、ワークロードのパフォーマンスを向上させることもできます。 
+---
+= Active IQ Unified Manager で MetroCluster 構成を確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster over FC構成およびMetroCluster over IP構成でミラーされたワークロードにパフォーマンスの問題が発生しないようにするには、MetroCluster構成が正しくセットアップされていることを確認します。構成を変更したり、ソフトウェア / ハードウェア コンポーネントをアップグレードすることでも、ワークロード パフォーマンスを改善することができます。
+
+ファイバチャネル（FC）スイッチ、ケーブル、スイッチ間リンク（ISL）を含むMetroCluster構成でのクラスタのセットアップ手順については、 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroClusterのドキュメント"]を参照してください。また、ローカルクラスタとリモートクラスタがミラーボリュームデータと通信できるようにMetroClusterソフトウェアを設定する際にも役立ちます。お客様のMetroCluster IPセットアップに固有の情報については、 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/index.html["MetroCluster IP構成の設置"]を参照してください。
+
+MetroCluster構成を https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroClusterのドキュメント"]の要件と比較することで、MetroCluster構成のコンポーネントを変更またはアップグレードした場合にワークロードのパフォーマンスが向上するかどうかを判断できます。この比較は、以下の質問に答えるのに役立ちます：
+
+* コントローラがワークロードに適しているか。
+* スループットの処理能力を高めるために、ISLバンドルをより大きな帯域幅にアップグレードする必要があるか。
+* 帯域幅を増やすためにスイッチ上でバッファ間クレジット（BBC）を調整できるか。
+* ワークロードにSSDストレージへの大量の書き込みスループットがある場合、そのスループットに対応するためにFC-to-SASブリッジをアップグレードする必要があるか。
+
+
+*関連情報*
+
+* MetroClusterコンポーネントの交換またはアップグレードの詳細については、 https://docs.netapp.com/us-en/ontap-metrocluster/index.html["MetroClusterのドキュメント"]を参照してください。
+* コントローラのアップグレードに関する情報については、 https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_fc_mcc_us_switchover_and_switchback_mcc_fc_4n_cu.html["スイッチオーバーとスイッチバックを使用したMetroCluster FC構成でのコントローラのアップグレード"]および https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/task_upgrade_controllers_in_a_four_node_ip_mcc_us_switchover_and_switchback_mcc_ip.html["スイッチオーバーとスイッチバックを使用したMetroCluster IP構成でのコントローラーのアップグレード"]を参照してください
+

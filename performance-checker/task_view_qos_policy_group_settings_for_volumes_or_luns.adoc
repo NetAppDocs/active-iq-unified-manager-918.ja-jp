@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: ボリュームとLUNに適用されているQoSポリシーグループを表示したり、パフォーマンス/QoSポリシーグループビューにリンクして、各QoSポリシーの詳細な構成設定を表示したりできます。 
+---
+= Active IQ Unified Manager でボリュームまたは LUN の QoS ポリシーグループ設定を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームとLUNに適用されているQoSポリシーグループを表示したり、パフォーマンス/QoSポリシーグループビューにリンクして、各QoSポリシーの詳細な構成設定を表示したりできます。
+
+ボリュームに適用されたQoSポリシーを表示する手順を次に示します。LUNについても同様です。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* ＞ *ボリューム* をクリックします。
++
+デフォルトでは、「健全性：すべてのボリューム」ビューが表示されます。
+
+. 「表示」メニューで、「パフォーマンス：QoS ポリシーグループ内のボリューム」を選択します。
+. 確認するボリュームを見つけて、*QoSポリシーグループ*列が表示されるまで右にスクロールします。
+. QoSポリシー グループ名をクリックします。
++
+従来のQoSポリシー、アダプティブQoSポリシー、またはUnified Managerのパフォーマンス サービス レベルを使用して作成されたQoSポリシーに対応する[QoS]ページが表示されます。
+
+. QoSポリシー グループの詳細な設定を表示します。
+. QoS ポリシーグループ名の横にある展開ボタン（image:../media/chevron_down.gif[""]）をクリックすると、ポリシーグループの詳細が表示されます。
+

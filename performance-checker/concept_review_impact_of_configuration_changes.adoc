@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_review_impact_of_configuration_changes.html 
+sidebar: sidebar 
+keywords: review, impact, configuration, changes, workload, performance 
+summary: ディスク障害、HAフェイルオーバー、ボリューム移動などを原因とするクラスタの構成変更が、ボリュームのパフォーマンスに悪影響を及ぼし、レイテンシを増大させる可能性があります。 
+---
+= 構成変更がワークロードのパフォーマンスに与える影響を Active IQ Unified Manager で評価する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ディスク障害、HAフェイルオーバー、ボリューム移動などを原因とするクラスタの構成変更が、ボリュームのパフォーマンスに悪影響を及ぼし、レイテンシを増大させる可能性があります。
+
+Unified Managerの[ワークロード分析]ページでは、最新の構成変更がいつ行われたかを確認し、処理やレイテンシ（応答時間）と比較して、選択したボリュームのワークロードのアクティビティに変化が生じたかどうかを確認できます。
+
+Unified Managerのパフォーマンスページでは、検出できる変更イベントの数に限りがあります。ヘルスページには、設定変更によって発生するその他のイベントに関するアラートが表示されます。Unified Managerでボリュームを検索すると、イベント履歴を確認できます。

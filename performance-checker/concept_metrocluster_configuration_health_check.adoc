@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_health_check.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, health, check 
+summary: Unified Manager を使用すると、MetroCluster 構成のクラスターの健全性を確認できます。ヘルスステータスとイベントは、ワークロードのパフォーマンスに影響を与えている可能性のあるハードウェアまたはソフトウェアの問題があるかどうかを判断するのに役立ちます。 
+---
+= Active IQ Unified Manager で MetroCluster 構成の健全性を確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerでは、MetroCluster over IP構成とMetroCluster over FC構成のクラスタの健全性を確認できます。健常性のステータスとイベントから、ワークロードのパフォーマンスに影響するハードウェアやソフトウェアの問題がないかを判断できます。
+
+Unified Managerでメールアラートを送信するように設定すると、パフォーマンスイベントの原因となった可能性のある、ローカルまたはリモートクラスタ上の健全性の問題がないか、メールで確認できます。Unified Manager GUIでは、*イベント管理*を選択して現在のイベントの一覧を表示し、フィルターを使用してMetroCluster設定イベントのみを表示することができます。
+
+詳細については、link:../health-checker/task_check_health_of_clusters_in_metrocluster_configuration.html["MetroCluster構成のクラスタの健全性チェック"]を参照してください。

@@ -1,0 +1,23 @@
+---
+permalink: events/task_delete_alerts.html 
+sidebar: sidebar 
+keywords: delete, alerts 
+summary: 不要になったアラートを削除できます。たとえば、特定のリソースがUnified Managerの監視対象でなくなった場合、そのリソースについて作成されたアラートを削除できます。 
+---
+= Active IQ Unified Manager でアラートを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったアラートを削除できます。たとえば、特定のリソースがUnified Managerの監視対象でなくなった場合、そのリソースについて作成されたアラートを削除できます。
+
+.開始する前に
+アプリケーション管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーション ペインで、*ストレージ管理* > *アラート設定* をクリックします。
+. 「Alert Setup」ページで、削除するアラートを選択し、「Delete」をクリックします。
+. 削除リクエストを確定するには、「はい」をクリックしてください。
+

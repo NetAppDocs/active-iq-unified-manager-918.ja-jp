@@ -1,0 +1,28 @@
+---
+permalink: config/task_view_https_security_certificate_ocf.html 
+sidebar: sidebar 
+keywords: view, https, security, certificate 
+summary: HTTPS証明書の詳細をブラウザで取得した証明書と比較することで、ブラウザとUnified Manager間の暗号化された接続が傍受されていないことを確認できます。 
+---
+= Active IQ Unified Manager でHTTPSセキュリティ証明書を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HTTPS証明書の詳細をブラウザで取得した証明書と比較して、Unified Managerに対するブラウザの暗号化された接続が妨害されていないことを確認できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+証明書を表示すると、再生成された証明書の内容を検証したり、Unified Managerへのアクセスに使用できるSubject Alt Name（SAN）を確認したりできます。
+
+.手順
+. 左側のナビゲーションペインで、*General* > *HTTPS Certificate* をクリックします。
++
+HTTPS証明書がページの上部に表示されます。
+
+
+
+セキュリティ証明書について、[HTTPS 証明書]ページの情報よりも詳しい情報を表示する必要がある場合は、ブラウザで接続証明書を表示します。

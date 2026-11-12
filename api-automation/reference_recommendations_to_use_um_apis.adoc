@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: Active IQ Unified Manager で API を使用する場合は、いくつかの推奨プラクティスに従う必要があります。 
+---
+= Active IQ Unified Manager API を使用する際は、推奨されるプラクティスに従ってください。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager で API を使用する場合は、いくつかの推奨プラクティスに従う必要があります。
+
+* 応答のコンテンツ タイプをすべて次の形式にする必要があります。
++
+[listing]
+----
+application/json
+----
+* APIのバージョン番号は、製品のバージョン番号とは関係ありません。Unified Managerインスタンスで利用可能な最新バージョンのAPIを使用してください。Unified Manager APIのバージョンの詳細については、「`REST API versioning in Active IQ Unified Manager`」セクションを参照してください。
+* Unified Manager APIを使用して配列値を更新する場合は、値の文字列全体を更新する必要があります。配列に値を付加することはできません。既存の配列のみを置換できます。
+* パイプ（|）やワイルドカード（+*+）などのフィルタ演算子は、double値（たとえば、メトリクスAPIのIOPSやパフォーマンスなど）を除くすべてのクエリパラメータに使用できます。
+* フィルタ演算子のワイルドカード（+*+）とパイプ（|）を組み合わせてオブジェクトをクエリすることは避けてください。誤った数のオブジェクトが取得される可能性があります。
+* フィルターに値を使用する場合は、値に `?`文字が含まれていないことを確認してください。これはSQLインジェクションのリスクを軽減するための措置です。
+* （すべての）APIに対する `GET`リクエストは、最大1000件のレコードを返すことに注意してください。 `max_records`パラメータを1000より大きい値に設定してクエリを実行しても、返されるレコードは1000件のみです。
+* 管理機能を実行するには、Unified Manager UIを使用することをお勧めします。
+

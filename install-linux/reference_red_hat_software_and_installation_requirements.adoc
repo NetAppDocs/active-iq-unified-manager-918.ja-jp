@@ -1,0 +1,120 @@
+---
+permalink: install-linux/reference_red_hat_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: linux software, installation requirements, system, authorization,  requirements 
+summary: Unified ManagerをインストールするLinuxシステムには、特定のバージョンのオペレーティング システムとサポート ソフトウェアが必要です。 
+---
+= Active IQ Unified Manager のLinuxソフトウェアとインストール要件について説明します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerをインストールするLinuxシステムには、特定のバージョンのオペレーティング システムとサポート ソフトウェアが必要です。Linux環境でのインストールの場合、Unified ManagerはRed Hat Enterprise Linuxオペレーティングシステムにのみインストールできます。他のオペレーティングシステムにはインストールできません。
+
+
+
+[[operating-system-software]]
+== オペレーティング システム ソフトウェア
+
+Linuxシステムに、次のバージョンのオペレーティング システムとサポート ソフトウェアがインストールされている必要があります。
+
+* x86_64アーキテクチャに基づくRed Hat Enterprise Linuxバージョン8.xおよび9.6
+
+
+サポートされているRed Hat Enterprise Linuxのバージョンの最新のリストについては、Interoperability Matrixを参照してください。
+
+https://mysupport.netapp.com/matrix["NetApp Interoperability Matrix"^]
+
+サーバーはUnified Managerの実行専用にする必要があります。サーバーには他のアプリケーションをインストールしないでください。企業方針により、一部の環境ではQualysなどの脆弱性スキャナーがLinuxシステムにインストールされています。Unified Managerをインストールする前に、インストールの失敗を防ぐため、脆弱性スキャナーを無効にしてください。
+
+
+NOTE: 脆弱性スキャナ（Qualysなど）は、仮想マシン（VM）を内部的にスキャンする場合（Unified Managerと脆弱性スキャナが同じVMにインストールされている場合）または外部的にスキャンする場合（Unified Managerと脆弱性スキャナが2つの異なるサーバにインストールされ、Unified ManagerがインストールされているVMを脆弱性スキャナがスキャンする場合）にCPU使用率が高くなる可能性があります。この問題が原因でVMが応答しなくなり、Unified Managerサービスに影響することがよくあります。そのため、NetAppでは、Unified ManagerがインストールされているVMで脆弱性スキャナを無効にすることを推奨しています。スキャナを無効にできない場合は、営業時間外にVMをスキャンし、スキャンの完了後にサービスを再起動してください。
+
+
+
+[[third-party-software]]
+== サードパーティ製ソフトウェア
+
+Unified ManagerはWildFly Webサーバに導入されます。WildFly 27.0.1.Final は Unified Manager にバンドルされ、設定されています。
+
+以下のサードパーティ パッケージが必要ですが、Unified Managerには含まれていません。これらのパッケージは、以下のセクションで説明するようにリポジトリを設定している場合、インストール中に `yum`インストーラーによって自動的にインストールされます。
+
+* MySQL Community Edition バージョン 8.4.10 （MySQL リポジトリより）
+* OpenJDK バージョン 17.0.14+6（Red Hat Extra Enterprise Linux Server リポジトリより）
+* Python 3.13.3（Red Hat Extra Enterprise Linux Serverリポジトリより）
+* 7zip バージョン 7z2301-linux-x64。詳細については、link:task_configure_7zip_package.html["7-zipソフトウェアパッケージを設定する"]をご覧ください。
+
+
+[NOTE]
+====
+サードパーティ製ソフトウェアをアップグレードする前に、Unified Managerの実行中のインスタンスをシャットダウンする必要があります。サードパーティ製ソフトウェアのインストールが完了したら、Unified Managerを再起動できます。
+
+====
+
+
+[[user-authorization-requirements]]
+== ユーザ認証の要件
+
+Linux システムへの Unified Manager のインストールは、root ユーザーまたは非 root ユーザーが `sudo`コマンドを使用して実行できます。
+
+また、デフォルトの Unified Manager インストールには、 `/etc/sudoers.d/` ディレクトリの sudoers ファイル (`ocum_sudoers` および  `ocie_sudoers`）に、umadmin ユーザー（デフォルトのメンテナンスユーザー）と jboss ユーザーが含まれています。セキュリティポリシーまたはセキュリティ監視ツールの理由でこのコンテンツを環境から削除した場合は、再度追加する必要があります。一部の Unified Manager 操作にはこれらの sudo 権限が必要なため、sudoers の設定を保持する必要があります。
+
+
+
+[[installation-requirements]]
+== インストールの要件
+
+Red Hat Enterprise Linuxとその関連リポジトリをシステムにインストールする際のベストプラクティスは次のとおりです。別の方法でインストールまたは設定されたシステム、またはオフプレミス（クラウド）に導入されたシステムでは、追加の手順が必要になる場合があります。また、Unified Managerが適切に実行されない可能性があります。
+
+* Red Hat Enterprise Linuxは、Red Hatのベストプラクティスに従ってインストールする必要があります。また、以下のデフォルトオプションを選択してください。これには、「`Server with GUI`」ベース環境を選択する必要があります。
+* Red Hat Enterprise LinuxへのUnified Managerのインストール中にインストール プログラムが必要なすべてのソフトウェアにアクセスしてインストールできるように、システムには該当するリポジトリへのアクセスが必要です。
+*  `yum`インストーラーがRed Hat Enterprise Linuxリポジトリ内の依存ソフトウェアを見つけるには、Red Hat Enterprise Linuxのインストール中、またはインストール後に有効なRed Hatサブスクリプションを使用してシステムを登録する必要があります。
++
+Red Hat Subscription Managerについては、Red Hatのドキュメントを参照してください。
+
+* 必要なサードパーティ ユーティリティがシステムに正しくインストールされるように、Extra Packages for Enterprise Linux（EPEL）リポジトリを有効にする必要があります。
++
+システムでEPELリポジトリが設定されていない場合は、リポジトリを手動でダウンロードして設定する必要があります。
+
++
+link:task_manually_configure_epel_repository.html["EPELリポジトリの手動設定"]を参照してください。
+
+* 正しいバージョンのMySQLがインストールされていない場合は、システムにMySQLソフトウェアが正しくインストールされるようにMySQLリポジトリを有効にする必要があります。
++
+システムでMySQLリポジトリが設定されていない場合は、リポジトリを手動でダウンロードして設定する必要があります。
+
++
+link:task_manually_configure_mysql_repository.html["MySQLリポジトリの手動設定"]を参照してください。
+
+* Unified ManagerホストにはJavaのバージョンを1つだけインストールする必要があります。そうしないと、システムがどのバージョンを使用すべきかを判断できない場合があります。 https://kb.netapp.com/data-mgmt/AIQUM/AIQUM_Kbs/After_updating_Java_on_the_Active_IQ_Unified_Manager_host_services_will_not_start["Active IQ Unified ManagerホストでJavaをアップデートしたあと、サービスが開始されません"]を参照してください。
+
+
+システムがインターネットに接続されておらず、インターネットに接続されたシステムからリポジトリがミラーリングされていない場合は、インストール手順に従ってシステムに必要な外部ソフトウェアを確認してください。その後、必要なソフトウェアをインターネットに接続されたシステムにダウンロードし、 `.rpm`ファイルをUnified Managerをインストールする予定のシステムにコピーしてください。アーティファクトとパッケージをダウンロードするには、 `yum install`コマンドを使用する必要があります。2つのシステムで同じバージョンのオペレーティング システムを実行していること、および該当するRed Hat Enterprise Linuxのサブスクリプション ライセンスがあることを確認してください。
+
+[NOTE]
+====
+必要なサードパーティ製ソフトウェアは、ここに記載されたリポジトリ以外からはインストールしないでください。Red Hatリポジトリからインストールされるソフトウェアは、Red Hat Enterprise Linux用に特別に設計されたものであり、Red Hatのベストプラクティス（ディレクトリのレイアウトや権限など）に準拠しています。他の場所から入手したソフトウェアはこれらのガイドラインに従っているとはかぎらないため、Unified Managerのインストールに失敗したり、将来のアップグレードで問題が発生したりする可能性があります。
+
+====
+
+
+[[port-443-requirement]]
+== ポート443の要件
+
+Red Hat Enterprise Linuxの汎用イメージは、ポート443への外部アクセスをブロックする場合があります。そのため、Unified Managerのインストール後に管理者Web UIに接続できなくなることがあります。次のコマンドを実行すると、汎用的なRed Hat Enterprise Linuxのすべての外部ユーザおよびアプリケーションがポート443にアクセスできるようになります。
+
+`# firewall-cmd --zone=public --add-port=443/tcp --permanent; firewall-cmd --reload`
+
+Red Hat Enterprise Linuxは、「`Server with GUI`」ベース環境でインストールする必要があります。これは、Unified Managerのインストール手順で使用されるコマンドを提供します。その他の基本環境では、インストールを検証または完了するために追加のコマンドをインストールする必要がある場合があります。お使いのシステムで `firewall-cmd`が利用できない場合は、次のコマンドを実行してインストールする必要があります：
+
+`# sudo yum install firewalld`
+
+コマンドを実行する前に、会社のセキュリティ ポリシーに違反しないか（別の方法が必要でないか）をIT部門の担当者に確認してください。
+
+[NOTE]
+====
+Red HatシステムではTransparent Huge Pages（THP）を無効にします。有効にすると、特定のプロセスがメモリを大量に消費して終了した場合にUnified Managerがシャットダウンする可能性があります。
+
+====

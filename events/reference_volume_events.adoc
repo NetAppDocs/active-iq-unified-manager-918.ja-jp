@@ -1,0 +1,945 @@
+---
+permalink: events/reference_volume_events.html 
+sidebar: sidebar 
+keywords: volume, events, impact area, availability, capacity, configuration, performance 
+summary: ボリューム イベントは、ボリュームのステータスに関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のボリュームイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム イベントは、ボリュームのステータスに関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+アスタリスク（*）は、EMSイベントがUnified Managerイベントに変換されたことを示します。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ボリュームは制限状態（ocumEvtVolumeRestricted）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームはオフライン（ocumEvtVolumeOffline）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリュームは一部使用可能（ocumEvtVolumePartiallyAvailable）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリュームをアンマウント（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームをマウント（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームを再マウント（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリューム ジャンクション パスは非アクティブ（ocumEvtVolumeJunctionPathInactive）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームのオートサイズを有効化（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームのオートサイズを無効化（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームのオートサイズの最大容量を変更（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームのオートサイズの増分サイズを変更（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+|===
+
+
+[[impact-area-capacity]]
+== 影響範囲：容量
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+シンプロビジョニング ボリュームにスペース リスクあり（ocumThinProvisionVolumeSpaceAtRisk）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム効率化処理エラー（ocumEvtVolumeEfficiencyOperationError）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリューム スペースがフル（ocumEvtVolumeFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリューム スペースがほぼフル（ocumEvtVolumeNearlyFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム論理領域がいっぱいです *（volumeLogicalSpaceFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリュームの論理領域がほぼ満杯です *（volumeLogicalSpaceNearlyFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム論理スペース正常 *(volumeLogicalSpaceAllOK)
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームの Snapshot リザーブ スペースがフル（ocumEvtSnapshotFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+Snapshot コピー数の上限を超過（ocumEvtSnapshotTooMany）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリュームの qtree クォータがオーバーコミット（ocumEvtVolumeQtreeQuotaOvercommitted）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリュームの qtree クォータがほぼオーバーコミット（ocumEvtVolumeQtreeQuotaAlmostOvercommitted）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームの増加率 - 異常（ocumEvtVolumeGrowthRateAbnormal）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームのフルまでの日数（ocumEvtVolumeDaysUntilFullSoon）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリュームのスペース ギャランティを無効化（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームのスペース ギャランティを有効化（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームのスペース ギャランティを変更（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームの Snapshot リザーブのフルまでの日数（ocumEvtVolumeSnapshotReserveDaysUntilFullSoon）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroupコンスティチュエントにスペースの問題があります *（flexGroupConstituentsHaveSpaceIssues）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroup構成要素スペースの状態 すべてOK *（flexGroupConstituentsSpaceStatusAllOK）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+FlexGroup構成要素にinodeの問題があります *（flexGroupConstituentsHaveInodesIssues）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroup構成要素のIノードの状態 すべてOK *(flexGroupConstituentsInodesStatusAllOK)
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+WAFLボリューム AutoSize 失敗 *（waflVolAutoSizeFail）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+WAFLボリュームAutoSize完了 *（waflVolAutoSizeDone）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+FlexGroupボリュームが80%以上利用されています*
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroupボリュームが90%以上利用されています*
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム ストレージ効率の異常（ocumVolumeAbnormalStorageEfficiencyWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム Snapshot リザーブの使用率が低い（volumeSnaphotReserveUnderutilizedWarning）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム Snapshot リザーブの使用率が低い（volumeSnaphotReserveUnderutilizedCleared）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+警告
+
+|===
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ボリュームの名前を変更（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームを検出（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームを削除（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+|===
+
+
+[[impact-area-performance]]
+== 影響範囲：パフォーマンス
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+QoS ボリューム最大 IOPS の警告しきい値を超過（ocumQosVolumeMaxIopsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+QoS ボリューム最大 MBps の警告しきい値を超過（ocumQosVolumeMaxMbpsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+QoS ボリューム最大 IOPS/TB の警告しきい値を超過（ocumQosVolumeMaxIopsPerTbWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+パフォーマンス サービス レベル ポリシーに定義されたワークロードのボリューム レイテンシしきい値を超過（ocumConformanceLatencyWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム IOPS の重大しきい値を超過（ocumVolumeIopsIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム IOPS の警告しきい値を超過（ocumVolumeIopsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム MBps の重大しきい値を超過（ocumVolumeMbpsIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム MBps の警告しきい値を超過（ocumVolumeMbpsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシの重大しきい値を超過（ocumVolumeLatencyIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシの警告しきい値を超過（ocumVolumeLatencyWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム キャッシュ ミス率の重大しきい値を超過（ocumVolumeCacheMissRatioIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム キャッシュ ミス率の警告しきい値を超過（ocumVolumeCacheMissRatioWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / IOPS の重大しきい値を超過（ocumVolumeLatencyIopsIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / IOPS の警告しきい値を超過（ocumVolumeLatencyIopsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / MBps の重大しきい値を超過（ocumVolumeLatencyMbpsIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / MBps の警告しきい値を超過（ocumVolumeLatencyMbpsWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / アグリゲートの使用済みパフォーマンス容量の重大しきい値を超過（ocumVolumeLatencyAggregatePerfCapacityUsedIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / アグリゲートの使用済みパフォーマンス容量の警告しきい値を超過（ocumVolumeLatencyAggregatePerfCapacityUsedWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / アグリゲート利用率の重大しきい値を超過（ocumVolumeLatencyAggregateUtilizationIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / アグリゲート利用率の警告しきい値を超過（ocumVolumeLatencyAggregateUtilizationWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / ノードの使用済みパフォーマンス容量の重大しきい値を超過（ocumVolumeLatencyNodePerfCapacityUsedIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / ノードの使用済みパフォーマンス容量の警告しきい値を超過（ocumVolumeLatencyNodePerfCapacityUsedWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / ノードの使用済みパフォーマンス容量 - テイクオーバーの重大しきい値を超過（ocumVolumeLatencyAggregatePerfCapacityUsedTakeoverIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / ノードの使用済みパフォーマンス容量 - テイクオーバーの警告しきい値を超過（ocumVolumeLatencyAggregatePerfCapacityUsedTakeoverWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム レイテンシ / ノード利用率の重大しきい値を超過（ocumVolumeLatencyNodeUtilizationIncident）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリューム レイテンシ / ノード利用率の警告しきい値を超過（ocumVolumeLatencyNodeUtilizationWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+|===
+
+
+[[impact-area-security]]
+== 影響領域：セキュリティ
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ボリュームランサムウェア監視が有効になっています（アクティブモード）（antiRansomwareVolumeStateEnabled）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームランサムウェア監視は無効になっています（antiRansomwareVolumeStateDisabled）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームランサムウェア監視が有効になっています（学習モード）（antiRansomwareVolumeStateDryrun）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームランサムウェア監視は一時停止されています（学習モード）（antiRansomwareVolumeStateDryrunPaused）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームのランサムウェア対策監視が一時停止されています（アクティブモード）（antiRansomwareVolumeStateEnablePaused）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームランサムウェア監視は無効化中です（antiRansomwareVolumeStateDisableInProgress）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ランサムウェア活動が確認されました（callHomeRansomwareActivitySeen）
+ a| 
+インシデント
+ a| 
+Volume
+ a| 
+重大
+
+
+
+ a| 
+ボリュームがランサムウェア対策監視に適合（学習モード）（ocumEvtVolumeArwCandidate）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリュームがランサムウェア対策監視に適合（アクティブ モード）（ocumVolumeSuitedForActiveAntiRansomwareDetection）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームにランサムウェア対策のアラートあり（antiRansomwareFeatureNoisyVolume）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+|===
+
+
+[[impact-area-data-protection]]
+== 影響範囲：データ保護
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ボリュームでローカル Snapshot の保護が十分でない（volumeLacksLocalProtectionWarning）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリュームでローカル Snapshot の保護が十分でない（volumeLacksLocalProtectionCleared）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+|===

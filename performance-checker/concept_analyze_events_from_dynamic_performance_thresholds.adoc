@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, dynamic, performance, thresholds 
+summary: '動的なしきい値によるイベントは、ワークロードの実際の応答時間（レイテンシ）と想定範囲との差が大きい場合に生成されます。[イベントの詳細]ページを使用してパフォーマンス イベントを分析し、必要に応じてイベントに対処してパフォーマンスを正常な状態に戻します。' 
+---
+= Active IQ Unified Manager で動的パフォーマンスしきい値からのイベントを分析する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+動的なしきい値によるイベントは、ワークロードの実際の応答時間（レイテンシ）と想定範囲との差が大きい場合に生成されます。[イベントの詳細]ページを使用してパフォーマンス イベントを分析し、必要に応じてイベントに対処してパフォーマンスを正常な状態に戻します。
+
+[NOTE]
+====
+動的なパフォーマンスしきい値は、Cloud Volumes ONTAP、ONTAP Edge、ONTAP Selectの各システムでは無効です。
+
+====

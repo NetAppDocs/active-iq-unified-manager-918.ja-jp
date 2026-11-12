@@ -1,0 +1,258 @@
+---
+permalink: events/reference_metrocluster_connectivity_events.html 
+sidebar: sidebar 
+keywords: metrocluster, connectivity, events, impact area, availability 
+summary: 接続イベントは、クラスタのコンポーネント間の接続およびMetroCluster構成のクラスタ間の接続に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の MetroCluster 接続イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+接続イベントは、クラスタ内のコンポーネント間の接続、およびMetroCluster over FC構成およびMetroCluster over IP構成内のクラスタ間の接続に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[events-common-in-both-configurations]]
+== 両方の構成に共通のイベント
+
+次の接続イベントは、MetroCluster over FC構成とMetroCluster over IP構成に共通です。
+
+
+
+[[impact-area-availability]]
+=== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+MetroCluster パートナー間のすべてのリンクが停止（ocumEvtMetroClusterAllLinksBetweenPartnersDown）
+ a| 
+インシデント
+ a| 
+MetroCluster関係
+ a| 
+重大
+
+
+
+ a| 
+MetroCluster パートナーにピアリング ネットワーク経由で到達不能（ocumEvtMetroClusterPartnersNotReachableOverPeeringNetwork）
+ a| 
+インシデント
+ a| 
+MetroCluster関係
+ a| 
+重大
+
+
+
+ a| 
+MetroCluster ディザスタ リカバリ機能への影響（ocumEvtMetroClusterDRStatusImpacted）
+ a| 
+リスク
+ a| 
+MetroCluster関係
+ a| 
+重大
+
+
+
+ a| 
+MetroCluster 構成をスイッチオーバー（ocumEvtMetroClusterDRStatusImpacted）
+ a| 
+リスク
+ a| 
+MetroCluster関係
+ a| 
+警告
+
+|===
+
+
+[[metrocluster-over-fc-configuration]]
+== MetroCluster over FC構成
+
+次のイベントは、MetroCluster over FC構成に関係します。
+
+
+
+[[impact-area-availability]]
+=== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+すべてのスイッチ間リンクが停止（ocumEvtMetroClusterAllISLBetweenSwitchesDown）
+ a| 
+インシデント
+ a| 
+MetroClusterスイッチ間の接続
+ a| 
+重大
+
+
+
+ a| 
+FC-SAS ブリッジからストレージ スタックへのリンクが停止（ocumEvtBridgeSasPortDown）
+ a| 
+インシデント
+ a| 
+MetroClusterブリッジのスタック接続
+ a| 
+重大
+
+
+
+ a| 
+MetroCluster 構成を一部スイッチオーバー（ocumEvtMetroClusterDRStatusPartiallyImpacted）
+ a| 
+リスク
+ a| 
+MetroCluster関係
+ a| 
+エラー
+
+
+
+ a| 
+ノードから FC スイッチへのすべての FC-VI インターコネクト リンクが停止（ocumEvtMccNodeSwitchFcviLinksDown）
+ a| 
+インシデント
+ a| 
+MetroClusterノードのスイッチ接続
+ a| 
+重大
+
+
+
+ a| 
+ノードから FC スイッチへの一部の FC イニシエータ リンクが停止（ocumEvtMccNodeSwitchFcLinksOneOrMoreDown）
+ a| 
+リスク
+ a| 
+MetroClusterノードのスイッチ接続
+ a| 
+警告
+
+
+
+ a| 
+ノードから FC スイッチへのすべての FC イニシエータ リンクが停止（ocumEvtMccNodeSwitchFcLinksDown）
+ a| 
+インシデント
+ a| 
+MetroClusterノードのスイッチ接続
+ a| 
+重大
+
+
+
+ a| 
+スイッチから FC-SAS ブリッジへの FC リンクが停止（ocumEvtMccSwitchBridgeFcLinksDown）
+ a| 
+インシデント
+ a| 
+MetroClusterスイッチのブリッジ接続
+ a| 
+重大
+
+
+
+ a| 
+ノード間のすべての FC-VI インターコネクト リンクが停止（ocumEvtMccInterNodeLinksDown）
+ a| 
+インシデント
+ a| 
+ノード間の接続
+ a| 
+重大
+
+
+
+ a| 
+ノード間の一部の FC-VI インターコネクト リンクが停止（ocumEvtMccInterNodeLinksOneOrMoreDown）
+ a| 
+リスク
+ a| 
+ノード間の接続
+ a| 
+警告
+
+
+
+ a| 
+ノードからブリッジへのリンクが停止（ocumEvtMccNodeBridgeLinksDown）
+ a| 
+インシデント
+ a| 
+ノードのブリッジ接続
+ a| 
+重大
+
+
+
+ a| 
+ノードからストレージ スタックへのすべての SAS リンクが停止（ocumEvtMccNodeStackLinksDown）
+ a| 
+インシデント
+ a| 
+ノードのスタック接続
+ a| 
+重大
+
+
+
+ a| 
+ノードからストレージ スタックへの一部の SAS リンクが停止（ocumEvtMccNodeStackLinksOneOrMoreDown）
+ a| 
+リスク
+ a| 
+ノードのスタック接続
+ a| 
+警告
+
+|===
+
+
+[[metrocluster-over-ip-configuration]]
+== MetroCluster over IP構成
+
+次のイベントは、MetroCluster over IP構成に関係します。
+
+
+
+[[impact-area-availability]]
+=== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+MetroCluster IP サイト間接続ステータスが停止（mccIntersiteconnectivityStatusDown）
+ a| 
+リスク
+ a| 
+MetroCluster関係
+ a| 
+重大
+
+
+
+ a| 
+MetroCluster IP ノードからスイッチへの接続がオフライン（mccIpPortStatusOffline）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+|===

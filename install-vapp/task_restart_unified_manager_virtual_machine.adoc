@@ -1,0 +1,26 @@
+---
+permalink: install-vapp/task_restart_unified_manager_virtual_machine.html 
+sidebar: sidebar 
+keywords: restart, unified manager, virtual, machine 
+summary: メンテナンスコンソールからUnified Manager仮想マシン（VM）を再起動できます。新しいセキュリティ証明書を生成した場合やVMで問題が発生した場合は、VMを再起動する必要があります。 
+---
+= Active IQ Unified Manager 仮想マシンを再起動する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メンテナンスコンソールからUnified Manager仮想マシン（VM）を再起動できます。新しいセキュリティ証明書を生成した場合やVMで問題が発生した場合は、VMを再起動する必要があります。
+
+.開始する前に
+* 仮想アプライアンスの電源をオンにする必要があります。
+* Unified Managerメンテナンス コンソールにメンテナンス ユーザとしてログインする必要があります。
+
+
+VMwareの*Restart Guest*オプションを使用して、vSphereから仮想マシンを再起動することもできます。次を参照してください https://developer.broadcom.com/powercli/latest/vmware.vimautomation.core/commands/restart-vmguest/["BroadcomのVMware vSphere PowerCLIコマンドレットリファレンスのRestart-VMGuestコマンドレット。"^]
+
+.手順
+. メンテナンスコンソールで、*System Configuration* > *Reboot Virtual Machine* を選択します。
+. ブラウザからUnified Manager Web UIを起動し、ログインします。
+

@@ -1,0 +1,86 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: ストレージ サービス イベントは、ストレージ サービスの作成とサブスクリプションに関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のストレージサービスイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ サービス イベントは、ストレージ サービスの作成とサブスクリプションに関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ストレージ サービスを作成（該当なし）
+ a| 
+イベント
+ a| 
+ストレージ サービス
+ a| 
+情報
+
+
+
+ a| 
+ストレージ サービスをサブスクライブ（該当なし）
+ a| 
+イベント
+ a| 
+ストレージ サービス
+ a| 
+情報
+
+
+
+ a| 
+ストレージ サービスをアンサブスクライブ（該当なし）
+ a| 
+イベント
+ a| 
+ストレージ サービス
+ a| 
+情報
+
+|===
+
+
+[[impact-area-protection]]
+== 影響範囲：保護
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+管理対象 SnapMirror 関係の予期しない削除（ocumEvtStorageServiceUnsupportedRelationshipDeletion）
+ a| 
+リスク
+ a| 
+ストレージ サービス
+ a| 
+警告
+
+
+
+ a| 
+ストレージ サービス メンバー ボリュームの予期しない削除（ocumEvtStorageServiceUnexpectedVolumeDeletion）
+ a| 
+インシデント
+ a| 
+ストレージ サービス
+ a| 
+重大
+
+|===

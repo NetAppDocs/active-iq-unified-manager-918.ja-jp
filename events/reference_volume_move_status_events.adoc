@@ -1,0 +1,67 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: ボリューム移動のステータスのイベントは、ボリューム移動のステータスについて通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のボリューム移動ステータスイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム移動のステータスのイベントは、ボリューム移動のステータスについて通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-capacity]]
+== 影響範囲：容量
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ボリューム移動ステータス：進行中（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリューム移動ステータス - 失敗（ocumEvtVolumeMoveFailed）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリューム移動ステータス：完了（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリューム移動ステータス - カットオーバー保留（ocumEvtVolumeMoveCutoverDeferred）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+|===

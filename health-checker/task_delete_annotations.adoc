@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_delete_annotations.html 
+sidebar: sidebar 
+keywords: delete, annotations 
+summary: 不要になったカスタム アノテーションとその値を削除できます。 
+---
+= Active IQ Unified Manager でアノテーションを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったカスタム アノテーションとその値を削除できます。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* アノテーションの値が他のアノテーションやグループ ルールで使用されていないことを確認する必要があります。
+
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *注釈* をクリックします。
+. 「Annotations」タブで、削除する注釈を選択します。
++
+選択したアノテーションの詳細が表示されます。
+
+. 選択した注釈とその値を削除するには、*Actions* > *Delete* をクリックします。
+. 警告ダイアログボックスで、*[はい]* をクリックして削除を確定します。
+

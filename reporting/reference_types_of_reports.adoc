@@ -1,0 +1,110 @@
+---
+permalink: reporting/reference_types_of_reports.html 
+sidebar: sidebar 
+keywords: types, reports 
+summary: 次の表は、カスタマイズ、ダウンロード、およびスケジュール設定が可能なレポートとして使用できるビューとインベントリ ページの一覧です。 
+---
+= Active IQ Unified Manager のレポートの種類について説明します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の表は、カスタマイズ、ダウンロード、およびスケジュール設定が可能なレポートとして使用できるビューとインベントリ ページの一覧です。
+
+
+
+[[active-iq-unified-manager-reports]]
+== Active IQ Unified Manager レポート
+
+[cols="2*"]
+|===
+| Type | ストレージまたはネットワーク オブジェクト 
+
+
+ a| 
+Capacity
+ a| 
+クラスタ
+
+アグリゲート
+
+ボリューム
+
+qtree
+
+
+
+ a| 
+Health
+ a| 
+クラスタ
+
+ノード
+
+アグリゲート
+
+Storage VM
+
+ボリューム
+
+SMB/CIFS共有
+
+NFS 共有
+
+
+
+ a| 
+Performance
+ a| 
+クラスタ
+
+ノード
+
+アグリゲート
+
+Storage VM
+
+ボリューム
+
+LUN
+
+NVMeネームスペース
+
+ネットワーク インターフェイス（LIF）
+
+ポート
+
+
+
+ a| 
+QoS
+ a| 
+従来のQoSポリシー グループ
+
+アダプティブQoSポリシー グループ
+
+パフォーマンス サービス レベル ポリシー グループ
+
+
+
+ a| 
+ボリュームの保護関係（［ボリューム］ページから）
+ a| 
+すべての関係
+
+過去1カ月の転送ステータス
+
+過去1カ月の転送速度
+
+
+
+ a| 
+セキュリティ
+ a| 
+Storage VM
+
+クラスタ
+
+|===

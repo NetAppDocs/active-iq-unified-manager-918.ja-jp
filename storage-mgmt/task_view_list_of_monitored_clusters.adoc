@@ -1,0 +1,24 @@
+---
+permalink: storage-mgmt/task_view_list_of_monitored_clusters.html 
+sidebar: sidebar 
+keywords: view, list, monitored, clusters 
+summary: '[クラスタ セットアップ]ページを使用して、クラスタのインベントリを表示できます。クラスタに関する詳細（名前またはIPアドレス、通信ステータスなど）を参照できます。' 
+---
+= Active IQ Unified Manager で監視対象のクラスター一覧を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[クラスタ セットアップ]ページを使用して、クラスタのインベントリを表示できます。クラスタに関する詳細（名前またはIPアドレス、通信ステータスなど）を参照できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* > *クラスタ設定*をクリックします。
++
+ストレージ環境内の、Unified Managerで管理されているクラスタがすべて表示され、収集状態の重大度レベル列でソートされます。列ヘッダーをクリックすると、別の列でクラスタをソートできます。
+
+

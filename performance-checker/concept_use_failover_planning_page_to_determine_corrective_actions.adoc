@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: '[パフォーマンス / ノード フェイルオーバー プラン]ページに表示される情報に基づいて、フェイルオーバーによってHAペアのパフォーマンスが許容可能なレベルを下回らないように対処することができます。' 
+---
+= Active IQ Unified Manager のパフォーマンス/ノードフェイルオーバー計画ページから是正措置を決定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[パフォーマンス / ノード フェイルオーバー プラン]ページに表示される情報に基づいて、フェイルオーバーによってHAペアのパフォーマンスが許容可能なレベルを下回らないように対処することができます。
+
+例えば、フェイルオーバーによるパフォーマンスへの影響を軽減するために、HAペア内のノードからクラスタ内の他のノードにボリュームやLUNの一部を移動することができます。そうすることで、フェイルオーバー後もプライマリノードが許容可能なパフォーマンスを継続的に提供できるようになります。

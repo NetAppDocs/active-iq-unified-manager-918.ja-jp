@@ -1,0 +1,57 @@
+---
+permalink: reporting/reference_reporting_limitations.html 
+sidebar: sidebar 
+keywords: reporting, limitations 
+summary: 新しい Active IQ Unified Manager のレポート機能には、いくつかの制限事項があります。 
+---
+= Active IQ Unified Manager のレポートの制限事項について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しい Active IQ Unified Manager のレポート機能には、いくつかの制限事項があります。
+
+
+
+[[existing-reports-from-previous-versions-of-unified-manager]]
+== Unified Managerの以前のバージョンからの既存のレポート
+
+スケジュールと受信者を編集できるのは、Unified Manager 9.5以前のリリースで作成およびインポートされた既存のレポート（.rptdesignファイル）のみです。Unified Manager 9.5以前の標準レポートをカスタマイズしたレポートは、新しいレポート ツールにインポートされません。
+
+.rptdesignファイルからインポートした既存のレポートを編集する必要がある場合は、次のいずれかの操作を実行して、インポートしたレポートを削除してください。
+
+* 新しいビューを作成し、作成したビューからレポートをスケジュールする（推奨）
+* レポート上にカーソルを置き、SQLをコピーして、外部ツールを使用してデータを抽出する
+
+
+デフォルト ビューは、カスタマイズしなくてもレポートとして生成できます。カスタム レポートは、新しいレポート機能を使用して再作成できます。
+
+
+
+[[schedule-and-report-relationship]]
+== スケジュールとレポートの関係
+
+保存したレポートごとに、受信者を任意に組み合わせて複数のスケジュールを作成できます。ただし、同じスケジュールを複数のレポートで再利用することはできません。
+
+
+
+[[report-protection]]
+== レポートの保護
+
+適切な権限があるユーザであれば、誰でもレポートを編集または削除できます。保存したビューやスケジュールを、他のユーザが削除または変更できないようにする方法はありません。
+
+
+
+[[event-reports]]
+== イベント レポート
+
+イベント ビューをカスタマイズしてレポートをCSV形式でダウンロードすることはできますが、イベント レポートを繰り返し生成して配信するようにスケジュール設定することはできません。
+
+
+
+[[report-attachments]]
+== レポートの添付
+
+レポートをEメールの本文として送信することはできません。レポートはPDF、Excel、またはCSV形式の添付ファイルとして送信されます。

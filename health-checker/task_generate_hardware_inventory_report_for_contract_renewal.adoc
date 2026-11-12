@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_generate_hardware_inventory_report_for_contract_renewal.html 
+sidebar: sidebar 
+keywords: contract, renewal, cluster, inventory report, hardware, generate 
+summary: Active IQ プラットフォームに接続されていないセキュアサイトでの契約更新のために、クラスターとノードのハードウェアの詳細を含むレポートを生成します。 
+---
+= Active IQ Unified Manager で契約更新用のハードウェアインベントリレポートを生成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ハードウェアのモデル番号とシリアル番号、ディスクのタイプと数、インストールされているライセンスなど、クラスタとノードのすべての情報を含むレポートを生成できます。このレポートは、NetAppActive IQプラットフォームに接続されていないセキュアなサイト（「ダーク」サイト）内での契約更新に役立ちます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ*>*ノード*をクリックします。
+. *ヘルス：すべてのノード*ビューまたは*パフォーマンス：すべてのノード*ビューに移動します。
+. *レポート* > *** > **ハードウェア在庫レポート*を選択します。
++
+ハードウェア インベントリ レポートは、.csvファイルとしてダウンロードされ、その時点における完全な情報を含みます。
+
+. この情報をNetAppのサポート担当者に提出して契約更新を申請します。
+

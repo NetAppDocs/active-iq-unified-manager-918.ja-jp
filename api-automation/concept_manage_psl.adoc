@@ -1,0 +1,119 @@
+---
+permalink: api-automation/concept_manage_psl.html 
+sidebar: sidebar 
+keywords: manage, performance, service, level 
+summary: Active IQ Unified Manager のストレージプロバイダー API を使用して、パフォーマンスサービスレベルを表示、作成、変更、および削除できます。 
+---
+= Active IQ Unified Manager で API を使用してパフォーマンスサービスレベルを管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager のストレージプロバイダー API を使用して、パフォーマンスサービスレベルを表示、作成、変更、および削除できます。
+
+
+
+[[view-performance-service-levels]]
+== パフォーマンス サービス レベルの表示
+
+ストレージ ワークロードに割り当てる際にパフォーマンス サービス レベルを表示するには、次のメソッドを使用します。このAPIは、システム定義およびユーザ作成のパフォーマンス サービス レベルをすべて表示し、すべてのパフォーマンス サービス レベルの属性を取得します。特定のパフォーマンス サービス レベルを照会する場合は、パフォーマンス サービス レベルの一意のIDを入力して詳細を取得する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/performance-service-levels`
+
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[add-performance-service-levels]]
+== パフォーマンス サービス レベルの追加
+
+システム定義のパフォーマンス サービス レベルが、ストレージ ワークロードに必要なサービス レベル目標（SLO）を満たしていない場合は、次のメソッドでカスタム パフォーマンス サービス レベルを作成し、ストレージ ワークロードに割り当てることができます。作成するパフォーマンス サービス レベルの詳細を入力します。IOPSプロパティには、有効な値の範囲を入力してください。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+POST
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
+
+
+[[delete-performance-service-levels]]
+== パフォーマンス サービス レベルの削除
+
+特定のパフォーマンス サービス レベルを削除するには、次のメソッドを使用します。ワークロードに割り当てられている場合、または他に使用可能なパフォーマンス サービス レベルがない場合、そのパフォーマンス サービス レベルは削除できません。特定のパフォーマンス サービス レベルを削除するには、パフォーマンス サービス レベルの一意のIDを入力パラメータとして指定する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+DELETE
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[modify-performance-service-levels]]
+== パフォーマンス サービス レベルの変更
+
+パフォーマンス サービス レベルを変更し、そのプロパティを更新するには、次のメソッドを使用します。システム定義のパフォーマンス サービス レベル、またはワークロードに割り当てられているパフォーマンス サービス レベルは変更できません。特定のパフォーマンス サービス レベルを変更するには、その一意のIDを指定する必要があります。また、更新するIOPSプロパティと有効な値も入力する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+[[view-aggregate-capabilities-based-on-performance-service-levels]]
+== パフォーマンスサービスレベルに基づいたアグリゲートの機能を表示する
+
+パフォーマンス サービス レベルに基づいてアグリゲート機能を照会するには、次のメソッドを使用します。この API は、データセンターで使用可能なアグリゲートのリストを返し、それらのアグリゲートでサポート可能なパフォーマンスサービスレベルに関する機能を示します。ボリューム上でワークロードをプロビジョニングする際に、アグリゲートが特定のパフォーマンスサービスレベルをサポートする能力を確認し、その能力に基づいてワークロードをプロビジョニングできます。アグリゲートを指定できるのは、API を使用してワークロードをプロビジョニングする場合に限られます。この機能は、Unified Manager の Web UI では利用できません。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/aggregate-capabilities`
+
+`/storage-provider/aggregate-capabilities/\{key}`
+
+|===

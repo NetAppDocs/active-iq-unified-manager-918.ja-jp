@@ -1,0 +1,570 @@
+---
+permalink: events/reference_ems_events_that_are_added_automatically_to_um.html 
+sidebar: sidebar 
+keywords: ems events, added, automatically, unified manager 
+summary: Unified Managerには次のONTAP EMSイベントが自動的に追加されます。これらのイベントは、Unified Managerが監視しているいずれかのクラスタでトリガーされると生成されます。 
+---
+= Active IQ Unified Manager に自動的に追加される EMS イベント
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerには次のONTAP EMSイベントが自動的に追加されます。これらのイベントは、Unified Managerが監視しているいずれかのクラスタでトリガーされると生成されます。
+
+ONTAP 9.5以降のソフトウェアを実行しているクラスタの監視では、次のEMSイベントを使用できます。
+
+|===
+| Unified Manager イベント名 | EMSイベント名 | 影響を受けるリソース | Unified Managerの重大度 
+
+
+ a| 
+アグリゲートの再配置でクラウド階層へのアクセス拒否
+ a| 
+arl.netra.ca.check.failed
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+ストレージ フェイルオーバー時のアグリゲートの再配置でクラウド階層へのアクセス拒否
+ a| 
+gb.netra.ca.check.failed
+ a| 
+Aggregate
+ a| 
+エラー
+
+
+
+ a| 
+FabricPool のミラー レプリケーションの再同期が完了
+ a| 
+wafl.ca.resync.complete
+ a| 
+クラスタ
+ a| 
+エラー
+
+
+
+ a| 
+FabricPool スペースがほぼフル
+ a| 
+fabricpool.nearly.full
+ a| 
+クラスタ
+ a| 
+エラー
+
+
+
+ a| 
+NVMF の猶予期間 - 開始
+ a| 
+nvmf.graceperiod.start
+ a| 
+クラスタ
+ a| 
+警告
+
+
+
+ a| 
+NVMF の猶予期間 - アクティブ
+ a| 
+nvmf.graceperiod.active
+ a| 
+クラスタ
+ a| 
+警告
+
+
+
+ a| 
+NVMF の猶予期間 - 終了
+ a| 
+nvmf.graceperiod.expired
+ a| 
+クラスタ
+ a| 
+警告
+
+
+
+ a| 
+LUN を破棄
+ a| 
+lun.destroy
+ a| 
+LUN
+ a| 
+情報
+
+
+
+ a| 
+Cloud AWS メタデータ接続エラー
+ a| 
+cloud.aws.metadataConnFail
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+Cloud AWS IAM クレデンシャルが期限切れ
+ a| 
+cloud.aws.iamCredsExpired
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+Cloud AWS IAM クレデンシャルが無効
+ a| 
+cloud.aws.iamCredsInvalid
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+Cloud AWS IAM クレデンシャルが見つからない
+ a| 
+cloud.aws.iamCredsNotFound
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+Cloud AWS IAM クレデンシャルが初期化されていない
+ a| 
+cloud.aws.iamNotInitialized
+ a| 
+ノード
+ a| 
+情報
+
+
+
+ a| 
+Cloud AWS IAM ロールが無効
+ a| 
+cloud.aws.iamRoleInvalid
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+Cloud AWS IAM ロールが見つからない
+ a| 
+cloud.aws.iamRoleNotFound
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+クラウド階層のホスト解決不可
+ a| 
+objstore.host.unresolvable
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+クラウド階層のクラスタ間ネットワーク インターフェイスが停止
+ a| 
+objstore.interclusterlifDown
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+要求とクラウド階層シグネチャの不一致
+ a| 
+osc.signatureMismatch
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+NFSv4 プールの 1 つに空きなし
+ a| 
+Nblade.nfsV4PoolExhaustを使用したチャンク アップロード署名要求がサポートされるようになりました。
+ a| 
+ノード
+ a| 
+重大
+
+
+
+ a| 
+QoS 監視メモリの最大化
+ a| 
+qos.monitor.memory.maxed
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+QoS 監視メモリの縮小
+ a| 
+qos.monitor.memory.abated
+ a| 
+ノード
+ a| 
+情報
+
+
+
+ a| 
+NVMe ネームスペースの破棄
+ a| 
+NVMeNS.destroy
+ a| 
+ネームスペース
+ a| 
+情報
+
+
+
+ a| 
+NVMe ネームスペース オンライン
+ a| 
+NVMeNS.offline
+ a| 
+ネームスペース
+ a| 
+情報
+
+
+
+ a| 
+NVMe ネームスペース オフライン
+ a| 
+NVMeNS.online
+ a| 
+ネームスペース
+ a| 
+情報
+
+
+
+ a| 
+NVMe ネームスペース スペース不足
+ a| 
+NVMeNS.out.of.space
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+同期レプリケーションが同期されていない
+ a| 
+sms.status.out.of.sync
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+同期レプリケーションをリストア
+ a| 
+sms.status.in.sync
+ a| 
+SnapMirror関係
+ a| 
+情報
+
+
+
+ a| 
+同期レプリケーションの自動再同期失敗
+ a| 
+sms.resync.attempt.failed
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+多数の CIFS 接続
+ a| 
+Nblade.cifsManyAuths
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+最大 CIFS 接続数を超過
+ a| 
+Nblade.cifsMaxOpenSameFile
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+ユーザあたりの最大 CIFS 接続数を超過
+ a| 
+Nblade.cifsMaxSessPerUsrConn
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+CIFS NetBIOS 名が競合
+ a| 
+Nblade.cifsNbNameConflict
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+存在しない CIFS 共有に対する試行
+ a| 
+Nblade.cifsNoPrivShare
+ a| 
+SVM
+ a| 
+重大
+
+
+
+ a| 
+CIFS シャドウ コピー処理が失敗
+ a| 
+cifs.shadowcopy.failure
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+AV サーバがウィルスを検出
+ a| 
+Nblade.vscanVirusDetected
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+ウィルス スキャン用の AV サーバ接続がない
+ a| 
+Nblade.vscanNoScannerConn
+ a| 
+SVM
+ a| 
+重大
+
+
+
+ a| 
+AV サーバが未登録
+ a| 
+Nblade.vscanNoRegdScanner
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+応答する AV サーバ接続がない
+ a| 
+Nblade.vscanConnInactive
+ a| 
+SVM
+ a| 
+情報
+
+
+
+ a| 
+AV サーバがビジーのため新しいスキャン要求の受け入れ不可
+ a| 
+Nblade.vscanConnBackPressure
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+権限のないユーザが AV サーバへのアクセスを試行
+ a| 
+Nblade.vscanBadUserPrivAccess
+ a| 
+SVM
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroup コンスティチュエントのスペースに問題あり
+ a| 
+flexgroup.constituents.have.space.issues
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroup コンスティチュエントのスペース ステータスがすべて正常
+ a| 
+flexgroup.constituents.space.status.all.ok
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+FlexGroup コンスティチュエントの inode に問題あり
+ a| 
+flexgroup.constituents.have.inodes.issues
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+FlexGroup コンスティチュエントの inode ステータスがすべて正常
+ a| 
+flexgroup.constituents.inodes.status.all.ok
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+ボリューム論理スペースがほぼフル
+ a| 
+monitor.vol.nearFull.inc.sav
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+ボリューム論理スペースがフル
+ a| 
+monitor.vol.full.inc.sav
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+ボリューム論理スペースが正常
+ a| 
+monitor.vol.one.ok.inc.sav
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+WAFL ボリュームのオートサイズが失敗
+ a| 
+wafl.vol.autoSize.fail
+ a| 
+Volume
+ a| 
+エラー
+
+
+
+ a| 
+WAFL ボリュームのオートサイズ完了
+ a| 
+wafl.vol.autoSize.done
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+WAFL READDIR ファイル処理タイムアウト
+ a| 
+wafl.readdir.expired
+ a| 
+Volume
+ a| 
+エラー
+
+|===

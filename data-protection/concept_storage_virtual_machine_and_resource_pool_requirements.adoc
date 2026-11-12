@@ -1,0 +1,33 @@
+---
+permalink: data-protection/concept_storage_virtual_machine_and_resource_pool_requirements.html 
+sidebar: sidebar 
+keywords: svm, resource pool requirements, support, storage services 
+summary: パートナーストレージサービスにおける保護トポロジーをサポートするために必要な SVM の関連付けとリソース プールの要件を確認します。 
+---
+= SVMとリソース プールがActive IQ Unified Managerのストレージサービスをサポートするための要件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パートナーアプリケーションが提供するストレージサービスで保護トポロジをサポートするために Unified Manager で SVM を関連付けてリソース プールを作成する場合など、ストレージサービスに特有の SVM の関連付けとリソース プールの要件を満たすことで、パートナーアプリケーションでの適合性をより確実にすることができます。
+
+一部のアプリケーションは、Unified Managerサーバーと連携して、ソースボリュームとセカンダリまたはターシャリの場所にある保護ボリューム間のSnapMirrorまたはSnapVaultバックアップ保護を自動的に構成および実行するサービスを提供します。これらの保護ストレージサービスをサポートするには、Unified Managerを使用して必要なSVM関連付けとリソース プールを構成する必要があります。
+
+ストレージ サービスのシングルホップまたはカスケード構成の保護（SnapMirrorソースまたはSnapVaultプライマリ ボリュームからデスティネーションSnapMirrorまたはセカンダリ ストレージ / 3番目のストレージにあるSnapVaultバックアップ ボリュームへのレプリケーションを含む）をサポートするには、以下の要件を確認してください。
+
+* SVMの関連付けは、SnapMirrorソースまたはSnapVaultプライマリボリュームを含むSVMと、セカンダリ ボリュームまたはターシャリ ボリュームが存在するSVMとの間で設定する必要があります。
++
+** 例えば、ソースボリューム Vol_A が SVM_1 上に存在し、SnapMirror のセカンダリ デスティネーション ボリューム Vol_B が SVM_2 上に存在し、第三の SnapVault バックアップ ボリューム Vol_C が SVM_3 上に存在する保護トポロジーをサポートするには、Unified Manager Web UI を使用して、SVM_1 と SVM_2 の間の SnapMirror 関連付けと、SVM_1 と SVM_3 の間の SnapVault バックアップ関連付けを設定する必要があります。
++
+この例では、SVM_2とSVM_3間のSnapMirror関連付けまたはSnapVaultバックアップ関連付けは不要であり、使用されません。
+
+** ソースボリューム Vol_A と SnapMirror デスティネーションボリューム Vol_B の両方が SVM_1 上に存在する保護トポロジをサポートするには、SVM_1 と SVM_1 の間に SnapMirror の関連付けを設定する必要があります。
+
+
+* リソース プールには、関連する SVM が利用できるクラスタアグリゲートリソースを含める必要があります。
++
+Unified Manager の Web UI を使用してリソース プールを設定し、パートナーアプリケーションを通じてストレージサービスのセカンダリターゲットノードとターシャリターゲットノードを割り当てます。
+
+

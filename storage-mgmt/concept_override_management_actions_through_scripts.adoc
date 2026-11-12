@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_override_management_actions_through_scripts.html 
+sidebar: sidebar 
+keywords: override, management, actions, scripts 
+summary: 'カスタム スクリプトを作成してアラートに関連付けると、特定のイベントに対して、[管理操作]ページやUnified Managerダッシュボードに表示されるデフォルトの管理操作ではなく特定の操作を実行できます。' 
+---
+= Active IQ Unified Manager でスクリプトを使用して管理アクションをオーバーライドする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタム スクリプトを作成してアラートに関連付けると、特定のイベントに対して、[管理操作]ページやUnified Managerダッシュボードに表示されるデフォルトの管理操作ではなく特定の操作を実行できます。
+
+あるイベント タイプに対して、Unified Managerの管理機能を使用して修正するのではなく特定の操作を実行するには、希望する操作のカスタム スクリプトを設定します。設定したスクリプトをそのイベント タイプのアラートに関連付けると、イベントに対して個別に対処できます。この場合、[管理操作]ページやUnified Managerのダッシュボードでそのイベント タイプに対する管理操作は生成されません。

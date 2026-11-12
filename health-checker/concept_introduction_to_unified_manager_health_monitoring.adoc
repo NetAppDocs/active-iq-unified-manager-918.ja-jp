@@ -1,0 +1,92 @@
+---
+permalink: health-checker/concept_introduction_to_unified_manager_health_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq, unified manager, health, monitor 
+summary: Active IQ Unified Manager（旧OnCommand Unified Manager）では、ONTAPソフトウェアを実行する多数のシステムを一元化されたユーザ インターフェイスで監視できます。Unified Managerサーバ インフラは拡張性とサポート性に優れ、高度な監視および通知機能を備えています。 
+---
+= Active IQ Unified Manager の健全性監視について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager（旧OnCommand Unified Manager）では、ONTAPソフトウェアを実行する多数のシステムを一元化されたユーザ インターフェイスで監視できます。Unified Managerサーバ インフラは拡張性とサポート性に優れ、高度な監視および通知機能を備えています。
+
+Unified Managerの主な機能は、クラスタの可用性と容量の監視 / 通知 / 管理、保護機能の管理、診断データの収集とテクニカル サポートへの送信です。
+
+Unified Managerを使用してクラスタを監視できます。クラスタで問題が発生すると、Unified Managerのイベントを通じて問題の詳細が通知されます。一部のイベントでは、問題を解消するための対応策も提示されます。問題が発生したときにEメールやSNMPトラップで通知されるように、イベントに対してアラートを設定できます。
+
+Unified Managerでは、アノテーションを関連付けることで環境内のストレージ オブジェクトを管理できます。カスタム アノテーションを作成し、ルールに基づいて動的にクラスタ、Storage Virtual Machine（SVM）、およびボリュームを関連付けることができます。
+
+また、それぞれのクラスタ オブジェクトについて、容量や健全性のグラフに表示される情報を使用してストレージ要件を計画することもできます。
+
+
+
+[[physical-and-logical-capacity]]
+== 物理容量と論理容量
+
+Unified Managerは、ONTAPストレージ オブジェクトに使用される物理容量と論理容量の概念を利用します。
+
+* 物理的容量：物理的空間とは、ボリューム内で使用される物理的なストレージブロックを指します。「物理使用済み容量」は通常、ストレージ効率化機能（重複排除や圧縮など）によるデータの削減により、使用済み論理容量よりも小さくなります。
+* 論理容量：論理空間とは、ボリューム内の使用可能な空間（論理ブロック）を指します。論理空間とは、重複排除や圧縮の結果を考慮しない、理論上の空間をどのように利用できるかを示すものです。「使用済み論理スペース」とは、使用されている物理スペースに、設定されているストレージ効率化機能（重複排除や圧縮など）による節約分を加えたものです。この測定値は、データ圧縮やその他の物理スペースの削減を反映していないため、物理的な使用容量よりも大きく見えることがよくあります。したがって、論理容量の合計は、割り当てられた容量よりも大きくなる可能性があります。
+
+
+
+
+[[capacity-measurement-units]]
+== 容量の測定単位
+
+Unified Managerは、1024（2^10^）バイトのバイナリ単位に基づいてストレージ容量を計算します。ONTAP 9.10.0以前では、これらの単位はKB、MB、GB、TB、PBと表示されていました。ONTAP 9.10.1以降では、Unified ManagerでKiB、MiB、GiB、TiB、PiBとして表示されます。
+
+
+NOTE: スループットに使用される単位は、すべてのリリースのONTAPについて、引き続きキロバイト/秒（Kbps）、メガバイト/秒（Mbps）、ギガバイト/秒（Gbps）、テラバイト/秒（Tbps）などになります。
+
+[cols="4*"]
+|===
+| ONTAP 9.10.0以前のUnified Managerに表示される容量単位 | ONTAP 9.10.1のUnified Managerに表示される容量単位 | 計算式 | バイト単位の値 
+
+
+ a| 
+KB
+ a| 
+KiB
+ a| 
+1024
+ a| 
+1024バイト
+
+
+
+ a| 
+MB
+ a| 
+MiB
+ a| 
+1024 * 1024
+ a| 
+1,048,576バイト
+
+
+
+ a| 
+GB
+ a| 
+GiB
+ a| 
+1024 * 1024 * 1024
+ a| 
+1,073,741,824バイト
+
+
+
+ a| 
+TB
+ a| 
+TiB
+ a| 
+1024 * 1024 * 1024 * 1024
+ a| 
+1,099,511,627,776バイト
+
+|===

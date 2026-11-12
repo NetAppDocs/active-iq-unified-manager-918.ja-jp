@@ -1,0 +1,59 @@
+---
+permalink: health-checker/concept_manage_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: backup, types, manage, restore, operations 
+summary: Active IQ Unified Managerのバックアップを作成し、システム障害やデータ損失が発生した場合に、リストア機能を使用して同じ（ローカル）システムまたは新しい（リモート）システムにバックアップをリストアできます。 
+---
+= Active IQ Unified Manager でバックアップとリストア操作を管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Managerのバックアップを作成し、システム障害やデータ損失が発生した場合に、リストア機能を使用して同じ（ローカル）システムまたは新しい（リモート）システムにバックアップをリストアできます。
+
+Unified Managerをインストールしたオペレーティング システム、および管理対象のクラスタとノードの数に応じて、バックアップとリストアの方法は3種類あります。
+
+[cols="3*"]
+|===
+| オペレーティング システム | 展開規模 | 推奨されるバックアップ方法 
+
+
+ a| 
+VMware vSphere
+ a| 
+any
+ a| 
+Unified Manager仮想アプライアンスのVMwareスナップショット
+
+
+
+.2+| Red Hat Enterprise Linux  a| 
+小規模
+ a| 
+Unified Manager MySQLデータベース ダンプ
+
+
+
+ a| 
+大規模
+ a| 
+Unified ManagerデータベースのNetApp Snapshot
+
+
+
+.2+| Microsoft Windows  a| 
+小規模
+ a| 
+Unified Manager MySQLデータベース ダンプ
+
+
+
+ a| 
+大規模
+ a| 
+iSCSIプロトコルによるUnified ManagerデータベースのNetApp Snapshot
+
+|===
+これらのそれぞれの方法について、以降のセクションで説明します。

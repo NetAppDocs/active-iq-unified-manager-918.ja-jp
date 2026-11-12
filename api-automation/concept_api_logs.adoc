@@ -1,0 +1,57 @@
+---
+permalink: api-automation/concept_api_logs.html 
+sidebar: sidebar 
+keywords: logs, troubleshooting 
+summary: システム ログを使用して、APIの実行中に発生する可能性のある障害の原因を分析し、問題のトラブルシューティングを実行できます。 
+---
+= Active IQ Unified Manager でシステムログを使用してトラブルシューティングを行う
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+システム ログを使用して、APIの実行中に発生する可能性のある障害の原因を分析し、問題のトラブルシューティングを実行できます。
+
+API呼び出しに関連する問題のトラブルシューティングを行うには、次の場所からログを取得します。
+
+[cols="2*"]
+|===
+| ログの場所 | 用途 
+
+
+ a| 
+`/var/log/ocie/access_log.log`
+ a| 
+APIを呼び出しているユーザ名、開始時刻、実行時間、ステータス、URLなど、API呼び出しに関するすべての詳細情報が含まれます。
+
+このログ ファイルを使用して、頻繁に使用されるAPIを確認したり、GUIワークフローのトラブルシューティングを行うことができます。また、実行時間に基づいて分析の規模を調整することもできます。
+
+
+
+ a| 
+`/var/log/ocum/ocumserver.log`
+ a| 
+すべてのAPI実行ログが含まれます。
+
+このログ ファイルを使用して、API呼び出しのトラブルシューティングとデバッグを行うことができます。
+
+
+
+ a| 
+`/var/log/ocie/server.log`
+ a| 
+すべてのWildflyサーバ構成と、サービスの開始 / 停止に関連するログが含まれています。
+
+このログ ファイルを使用して、Wildflyサーバの開始、停止、または導入中に発生した問題の根本原因を見つけることができます。
+
+
+
+ a| 
+`/var/log/ocie/au.log`
+ a| 
+Acquisition Unit関連のログが含まれます。
+
+ONTAP でオブジェクトを作成、変更、または削除したにもかかわらず、Active IQ Unified Manager REST API に反映されない場合に、このログファイルを使用できます。
+
+|===

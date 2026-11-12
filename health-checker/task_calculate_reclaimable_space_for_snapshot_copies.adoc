@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_calculate_reclaimable_space_for_snapshot_copies.html 
+sidebar: sidebar 
+keywords: calculate, reclaimable space, snapshot copies 
+summary: 1つ以上のSnapshotコピーを削除した場合に再利用可能となるディスク スペースの量を計算できます。 
+---
+= Active IQ Unified Manager でSnapshotコピーの再利用可能スペースを計算する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+1つ以上のSnapshotコピーを削除した場合に再利用可能となるディスク スペースの量を計算できます。
+
+.開始する前に
+* オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+* ボリュームはオンラインである必要があります。
+* ボリュームはFlexVolである必要があります。この機能はFlexGroupボリュームではサポートされていません。
+
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* ＞ *ボリューム* をクリックします。
+. 「健全性：すべてのボリューム」ビューで、表示する Snapshot コピーが含まれているボリュームを選択します。
++
+Snapshotコピーのリストが表示されます。
+
+. 「Volume / Health」の詳細ページで、「Capacity」タブをクリックします。
+. 「容量」タブの「詳細」ペインの「その他の詳細」セクションで、「Snapshot Copies」の横にあるリンクをクリックします。
++
+Snapshotコピーの数はリンクになっており、クリックするとSnapshotコピーのリストが表示されます。
+
+. *Snapshot Copies* ビューで、再利用可能なスペースを計算するSnapshotコピーを選択します。
+. *Calculate* をクリックします。
++
+ボリューム上の再利用可能なスペース（割合、KB、MB、GBなど）が表示されます。
+
+. 再利用可能なスペースを再計算するには、必要な Snapshot コピーを選択して、*再計算*をクリックします。
+

@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: ユーザ クォータの制限とは、Unified Manager サーバがユーザによる容量使用量が制限に近づいているか、またはユーザのクォータに設定された制限に達したかを評価するために使用する値です。ソフトリミットを超えた場合、またはハード リミットに到達した場合、Unified Manager サーバはユーザ クォータイベントを生成します。 
+---
+= Active IQ Unified Manager のクォータ制限について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユーザ クォータ制限とは、ユーザのスペース使用量がそのユーザのクォータで設定されている制限値に近づいているかどうか、または到達したかどうかを評価するためにUnified Managerサーバで使用される値です。ソフトリミットを超えた場合、またはハード リミットに到達した場合、Unified Manager サーバはユーザ クォータイベントを生成します。
+
+デフォルトでは、Unified Manager サーバーは、クォータのソフト リミットを超えたユーザーまたはクォータのハード リミットに達したユーザーに通知メールを送信します。また、ユーザ クォータ イベントが設定されている場合も同様です。Application Administrator ロールを持つユーザーは、ユーザーまたはユーザー グループ クォータ イベントの指定された受信者に通知するアラートを設定できます。
+
+クォータ制限は、ONTAP System Manager または ONTAP CLI を使用して指定できます。

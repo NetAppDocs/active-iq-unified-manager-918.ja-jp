@@ -1,0 +1,23 @@
+---
+permalink: config/concept_add_disk_space_to_um_database_directory.html 
+sidebar: sidebar 
+keywords: add, disk, space, unified manager, database, directory 
+summary: ONTAPシステムから収集された健全性とパフォーマンスのデータは、すべてUnified Managerデータベース ディレクトリに格納されます。状況によっては、データベース ディレクトリのサイズの拡張が必要になることがあります。 
+---
+= Active IQ Unified Manager データベースディレクトリへのディスク容量の追加
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAPシステムから収集された健全性とパフォーマンスのデータは、すべてUnified Managerデータベース ディレクトリに格納されます。状況によっては、データベース ディレクトリのサイズの拡張が必要になることがあります。
+
+たとえば、Unified Managerで多数のクラスタからデータを収集している場合、各クラスタに大量のノードがあると、データベース ディレクトリがいっぱいになることがあります。データベース ディレクトリの容量の95%に達すると警告イベントが生成され、95%に達すると重大イベントが生成されます。
+
+[NOTE]
+====
+ディレクトリの容量の95%に達すると、クラスタからデータが収集されなくなります。
+
+====
+データ ディレクトリの容量を追加する手順は、Unified ManagerをVMware ESXiサーバ、Red Hatサーバ、Microsoft Windowsサーバのいずれで実行しているかによって異なります。

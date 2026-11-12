@@ -1,0 +1,48 @@
+---
+permalink: events/reference_management_scripts_page.html 
+sidebar: sidebar 
+keywords: scripts, page, command, buttons, list, view 
+summary: '[スクリプト]ページでは、Unified Managerにカスタム スクリプトを追加できます。追加したスクリプトをアラートに関連付けると、ストレージ オブジェクトが自動的に再設定されます。' 
+---
+= Active IQ Unified Manager の [スクリプト] ページについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[スクリプト]ページでは、Unified Managerにカスタム スクリプトを追加できます。追加したスクリプトをアラートに関連付けると、ストレージ オブジェクトが自動的に再設定されます。
+
+[スクリプト]ページでは、Unified Managerに対してスクリプトを追加または削除できます。
+
+
+
+[[command-buttons]]
+== コマンド ボタン
+
+* *追加*
++
+[スクリプトの追加]ダイアログ ボックスが開き、スクリプトを追加できます。
+
+* *削除*
++
+選択したスクリプトを削除します。
+
+
+
+
+
+[[list-view]]
+== リスト ビュー
+
+リストビューには、Unified Managerに追加したスクリプトが表形式で表示されます。
+
+* *名前*
++
+スクリプトの名前が表示されます。
+
+* *概要*
++
+スクリプトの説明が表示されます。
+
+

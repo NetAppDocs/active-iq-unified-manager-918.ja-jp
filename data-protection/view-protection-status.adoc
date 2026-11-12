@@ -1,0 +1,102 @@
+---
+permalink: data-protection/view-protection-status.html 
+sidebar: sidebar 
+keywords: volume relationship, protection status, dashboard protection card, protection widget, lag, relationship health, healthy relationship, lag threshold, relationship event, source cluster, snapmirror, snapshot 
+summary: データ保護ページでは、データセンター内のすべての保護対象ボリュームに関するデータ保護の詳細を包括的に確認できます。 
+---
+= Active IQ Unified Manager でボリューム保護ステータスを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[データ保護]ページには、データセンター内の1つまたはすべてのクラスタについて、保護対象のすべてのボリュームに関するデータ保護の詳細がまとめて表示されます。
+
+.手順
+. 左側のナビゲーションペインで、*ダッシュボード*をクリックします。
+. 監視対象のすべてのクラスタのデータ保護ステータスを表示するか、単一のクラスタのデータ保護ステータスを表示するかに応じて、*すべてのクラスタ*を選択するか、ドロップダウンメニューから単一のクラスタを選択します。
+. データ保護パネルの上部にある右向き矢印をクリックします。*データ保護*ページが表示されます。
+
+
+単一のクラスタまたはデータセンター内のすべてのクラスタのどちらを選択したかに応じて、このページには、SnapshotコピーまたはSnapMirrorポリシーで保護されているボリュームのデータ保護ステータス、および保護されていないボリュームの数が表示されます。
+
+*個別クラスタ*リストからクラスタを選択すると、そのクラスタ内の保護対象ボリュームのSnapshot保護およびSnapMirror関係のステータスが表示されます。
+
+このページのイベントをクリックすると、イベント詳細ページに移動します。イベント管理インベントリページですべてのアクティブな保護イベントを表示するには、*View All*リンクをクリックします。マウスカーソルを合わせると、それぞれの数と凡例が表示されます。次をクリックできます：
+
+* Snapshotコピーで保護されていないボリュームおよびされているボリュームの棒グラフをクリックすると、[ボリューム]ページに移動して詳細を確認できます。
+* すべての関係の棒グラフをクリックすると、ソース クラスタに基づいてフィルタされた詳細が[関係]ページに表示されます。
+
+
+
+
+[[view-protection-status-of-volumes-protected-by-snapshot-copies]]
+== Snapshotコピーで保護されているボリュームの保護ステータスの表示
+
+*Snapshotコピーの概要*：Snapshotコピーで保護されているボリュームの概要。例：
+
+* Snapshotコピーで保護されているボリュームと保護されていないボリュームの総数。
+* Snapshotコピーのリザーブ スペースを使用している、または超えているボリュームの総数。
+
+
+*Snapshotコピー分析*では、以下の情報が詳細に説明されています：
+
+* Snapshotコピーの個々のイベント（過去24時間に生成されたイベントなど）。
+* Snapshotコピーで保護されているボリュームと保護されていないボリュームの詳細なグラフ。
+* Snapshotコピーのリザーブ スペースを使用している、使用していない、および超えているボリューム。
+* Snapshotコピーの数に基づくボリューム数の内訳。
+
+
+
+
+[[points-to-note-for-snapshot-copies]]
+=== Snapshotコピーに関する注意事項
+
+* Snapshotコピーで保護されているボリューム数には、ソース ボリュームとデスティネーション ボリュームの両方がカウントされます。
+* Snapshotコピーの数が返されるのは、オンラインかつ使用可能なボリュームのみです。
+* Snapshotコピー数のグラフの範囲はそのつど変化します。このグラフは、選択したクラスタ内のSnapshotの数に基づいて生成されます。
+* ボリュームが保護対象とみなされるためには、ボリュームのSnapshotコピー スケジュールが有効になっている必要があります。
+* Snapshotコピーのリザーブ スペースの値は、使用済みのディスク スペースを確認したり、1つ以上のSnapshotコピーが削除された場合に再利用可能なスペースを計算したりする際に重要となります。
+
+
+
+
+[[view-protection-status-for-snapmirror-relationships]]
+== SnapMirror関係の保護ステータスの表示
+
+*SnapMirrorの概要*：SnapMirrorポリシーによって保護されているボリュームの概要（次のようなものなど）：
+
+* ボリュームSnapMirror関係、Storage VMディザスタ リカバリ（SVM-DR）、およびこの2つの組み合わせなど、該当するSnapMirrorポリシーで保護されているボリュームの数。
+* 目標復旧時点（RPO）の遅延が発生しているSnapMirror関係の総数（遅延ステータスに基づく）。
+
+
+*SnapMirror分析*では、以下の情報が詳細に説明されています：
+
+* SnapMirror関係に対して発生した個々のイベント（過去24時間に生成されたイベントなど）。
+* それぞれのタイプのSnapMirrorポリシーで保護されているボリュームの数。
+* 非同期ミラー、非同期バックアップ、非同期ミラー バックアップ、StrictSync、SnapMirrorアクティブ同期整合性グループ、同期など、各SnapMirror関係タイプで保護されている関係の数。
+* 健全な関係と健全でない関係の数。
+* ボリューム関係の数の内訳。RPOの遅延時間とステータスでグラフを切り替えることができます。
+* 管理対象外の関係の遅延しきい値。設定アイコン（image:../media/Settings.PNG["ラグしきい値設定のアイコン"]）をクリックして、遅延しきい値の設定を構成できます。詳細については、link:../health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html["管理対象外の保護関係の遅延しきい値の設定"]を参照してください。
+
+
+
+
+[[points-to-note-for-snapmirror-relationships]]
+=== SnapMirror関係に関する注意事項
+
+* SnapMirror関係の数には、読み取りと書き込みが有効なソース ボリュームがカウントされます。デスティネーション ボリュームとルート ボリュームはカウントされません。
+* SnapMirror関係の場合、ソース クラスタのイベントが表示されます。
+* SnapMirror関係の数には、ソースとデスティネーションが同じクラスタまたは異なるクラスタにあるボリュームの数が含まれます。
+* データレプリケーションにおけるRPOラグの遅延期間は、SnapMirror関係に基づいています。設定された関係のしきい値に基づいて、ステータスは `ok`、 `warning`、または `error`に分類されます。ステータスを確認することで、パラメータが期待どおりに機能しているかどうか、または何らかの問題に対処する必要があるかどうかを判断できます。
+* ボリュームに複数のSnapMirror関係が設定されている場合、RPO遅延は各関係タイプごとにカウントされます。
+* ソースとデスティネーションの間でデータ レプリケーションに問題がある場合（関係が解除された場合など）、ボリューム関係は健全でないとみなされます。
+
+
+
+
+[[view-clusters-protected-by-metrocluster-configuration]]
+== MetroCluster構成で保護されているクラスタの表示
+
+*データ保護*ページの*MetroCluster Protection*パネルには、サイトのFCまたはIP構成を介してMetroClusterで保護されているクラスタと保護されていないクラスタの数が表示されます。このパネルの棒グラフをクリックするとClustersページに移動し、保護されているクラスタと保護されていないクラスタに基づいてクラスタの詳細がフィルタリングされます。MetroCluster構成の監視に関する詳細については、link:../storage-mgmt/task_monitor_metrocluster_configurations.html["MetroCluster構成の監視"]を参照してください。

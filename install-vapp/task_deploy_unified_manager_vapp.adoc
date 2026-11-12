@@ -1,0 +1,46 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager 
+summary: Unified Managerの導入には、ソフトウェアのダウンロード、仮想アプライアンスの展開、メンテナンス用ユーザー名とパスワードの作成、およびWeb UIでの初期設定が含まれます。 
+---
+= Active IQ Unified Manager の導入
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerの導入には、ソフトウェアのダウンロード、仮想アプライアンスの展開、メンテナンス用ユーザー名とパスワードの作成、およびWeb UIでの初期設定が含まれます。
+
+.開始する前に
+* 導入のためのシステム要件を確認し、完了しておく必要があります。
++
+link:concept_requirements_for_installing_unified_manager.html["システム要件"]を参照してください。
+
+* 次の情報が揃っていることを確認します。
++
+** NetApp Support Site のログイン資格情報
+** VMware vCenter ServerおよびvSphere Web Clientにアクセスするためのクレデンシャル
+** Unified Manager仮想アプライアンスをデプロイするESXiサーバーのIPアドレス
+** データセンターの詳細（データストアのストレージ スペースやメモリの要件など）
+** IPv6アドレスを使用する予定がある場合は、ホスト上でIPv6を有効にする必要があります。
+
+
+
+
+Unified Managerは、VMware ESXiサーバー上に仮想アプライアンスとしてデプロイできます。
+
+メンテナンス コンソールには、SSHではなく、VMwareコンソールを使用してアクセスする必要があります。
+
+[NOTE]
+====
+Unified Manager 9.8以降、VMware ToolsはOpen VM Tools  `open-vm-tools`）に置き換えられました。 `open-vm-tools`がUnified Managerのインストールパッケージに含まれているため、インストールの一部としてVMware Toolsをインストールする必要はなくなりました。
+
+====
+導入と初期セットアップが完了したら、クラスタを追加するかメンテナンス コンソールで追加のネットワーク設定を行ってから、Web UIにアクセスできます。
+
+.手順
+. link:task_download_unified_manager_ova_file.html["Unified Managerをダウンロード"]の手順に従います。
+. さらに、link:task_deploy_unified_manager_virtual_appliance_vapp.html["Unified Manager仮想アプライアンスをデプロイする"] の手順に従ってください。
+

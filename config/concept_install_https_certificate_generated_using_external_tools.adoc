@@ -1,0 +1,123 @@
+---
+permalink: config/concept_install_https_certificate_generated_using_external_tools.html 
+sidebar: sidebar 
+keywords: install, HTTPS, certificate, generated from external tools 
+summary: 自己署名またはCA署名の証明書に加え、OpenSSL、BoringSSL、LetsEncryptなどの外部ツールを使用して生成された証明書をインストールできます。 
+---
+= Active IQ Unified Manager で外部ツールを使用して生成された HTTPS 証明書について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自己署名またはCA署名の証明書に加え、OpenSSL、BoringSSL、LetsEncryptなどの外部ツールを使用して生成された証明書をインストールできます。
+
+これらの証明書は外部で生成された公開鍵と秘密鍵のペアであるため、証明書チェーンとともに秘密鍵も読み込む必要があります。使用可能な鍵ペアアルゴリズムは「`RSA`」と「`EC`」です。「HTTPS証明書のインストール」オプションは、「HTTPS証明書」ページの「一般」セクションにあります。アップロードするファイルは、以下の入力形式である必要があります。
+
+. Active IQ Unified Managerホストに属するサーバの秘密鍵
+. 秘密鍵と一致するサーバの証明書
+. 上記の証明書への署名に使用された、ルートまでのCAの証明書
+
+
+
+
+[[format-for-loading-a-certificate-with-an-ec-key-pair]]
+== ECキー ペアを含む証明書のロード形式
+
+許可されている曲線は「`prime256v1`」と「`secp384r1`」です。外部で生成されたECペアを含む証明書のサンプル：
+
+[listing]
+----
+ -----BEGIN EC PRIVATE KEY-----
+<EC private key of Server>
+-----END EC PRIVATE KEY-----
+----
+[listing]
+----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+
+
+[[format-for-loading-a-certificate-with-an-rsa-key-pair]]
+== RSAキー ペアを含む証明書のロード形式
+
+ホスト証明書に属する RSA 鍵ペアに許可される鍵サイズは 2048、3072、および 4096 です。外部で生成された *RSA 鍵ペア* を持つ証明書：
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+ <RSA private key of Server>
+ -----END RSA PRIVATE KEY-----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+証明書をアップロードしたら、Active IQ Unified Managerインスタンスを再起動して変更を反映する必要があります。
+
+
+
+[[checks-while-uploading-externally-generated-certificates]]
+== 外部で生成された証明書のアップロード チェック
+
+外部ツールを使用して生成された証明書をアップロードすると、システムでいくつかのチェックが実行されます。チェックに1つでも失敗すると、証明書は拒否されます。また、製品内のCSRから生成された証明書、および外部ツールを使用して生成された証明書の検証も実施されます。
+
+* 入力で指定された秘密鍵が入力で指定されたホスト証明書と照合して検証されます。
+* ホスト証明書の共通名（CN）がホストのFQDNと照合してチェックされます。
+* ホスト証明書の共通名（CN）を空または空白にしたり、ローカル ホストに設定したりすることはできません。
+* 証明書の有効期間の開始日を将来の日付にしたり、有効期限を過去の日付にしたりすることはできません。
+* 中間CAまたはCAが存在する場合、証明書有効期間の開始日を将来の日付にしたり、有効期限を過去の日付にしたりすることはできません。
+
+
+[NOTE]
+====
+入力で指定する秘密鍵は暗号化しないでください。暗号化された秘密鍵はシステムで拒否されます。
+
+====
+例1
+
+[listing]
+----
+----BEGIN ENCRYPTED PRIVATE KEY-----
+<Encrypted private key>
+-----END ENCRYPTED PRIVATE KEY-----
+----
+例2
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END RSA PRIVATE KEY-----
+----
+例3
+
+[listing]
+----
+-----BEGIN EC PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END EC PRIVATE KEY-----
+----
+証明書のインストールが失敗した場合は、ナレッジベース（KB）の記事を参照してください：https://kb.netapp.com/mgmt/AIQUM/AIQUM_fails_to_install_externally_generated_certificate["ActiveIQ Unified Manager が外部で生成された証明書のインストールに失敗する"^]

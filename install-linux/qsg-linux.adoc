@@ -1,0 +1,80 @@
+---
+permalink: install-linux/qsg-linux.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, Linux QSG, RHEL QSG, quick installation 
+summary: LinuxプラットフォームにおけるUnified Managerのクイックスタートガイド。 
+---
+= Linux で Active IQ Unified Manager を使い始める
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerのインストール パッケージをダウンロードして、Red Hat Enterprise Linuxの物理プラットフォームまたは仮想プラットフォームにインストールできます。
+
+
+
+[[system-requirements]]
+== システム要件
+
+* オペレーティングシステム：Red Hat Enterprise Linux バージョン 8.x および 9.4（x86_64 アーキテクチャベース）、OS インストーラの「ソフトウェア選択」オプションから「GUI 付きサーバー」ベース環境を使用してインストールしたもの
+* RAM: 12 GB、CPU: 合計9572 MHz
+* 空きディスク容量： `/opt/netapp/data`ディレクトリに100 GBのディスク容量、ルートパーティションに50 GB。 `/opt`および `/var/log`ディレクトリを個別にマウントする場合は、 `/opt`に15 GB、 `/var/log`に16 GB、 `/tmp`に10 GBの空き容量があることを確認してください。
+
+
+詳細なシステム要件および製品をセキュリティで保護されたサイトにインストールする方法については、link:../install-linux/concept_requirements_for_install_unified_manager.html["Unified Managerをインストールするための要件"]およびlink:http://mysupport.netapp.com/matrix["Interoperability Matrix"]を参照してください。
+
+
+
+[[install-active-iq-unified-manager]]
+== Active IQ Unified Managerのインストール
+
+
+
+[[download-the-installer]]
+=== インストーラをダウンロードする
+
+.  `ActiveIQUnifiedManager-<version>.zip`インストールパッケージをコード署名証明書(`.pem`）およびデジタル署名(`.sig`）とともにダウンロードします。
+. インストール ファイルをダウンロードしたフォルダで、次のコマンドを実行します。
++
+`# unzip ActiveIQUnifiedManager-<version>.zip`
+
+
+
+
+
+[[verify-integrity]]
+=== 整合性を検証する
+
+次のコマンドを実行して、インストーラ パッケージの整合性を検証します。
+
+*  `openssl x509 -pubkey -noout -in AIQUM-RHEL-CLIENT-INTER-ROOT.pem > <public_key_file_name>`を実行して、コード署名証明書の公開鍵を含むファイルを作成します。
+* インストーラーパッケージの署名を確認するには、 `openssl dgst -sha256 -verify <public_key_file_name> -signature <signature_file_name> ActiveIQUnifiedManager-<version>.zip`を実行します。
+
+
+
+
+[[verify-repository-configuration]]
+=== リポジトリ設定を確認する
+
+Red Hat Enterprise Linuxのリポジトリの設定手順はサイトによって異なります。インストールパッケージに含まれている `pre_install_check.sh`スクリプトを使用して、オペレーティングシステムの構成を確認できます。システムがインターネットに接続されている場合、Red Hat Enterprise Linuxのリポジトリのセットアップ方法が通知されます。
+
+`# sudo ./pre_install_check.sh`
+
+
+
+[[install-unified-manager]]
+=== Unified Managerをインストールする
+
+Unified Manager は `yum`ユーティリティを使用して、ソフトウェアおよび依存ソフトウェアをインストールします。Red Hat Enterprise Linuxには複数のイメージがあるため、どのパッケージがインストールされるかはイメージに含まれているソフトウェアによって決まります。 `yum`ユーティリティは、インストールに必要な依存ソフトウェアパッケージを特定します。依存するソフトウェアパッケージに関する詳細情報が必要な場合は、link:../install-linux/reference_red_hat_software_and_installation_requirements.html["Linuxソフトウェアとインストールの要件"]を参照してください。
+
+Unified Manager をインストールするには、インストールファイルが解凍されたディレクトリから、root ユーザーとして、または `sudo`を使用して、次のコマンドを実行します：
+
+`# yum install netapp-um<version>.x86_64.rpm`
+
+または
+
+`% sudo yum install netapp-um<version>.x86_64.rpm`
+
+インストールが完了すると、Unified Manager Web UIへの接続方法が表示されます。Web UI に接続できない場合は、ポート 443 の制限に関する詳細について、ソフトウェアに同梱されている `README`ファイルを参照してください。

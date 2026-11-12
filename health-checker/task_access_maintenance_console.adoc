@@ -1,0 +1,65 @@
+---
+permalink: health-checker/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance, console 
+summary: Unified Managerユーザ インターフェイスが動作状態でない場合、またはこのユーザ インターフェイスにない機能を実行する必要がある場合は、メンテナンス コンソールにアクセスしてUnified Managerシステムを管理できます。 
+---
+= Active IQ Unified Manager のメンテナンスコンソールにアクセスする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerユーザ インターフェイスが動作状態でない場合、またはこのユーザ インターフェイスにない機能を実行する必要がある場合は、メンテナンス コンソールにアクセスしてUnified Managerシステムを管理できます。
+
+.開始する前に
+Unified Managerをインストールして設定しておく必要があります。
+
+15分間操作しないと、メンテナンス コンソールからログアウトされます。
+
+[NOTE]
+====
+VMwareにインストールした場合、VMwareコンソールからメンテナンス ユーザとしてすでにログインしているときは、Secure Shellを使用して同時にログインできません。
+
+====
+.手順
+. 次の手順に従ってメンテナンス コンソールにアクセスします。
++
+[cols="2*"]
+|===
+| このオペレーティングシステムでは… | 次の手順に従ってください。 
+
+
+ a| 
+VMware
+ a| 
+.. Secure Shellを使用して、Unified Manager仮想アプライアンスのIPアドレスまたは完全修飾ドメイン名に接続します。
+.. メンテナンス ユーザ名とパスワードを使用してメンテナンス コンソールにログインします。
+
+
+
+
+ a| 
+Linux
+ a| 
+.. Secure Shellを使用して、Unified ManagerシステムのIPアドレスまたは完全修飾ドメイン名に接続します。
+.. メンテナンス ユーザ（umadmin）の名前とパスワードでシステムにログインします。
+.. コマンド `maintenance_console`を入力し、Enterキーを押します。
+
+
+
+
+ a| 
+Windows
+ a| 
+.. 管理者のクレデンシャルでUnified Managerシステムにログインします。
+.. Windows管理者としてPowerShellを起動します。
+.. コマンド `maintenance_console`を入力し、Enterキーを押します。
+
+
+|===
++
+Unified Managerメンテナンス コンソール メニューが表示されます。
+
+

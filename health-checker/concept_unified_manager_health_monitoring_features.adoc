@@ -1,0 +1,48 @@
+---
+permalink: health-checker/concept_unified_manager_health_monitoring_features.html 
+sidebar: sidebar 
+keywords: unified manager, health, monitor, features 
+summary: Unified Managerは、拡張性、サポート性、および強化された監視・通知機能を提供するサーバーインフラストラクチャ上に構築されています。Unified Managerは、ONTAPソフトウェアを実行しているシステムの監視をサポートします。 
+---
+= Active IQ Unified Manager の正常性監視機能について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerは、拡張性、サポート性、および強化された監視・通知機能を提供するサーバーインフラストラクチャ上に構築されています。Unified Managerは、ONTAPソフトウェアを実行しているシステムの監視をサポートします。
+
+Unified Managerには以下の機能が含まれています：
+
+* ONTAPソフトウェアがインストールされたシステムの検出、監視、通知
++
+** 物理オブジェクト：ノード、ディスク、ディスク シェルフ、SFOペア、ポート、Flash Cache
+** 論理オブジェクト：クラスタ、ストレージ仮想マシン（SVM）、アグリゲート、ボリューム、LUN、ネームスペース、qtree、LIF、Snapshotコピー、ジャンクションパス、NFS共有、SMB共有、ユーザーおよびグループクォータ、QoSポリシーグループ、イニシエータグループ
+** プロトコル：CIFS、NFS、FC、iSCSI、NVMe、FCoE
+** ストレージ効率：SSD アグリゲート、Flash Pool アグリゲート、FabricPool アグリゲート、重複排除、圧縮
+** 保護：SnapMirror関係（同期および非同期）およびSnapVault関係
+
+
+* クラスタの検出と監視のステータスの表示
+* MetroCluster over FC構成およびMetroCluster over IP構成：クラスタ コンポーネントの設定、問題、接続ステータスの表示と監視（MetroCluster over FC構成についてはMetroClusterのスイッチとブリッジを含む）
+* アラート、イベント、およびしきい値インフラの強化
+* LDAP / LDAPS / SAML認証とローカル ユーザのサポート
+* RBAC（事前定義された一連のロール）
+* AutoSupportとサポート バンドル
+* ダッシュボードの強化：容量、可用性、保護、パフォーマンスなど、環境の健全性を表示
+* ボリューム移動の相互運用性、ボリューム移動の履歴、ジャンクション パスの変更履歴
+* 影響範囲領域は、一部のディスク障害、MetroCluster アグリゲートミラーリングの劣化、およびMetroCluster 予備ディスクの置き忘れなどのイベントで影響を受けるリソースをグラフィカルに表示します。
+* MetroClusterイベントの影響を表示する「影響を受ける可能性のある領域」エリア
+* 推奨される是正措置エリアには、一部のディスク障害、MetroCluster アグリゲートミラーリングの劣化、MetroCluster 予備ディスクの置き忘れなどのイベントに対処するために実行できるアクションが表示されます
+* 影響を受ける可能性のあるリソースを表示する「影響を受ける可能性のあるリソース」領域には、ボリュームオフラインイベント、ボリューム制限イベント、シンプロビジョニングボリュームのスペースリスクイベントなどのイベントで影響を受ける可能性のあるリソースが表示されます。
+* SVMのサポート（FlexVolまたはFlexGroupボリューム）
+* ノードのルート ボリューム監視のサポート
+* Snapshotコピーの監視強化（再利用可能なスペースの計算やSnapshotコピーの削除など）
+* ストレージ オブジェクトのアノテーション
+* ストレージ オブジェクトの情報（物理 / 論理容量、利用率、スペース削減率、パフォーマンス、関連イベントなど）に関するレポートの作成と管理
+* OnCommand Workflow Automation との統合によるワークフローの実行
++
+https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["WFAダウンロード"^]
+
+

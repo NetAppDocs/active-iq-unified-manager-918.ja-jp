@@ -1,0 +1,19 @@
+---
+permalink: health-checker/task_view_annotation_list_and_details.html 
+sidebar: sidebar 
+keywords: view, annotation list, details 
+summary: クラスタ、ボリューム、およびStorage Virtual Machine（SVM）に動的に関連付けられるアノテーションのリストを確認することができます。説明、作成者、作成日、値、ルール、オブジェクトなど、アノテーションに関連する詳細も確認できます。 
+---
+= Active IQ Unified Manager で注釈リストと詳細を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クラスタ、ボリューム、およびStorage Virtual Machine（SVM）に動的に関連付けられるアノテーションのリストを確認することができます。説明、作成者、作成日、値、ルール、オブジェクトなど、アノテーションに関連する詳細も確認できます。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *注釈* をクリックします。
+. *Annotations* タブで、注釈名をクリックすると、関連する詳細が表示されます。
+

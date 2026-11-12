@@ -1,0 +1,151 @@
+---
+permalink: health-checker/reference_svm_compliance_categories.html 
+sidebar: sidebar 
+keywords: storage vm, compliance, svm compliance, categories 
+summary: 次の表に、Unified Managerで評価されるStorage Virtual Machine（SVM）セキュリティ コンプライアンスの各条件（パラメータ）、NetAppの推奨設定、およびSVMが準拠しているかどうかの総合的な判断にその条件が影響するかどうかを示します。 
+---
+= Active IQ Unified Manager でのストレージ VM コンプライアンスカテゴリについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の表に、Unified Managerで評価されるStorage Virtual Machine（SVM）セキュリティ コンプライアンスの各条件（パラメータ）、NetAppの推奨設定、およびSVMが準拠しているかどうかの総合的な判断にその条件が影響するかどうかを示します。
+
+[cols="4*"]
+|===
+| パラメータ | 説明 | 推奨事項 | SVMコンプライアンスに影響します 
+
+
+ a| 
+監査ログ
+ a| 
+監査ログが有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+はい
+
+
+
+ a| 
+安全でない SSH 設定
+ a| 
+SSH が安全でない暗号を使用しているかどうかを示します。たとえば、 `cbc*`で始まる暗号などです。
+ a| 
+×
+ a| 
+はい
+
+
+
+ a| 
+ログイン バナー
+ a| 
+システム上のSVMにアクセスするユーザーに対して、ログインバナーが有効になっているか無効になっているかを示します。
+ a| 
+有効
+ a| 
+はい
+
+
+
+ a| 
+LDAP 暗号化
+ a| 
+LDAP暗号化が有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+×
+
+
+
+ a| 
+NTLM 認証
+ a| 
+NTLM認証が有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+×
+
+
+
+ a| 
+LDAP ペイロードの署名
+ a| 
+LDAPペイロードの署名が有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+×
+
+
+
+ a| 
+CHAP 設定
+ a| 
+CHAPが有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+×
+
+
+
+ a| 
+Kerberos V5
+ a| 
+Kerberos V5認証が有効になっているかどうかを示します。
+ a| 
+有効
+ a| 
+×
+
+
+
+ a| 
+NIS 認証
+ a| 
+NIS認証の使用が設定されているかどうかを示します。
+ a| 
+Disabled
+ a| 
+×
+
+
+
+ a| 
+FPolicy のステータスがアクティブ
+ a| 
+FPolicyが作成されているかどうかを示します。
+ a| 
+はい
+ a| 
+×
+
+
+
+ a| 
+SMB 暗号化が有効
+ a| 
+SMBの署名と封印が有効になっているかどうかを示します。
+ a| 
+はい
+ a| 
+×
+
+
+
+ a| 
+SMB 署名が有効
+ a| 
+SMBの署名が有効になっているかどうかを示します。
+ a| 
+はい
+ a| 
+×
+
+|===

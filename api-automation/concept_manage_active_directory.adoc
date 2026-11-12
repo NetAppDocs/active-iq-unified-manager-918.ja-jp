@@ -1,0 +1,57 @@
+---
+permalink: api-automation/concept_manage_active_directory.html 
+sidebar: sidebar 
+keywords: manage, active, directory, mapping 
+summary: ここに記載されたAPIを使用して、SVM上のCIFS共有のプロビジョニングに必要なSVMのActive Directoryマッピングを管理できます。ONTAPでSVMをマッピングするには、Active Directoryマッピングを設定する必要があります。 
+---
+= Active IQ Unified Manager で API を使用して Active Directory マッピングを管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ここに記載されたAPIを使用して、SVM上のCIFS共有のプロビジョニングに必要なSVMのActive Directoryマッピングを管理できます。ONTAPでSVMをマッピングするには、Active Directoryマッピングを設定する必要があります。
+
+
+
+[[view-active-directory-mappings]]
+== Active Directoryマッピングの表示
+
+SVMのActive Directoryマッピングの設定の詳細を表示するには、次のメソッドを使用します。SVMのActive Directoryマッピングを表示するには、SVMキーを入力する必要があります。特定のマッピングの詳細を照会するには、マッピング キーを入力する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/active-directories-mappings`
+
+`/storage-provider/active-directories-mappings/\{key}`
+
+|===
+
+
+[[add-active-directory-mapping]]
+== Active Directoryマッピングの追加
+
+SVMにActive Directoryマッピングを作成するには、次のメソッドを使用します。マッピングの詳細を入力パラメータとして指定する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+POST
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===

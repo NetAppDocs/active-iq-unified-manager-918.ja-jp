@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_shark_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, shark workloads, involved, dynamic, performance, event 
+summary: Unified Managerでは、競合しているストレージ コンポーネントを集中的に使用しているワークロードを特定できます。このようなワークロードを特定すると、利用率が低いクラスタにこれらのワークロードを移動する必要があるかどうかを判断できます。 
+---
+= Active IQ Unified Manager で動的パフォーマンスイベントのサメワークロードを特定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerでは、競合しているストレージ コンポーネントを集中的に使用しているワークロードを特定できます。このようなワークロードを特定すると、利用率が低いクラスタにこれらのワークロードを移動する必要があるかどうかを判断できます。
+
+.開始する前に
+* オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+* 新規、確認済み、または廃止の動的なパフォーマンス イベントが必要です。
+
+
+[イベントの詳細]ページには、コンポーネントの使用量が多い順、またはイベントの影響が大きい順に、ユーザ定義およびシステム定義のワークロードのリストが表示されます。値は、Unified Managerがイベントを検出および最後に分析した際に特定したピーク値に基づいています。
+
+.手順
+. イベントに関する情報を表示するには、「イベントの詳細」ページを表示します。
+. ワークロード遅延とワークロードアクティビティのグラフで、*Shark Workloads* を選択します。
+. グラフにカーソルを合わせると、コンポーネントに影響を与えている上位のユーザ定義ワークロード、およびSharkワークロードの名前が表示されます。
+

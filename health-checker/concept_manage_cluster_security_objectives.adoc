@@ -1,0 +1,22 @@
+---
+permalink: health-checker/concept_manage_cluster_security_objectives.html 
+sidebar: sidebar 
+keywords: cluster, security, manage, objectives 
+summary: Unified Managerは、『NetApp Security Hardening Guide for ONTAP 9』で定義されている推奨事項に基づいて、ONTAPクラスタ、ストレージ仮想マシン（SVM）、およびボリュームのセキュリティ状態を示すダッシュボードを提供します。 
+---
+= Active IQ Unified Manager でクラスターのセキュリティ目標を管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager は、_NetApp Security Hardening Guide for ONTAP 9_ で定義されている推奨事項に基づいて、ONTAP クラスター、Storage Virtual Machine （SVM）、およびボリュームのセキュリティレベルを識別するダッシュボードを提供します。
+
+セキュリティ ダッシュボードの目的は、ONTAPクラスタがNetApp推奨のガイドラインに従っていない領域を提示して、潜在的な問題を修正できるようにすることです。ほとんどの場合、問題はONTAP System ManagerまたはONTAP CLIを使用して解決します。組織がすべての推奨事項に従うとはかぎらないため、変更が不要な場合もあります。
+
+詳細な推奨事項と解決策については、 https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 セキュリティ強化ガイド"^]（TR-4569）を参照してください。
+
+Unified Managerは、セキュリティ ステータスを報告するだけでなく、セキュリティ違反があるクラスタまたはSVMに対してセキュリティ イベントを生成します。これらの問題は[イベント管理]インベントリ ページで追跡できます。また、イベントにアラートを設定して、新たなセキュリティ イベントが発生したときにストレージ管理者が通知を受け取るようにすることができます。
+
+詳細については、link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["評価されるセキュリティ条件"]を参照してください。

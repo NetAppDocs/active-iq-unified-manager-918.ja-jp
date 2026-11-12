@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: MetroCluster 構成におけるクラスター間の接続ステータス（最適、影響あり、ダウンなど）を理解します。 
+---
+= Active IQ Unified Manager における FC 構成の MetroCluster でのクラスター接続について理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC構成のMetroClusterにおけるクラスタ間の接続ステータスは、次のいずれかになります：最適、影響あり、またはダウン。接続ステータスを理解することで、MetroCluster構成を効果的に管理できます。
+
+|===
+| 接続状況 | 説明 | アイコンが表示されます 
+
+
+ a| 
+Optimal
+ a| 
+MetroCluster構成のクラスタ間の接続は正常な状態です。
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["MetroCluster接続の最適アイコン"]
+
+
+
+ a| 
+影響あり
+ a| 
+1つ以上のエラーによってフェイルオーバー可用性のステータスが損なわれていますが、MetroCluster構成の両方のクラスタは稼働しています。たとえば、ISLリンクが停止している、クラスタ間IPリンクが停止している、パートナー クラスタにアクセスできないなどの場合です。
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["MetroClusterの接続に影響を受けたアイコン"]
+
+
+
+ a| 
+停止
+ a| 
+一方または両方のクラスタが停止しているか、クラスタがフェイルオーバー モードになっているため、MetroCluster構成のクラスタ間の接続が停止しています。たとえば、災害によってパートナー クラスタが停止している、テスト目的で計画的スイッチオーバーを実行中などの状況が考えられます。
+ a| 
+スイッチオーバーでエラー：
+
+image::../media/metrocluster_connectivity_down.gif[MetroCluster接続ダウンアイコン]
+
+スイッチオーバー成功：
+
+image::../media/metrocluster_connectivity_failover.gif[MetroCluster接続フェイルオーバーアイコン]
+
+|===

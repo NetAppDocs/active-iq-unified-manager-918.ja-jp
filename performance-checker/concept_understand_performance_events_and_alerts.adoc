@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_understand_performance_events_and_alerts.html 
+sidebar: sidebar 
+keywords: understand, performance, events, alerts 
+summary: パフォーマンスイベントとは、Unified Managerが定義済みの条件が発生した場合、またはパフォーマンスカウンターの値がしきい値を超えた場合に自動的に生成する通知です。イベントは、監視対象のクラスターにおけるパフォーマンスの問題を特定するのに役立ちます。 
+---
+= Active IQ Unified Manager のパフォーマンスイベントとアラートについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンス イベントとは、クラスタでのワークロード パフォーマンスに関連するインシデントです。応答時間が長いワークロードを特定するのに役立ちます。同時に発生した健全性イベントと一緒に確認することで、応答時間が長くなった原因と考えられる関連する問題を特定することができます。
+
+Unified Manager が同じクラスタ コンポーネントに対して同じイベント条件が複数回発生したことを検出した場合、それらを個別のイベントとしてではなく、単一のイベントとして扱います。
+
+特定の重要度タイプのパフォーマンス イベントが発生したときに自動的にEメール通知を送信するアラートを設定できます。

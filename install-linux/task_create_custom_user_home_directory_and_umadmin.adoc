@@ -1,0 +1,60 @@
+---
+permalink: install-linux/task_create_custom_user_home_directory_and_umadmin.html 
+sidebar: sidebar 
+keywords: create, custom, user, home, directory, umadmin, password, prior, installation 
+summary: Unified Managerをインストールする前に、カスタムのホーム ディレクトリを作成し、umadminユーザのパスワードを独自に定義できます。このタスクはオプションですが、サイトによってはUnified Managerのデフォルトのインストール設定とは異なる設定が必要になることがあります。 
+---
+= Active IQ Unified Manager をインストールする前に、カスタムユーザーホームディレクトリと umadmin パスワードを作成してください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerをインストールする前に、カスタムのホーム ディレクトリを作成し、umadminユーザのパスワードを独自に定義できます。このタスクはオプションですが、サイトによってはUnified Managerのデフォルトのインストール設定とは異なる設定が必要になることがあります。
+
+.開始する前に
+* システムは、link:concept_virtual_infrastructure_or_hardware_system_requirements.html["ハードウェアシステム要件"]に記載されている要件を満たす必要があります。
+* Red Hat Enterprise Linuxシステムにrootユーザとしてログインできる必要があります。
+
+
+Unified Managerのインストール時、デフォルト設定では次のタスクが実行されます。
+
+*  `/home/umadmin`をホームディレクトリとして、umadminユーザーを作成します。
+* umadmin ユーザーにデフォルトパスワード「`admin`」を割り当てます。
+
+
+一部のインストール環境では `/home`へのアクセスが制限されているため、インストールが失敗します。ホームディレクトリは別の場所に作成する必要があります。さらに、サイトによってはパスワードの複雑さに関するルールがあったり、インストールプログラムではなくローカル管理者がパスワードを設定することを要求している場合があります。
+
+インストール環境でデフォルトのインストール設定とは異なる設定が必要な場合は、以下の手順に従って、カスタムのホーム ディレクトリを作成し、umadminユーザのパスワードを定義します。
+
+インストール前にこの情報を定義しておけば、インストール スクリプトで設定が検出され、定義した値がデフォルトのインストール設定の代わりに使用されます。
+
+さらに、デフォルトのUnified Managerインストールでは、sudoersファイル（(`ocum_sudoers`および `ocie_sudoers`）にumadminユーザーが含まれており、 `/etc/sudoers.d/`ディレクトリに配置されています。セキュリティポリシーやセキュリティ監視ツールなどの理由でこのコンテンツを環境から削除した場合は、必ず再度追加してください。Unified Managerの一部の操作にはsudo権限が必要となるため、sudoersの設定を保持する必要があります。
+
+お使いの環境におけるセキュリティポリシーでは、Unified Managerのメンテナンスユーザーに対するsudo権限を制限してはなりません。権限が制限されている場合、一部のUnified Managerの操作が失敗する可能性があります。インストールの完了後にumadminユーザとしてログインして、次のsudoコマンドを実行できることを確認します。
+
+`sudo systemctl  status ocie`
+
+エラーが発生せずにocieサービスの適切なステータスが返されれば問題ありません。
+
+.手順
+. サーバにrootユーザとしてログインします。
+. 「`maintenance`」という名前のumadminグループアカウントを作成します：
++
+`groupadd maintenance`
+
+. 任意のホームディレクトリに、メンテナンスグループ内にユーザーアカウント「`umadmin`」を作成してください：
++
+`adduser --home <home_directory\> -g maintenance umadmin`
+
+. umadminのパスワードを定義します。
++
+`passwd umadmin`
+
++
+umadminユーザの新しいパスワードの文字列を入力するように求められます。
+
+
+
+Unified Managerのインストールが完了したら、umadminユーザのログイン シェルを指定する必要があります。

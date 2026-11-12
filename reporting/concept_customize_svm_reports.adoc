@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: Storage VMレポートを作成して、ボリューム情報を分析したり、全体の健全性とストレージの可用性を確認したりできます。たとえば、レポートを作成して、ボリューム数の上限に達したSVMを表示したり、停止したSVMを分析したりできます。 
+---
+= Active IQ Unified Manager でストレージ VM レポートをカスタマイズする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage VMレポートを作成して、ボリューム情報を分析したり、全体の健全性とストレージの可用性を確認したりできます。たとえば、レポートを作成して、ボリューム数の上限に達したSVMを表示したり、停止したSVMを分析したりできます。

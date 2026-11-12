@@ -1,0 +1,37 @@
+---
+permalink: config/task_disable_saml_authentication_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication 
+summary: Unified Manager の Web UI にログインする前に、セキュアな ID プロバイダー（IdP）を介したリモートユーザーの認証を停止する場合は、SAML 認証を無効にすることができます。SAML 認証が無効になっている場合、Active Directory や LDAP などの構成済みのディレクトリサービスプロバイダーがサインオン認証を実行します。 
+---
+= Active IQ Unified Manager で SAML 認証を無効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager の Web UI にログインする前に、セキュアな ID プロバイダー（IdP）を介したリモートユーザーの認証を停止する場合は、SAML 認証を無効にすることができます。SAML 認証が無効になっている場合、Active Directory や LDAP などの構成済みのディレクトリサービスプロバイダーがサインオン認証を実行します。
+
+SAML認証を無効にすると、設定されているリモート ユーザに加え、ローカル ユーザとメンテナンス ユーザもグラフィカル ユーザ インターフェイスにアクセスできるようになります。
+
+グラフィカル ユーザ インターフェイスにアクセスできない場合、SAML認証はUnified Managerメンテナンス コンソールからも無効にすることができます。
+
+[NOTE]
+====
+SAML認証を無効にしたあと、Unified Managerが自動的に再起動されます。
+
+====
+.手順
+. 左側のナビゲーションペインで、*General* > *SAML Authentication* をクリックします。
+. 「SAML認証を有効にする」チェックボックスのチェックを外します。
+. *保存*をクリックします。
++
+設定を完了してUnified Managerを再起動するかどうかの確認を求めるメッセージ ボックスが表示されます。
+
+. 「確認してログアウト」をクリックすると、Unified Manager が再起動されます。
+
+
+リモート ユーザがUnified Managerのグラフィカル インターフェイスにアクセスする際にクレデンシャルを入力するページが、次回からIdPのログイン ページではなくUnified Managerのログイン ページに変わります。
+
+IdPにアクセスし、Unified ManagerサーバーのURIとメタデータを削除してください。

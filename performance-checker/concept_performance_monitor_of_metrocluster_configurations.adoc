@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/concept_performance_monitor_of_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: performance, monitor, metrocluster, throughput 
+summary: Unified Manager を使用すると、MetroCluster 構成のクラスター間の書き込みスループットを監視し、書き込みスループットが高いワークロードを識別できます。これらの高性能ワークロードによってローカルクラスタ上の他のボリュームの I/O 応答時間が長くなっている場合、Unified Manager はパフォーマンスイベントをトリガーして通知します。 
+---
+= Active IQ Unified Managerを使用したMetroClusterパフォーマンスの監視
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager を使用すると、MetroCluster 構成のクラスター間の書き込みスループットを監視し、書き込みスループットが高いワークロードを識別できます。
+
+これらの高性能ワークロードによってローカルクラスタ上の他のボリュームの I/O 応答時間が長くなっている場合、Unified Manager はパフォーマンスイベントをトリガーして通知します。
+
+
+NOTE: Unified Manager は、MetroCluster 構成内のクラスターを個々のクラスターとして扱います。パートナー関係にあるクラスターを区別したり、各クラスターの書き込みスループットを相関させたりすることはありません。
+
+MetroCluster構成のローカル クラスタがデータをパートナー クラスタにミラーリングすると、データはNVRAMに書き込まれてからインタースイッチ リンク（ISL）経由でリモート アグリゲートに転送されます。Unified Manager は NVRAM を分析して、書き込みスループットが高く NVRAM を過剰に使用しているワークロードを特定し、NVRAM の競合を引き起こしているものを検出します。
+
+応答時間の偏差がパフォーマンスしきい値を超えたワークロードは「犠牲者」と呼ばれ、NVRAMへの書き込みスループットの偏差が通常よりも高く、競合を引き起こしているワークロードは「いじめっ子」と呼ばれます。書き込み要求のみがパートナークラスタにミラーリングされるため、Unified Manager は読み取りスループットを分析しません。
+
+MetroCluster構成のいずれかのクラスタのスループットを表示するには、次の各画面で対応するLUNおよびボリュームのワークロードを分析します。結果はクラスタでフィルタリングできます。左側のナビゲーション ペインで、次のいずれかを選択します。
+
+* *ストレージ > クラスター > パフォーマンス：すべてのクラスター* ビュー。参照
+* *ストレージ > ボリューム > パフォーマンス：すべてのボリューム* ビュー。
+* *ストレージ > LUN > パフォーマンス：すべてのLUN* ビュー。
+* *ワークロード分析 > すべてのワークロード*
+
+
+*関連情報*
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["パフォーマンス イベントの分析と通知"]
+
+link:../performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html["MetroCluster構成のパフォーマンス イベント分析"]
+
+link:../performance-checker/concept_roles_of_workloads_involved_in_performance_incident.html["パフォーマンス イベントに関連したワークロードの役割"]
+
+link:../performance-checker/task_identify_victim_workloads_involved_in_performance_event.html["パフォーマンス イベントに関連したVictimワークロードの特定"]
+
+link:../performance-checker/task_identify_bully_workloads_involved_in_performance_event.html["パフォーマンス イベントに関連したBullyワークロードの特定"]
+
+link:../performance-checker/task_identify_shark_workloads_involved_in_performance_event.html["パフォーマンス イベントに関連したSharkワークロードの特定"]

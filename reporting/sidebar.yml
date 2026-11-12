@@ -1,0 +1,148 @@
+---
+section: reporting
+title: カスタム レポートの生成
+entries:
+- title: Unified Managerのレポート
+  entries:
+  - title: Unified Manager のレポート機能について
+    url: "/reporting/concept_unified_manager_reporting.html"
+  - title: レポートを生成するためのアクセス ポイント
+    entries:
+    - title: レポート機能にアクセスする方法を確認する
+      url: "/reporting/concept_report_access_points.html"
+    - title: カスタム レポートを作成するためのUnified Managerデータベースへのアクセス
+      url: "/reporting/concept_unified_manager_databases_accessible_for_reporting.html"
+    - title: レポート作成に使用できるUnified Manager REST API
+      url: "/reporting/generaltask_um_rest_apis_that_can_be_used_for_reporting.html"
+  - title: レポートを理解する
+    url: "/reporting/concept_understand_reports.html"
+  - title: ビューとレポートの関係を理解する
+    url: "/reporting/concept_understand_view_and_reports_relationship.html"
+  - title: レポートの種類
+    url: "/reporting/reference_types_of_reports.html"
+  - title: レポートの制限事項
+    url: "/reporting/reference_reporting_limitations.html"
+- title: レポートを操作する
+  entries:
+  - title: レポート ワークフロー
+    url: "/reporting/concept_report_work_flow.html"
+  - title: レポートクイックスタート
+    url: "/reporting/task_report_quick_start.html"
+  - title: スケジュール済みレポートを検索
+    url: "/reporting/task_search_for_scheduled_report.html"
+  - title: レポートをカスタマイズする
+    entries:
+    - title: レポートのカスタマイズについて
+      url: "/reporting/concept_customize_reports.html"
+    - title: 列をカスタマイズする
+      url: "/reporting/task_customize_columns.html"
+    - title: データをフィルタリングする
+      url: "/reporting/task_filter_data.html"
+    - title: データを並べ替える
+      url: "/reporting/task_sort_data.html"
+    - title: 検索機能を使って表示を絞り込む
+      url: "/reporting/task_search_to_refine_view.html"
+    - title: Excelを使用してレポートをカスタマイズする
+      url: "/reporting/task_use_excel_to_customize_your_report.html"
+  - title: レポートをダウンロード
+    url: "/reporting/task_download_reports.html"
+- title: レポートのスケジュール設定
+  entries:
+  - title: レポートのスケジュール設定について
+    url: "/reporting/concept_schedule_reports.html"
+  - title: レポートをスケジュールする
+    entries:
+    - title: レポートスケジュールを作成する
+      url: "/reporting/task_schedule_report.html"
+    - title: インポートされた.rptdesignレポートをスケジュールする
+      url: "/reporting/task_schedule_an_imported_report.html"
+  - title: レポートのスケジュールを管理する
+    entries:
+    - title: レポートスケジュールの表示、編集、削除
+      url: "/reporting/task_manage_report_schedules.html"
+    - title: スケジュールされたレポートを編集する
+      url: "/reporting/task_edit_scheduled_reports.html"
+    - title: スケジュールされたレポートを削除する
+      url: "/reporting/task_delete_scheduled_reports.html"
+- title: サンプルのカスタム レポート
+  entries:
+  - title: サンプルカスタムレポートを理解する
+    url: "/reporting/concept_sample_custom_reports.html"
+  - title: クラスタストレージレポートをカスタマイズする
+    entries:
+    - title: クラスタモデル別の容量を表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_capacity_by_cluster_model.html"
+    - title: 未割り当てのLUN容量が最も多いクラスターを特定するレポートを作成する
+      url: "/reporting/task_create_report_to_identify_clusters_with_unallocated_capacity.html"
+    - title: 利用可能な容量が最も多いHAペアを表示するレポートを作成します。
+      url: "/reporting/task_create_report_to_view_ha_pairs_with_most_available_capacity.html"
+    - title: 古いバージョンのONTAPを実行しているノードを表示するレポートを作成します
+      url: "/reporting/task_create_report_view_nodes_running_older_versions_of_ontap.html"
+  - title: アグリゲート容量レポートをカスタマイズする
+    entries:
+    - title: 最大容量に達するアグリゲートを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_aggregates_reaching_full_capacity.html"
+    - title: ほぼ満杯のアグリゲートを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_aggregates_that_are_nearly_full.html"
+    - title: 過剰割り当てされているアグリゲートを表示するレポートを作成する
+      url: "/reporting/task_create_report_to_view_aggregates_that_are_overcommitted.html"
+  - title: ボリューム容量レポートをカスタマイズする
+    entries:
+    - title: Snapshotの自動削除がオフになっており、容量がほぼ満杯になっているボリュームを特定するレポートを作成します。
+      url: "/reporting/task_create_report_to_identify_volumes_nearing_full_capacity.html"
+    - title: シンプロビジョニングが無効になっているボリュームが使用するスペースを特定するレポートを作成します
+      url: "/reporting/task_create_report_to_identify_space_with_thin_provisioning_disabled.html"
+    - title: データをクラウド層に移動すべきFabricPoolアグリゲート上のボリュームを特定するレポートを作成します
+      url: "/reporting/task_create_report_volumes_that_should_move_data_to_cloud_tier.html"
+  - title: Qtreeの容量レポートをカスタマイズする
+    entries:
+    - title: ほぼ満杯のqtreeを表示するレポートを作成する
+      url: "/reporting/task_create_report_to_view_qtrees_that_are_nearly_full.html"
+  - title: NFS共有レポートをカスタマイズする
+    entries:
+    - title: NFS共有レポートのカスタマイズについて学ぶ
+      url: "/reporting/concept_customize_nfs_share_reports.html"
+    - title: アクセスできないマウントパスを持つボリュームを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_volumes_with_an_inaccessible_junction_path.html"
+    - title: デフォルトのエクスポートポリシーを使用しているボリュームを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_volumes_with_default_export_policy.html"
+  - title: ストレージVMレポートをカスタマイズする
+    entries:
+    - title: ストレージVMレポートのカスタマイズについて
+      url: "/reporting/concept_customize_svm_reports.html"
+    - title: 最大ボリューム制限に達しているストレージVMを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_svms_reaching_maximum_volume_limit.html"
+    - title: 停止したストレージVMを表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_stopped_svms.html"
+  - title: ボリューム関係レポートをカスタマイズする
+    entries:
+    - title: ボリューム関係レポートのカスタマイズについて
+      url: "/reporting/concept_customize_volume_relationship_reports.html"
+    - title: 障害発生源別にボリュームの関係性をグループ化するレポートを作成する
+      url: "/reporting/task_create_report_volume_relationships_source_of_failure.html"
+    - title: ボリューム関係を問題別にグループ化するレポートを作成する
+      url: "/reporting/task_create_report_to_group_volume_relationships_by_issue.html"
+    - title: 特定の時間間隔におけるボリューム転送の傾向を表示するレポートを作成する
+      url: "/reporting/task_create_report_to_view_volumes_at_specific_time_intervals.html"
+    - title: ボリューム転送の失敗または成功を表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_failed_or_successful_volume_transfers.html"
+    - title: 転送サイズに基づいてボリューム転送を表示するレポートを作成する
+      url: "/reporting/task_create_report_to_view_volume_transfers_based_on_transfer_size.html"
+    - title: 日ごとにグループ化されたボリューム転送を表示するレポートを作成します
+      url: "/reporting/task_create_report_to_view_volume_transfers_grouped_by_day.html"
+  - title: ボリュームパフォーマンスレポートをカスタマイズする
+    entries:
+    - title: FabricPoolが有効になっていないアグリゲート上の、大量のコールドデータを含むボリュームを表示するレポートを作成します。
+      url: "/reporting/task_create_report_for_volumes_with_high_amount_of_cold_data.html"
+- title: Microsoft Excelのサンプル レポート
+  entries:
+  - title: Microsoft Excelのサンプルレポートを理解する
+    url: "/reporting/concept_sample_microsoft_excel_reports.html"
+  - title: アグリゲート容量の表とグラフを表示するレポートを作成します
+    url: "/reporting/task_create_report_to_view_capacity.html"
+  - title: アグリゲートの総容量と利用可能容量のグラフを表示するレポートを作成する
+    url: "/reporting/task_create_report_to_view_aggregate_capacity_charts.html"
+  - title: 利用可能なボリューム容量チャートを表示するレポートを作成します
+    url: "/reporting/task_create_report_to_view_available_volume_capacity_charts.html"
+  - title: 利用可能なIOPSが最も多いアグリゲートを表示するレポートを作成します
+    url: "/reporting/task_create_report_to_view_aggregates_with_most_available_iops.html"

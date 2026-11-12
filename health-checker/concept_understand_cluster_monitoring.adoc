@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_cluster_monitoring.html 
+sidebar: sidebar 
+keywords: understand, cluster, monitor 
+summary: Unified Manager データベースにクラスターを追加して、可用性、容量、CPU 使用率、インターフェイス統計、空きディスク容量、qtree 使用状況、シャーシ環境などの詳細を監視できます。 
+---
+= Active IQ Unified Manager でのクラスター監視について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager データベースにクラスターを追加して、可用性、容量、CPU 使用率、インターフェイス統計、空きディスク容量、qtree 使用状況、シャーシ環境などの詳細を監視できます。
+
+ステータスが異常な場合や事前定義されたしきい値を超えた場合は、イベントが生成されます。設定によっては、Unified Manager はイベントによってアラートがトリガーされた際に、指定された受信者に通知を送信します。

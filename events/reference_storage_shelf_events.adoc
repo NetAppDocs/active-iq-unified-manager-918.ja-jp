@@ -1,0 +1,56 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: ストレージ シェルフ イベントは、ストレージ シェルフが異常な状態である場合に通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のストレージシェルフイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ シェルフ イベントは、ストレージ シェルフが異常な状態である場合に通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+異常な電圧範囲（ocumEvtShelfVoltageAbnormal）
+ a| 
+リスク
+ a| 
+ストレージ シェルフ
+ a| 
+警告
+
+
+
+ a| 
+異常な電流範囲（ocumEvtShelfCurrentAbnormal）
+ a| 
+リスク
+ a| 
+ストレージ シェルフ
+ a| 
+警告
+
+
+
+ a| 
+異常な温度（ocumEvtShelfTemperatureAbnormal）
+ a| 
+リスク
+ a| 
+ストレージ シェルフ
+ a| 
+警告
+
+|===

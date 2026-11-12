@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_microsoft_excel_reports.html 
+sidebar: sidebar 
+keywords: sample, microsoft, excel, reports 
+summary: ここでは、Microsoft Excelのサンプル レポートをとおして、Excelの高度な機能を使用したレポート オプションを紹介します。 
+---
+= Active IQ Unified Manager で Microsoft Excel のサンプルレポートを理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ここでは、Microsoft Excelのサンプル レポートをとおして、Excelの高度な機能を使用したレポート オプションを紹介します。
+
+Excelの高度な機能により、ニーズに合わせたさまざまなレポートを作成することができます。Excelの詳細な使用方法については、製品ドキュメントを参照してください。
+
+[NOTE]
+====
+レポートを操作するには、アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+====

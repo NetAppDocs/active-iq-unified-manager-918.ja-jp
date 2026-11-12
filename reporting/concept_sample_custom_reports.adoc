@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_custom_reports.html 
+sidebar: sidebar 
+keywords: sample, custom, reports 
+summary: 以下に記載するサンプルのカスタム レポートを使用して、潜在的な問題を発生前に特定して対処することができます。 
+---
+= Active IQ Unified Manager のサンプルカスタムレポートについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下に記載するサンプルのカスタム レポートを使用して、潜在的な問題を発生前に特定して対処することができます。
+
+レポート リストはすべてのレポートを網羅しているわけではなく、今後も増えていきます。このセクションに追加して欲しいカスタム レポートがあれば、ドキュメントに関するフィードバックの形で提案していただくことができます。
+
+[NOTE]
+====
+レポートを操作するには、アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+====

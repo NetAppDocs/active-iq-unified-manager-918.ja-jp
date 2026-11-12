@@ -1,0 +1,28 @@
+---
+permalink: health-checker/task_delete_groups.html 
+sidebar: sidebar 
+keywords: delete, groups 
+summary: 不要になったグループは、Unified Managerから削除できます。 
+---
+= Active IQ Unified Manager でグループを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要になったグループは、Unified Managerから削除できます。
+
+.開始する前に
+* 削除するグループのグループ ルールに関連付けられたストレージ オブジェクト（クラスタ、SVM、またはボリューム）がないことを確認する必要があります。
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *グループ*をクリックします。
+. 「グループ」タブで、削除するグループを選択し、「削除」をクリックします。
+. 『警告』ダイアログボックスで、「はい」をクリックして削除を確定します。
++
+グループを削除しても、グループに関連付けられているグループ操作は削除されませんが、マッピングは解除されます。
+
+

@@ -1,0 +1,18 @@
+---
+permalink: install-windows/concept_overview_of_installation_sequence_um.html 
+sidebar: sidebar 
+keywords: overview, installation, sequence 
+summary: インストールワークフローには、Unified Manager を使用する前に実行する必要があるタスクが記載されています。 
+---
+= Active IQ Unified Manager のインストール手順について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールワークフローには、Unified Manager を使用する前に実行する必要があるタスクが記載されています。
+
+以降の各セクションでは、このワークフローの各項目について説明します。
+
+image::../media/overall_um_install_flow.png[Unified Managerのインストール、初期設定、および管理設定のワークフローを示す図]

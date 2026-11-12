@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_edit_group_settings.html 
+sidebar: sidebar 
+keywords: edit, groups 
+summary: Unified Managerで作成したグループの名前と説明を編集できます。 
+---
+= Active IQ Unified Manager でグループを編集する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerで作成したグループの名前と説明を編集できます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+グループを編集して名前を更新するときは、一意の名前を指定する必要があります。既存のグループの名前は使用できません。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *グループ*をクリックします。
+. 「グループ」タブで、編集するグループを選択し、「編集」をクリックします。
+. 「グループの編集」ダイアログボックスで、グループの名前、説明、またはその両方を変更します。
+. *保存*をクリックします。
+

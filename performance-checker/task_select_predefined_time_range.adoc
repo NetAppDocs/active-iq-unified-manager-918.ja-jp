@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: 事前定義の期間を選択すると、クラスタ オブジェクトのパフォーマンス データを表示する際に、すばやく効率的にデータ出力をカスタマイズして絞り込むことができます。事前定義された期間を選択する場合、最大で13カ月分のデータを利用できます。 
+---
+= Active IQ Unified Manager で定義済みの時間範囲を選択する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+事前定義の期間を選択すると、クラスタ オブジェクトのパフォーマンス データを表示する際に、すばやく効率的にデータ出力をカスタマイズして絞り込むことができます。事前定義された期間を選択する場合、最大で13カ月分のデータを利用できます。
+
+.手順
+. *パフォーマンスエクスプローラー* ページの右上にある *時間範囲* をクリックします。
+. 「時間範囲選択」パネルの右側から、事前定義された時間範囲を選択します。
+. 「範囲を適用」をクリックします。
+

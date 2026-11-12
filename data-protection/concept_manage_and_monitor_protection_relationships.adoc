@@ -1,0 +1,28 @@
+---
+permalink: data-protection/concept_manage_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: manage, monitor, protection, relationships 
+summary: Active IQ Unified Managerでは、保護関係の作成、管理対象クラスタでのSnapMirror関係とSnapVault関係の監視とトラブルシューティング、および上書きされたデータや失われたデータのリストアを実行できます。 
+---
+= Active IQ Unified Manager における保護関係の管理と監視について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Managerでは、保護関係の作成、管理対象クラスタでのSnapMirror関係とSnapVault関係の監視とトラブルシューティング、および上書きされたデータや失われたデータのリストアを実行できます。
+
+SnapMirror処理には、2つのレプリケーション タイプがあります。
+
+* 非同期
++
+プライマリ ボリュームからセカンダリ ボリュームへのレプリケーションがスケジュールに従って実行されます。
+
+* 同期
++
+プライマリ ボリュームとセカンダリ ボリュームで同時にレプリケーションが実行されます。
+
+
+
+保護ジョブは、10件までであれば、パフォーマンスに影響を及ぼすことなく同時に実行できます。11～30件のジョブを同時に実行すると、パフォーマンスが低下することがあります。30件を超えるジョブを同時に実行することは推奨されません。

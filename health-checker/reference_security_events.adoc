@@ -1,0 +1,16 @@
+---
+permalink: health-checker/reference_security_events.html 
+sidebar: sidebar 
+keywords: security events 
+summary: セキュリティイベントは、ONTAP 9向けNetAppセキュリティ強化ガイドで定義されたパラメータに基づいて、ONTAPクラスタ、ストレージ仮想マシン（SVM）、およびボリュームのセキュリティステータスに関する情報を提供します。これらのイベントは潜在的な問題を通知するため、重大度を評価し、必要に応じて問題を修正することができます。 
+---
+= Active IQ Unified Manager でセキュリティイベントを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+セキュリティイベントは、_NetApp Security Hardening Guide for ONTAP 9_で定義されているパラメータに基づいて、ONTAPクラスタ、ストレージ仮想マシン（SVM）、およびボリュームのセキュリティステータスに関する情報を提供します。これらのイベントは潜在的な問題を通知するもので、問題の重大度を評価し、必要に応じて問題を修正することができます。
+
+セキュリティ イベントはソース タイプ別にまとめられ、イベント名とトラップ名、影響レベル、および重大度が表示されます。これらのイベントは、クラスタおよびStorage VMのイベント カテゴリに表示されます。

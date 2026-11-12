@@ -1,0 +1,37 @@
+---
+permalink: config/concept_maintenance_console_menu.html 
+sidebar: sidebar 
+keywords: maintenance, console, menus 
+summary: メンテナンスコンソールは、Unified Manager サーバーの特殊機能や構成設定を維持・管理するための様々なメニューで構成されています。 
+---
+= Active IQ Unified Manager のメンテナンスコンソールメニューについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メンテナンスコンソールは、Unified Manager サーバーの特殊機能や構成設定を維持・管理するための様々なメニューで構成されています。
+
+Unified Managerをインストールしたオペレーティングシステムによって、メンテナンスコンソールは以下のメニューで構成されます：
+
+* Upgrade Unified Manager（VMwareのみ）
+* Network Configuration（VMwareのみ）
+* System Configuration（VMwareのみ）
++
+.. Support/Diagnostics
+.. Reset Server Certificate
+.. クライアント証明書を再生成する
+.. Backup Restore
+.. External Data Provider
+.. Performance Polling Interval Configuration
+.. SAML認証の無効化
+.. View/Change Application Ports
+.. Debug Log Configuration
+.. Control access to MySQL port 3306
+.. 終了
+
+
+
+
+特定のメニューオプションにアクセスするには、リストから番号を選択します。たとえば、バックアップとリストアの場合は、_4_を選択します。

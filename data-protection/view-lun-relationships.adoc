@@ -1,0 +1,38 @@
+---
+permalink: data-protection/view-lun-relationships.html 
+sidebar: sidebar 
+keywords: LUN, SnapMirror active sync, Consistency Group, CG 
+summary: SnapMirrorアクティブ同期で保護されたLUNの統合ビュー。 
+---
+= Active IQ Unified Manager で整合グループ LUN の関係を監視する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP環境がLUNを使用するアプリケーションを保護するためのSnapMirror active syncをサポートしている場合、Active IQ Unified ManagerでそれらのLUNを表示および監視できます。
+
+SnapMirrorアクティブ同期は、SAN環境でフェイルオーバー時の目標復旧時間（RTO）ゼロを実現します。SnapMirrorアクティブ同期をサポートする一般的な環境では、ボリューム上のLUNが整合性グループ関係で保護されます。
+
+これらのプライマリLUNとセカンダリLUNは、複合LUN（UUIDとシリアル番号が同じレプリカLUNのペア）です。I/O処理（読み取りと書き込みの両方）はこれらの複合LUN上のソース サイトとデスティネーション サイト間で多重化されるため、透過性が確保されます。
+
+複合LUNを表示するためには、整合性グループ関係に含まれるLUNを使用するプライマリ クラスタとセカンダリ クラスタの両方を、Unified Managerに追加して検出しておく必要があります。iSCSI LUNとFCP LUNのみがサポートされます。
+
+SnapMirrorアクティブ同期の詳細については、link:https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror active sync（旧称SM-BC）向け ONTAP 9 ドキュメント"]を参照してください。
+
+環境内の複合LUNを表示するには、次の手順を実行します。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* > *LUNs*をクリックします。
+. 「表示」メニューから、*関係* > *すべてのLUN*を選択します。
++
+関係性：すべてのLUNビューが表示されます。
+
+
+
+LUNの名前、ボリューム、LUNをホストしているStorage VM、クラスタ、整合性グループ、パートナーLUNなど、LUNの詳細を確認できます。これらの各コンポーネントをクリックすると、詳細ビューにドリルダウンできます。整合性グループをクリックすると、[関係]ページが表示されます。
+
+パートナーLUNをクリックすると、そのパートナーLUNがホストされているStorage VMについて、[SVM の詳細]ページの[SAN]タブで設定の詳細を確認できます。パートナーLUNのイニシエータやイニシエータ グループなどの情報が表示されます。
+
+環境内の保護対象のLUNのレポートをソート、フィルタ、生成、およびアップロードするためのグリッドレベルの標準機能を実行できます。

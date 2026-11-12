@@ -1,0 +1,22 @@
+---
+permalink: config/concept_inactivity_timeout.html 
+sidebar: sidebar 
+keywords: inactivity timeout, feature settings 
+summary: Active IQ Unified Manager の非アクティブタイムアウト値を指定できます。指定された時間操作がないと、アプリケーションは自動的にログアウトされます。このオプションはデフォルトで有効になっています。 
+---
+= Active IQ Unified Manager で非アクティブタイムアウトを指定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager の非アクティブタイムアウト値を指定できます。指定された時間操作がないと、アプリケーションは自動的にログアウトされます。このオプションはデフォルトで有効になっています。
+
+この機能は、「一般」＞「機能設定」＞「非アクティブタイムアウト」から無効化したり、時間を変更したりできます。この機能を有効にしたら、「ログアウトまでの時間（分）」フィールドに、操作がない状態が続くとシステムが自動的にログアウトする時間制限を指定してください。デフォルト値は4320分（72時間）です。
+
+[NOTE]
+====
+このオプションは、Security Assertion Markup Language（SAML）認証を有効にしている場合は使用できません。
+
+====

@@ -1,0 +1,22 @@
+---
+permalink: reporting/task_filter_data.html 
+sidebar: sidebar 
+keywords: filtering, data 
+summary: 要件を満たすレポートを作成するには、データをフィルタリングします。フィルタリングすることで関心のあるデータのみを表示できます。 
+---
+= Active IQ Unified Manager でデータをフィルタリングする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要件を満たすレポートを作成するには、データをフィルタリングします。フィルタリングすることで関心のあるデータのみを表示できます。
+
+.手順
+. フィルターアイコンをクリックしてフィルターを追加し、表示したい結果を絞り込んでから、*フィルターを適用*をクリックしてください。
++
+image::../media/filter_cold_data_2.png[フィルターを追加して適用する方法を示すUIスクリーンショット。]
+
+. ビューに名前を付けて変更を保存します。
+

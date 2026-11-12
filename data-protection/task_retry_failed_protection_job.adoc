@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_retry_failed_protection_job.html 
+sidebar: sidebar 
+keywords: retry, failed, protection job 
+summary: 保護ジョブの失敗を修正するための措置を講じた後、再試行機能を使用してジョブを再度実行できます。ジョブを再試行すると、元のジョブIDを使用して新しいジョブが作成されます。 
+---
+= Active IQ Unified Manager で失敗した保護ジョブを再試行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護ジョブの失敗を修正するための措置を講じた後、*再試行*を使用してジョブを再度実行できます。ジョブを再試行すると、元のジョブIDを使用して新しいジョブが作成されます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+失敗したジョブは一度に1つしか再試行できません。複数のジョブを選択すると、*再試行*ボタンが無効になります。再試行できるのは、保護構成および保護関係操作タイプのジョブのみです。
+
+.手順
+. 左側のナビゲーションペインで、*Protection* > *Jobs* をクリックします。
+. ジョブのリストから、タイプがProtection ConfigurationまたはProtection Relationship Operationの失敗したジョブを1つだけ選択します。
++
+「再試行」ボタンが有効になっています。
+
+. *再試行*をクリックしてください。
++
+ジョブが再実行されます。
+
+

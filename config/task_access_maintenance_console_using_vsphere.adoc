@@ -1,0 +1,29 @@
+---
+permalink: config/task_access_maintenance_console_using_vsphere.html 
+sidebar: sidebar 
+keywords: access, maintenance, console, using, vsphere, vm console 
+summary: Unified Managerユーザ インターフェイスが動作状態でない場合、またはこのユーザ インターフェイスにない機能を実行する必要がある場合は、メンテナンス コンソールにアクセスして仮想アプライアンスを再設定できます。 
+---
+= Active IQ Unified Manager の vSphere VM コンソールを使用してメンテナンスコンソールにアクセスする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerユーザ インターフェイスが動作状態でない場合、またはこのユーザ インターフェイスにない機能を実行する必要がある場合は、メンテナンス コンソールにアクセスして仮想アプライアンスを再設定できます。
+
+.開始する前に
+* メンテナンス ユーザである必要があります。
+* メンテナンス コンソールにアクセスするには、仮想アプライアンスの電源をオンにする必要があります。
+
+
+.手順
+. vSphere Clientで、Unified Manager仮想アプライアンスを見つけます。
+. 「コンソール」タブをクリックします。
+. コンソール ウィンドウ内をクリックしてログインします。
+. ユーザ名とパスワードを使用してメンテナンス コンソールにログインします。
++
+15分間操作しないと、メンテナンス コンソールからログアウトされます。
+
+

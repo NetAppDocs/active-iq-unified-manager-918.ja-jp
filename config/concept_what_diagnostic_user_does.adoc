@@ -1,0 +1,16 @@
+---
+permalink: config/concept_what_diagnostic_user_does.html 
+sidebar: sidebar 
+keywords: diagnostic, user, capabilities 
+summary: 診断アクセスの目的は、テクニカル サポートからトラブルシューティングのサポートを受けられるようにすることです。このため、テクニカル サポートから指示された場合にのみ診断アクセスを使用する必要があります。 
+---
+= Active IQ Unified Manager における診断ユーザー機能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+診断アクセスの目的は、テクニカル サポートからトラブルシューティングのサポートを受けられるようにすることです。このため、テクニカル サポートから指示された場合にのみ診断アクセスを使用する必要があります。
+
+診断ユーザは、テクニカル サポートからの指示を受けて、トラブルシューティングの目的でOSレベルのコマンドを実行できます。

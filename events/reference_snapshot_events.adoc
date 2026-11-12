@@ -1,0 +1,56 @@
+---
+permalink: events/reference_snapshot_events.html 
+sidebar: sidebar 
+keywords: snapshot, events, impact area, availability 
+summary: Snapshotイベントは、Snapshotのステータス情報を提供します。これにより、Snapshotの潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のスナップショットイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshotイベントは、Snapshotのステータス情報を提供します。これにより、Snapshotの潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+Snapshot の自動削除が無効（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+Snapshot の自動削除が有効（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+
+
+ a| 
+Snapshot の自動削除の設定を変更（該当なし）
+ a| 
+イベント
+ a| 
+Volume
+ a| 
+情報
+
+|===

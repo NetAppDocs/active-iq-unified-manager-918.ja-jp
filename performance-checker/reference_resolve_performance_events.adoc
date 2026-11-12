@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/reference_resolve_performance_events.html 
+sidebar: sidebar 
+keywords: resolving, performance, events 
+summary: 推奨される対処方法を使用して、パフォーマンス イベントを解決することができます。最初の3つの推奨策は常に表示され、表示されたイベントに固有の推奨策が4つ目以降に表示されます。 
+---
+= Active IQ Unified Manager でパフォーマンスイベントを解決する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+推奨される対処方法を使用して、パフォーマンス イベントを解決することができます。最初の3つの推奨策は常に表示され、表示されたイベントに固有の推奨策が4つ目以降に表示されます。
+
+「この操作をお手伝いします」リンクをクリックすると、それぞれの推奨操作に関する追加情報（具体的な操作手順を含む）が表示されます。一部のアクションには、Unified Manager、ONTAP System Manager、OnCommand Workflow Automation、ONTAP CLIコマンド、またはこれらのツールの組み合わせを使用する場合があります。

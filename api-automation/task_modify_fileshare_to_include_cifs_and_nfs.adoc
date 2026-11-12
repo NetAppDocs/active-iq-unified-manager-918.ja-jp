@@ -1,0 +1,159 @@
+---
+permalink: api-automation/task_modify_fileshare_to_include_cifs_and_nfs.html 
+sidebar: sidebar 
+keywords: modify, nfs, file, share, support, cifs 
+summary: CIFSプロトコルをサポートするようにNFSファイル共有を変更できます。ファイル共有を作成する際には、アクセス制御リスト（ACL）パラメータとエクスポート ポリシー ルールの両方を指定できます。ただし、NFSファイル共有を作成したボリュームでCIFSを有効にする場合は、CIFSをサポートするようにファイル共有のACLパラメータを更新できます。 
+---
+= Active IQ Unified Manager APIを使用してNFSファイル共有を変更してCIFSをサポートする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+CIFSプロトコルをサポートするようにNFSファイル共有を変更できます。ファイル共有を作成する際には、アクセス制御リスト（ACL）パラメータとエクスポート ポリシー ルールの両方を指定できます。ただし、NFSファイル共有を作成したボリュームでCIFSを有効にする場合は、CIFSをサポートするようにファイル共有のACLパラメータを更新できます。
+
+.開始する前に
+. エクスポート ポリシーの詳細のみを指定して、NFSファイル共有を作成しておく必要があります。詳細については、「ファイル共有の管理」および「ストレージワークロードの変更」を参照してください。
+. この操作を実行するには、ファイル共有キーが必要です。ファイル共有の詳細を表示したり、ジョブ ID を使用してファイル共有キーを取得したりする方法については、「CIFS および NFS ファイル共有のプロビジョニング」を参照してください。
+
+
+この処理は、ACLパラメータは指定せずに、エクスポート ポリシー ルールのみを指定して作成したNFSファイル共有が対象です。NFSファイル共有を変更してACLパラメータを追加します。
+
+.手順
+. NFSファイル共有上で、CIFSアクセスを許可するACLの詳細を使用して `PATCH`操作を実行します。
++
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/file-shares`
+
+|===
++
+*サンプルcURL*
+
++
+次の例に示すように、ユーザ グループに割り当てたアクセス権限に基づいてACLが作成され、ファイル共有に割り当てられます。
+
++
+[listing]
+----
+{
+  "access_control": {
+    "acl": [
+      {
+        "permission": "read",
+        "user_or_group": "everyone"
+      }
+    ],
+    "active_directory_mapping": {
+      "key": "3b648c1b-d965-03b7-20da-61b791a6263c"
+    }
+----
++
+*JSON出力例*
+
++
+更新を実行するジョブのジョブIDが返されます。
+
+. 同じファイル共有に対して詳細を照会し、パラメータが正しく追加されているかどうかを確認します。
++
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+*JSON出力例*
+
++
+[listing]
+----
+"access_control": {
+        "acl": [
+            {
+                "user_or_group": "everyone",
+                "permission": "read"
+            }
+        ],
+        "export_policy": {
+            "id": 1460288880641,
+            "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+            "name": "default",
+            "rules": [
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 1,
+                    "protocols": [
+                        "nfs3",
+                        "nfs4"
+                    ],
+                    "ro_rule": [
+                        "sys"
+                    ],
+                    "rw_rule": [
+                        "sys"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                },
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 2,
+                    "protocols": [
+                        "cifs"
+                    ],
+                    "ro_rule": [
+                        "ntlm"
+                    ],
+                    "rw_rule": [
+                        "ntlm"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                }
+            ],
+            "_links": {
+                "self": {
+                    "href": "/api/datacenter/protocols/nfs/export-policies/7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/api/storage-provider/file-shares/7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    }
+----
++
+同じファイル共有に対して、エクスポート ポリシーに加えてACLが割り当てられていることがわかります。
+
+

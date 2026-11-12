@@ -1,0 +1,62 @@
+---
+permalink: config/task_change_um_host_name_on_rhel.html 
+sidebar: sidebar 
+keywords: change, unified manager, host name, linux systems 
+summary: 必要に応じて、Unified ManagerをインストールしたRed Hat Enterprise Linuxマシンのホスト名をあとから変更することができます。たとえば、タイプ、ワークグループ、監視対象のクラスタ グループなどがわかるような名前に変更すると、LinuxマシンのリストでUnified Managerサーバを識別しやすくなります。 
+---
+= Linux システム上の Active IQ Unified Manager ホスト名の変更
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+必要に応じて、Unified ManagerをインストールしたRed Hat Enterprise Linuxマシンのホスト名をあとから変更することができます。たとえば、タイプ、ワークグループ、監視対象のクラスタ グループなどがわかるような名前に変更すると、LinuxマシンのリストでUnified Managerサーバを識別しやすくなります。
+
+.開始する前に
+Unified ManagerがインストールされているLinuxシステムへのrootユーザ アクセスが必要です。
+
+Unified Manager Web UIには、ホスト名（またはホストのIPアドレス）を使用してアクセスできます。導入時に静的IPアドレスを使用してネットワークを設定した場合は、指定したネットワーク ホストの名前を使用します。DHCPを使用してネットワークを設定した場合は、DNSサーバからホスト名を取得します。
+
+ホスト名を変更した場合、Unified Manager Web UIへのアクセスに新しいホスト名を使用するには、ホスト名の元の割り当て方法に関係なく、必ず新しいセキュリティ証明書を生成する必要があります。
+
+ホスト名ではなくサーバのIPアドレスを使用してWeb UIにアクセスする場合は、ホスト名の変更時に新しい証明書を生成する必要はありません。ただし、証明書のホスト名が実際のホスト名と同じになるように証明書を更新することを推奨します。新しい証明書は、Linuxマシンを再起動するまで有効になりません。
+
+Unified Managerでホスト名を変更したら、OnCommand Workflow Automation（WFA）で手動でホスト名を更新する必要があります。ホスト名はWFAでは自動的に更新されません。
+
+.手順
+. 変更するUnified Managerシステムにrootユーザとしてログインします。
+. 次のコマンドを入力して、Unified Managerソフトウェアと関連するMySQLソフトウェアを停止します。
++
+`systemctl stop ocieau ocie mysqld`
+
+. Linux `hostnamectl`コマンドを使用してホスト名を変更します：
++
+`hostnamectl set-hostname new_FQDN`
+
++
+`hostnamectl set-hostname nuhost.corp.widget.com`
+
+. サーバのHTTPS証明書を再生成します。
++
+`/opt/netapp/essentials/bin/cert.sh create`
+
+. ネットワーク サービスを再起動します。
++
+`systemctl restart NetworkManager.service`
+
+. サービスが再起動されたら、新しいホスト名でpingを実行できるかどうかを確認します。
++
+`ping new_hostname`
+
++
+`ping nuhost`
+
++
+元のホスト名に対して設定していた同じIPアドレスが返されることを確認します。
+
+. ホスト名を変更して確認したら、次のコマンドを入力してUnified Managerを再起動します。
++
+`systemctl start mysqld ocie ocieau`
+
+

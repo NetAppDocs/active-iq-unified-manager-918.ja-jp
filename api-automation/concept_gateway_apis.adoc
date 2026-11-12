@@ -1,0 +1,118 @@
+---
+permalink: api-automation/concept_gateway_apis.html 
+sidebar: sidebar 
+keywords: access, ONTAP, APIs, proxy, access 
+summary: ゲートウェイAPIを使用すると、Active IQ Unified Managerのクレデンシャルを使用してONTAP REST APIを実行し、ストレージ オブジェクトを管理することができます。これらのAPIは、Unified Manager Web UIからAPIゲートウェイ機能を有効にすると使用できるようになります。 
+---
+= Active IQ Unified Manager のプロキシアクセスを使用して ONTAP API にアクセスする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲートウェイAPIを使用すると、Active IQ Unified Managerのクレデンシャルを使用してONTAP REST APIを実行し、ストレージ オブジェクトを管理することができます。これらのAPIは、Unified Manager Web UIからAPIゲートウェイ機能を有効にすると使用できるようになります。
+
+Unified Manager REST APIでUnified Managerのデータソース（ONTAPクラスタ）に対して実行できるのは、一部の処理のみです。その他の機能は ONTAP API を使用して利用できます。ゲートウェイAPIを使用すると、Unified Managerをパススルー インターフェイスとして、各データセンター クラスタに個別にログインせずに直接管理対象のONTAPクラスタに対してすべてのAPI要求を実行することができます。Unified Managerは単一の管理ポイントとして機能し、そのUnified Managerインスタンスが管理するONTAPクラスタ全体に対してAPIを実行することができます。API Gateway 機能により、Unified Manager は、複数の ONTAPクラスターに個別にログインすることなく管理できる単一のコントロールプレーンとして機能します。ゲートウェイ API を使用すると、Unified Manager にログインしたまま、ONTAP REST API 操作を実行して ONTAPクラスターを管理できます。
+
+[NOTE]
+====
+すべてのユーザがGET処理を使用してクエリを実行できます。アプリケーション管理者はすべてのONTAP REST処理を実行できます。
+
+====
+ゲートウェイは、ヘッダーと本文の形式をONTAP APIと同じにすることで、API要求をトンネリングするプロキシとして機能します。個々のクラスタのクレデンシャルを渡すことなく、Unified Managerのクレデンシャルを使用して特定の処理を実行し、ONTAPクラスタにアクセスして管理することができます。クラスタ認証とクラスタ管理は引き続き管理されますが、API要求は特定のクラスタにリダイレクトされて直接実行されます。APIから返される応答は、対応するONTAP REST APIをONTAPから直接実行した場合と同じです。
+
+[cols="3*"]
+|===
+| HTTP動詞 | パス（URL） | 説明 
+
+
+ a| 
+`GET`
+ a| 
+`/gateways`
+ a| 
+このGETメソッドは、Unified Managerで管理されているクラスタのうち、ONTAP REST呼び出しをサポートするすべてのクラスタのリストを取得します。クラスタのUniversal Unique Identifier（UUID）に基づいてクラスタの詳細を確認し、他のメソッドを実行することができます。
+
+[NOTE]
+====
+ゲートウェイAPIは、ONTAP 9.5以降でサポートされていて、HTTPSを使用してUnified Managerに追加されたクラスタのみを取得します。
+
+====
+
+
+ a| 
+`GET`
+
+`POST`
+
+`DELETE`
+
+`PATCH`
+
+`OPTIONS`（Swaggerでは利用できません）
+
+`HEAD`（Swaggerでは利用できません）
+ a| 
+`/gateways/\{uuid}/\{path}`
+
+[NOTE]
+====
+\{uuid} の値は、REST操作を実行するクラスタのUUIDに置き換える必要があります。また、そのUUIDがONTAP 9.5以降でサポートされており、HTTPS経由でUnified Managerに追加されたクラスタのものであることを確認してください。\{path} はONTAP REST URLに置き換える必要があります。URLから `/api/`を削除する必要があります。
+
+==== a| 
+これは単一ポイントのプロキシAPIで、POST、DELETE、PATCHの処理に加え、すべてのONTAP REST APIのGETをサポートしています。ONTAPでサポートされているかぎり、どのAPIにも制限はありません。トンネリングまたはプロキシ機能を無効にすることはできません。
+
+ `OPTIONS`メソッドは、ONTAP REST API でサポートされているすべての操作を返します。たとえば、ONTAP API が `GET`操作のみをサポートしている場合、このゲートウェイ API を使用して `OPTIONS`メソッドを実行すると、レスポンスとして `GET`が返されます。このメソッドはSwaggerではサポートされていませんが、他のAPIツールでは実行できます。
+
+ `OPTIONS`メソッドは、リソースが利用可能かどうかを判定します。この操作を使用すると、HTTPレスポンスヘッダー内のリソースに関するメタデータを表示できます。この方法はSwaggerではサポートされていませんが、他のAPIツールでは実行可能です。
+
+|===
+
+
+[[understand-the-api-gateway-tunneling]]
+== API Gateway トンネリングを理解する
+
+ゲートウェイAPIを使用すると、Unified ManagerからONTAPオブジェクトを管理できます。Unified Managerはクラスタと認証の詳細を管理し、ONTAP RESTエンドポイントに要求をリダイレクトします。ゲートウェイAPIは、ヘッダーおよび応答本文のURLとHypermedia as the Engine of Application State（HATEOAS）リンクをAPIゲートウェイのベースURLで変換します。ゲートウェイAPIはプロキシのベースURLとして機能し、これにONTAP REST URLを追加して必要なONTAP RESTエンドポイントを実行します。
+
+
+NOTE: ONTAP APIがAPIゲートウェイ経由で実行されるためには、APIを実行するONTAPクラスタのバージョンでAPIがサポートされている必要があります。ONTAPクラスタでサポートされていないAPIを実行した場合、結果は何も返されません。
+
+この例では、ゲートウェイAPI（プロキシベースURL）は次のとおりです： `+/gateways/{uuid}/+`
+
+使用した ONTAP API は次のとおりです： `/storage/volumes`このONTAP API REST URLをpathパラメータの値として追加する必要があります。
+
+[NOTE]
+====
+パスを追加する際は、「`/`" symbol at the beginning of the URL. For the API `/storage/volumes,` add `storage/volumes.`を削除したことを確認してください。
+
+====
+追加されたURLは： `+/gateways/{uuid}/storage/volumes+`
+
+ `GET`操作を実行すると、生成される URL は次のとおりです： `GEThttps://<hostname\>/api/gateways/<cluster_UUID\>/storage/volumes`
+
+ONTAP REST URLの `/api`タグは、付加されたURLから削除され、ゲートウェイAPIのタグは保持されます。
+
+*cURLコマンドの例*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/1cd8a442-86d1-11e0-ae1c-9876567890123/storage/volumes" -H "accept: application/hal+json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+このAPIは、指定したクラスタ内のストレージ ボリュームのリストを返します。応答形式は、同じAPIをONTAPから実行した場合と同じです。返されるステータス コードは、ONTAP RESTのステータス コードです。
+
+
+
+[[set-api-scope]]
+== APIスコープを設定する
+
+すべてのAPIは、コンテキストがクラスタのスコープ内に設定されています。ストレージVMに基づいて動作するAPIも、スコープとしてクラスターを持ちます。つまり、API操作は、管理対象クラスター内の特定のストレージVM上で実行されます。 `/gateways/\{uuid}/\{path}`APIを実行する場合は、操作を実行するクラスターのクラスターUUID（Unified ManagerデータソースUUID）を入力してください。そのクラスタ内の特定のStorage VMにコンテキストを設定する場合は、Storage VMのキーをX-Dot-SVM-UUIDパラメータとして入力するか、Storage VMの名前をX-Dot-SVM-Nameパラメータとして入力します。指定したパラメータが文字列ヘッダーにフィルタとして追加され、クラスタ内のそのStorage VMのスコープ内で処理が実行されます。
+
+*cURLコマンドの例*
+
+[listing]
+----
+curl -X GET "https://<hostname>/api/gateways/e4f33f90-f75f-11e8-9ed9-00a098e3215f/storage/volume" -H "accept: application/hal+json" -H "X-Dot-SVM-UUID: d9c33ec0-5b61-11e9-8760-00a098e3215f"
+-H "Authorization: Basic <Base64EncodedCredentials>"
+----
+ONTAP REST APIの使用方法の詳細については、https://docs.netapp.com/us-en/ontap-automation/index.html["ONTAP REST APIの自動化のドキュメントを参照してください。"]を参照してください。

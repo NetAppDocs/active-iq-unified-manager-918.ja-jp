@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: 不要または無効になったスクリプトは、Unified Managerから削除できます。 
+---
+= Active IQ Unified Manager でスクリプトを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+不要または無効になったスクリプトは、Unified Managerから削除できます。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* スクリプトがアラートに関連付けられていないことを確認する必要があります。
+
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *スクリプト* をクリックします。
+. 「Scripts」ページで、削除するスクリプトを選択し、「Delete」をクリックします。
+. 『警告』ダイアログボックスで、「はい」をクリックして削除を確定します。
+

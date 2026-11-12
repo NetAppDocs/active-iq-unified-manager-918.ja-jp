@@ -1,0 +1,43 @@
+---
+permalink: config/task_change_ports_um_uses_for_http_and_https_protocols.html 
+sidebar: sidebar 
+keywords: change, ports, unified manager, uses, http, https, protocols 
+summary: Unified ManagerがHTTPおよびHTTPSプロトコルに使用するデフォルトのポートは、インストール後に変更できます（セキュリティ上必要な場合）。デフォルトのポートは、HTTPの場合は80、HTTPSの場合は443です。 
+---
+= Active IQ Unified Manager がHTTPおよびHTTPSプロトコルに使用するポートを変更する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerがHTTPおよびHTTPSプロトコルに使用するデフォルトのポートは、インストール後に変更できます（セキュリティ上必要な場合）。デフォルトのポートは、HTTPの場合は80、HTTPSの場合は443です。
+
+.開始する前に
+Unified Managerサーバのメンテナンス コンソールへのログインが許可されているユーザIDとパスワードが必要です。
+
+[NOTE]
+====
+Mozilla FirefoxまたはGoogle Chromeブラウザでは、安全でないとみなされるポートがいくつかあります。HTTPトラフィックとHTTPSトラフィックに新しいポート番号を割り当てる前にブラウザで確認してください。安全でないポートを選択すると、システムにアクセスできなくなる可能性があります。その場合、カスタマー サポートに連絡して解決を依頼する必要があります。
+
+====
+ポートを変更するとUnified Managerのインスタンスが自動的に再起動されるため、システムを短時間停止しても問題のないタイミングであることを確認してください。
+
+. SSHを使用して、Unified Managerホストにメンテナンス ユーザとしてログインします。
++
+Unified Managerメンテナンス コンソールのプロンプトが表示されます。
+
+. 「アプリケーションポートの表示/変更」というラベルの付いたメニューオプションの番号を入力し、Enter キーを押してください。
+. プロンプトが表示されたら、メンテナンス ユーザのパスワードをもう一度入力します。
+. HTTPポートとHTTPSポートの新しいポート番号を入力し、Enterキーを押します。
++
+ポート番号を空白のままにした場合は、プロトコルのデフォルトのポートが割り当てられます。
+
++
+ポートを変更してUnified Managerをすぐに再起動するかどうかを確認するメッセージが表示されます。
+
+. ポートを変更して Unified Manager を再起動するには、*y* と入力してください。
+. メンテナンス コンソールを終了します。
+
+
+この変更後、ユーザーはUnified Manager Web UIにアクセスするために、URLに新しいポート番号を含める必要があります。例：+https://host.company.com:1234+、+https://12.13.14.15:1122+、または+https://[2001:db8:0:1]:2123+。

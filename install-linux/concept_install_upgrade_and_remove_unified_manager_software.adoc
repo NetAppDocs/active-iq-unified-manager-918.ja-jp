@@ -1,0 +1,16 @@
+---
+permalink: install-linux/concept_install_upgrade_and_remove_unified_manager_software.html 
+sidebar: sidebar 
+keywords: install, upgrade, remove, unified manager software 
+summary: Linuxシステムで、Unified Managerソフトウェアのインストール、新しいバージョンへのアップグレード、またはUnified Managerの削除を実行できます。 
+---
+= Active IQ Unified Manager ソフトウェアのインストール、アップグレード、および削除
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linuxシステムで、Unified Managerソフトウェアのインストール、新しいバージョンへのアップグレード、またはUnified Managerの削除を実行できます。
+
+Unified Managerは、Red Hat Enterprise Linuxサーバにインストールできます。Unified ManagerをインストールするLinuxサーバは、物理マシンでも仮想マシンでもかまいません。仮想マシンの場合は、VMware ESXi、Microsoft Hyper-V、またはCitrix XenServerで実行されているマシンを使用できます。

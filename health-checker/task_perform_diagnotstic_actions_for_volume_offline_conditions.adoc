@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_perform_diagnotstic_actions_for_volume_offline_conditions.html 
+sidebar: sidebar 
+keywords: perform, diagnostic actions, volume, offline, conditions 
+summary: 'オフラインと報告されたボリュームの[ボリューム / 健全性の詳細]ページに移動したら、ボリュームのオフライン状態の診断に役立つ追加情報を検索できます。' 
+---
+= Active IQ Unified Manager でボリュームオフライン状態に対する診断アクションを実行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+オフラインと報告されたボリュームの[ボリューム / 健全性の詳細]ページに移動したら、ボリュームのオフライン状態の診断に役立つ追加情報を検索できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+オフラインと報告されたボリュームが、意図的にオフラインにされたのではない場合は、いくつかの理由が考えられます。
+
+オフライン ボリュームの[ボリューム / 健全性の詳細]ページから他のページやペインに移動して、考えられる原因を確認または解決することができます。
+
+* *Volume / Health* の詳細ページへのリンクをクリックして、ホストノードがダウンしているためにボリュームがオフラインになっているか、また、HAペアパートナーへのストレージフェイルオーバーも失敗したかを確認してください。
++
+link:task_determine_if_volume_offline_condition_is_by_down_cluster_node.html["ボリュームのオフライン状態がノードのダウンによって引き起こされているかどうかを判断する"]を参照してください。
+
+* *ボリューム / ヘルス* の詳細ページへのリンクをクリックして、ボリュームがオフラインになっているかどうか、また、そのSVMのルートボリュームをホストしているノードがダウンしているためにホストストレージ仮想マシン（SVM）が停止しているかどうかを確認します。
++
+link:task_determine_if_volume_is_offline_and_its_svm_is_stopped.html["ボリュームがオフラインかどうか、またノードがダウンしているためにSVMが停止しているかどうかを判定する"]を参照してください。
+
+* ボリュームがホストアグリゲート内の障害ディスクによってオフラインになっているかどうかを確認するには、「ボリューム／健全性」の詳細ページへのリンクをクリックしてください。
++
+link:task_determine_if_volume_is_offline_because_of_broken_disks.html["ボリュームのオフライン状態の原因がアグリゲート内の破損ディスクであるかどうかの判別"]を参照してください。
+
+
+
+*関連情報*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Managerのユーザ ロールと機能"]

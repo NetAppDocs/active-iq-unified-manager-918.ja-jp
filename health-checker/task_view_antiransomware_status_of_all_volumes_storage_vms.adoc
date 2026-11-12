@@ -1,0 +1,46 @@
+---
+permalink: health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html 
+sidebar: sidebar 
+keywords: view, anti-ransomware status, volumes, storage VMs, SVMs 
+summary: すべてのボリュームとストレージVMのリスト、およびそれらの現在のランサムウェア対策ステータスを表示することで、ボリューム上のデータがランサムウェア攻撃から適切に保護されているかどうかを判断できます。 
+---
+= Active IQ Unified Manager ですべてのボリュームとストレージ VM のランサムウェア対策ステータスを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+すべてのボリュームとStorage VM（SVM）、およびそれらの現在のランサムウェア対策ステータスのリストを表示して、ボリュームおよびSVMのデータがランサムウェア攻撃から適切に保護されているかどうかを確認できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+さまざまなランサムウェア対策ステータスの詳細については、link:https://docs.netapp.com/us-en/ontap/anti-ransomware/enable-task.html#system-manager-procedure["ONTAP：ランサムウェア対策を有効にする"]を参照してください。
+
+
+
+[[view-security-details-of-all-volumes-with-anti-ransomware-detection]]
+== ランサムウェア対策検出機能による全ボリュームのセキュリティの詳細表示
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* ＞ *ボリューム* をクリックします。
+. 「表示」メニューで、*ヘルス* > *セキュリティ* > *ランサムウェア対策*を選択します。
+. *セキュリティ：ランサムウェア対策*ビューでは、さまざまなフィールドで並べ替えたり、フィルタを使用したりできます。
+
+
+
+NOTE: ランサムウェア対策は、オフライン ボリューム、制限状態のボリューム、SnapLockボリューム、FlexGroupボリューム、FlexCacheボリューム、SANのみのボリューム、停止中のStorage VMのボリューム、Storage VMのルート ボリューム、データ保護ボリュームに対してはサポートされていません。
+
+
+
+[[view-security-details-of-all-storage-vms-with-anti-ransomware-detection]]
+== ランサムウェア対策の検出機能による全Storage VMのセキュリティの詳細表示
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ > ストレージVM*をクリックします。
+. *表示 > セキュリティ > ランサムウェア対策*を選択します。ランサムウェア対策ステータスを持つSVMのリストが表示されます。
+
+
+
+NOTE: ランサムウェア対策による監視は、NASプロトコルが有効になっていないStorage VMではサポートされていません。

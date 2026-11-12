@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_add_annotations_dynamically.html 
+sidebar: sidebar 
+keywords: add, annotations, dynamically 
+summary: Unified Managerでカスタム アノテーションを作成すると、クラスタ、Storage Virtual Machine（SVM）、およびボリュームがルールに基づいてアノテーションに動的に関連付けられます。ルールにより、ストレージ オブジェクトにアノテーションが自動的に割り当てられます。 
+---
+= Active IQ Unified Manager で注釈を動的に追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerでカスタム アノテーションを作成すると、クラスタ、Storage Virtual Machine（SVM）、およびボリュームがルールに基づいてアノテーションに動的に関連付けられます。ルールにより、ストレージ オブジェクトにアノテーションが自動的に割り当てられます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *注釈* をクリックします。
+. 「Annotations」ページで、「Add Annotation」をクリックします。
+. *注釈の追加*ダイアログボックスで、注釈の名前と説明を入力します。
+. オプション：*[注釈値]* セクションで、*[追加]* をクリックして注釈に値を追加します。
+. *保存*をクリックします。
+

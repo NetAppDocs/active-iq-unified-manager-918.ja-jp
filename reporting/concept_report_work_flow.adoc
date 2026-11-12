@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: 以下は、レポートのワークフローに関するデシジョン ツリーです。 
+---
+= Active IQ Unified Manager のレポートワークフローを理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以下は、レポートのワークフローに関するデシジョン ツリーです。
+
+image::../media/reports_view_workflow.png[レポートの表示、カスタマイズ、アップロード、ダウンロードに関する意思決定ツリーワークフローを示す図]

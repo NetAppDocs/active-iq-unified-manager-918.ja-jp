@@ -1,0 +1,27 @@
+---
+permalink: data-protection/task_view_protection_relationships_from_storage_vms_page.html 
+sidebar: sidebar 
+keywords: storage vm, viewing protection relationships 
+summary: ストレージVMページを使用すると、既存のストレージVMの災害復旧関係のステータスを確認できます。 
+---
+= Active IQ Unified Manager のストレージ VM ページで保護関係を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージVMページを使用すると、既存のストレージVMのディザスタリカバリ関係のステータスを確認できます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+保護関係の詳細、例えば転送状況や遅延状況、送信元や送信先の詳細なども確認できます。レポートのスケジュール設定や、必要な形式で既存のレポートをダウンロードできます。「表示/非表示」ボタンを使用すると、デフォルトでは表示されない必要な列をレポートに追加できます。
+
+.手順
+. 左側のナビゲーションペインで、*STORAGE* > *Storage VMs*をクリックします。
+. *表示*メニューから、*関係* > *すべての関係*を選択します。
++
+関係：すべての関係ビューには、構成済みのすべてのストレージVMが表示されます。
+
+

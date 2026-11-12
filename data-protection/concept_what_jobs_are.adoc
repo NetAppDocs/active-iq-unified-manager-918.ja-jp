@@ -1,0 +1,18 @@
+---
+permalink: data-protection/concept_what_jobs_are.html 
+sidebar: sidebar 
+keywords: jobs 
+summary: ジョブとは、Unified Managerを使用して監視できる一連のタスクのことです。ジョブとその関連タスクを表示することで、ジョブが正常に完了したかどうかを判断できます。 
+---
+= Active IQ Unified Managerのジョブについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ジョブとは、Unified Managerを使用して監視できる一連のタスクのことです。ジョブとその関連タスクを表示することで、ジョブが正常に完了したかどうかを判断できます。
+
+ジョブは、SnapMirror関係とSnapVault関係の作成時、関係の操作（解除、編集、休止、削除、再開、再同期、逆再同期）の実行時、データのリストア タスクの実行時、クラスタへのログイン時などに開始されます。
+
+ジョブを開始したら、[ジョブ]ページと[ジョブの詳細]ページを使用して、ジョブおよびジョブに関連するタスクの進捗状況を監視できます。

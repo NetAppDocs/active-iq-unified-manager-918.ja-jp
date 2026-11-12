@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_nfs_share_reports.html 
+sidebar: sidebar 
+keywords: customize, nfs, share, reports 
+summary: 'ストレージ システム上のボリュームに対するNFSエクスポートのポリシーとルールの情報を分析できるように、[NFS共有]レポートをカスタマイズすることができます。たとえば、アクセスできないマウント パスがあるボリュームやデフォルトのエクスポート ポリシーを使用するボリュームを表示するように、レポートをカスタマイズできます。' 
+---
+= Active IQ Unified ManagerでNFS共有レポートをカスタマイズする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ システム上のボリュームに対するNFSエクスポートのポリシーとルールの情報を分析できるように、[NFS共有]レポートをカスタマイズすることができます。たとえば、アクセスできないマウント パスがあるボリュームやデフォルトのエクスポート ポリシーを使用するボリュームを表示するように、レポートをカスタマイズできます。

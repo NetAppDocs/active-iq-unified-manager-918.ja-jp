@@ -1,0 +1,102 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: Storage Virtual Machine（SVM）、LUN、およびファイル共有のプロビジョニングに必要な、アクセス エンドポイントまたは論理インターフェイス（LIF）を作成する必要があります。Active IQ Unified Manager環境で、SVM、LUN、またはファイル共有のアクセスエンドポイントを表示、作成、変更、および削除できます。 
+---
+= Active IQ Unified Manager で API を使用してアクセスエンドポイントを管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Virtual Machine（SVM）、LUN、およびファイル共有のプロビジョニングに必要な、アクセス エンドポイントまたは論理インターフェイス（LIF）を作成する必要があります。Active IQ Unified Manager環境で、SVM、LUN、またはファイル共有のアクセスエンドポイントを表示、作成、変更、および削除できます。
+
+
+
+[[view-access-endpoints]]
+== アクセス エンドポイントの表示
+
+以下の方法を使用すると、Unified Manager環境内のアクセスエンドポイントの一覧を表示できます。特定のSVM、LUN、またはファイル共有のアクセスエンドポイントのリストを照会するには、そのSVM、LUN、またはファイル共有の一意の識別子を入力する必要があります。固有のアクセスエンドポイントキーを入力することで、特定のアクセスエンドポイントの詳細を取得することもできます。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+[[add-access-endpoints]]
+== アクセス エンドポイントの追加
+
+カスタムアクセスエンドポイントを作成し、必要なプロパティを割り当てることができます。作成するアクセスエンドポイントの詳細を入力パラメータとして入力する必要があります。この API、System Manager、または ONTAP CLI を使用して、各ノードにアクセスエンドポイントを作成できます。アクセスエンドポイントの作成には、IPv4 アドレスと IPv6 アドレスの両方がサポートされています。
+
+[NOTE]
+====
+LUNとファイル共有をプロビジョニングするためには、SVMにノードあたりの最小アクセス エンドポイント数を設定する必要があります。SVMには、ノードごとに少なくとも2つのアクセス エンドポイントを設定する必要があります。1つはCIFSプロトコルおよび/またはNFSプロトコルをサポートし、もう1つはiSCSIプロトコルまたはFCPプロトコルをサポートします。
+
+====
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+POST
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+[[delete-access-endpoints]]
+== アクセス エンドポイントの削除
+
+特定のアクセス エンドポイントを削除するには、次のメソッドを使用します。特定のアクセス エンドポイントを削除するには、入力パラメータとしてアクセス エンドポイント キーを指定する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+DELETE
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+[[modify-access-endpoints]]
+== アクセス エンドポイントの変更
+
+アクセス エンドポイントを変更し、そのプロパティを更新するには、次のメソッドを使用します。特定のアクセス エンドポイントを変更するには、アクセス エンドポイント キーを指定する必要があります。また、更新するプロパティとその値を入力する必要があります。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+PATCH
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

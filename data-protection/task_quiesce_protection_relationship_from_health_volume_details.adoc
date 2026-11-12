@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, health details page 
+summary: 保護関係を休止してデータ転送を一時的に停止できます。関係の休止は、データベースを含むSnapMirrorデスティネーション ボリュームのSnapshotコピーを作成する場合に、Snapshotコピーの実行中にデータベース コンテンツの安定を確保する目的で行うことがあります。 
+---
+= Active IQ Unified Manager のボリューム/健全性の詳細ページから保護関係を休止する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護関係を休止してデータ転送を一時的に停止できます。関係の休止は、データベースを含むSnapMirrorデスティネーション ボリュームのSnapshotコピーを作成する場合に、Snapshotコピーの実行中にデータベース コンテンツの安定を確保する目的で行うことがあります。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* Workflow Automationのセットアップが完了している必要があります。
+
+
+次の場合は休止操作が表示されません。
+
+* RBACの設定で許可されていない場合：オペレータの権限しかない場合など
+* ボリュームIDが不明な場合：クラスタ間関係が確立されているがデスティネーション クラスタが検出されていない場合など
+* Workflow AutomationとUnified Managerを連携させていない場合
+
+
+.手順
+. *Volume / Health* 詳細ページの *Protection* タブで、静止させたい保護関係のトポロジービュー内の関係を右クリックします。
+. メニューから「Quiesce」を選択してください。
+. 続行するには*はい*をクリックしてください。
++
+[ボリューム / 健全性の詳細]ページの上部に、休止ジョブのステータスがジョブの詳細へのリンクとともに表示されます。
+
+. 「詳細を表示」リンクをクリックすると、「ジョブ」詳細ページに移動し、詳細情報やジョブの進捗状況を確認できます。
+. *オプション：* ブラウザの戻る矢印をクリックして、*ボリューム / 健常性*の詳細ページに戻ります。
++
+すべてのジョブ タスクが正常に完了すれば休止ジョブは終了です。
+
+

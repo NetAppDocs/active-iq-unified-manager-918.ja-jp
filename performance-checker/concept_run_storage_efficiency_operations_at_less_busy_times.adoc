@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: Storage Efficiency処理に適用されるポリシーやスケジュールを変更して、影響を受けるボリューム ワークロードの負荷が低いときにStorage Efficiency処理を実行するように設定できます。 
+---
+= Active IQ Unified Manager でストレージ効率化処理を比較的負荷の少ない時間帯にスケジュールする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Storage Efficiency処理に適用されるポリシーやスケジュールを変更して、影響を受けるボリューム ワークロードの負荷が低いときにStorage Efficiency処理を実行するように設定できます。
+
+Storage Efficiency処理では、大量のクラスタCPUリソースが使用されて、処理を実行するボリュームの負荷が高くなることがあります。Storage Efficiency処理の実行中に、影響を受けるボリュームでアクティビティ レベルが上がると、レイテンシが高くなってイベントがトリガーされる可能性があります。
+
+イベント詳細ページのシステム診断セクションでは、QoSポリシーグループ内のワークロードをアクティビティのピーク偏差に基づいて表示し、負荷の高いワークロードを特定します。表の上部付近に「`storage efficiency`」が表示されている場合、これらの操作は対象となるワークロードに過負荷をかけています。ワークロードの負荷が低い時間帯に実行するように効率化ポリシーまたはスケジュールを変更することで、ストレージ効率化操作がクラスタ上で競合を引き起こすのを防ぐことができます。
+
+効率化ポリシーの管理には、ONTAP System Managerを使用できます。効率化ポリシーとスケジュールの管理には、ONTAPコマンドを使用できます。

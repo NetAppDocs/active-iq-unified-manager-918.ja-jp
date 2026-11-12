@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/task_log_in_to_gui.html 
+sidebar: sidebar 
+keywords: log in, ui, unified manager 
+summary: Unified ManagerのUIには、サポートされているWebブラウザからログインできます。 
+---
+= Active IQ Unified Manager UI にログインする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerのUIには、サポートされているWebブラウザからログインできます。
+
+.開始する前に
+* Webブラウザが最小要件を満たしている必要があります。
++
+サポートされているブラウザバージョンの完全なリストについては、 http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]の相互運用性マトリックスを参照してください。
+
+* Unified ManagerサーバのIPアドレスまたはURLが必要です。
+
+
+1時間何も操作を行わないと、セッションから自動的にログアウトされます。この期間は、「一般」＞「機能設定」で設定できます。
+
+.手順
+. Webブラウザに、下記の形式でURLを入力します。URLは、Unified ManagerサーバのIPアドレスまたは完全修飾ドメイン名（FQDN）です。
++
+** IPv4の場合： `+https://URL/+`
+** IPv6の場合： `https://[URL]/`
+
+
+
+
+自己署名のデジタル証明書がサーバで使用されている場合、信頼されていない証明書であることを伝える警告がブラウザ画面に表示されることがあります。その場合は、危険を承諾してアクセスを続行するか、認証局（CA）の署名のあるデジタル証明書をインストールしてサーバを認証します。.ログイン画面で、ユーザ名とパスワードを入力します。
+
+Unified Managerのユーザ インターフェイスへのログインがSAML認証で保護されている場合は、Unified Managerのログイン ページではなくアイデンティティ プロバイダ（IdP）のログイン ページでクレデンシャルを入力します。
+
+[Dashboard]ページが表示されます。
+
+[NOTE]
+====
+Unified Managerサーバが初期化されていない場合は、新しいブラウザ ウィンドウに初期設定ウィザードが表示されます。このウィザードで、Eメール アラートの受信者およびEメール通信を処理するSMTPサーバを入力し、AutoSupportでUnified Managerに関する情報のテクニカル サポートへの送信が有効になっているかどうかを指定します。これらの情報の入力を完了すると、Unified ManagerのUIが表示されます。
+
+====

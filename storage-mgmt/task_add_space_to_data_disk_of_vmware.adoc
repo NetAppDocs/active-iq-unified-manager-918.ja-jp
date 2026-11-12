@@ -1,0 +1,33 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_vmware.html 
+sidebar: sidebar 
+keywords: add space, data, disk, vmware, virtual, machine 
+summary: Unified Managerデータベースのデータ ディスクのスペースを増やす必要がある場合は、インストール後にUnified Managerメンテナンス コンソールを使用して容量を追加できます。 
+---
+= Active IQ Unified Manager の VMware 仮想マシンのデータディスクに空き容量を追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerデータベースのデータ ディスクのスペースを増やす必要がある場合は、インストール後にUnified Managerメンテナンス コンソールを使用して容量を追加できます。
+
+.開始する前に
+* vSphere Clientへのアクセス権が必要です。
+* 仮想マシンにスナップショットがローカルに格納されていない必要があります。
+* メンテナンス ユーザのクレデンシャルが必要です。
+
+
+仮想ディスクのサイズを拡張する前に仮想マシンをバックアップすることを推奨します。
+
+.手順
+. vSphereクライアントで、Unified Manager仮想マシンを選択し、データにディスク容量を追加します `disk 3`。詳細については、VMwareのドキュメントを参照してください。
++
+まれに、Unified Manager環境のデータ ディスクに「ハードディスク3」ではなく「ハードディスク2」が使用されていることがあります。その場合は、大きい方のディスクのスペースを増やしてください。データ ディスクのスペースは、常に他のディスクより大きくなります。
+
+. vSphere クライアントで、Unified Manager 仮想マシンを選択し、「コンソール」タブを選択します。
+. コンソール ウィンドウ内をクリックし、ユーザ名とパスワードを使用してメンテナンス コンソールにログインします。
+. *メインメニュー*で、*システム設定*オプションの番号を入力してください。
+. *システム構成メニュー*で、*データディスクサイズの増加*オプションの番号を入力します。
+

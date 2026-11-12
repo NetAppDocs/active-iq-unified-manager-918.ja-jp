@@ -1,0 +1,21 @@
+---
+permalink: config/concept_manage_feature_settings.html 
+sidebar: sidebar 
+keywords: uploading scripts, api gateway, slo or policy-based storage management, timeout, active iq platform events 
+summary: 機能設定ページでは、Active IQ Unified Managerの特定の機能を有効または無効にすることができます。これには、ポリシーに基づくストレージオブジェクトの作成と管理、APIゲートウェイの有効化、アラート管理用スクリプトのアップロード、非アクティブ時間に基づくWeb UIセッションのタイムアウト、およびActive IQプラットフォームイベントの受信の無効化が含まれます。 
+---
+= Active IQ Unified Manager の機能設定について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[機能設定]ページで、Active IQ Unified Managerの特定の機能を有効または無効にできます。ポリシーに基づいたストレージ オブジェクトの作成と管理、APIゲートウェイとログイン バナーの有効化、アラート管理用スクリプトのアップロード、非アクティブ時間に基づくWeb UIセッションのタイムアウト、Active IQプラットフォーム イベントの受信停止などが含まれます。
+
+[NOTE]
+====
+[機能設定]ページは、アプリケーション管理者ロールが割り当てられたユーザだけが使用できます。
+
+====
+スクリプトのアップロードに関する情報については、link:task_enable_and_disable_ability_to_upload_scripts.html["スクリプト アップロードの有効化と無効化"]を参照してください。

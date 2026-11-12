@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: カウンターチャートにはズームビューがあり、指定した期間のパフォーマンスの詳細を拡大表示できます。これにより、パフォーマンスの詳細やイベントをより詳細なレベルで確認できるため、パフォーマンスの問題をトラブルシューティングする際に役立ちます。 
+---
+= Active IQ Unified Manager のカウンターチャートのズームビューについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カウンターチャートにはズームビューがあり、指定した期間のパフォーマンスの詳細を拡大表示できます。これにより、パフォーマンスの詳細やイベントをより詳細なレベルで確認できるため、パフォーマンスの問題をトラブルシューティングする際に役立ちます。
+
+ズーム ビューで表示した場合、一部の内訳グラフでは、ズーム ビュー以外では表示されない追加の情報が表示されます。たとえば、IOPS、IOPS/TB、およびMBpsの内訳グラフのズーム ビュー ページには、ONTAPで設定されている場合、ボリュームおよびLUNのQoSポリシーの値が表示されます。
+
+[NOTE]
+====
+システム定義のパフォーマンスしきい値ポリシーについては、「`Node resources over-utilized`」と「`QoS throughput limit breached`」のポリシーのみが*Policies*リストから利用可能です。その他のシステム定義のしきい値ポリシーは、現時点では利用できません。
+
+====

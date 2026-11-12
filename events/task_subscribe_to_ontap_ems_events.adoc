@@ -1,0 +1,54 @@
+---
+permalink: events/task_subscribe_to_ontap_ems_events.html 
+sidebar: sidebar 
+keywords: subscribe, ontap, ems events 
+summary: ONTAPソフトウェアがインストールされているシステムで生成されたEvent Management System（EMS;イベント管理システム）イベントを受け取るように登録することができます。一部のEMSイベントはUnified Managerに自動的に報告されますが、それ以外のEMSイベントは登録している場合にのみ報告されます。 
+---
+= Active IQ Unified Manager で ONTAP EMS イベントをサブスクライブする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAPソフトウェアがインストールされているシステムで生成されたEvent Management System（EMS;イベント管理システム）イベントを受け取るように登録することができます。一部のEMSイベントはUnified Managerに自動的に報告されますが、それ以外のEMSイベントは登録している場合にのみ報告されます。
+
+.開始する前に
+同じ問題に対するイベントを2つ受け取って混乱を招く可能性があるため、Unified Managerにすでに自動的に追加されているEMSイベントは登録しないでください。
+
+EMSイベントはいくつでも登録できます。登録したすべてのイベントが検証され、検証済みのイベントだけがUnified Managerで監視しているクラスタに適用されます。_ONTAP 9 EMSイベントカタログ_は、指定されたバージョンのONTAP 9ソフトウェアのすべてのEMSメッセージに関する詳細情報を提供します。該当するイベントの一覧については、ONTAP 9製品ドキュメントページから適切なバージョンの_EMSイベントカタログ_を参照してください。
+
+https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62286["ONTAP 9製品ライブラリ"]
+
+登録したONTAP EMSイベントにアラートを設定したり、それらのイベントに対して実行するカスタム スクリプトを作成したりできます。
+
+[NOTE]
+====
+登録したONTAP EMSイベントが届かない場合は、クラスタのDNS設定に問題があり、クラスタからUnified Managerサーバに到達できなくなっていることが考えられます。その場合は、クラスタ管理者がクラスタのDNS設定を修正し、Unified Managerを再起動する必要があります。これにより、保留中のEMSイベントがUnified Managerサーバに送信されます。
+
+====
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* ＞ *イベント設定* をクリックします。
+. イベント設定ページで、*EMSイベントを購読する*ボタンをクリックします。
+. [EMSイベントにサブスクライブ]ダイアログ ボックスで、登録するONTAP EMSイベントの名前を入力します。
++
+購読できる EMS イベントの名前を表示するには、ONTAP クラスターシェルから `event route show`コマンド（ONTAP 9 より前）または `event catalog show`コマンド（ONTAP 9 以降）を使用できます。
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_and_receive_alerts_from_ONTAP_EMS_Event_Subscription_in_Active_IQ_Unified_Manager["Active IQ Unified ManagerでONTAP EMSイベント サブスクリプションを設定してアラートを受信する方法"]
+
+. *[追加]*をクリックします。
++
+EMSイベントは「購読済みEMSイベント」リストに追加されますが、「適用対象クラスタ」列には、追加したEMSイベントのステータスが「`Unknown`」と表示されます。
+
+. *保存して閉じる*をクリックして、EMSイベントのサブスクリプションをクラスターに登録します。
+. 「EMSイベントを購読する」をもう一度クリックしてください。
++
+追加したEMSイベントの「適用対象クラスタ」列に「`Yes`」というステータスが表示されます。
+
++
+ステータスが「`Yes`」でない場合は、ONTAP EMSイベント名のスペルを確認してください。名前が正しく入力されていない場合は、誤ったイベントを削除してから、再度イベントを追加する必要があります。
+
+
+
+ONTAP EMSイベントが発生すると、そのイベントが[イベント]ページに表示されます。イベントを選択すると、EMSイベントに関する詳細を[イベントの詳細]ページで確認できます。イベントの処理を管理したり、イベントのアラートを作成したりすることもできます。

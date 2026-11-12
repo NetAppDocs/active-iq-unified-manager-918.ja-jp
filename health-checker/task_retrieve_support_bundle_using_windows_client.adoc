@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_windows_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, windows client 
+summary: Windowsを使用している場合は、ツールをダウンロードしてインストールすることにより、Unified Managerサーバからサポート バンドルを取得することができます。このサポート バンドルをテクニカル サポートに送信して、問題の詳しい診断を受けることができます。使用可能なツールには、FilezillaやWinSCPなどがあります。 
+---
+= Active IQ Unified Manager でWindowsクライアントを使用してサポートバンドルを取得する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windowsを使用している場合は、ツールをダウンロードしてインストールすることにより、Unified Managerサーバからサポート バンドルを取得することができます。このサポート バンドルをテクニカル サポートに送信して、問題の詳しい診断を受けることができます。使用可能なツールには、FilezillaやWinSCPなどがあります。
+
+.開始する前に
+このタスクを実行するには、maintenanceユーザである必要があります。
+
+SCPまたはSFTPをサポートするツールを使用する必要があります。
+
+.手順
+. サポート バンドルを取得するためのツールをダウンロードしてインストールします。
+. ツールを開きます。
+. Unified Manager管理サーバにSFTP経由で接続します。
++
+ツールに/supportディレクトリの内容が表示され、既存のサポート バンドルをすべて確認できます。
+
+. サポート バンドルのコピー先となるディレクトリを選択します。
+. コピーするサポート バンドルを選択し、ツールを使用してUnified Managerサーバからローカル システムにファイルをコピーします。
+

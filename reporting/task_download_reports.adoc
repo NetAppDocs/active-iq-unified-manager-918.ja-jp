@@ -1,0 +1,44 @@
+---
+permalink: reporting/task_download_reports.html 
+sidebar: sidebar 
+keywords: download, reports 
+summary: レポートをダウンロードして、データをカンマ区切り値（CSV）ファイル、Microsoft Excel（.XLSX）ファイル、またはPDFファイルとしてローカル ドライブやネットワーク ドライブに保存できます。CSVファイルとXLSXファイルはMicrosoft Excelなどのスプレッドシート アプリケーションで、PDFファイルはAdobe Acrobatなどのリーダーで開くことができます。 
+---
+= Active IQ Unified Manager でレポートをダウンロードする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+レポートをダウンロードして、データをカンマ区切り値（CSV）ファイル、Microsoft Excel（.XLSX）ファイル、またはPDFファイルとしてローカル ドライブやネットワーク ドライブに保存できます。CSVファイルとXLSXファイルはMicrosoft Excelなどのスプレッドシート アプリケーションで、PDFファイルはAdobe Acrobatなどのリーダーで開くことができます。
+
+.手順
+. 「*レポート*」ボタンをクリックして、レポートを次のいずれかの形式でダウンロードします：
++
+[cols="2*"]
+|===
+| 選択 | 目的 
+
+
+ a| 
+CSV をダウンロード
+ a| 
+レポートをカンマ区切り値（CSV）ファイルとして保存します。
+
+
+
+ a| 
+PDF をダウンロード
+ a| 
+レポートを.pdfファイルとして保存します。
+
+
+
+ a| 
+Excel をダウンロード
+ a| 
+レポートをMicrosoft Excel（XLSX）ファイルとして保存します。
+
+|===
+

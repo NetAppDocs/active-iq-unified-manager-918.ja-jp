@@ -1,0 +1,56 @@
+---
+permalink: install-windows/task_unattended_installation_of_unified_manager.html 
+sidebar: sidebar 
+keywords: perform, unattended, installation, unified manager 
+summary: コマンドライン インターフェイスを使用して、手動操作なしでUnified Managerをインストールできます。無人インストールを実行するには、キーと値のペアの形式でパラメータを渡します。 
+---
+= Active IQ Unified Manager の無人インストールを実行する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+コマンドライン インターフェイスを使用して、手動操作なしでUnified Managerをインストールできます。無人インストールを実行するには、キーと値のペアの形式でパラメータを渡します。
+
+.手順
+. デフォルトのローカル管理者アカウントでWindowsのコマンドライン インターフェイスにログインします。
+. Unified Manager をインストールする場所に移動し、次のいずれかのオプションを選択してください：
++
+[cols="4a,4a"]
+|===
+| オプション | 手順 
+
+
+ a| 
+サードパーティ パッケージが事前にインストールされている
+ a| 
+`ActiveIQUnifiedManager-x.y.exe /V"MYSQL_PASSWORD=mysql_password INSTALLDIR=\"Installation directory\" MYSQL_DATA_DIR=\"MySQL data directory\" MAINTENANCE_PASSWORD=maintenance_password MAINTENANCE_USERNAME=maintenance_username /qn /l*v CompletePathForLogFile"`
+
+*例：*
+
+`ActiveIQUnifiedManager.exe /s /v"MYSQL_PASSWORD=netapp21! INSTALLDIR=\"C:\Program Files\NetApp\" MYSQL_DATA_DIR=\"C:\ProgramData\MYSQL\MySQLServer\" MAINTENANCE_PASSWORD=******* MAINTENANCE_USERNAME=admin /qn /l*v C:\install.log"`
+
+
+
+ a| 
+サードパーティ パッケージがインストールされていない
+ a| 
+`ActiveIQUnifiedManager-x.y.exe /V"MYSQL_PASSWORD=mysql_password INSTALLDIR=\"Installation directory\" MYSQL_DATA_DIR=\"MySQL data directory\" MAINTENANCE_PASSWORD=maintenance_password MAINTENANCE_USERNAME=maintenance_username /qr /l*v CompletePathForLogFile"`
+
+*例：*
+
+`ActiveIQUnifiedManager.exe /s /v"MYSQL_PASSWORD=netapp21! INSTALLDIR=\"C:\Program Files\NetApp\" MYSQL_DATA_DIR=\"C:\ProgramData\MYSQL\MySQLServer\" MAINTENANCE_PASSWORD=******* MAINTENANCE_USERNAME=admin /qr /l*v C:\install.log"`
+
+|===
++
+ `/qr`オプションを使用すると、ユーザーインターフェイスが縮小されたquietモードが有効になります。インストールの進行状況を示す基本的なユーザーインターフェイスが表示されます。入力を求められることはありません。JRE、MySQL、7zipなどのサードパーティ製パッケージがプリインストールされていない場合は、 `/qr`オプションを使用する必要があります。サードパーティ製パッケージがインストールされていないサーバーで `/qn`オプションを使用すると、インストールは失敗します。
+
++
+ `/qn` オプションを使用すると、ユーザーインターフェイスなしのサイレントモードが有効になります。インストール中は、ユーザーインターフェイスや詳細情報は表示されません。サードパーティ製パッケージがインストールされていない場合は、 `/qn` オプションを使用しないでください。
+
+. 以下のURLを使用して、Unified Manager の Web ユーザーインターフェースにログインしてください：
++
+`\https://IP address`
+
+

@@ -1,0 +1,299 @@
+---
+permalink: install-windows/reference_protocol_and_port_requirements.html 
+sidebar: sidebar 
+keywords: unified manager, protocol, port, requirements 
+summary: これらのポートとプロトコルを使用して、Unified Managerサーバは管理対象のストレージ システム、サーバ、その他のコンポーネントと通信します。 
+---
+= Active IQ Unified Manager のプロトコルとポートの要件を理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+これらのポートとプロトコルを使用して、Unified Managerサーバは管理対象のストレージ システム、サーバ、その他のコンポーネントと通信します。
+
+
+
+[[connections-to-the-unified-manager-server]]
+== Unified Managerサーバへの接続
+
+通常の環境では、Unified Manager Web UIへの接続に常にデフォルトのポートが使用されるため、ポート番号を指定する必要はありません。たとえば、Unified Managerは常にデフォルトポートでの動作を試みるため、 `+https://<host>:443+`の代わりに `+https://<host>+`を入力できます。
+
+Unified Managerサーバでは、次のインターフェイスにアクセスする際に特定のプロトコルを使用します。
+
+[cols="4*"]
+|===
+| インターフェイス | Protocol | ポート | 説明 
+
+
+ a| 
+Unified Manager Web UI
+ a| 
+HTTP
+ a| 
+80
+ a| 
+Unified Manager Web UIへのアクセスに使用され、自動的にセキュア ポート443にリダイレクトされます。
+
+
+
+ a| 
+Unified Manager Web UIおよびAPIを使用するプログラム
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+Unified Manager Web UIへのセキュアなアクセスとAPI呼び出しに使用されます。API呼び出しはHTTPSでしか実行できません。
+
+
+
+ a| 
+メンテナンス コンソール
+ a| 
+SSH / SFTP
+ a| 
+22
+ a| 
+メンテナンス コンソールにアクセスしてサポート バンドルを取得する際に使用されます。
+
+
+
+ a| 
+Linuxコマンドライン
+ a| 
+SSH / SFTP
+ a| 
+22
+ a| 
+Red Hat Enterprise Linuxのコマンドラインにアクセスしてサポート バンドルを取得する際に使用されます。
+
+
+
+ a| 
+syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+ONTAPシステムからのサブスクリプションベースのEMSメッセージにアクセスし、メッセージに基づいてイベントを作成する際に使用されます。
+
+
+
+ a| 
+REST
+ a| 
+HTTPS
+ a| 
+9443
+ a| 
+認証されたONTAPシステムからのREST APIベースのリアルタイムのEMSイベントにアクセスする際に使用されます。
+
+
+
+ a| 
+MySQLデータベース
+ a| 
+MySQL
+ a| 
+3306
+ a| 
+OnCommand Workflow AutomationおよびOnCommand API ServicesからUnified Managerへのアクセスで使用されます。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP / IP
+ a| 
+56072
+ a| 
+内部メッセージ通信に使用されます。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP経由のWebSocket
+ a| 
+56080
+ a| 
+ONTAP（クラウド エージェント）から受信するメッセージをこのポートでリッスンするために使用されます。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP経由のWebSocket
+ a| 
+56443
+ a| 
+ONTAP（クラウド エージェント）から受信するメッセージをこのポートでリッスンするために使用されます。このポートを介した通信では、TLSまたはSSLによる暗号化がサポートされます。
+
+|===
+[NOTE]
+====
+WindowsシステムにUnified Managerをインストールする際、MySQLのデフォルトポートである3306はlocalhostのみに制限されます。インストールが完了したら、ファイアウォールを有効にして、MySQLポート（3306番）へのアクセスを制限してください。これは、以前の構成が維持されるアップグレードシナリオには影響しません。この構成は変更可能であり、メンテナンスコンソールの `Control access to MySQL port 3306`オプションを使用することで、他のホストから接続できるようにすることができます。詳細については、link:../config/reference_additional_menu_options.html["その他のメニュー オプション"]を参照してください。HTTPおよびHTTPS通信に使用されるポート（ポート80および443）は、Unified Managerのメンテナンスコンソールを使用して変更できます。詳細については、link:../config/concept_configure_unified_manager.html["Active IQ Unified Managerの設定"]を参照してください。
+
+====
+
+
+[[connections-from-the-unified-manager-server]]
+== Unified Managerサーバからの接続
+
+ファイアウォールの設定で、Unified Managerサーバと管理対象のストレージ システム、サーバ、その他のコンポーネントの間の通信に使用するポートを開いておく必要があります。ポートが開いていない場合、通信は失敗します。
+
+環境に応じて、Unified Managerサーバから特定の接続先への接続に使用するポートとプロトコルを変更することもできます。
+
+Unified Managerサーバは、次のプロトコルとポートを使用して、管理対象のストレージ システム、サーバ、その他のコンポーネントに接続します。
+
+[cols="4*"]
+|===
+| デスティネーション | Protocol | ポート | 説明 
+
+
+ a| 
+ストレージ システム
+ a| 
+HTTPS
+ a| 
+443 / TCP
+ a| 
+ストレージ システムの監視と管理に使用されます。
+
+
+
+ a| 
+ストレージ システム
+ a| 
+NDMP
+ a| 
+10000 / TCP
+ a| 
+特定のSnapshotリストア処理に使用されます。
+
+
+
+ a| 
+AutoSupportサーバ
+ a| 
+HTTPS
+ a| 
+443
+ a| 
+AutoSupport情報の送信に使用されます。この機能を実行するにはインターネット アクセスが必要です。
+
+
+
+ a| 
+認証サーバ
+ a| 
+LDAP
+ a| 
+389
+ a| 
+認証要求、およびユーザとグループの検索要求に使用されます。
+
+
+
+ a| 
+LDAPS
+ a| 
+636
+ a| 
+セキュアなLDAP通信に使用されます。
+
+
+
+ a| 
+メール サーバ
+ a| 
+SMTP
+ a| 
+25
+ a| 
+アラート通知Eメールの送信に使用されます。
+
+
+
+ a| 
+SNMPトラップの送信元
+ a| 
+SNMPv1またはSNMPv3
+ a| 
+162 / UDP
+ a| 
+アラート通知SNMPトラップの送信に使用されます。
+
+
+
+ a| 
+外部データ プロバイダのサーバ
+ a| 
+TCP
+ a| 
+2003
+ a| 
+外部のデータ プロバイダ（Graphiteなど）へのパフォーマンス データの送信に使用されます。
+
+
+
+ a| 
+NTP サーバ
+ a| 
+NTP
+ a| 
+123 / UDP
+ a| 
+Unified Managerサーバの時間を外部のNTPタイム サーバと同期するために使用されます（VMwareシステムのみ）。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP / IP
+ a| 
+56072
+ a| 
+内部メッセージ通信に使用されます。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP経由のWebSocket
+ a| 
+56080
+ a| 
+ONTAP（クラウド エージェント）から受信するメッセージをこのポートでリッスンするために使用されます。
+
+
+
+ a| 
+AMQP QPIDブローカー
+ a| 
+TCP経由のWebSocket
+ a| 
+56443
+ a| 
+ONTAP（クラウド エージェント）から受信するメッセージをこのポートでリッスンするために使用されます。このポートを介した通信では、TLSまたはSSLによる暗号化がサポートされます。
+
+
+
+ a| 
+syslog
+ a| 
+UDP
+ a| 
+514
+ a| 
+Unified Manager が監査ログをリモート syslog サーバに送信するために使用します。
+
+|===

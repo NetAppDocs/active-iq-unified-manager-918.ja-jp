@@ -1,0 +1,43 @@
+---
+permalink: health-checker/task_view_volume_list_and_details.html 
+sidebar: sidebar 
+keywords: view, volume list, details 
+summary: ボリュームのインベントリを監視するには Health ページの All Volumes ビューを使用し、容量と使用状況の詳細を確認するには Capacity ページの All Volumes ビューを使用してください。 
+---
+= Active IQ Unified Manager でボリュームリストと詳細を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「健全性：全ボリューム」ビューから、ボリュームのインベントリを監視できます。「容量：すべてのボリューム」ビューでは、クラスター内のボリュームの容量と使用状況に関する情報を表示できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+[ボリューム / 健全性の詳細]ページを使用して、監視対象のボリュームに関する詳細情報（ボリュームの容量、効率、構成、保護など）を表示することもできます。また、特定のボリュームに関連するデバイスやアラートに関する情報も参照できます。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* ＞ *ボリューム* をクリックします。
+. 次のいずれかの方法を選択してボリュームの詳細を表示します。
++
+** クラスター内のボリュームの状態に関する詳細情報を表示するには、「表示」メニューで「状態：すべてのボリューム」ビューを選択します。
+** クラスター内のボリュームの容量と使用状況に関する詳細情報を表示するには、「表示」メニューで「容量：すべてのボリューム」ビューを選択します。
+** すべての詳細を表示するには、ボリューム名をクリックします。
++
+最小限の詳細情報ダイアログボックスで「詳細を表示」をクリックすると、詳細情報をすべて表示することもできます。
+
+
+
+. *オプション：* 最小詳細ダイアログボックスから *関連を表示* をクリックして、ボリュームに関連するオブジェクトを表示します。
+
+
+*関連情報*
+
+* link:../health-checker/reference_health_volume_details_page.html["ボリューム：健全性詳細ページ"]
+* link:../performance-checker/performance-view-all.html#performance-all-volumes-view["パフォーマンス：全ボリューム表示"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["セキュリティ：ランサムウェア対策ビュー"]
+* link:../data-protection/task_view_volume_protection_relationships.html["ボリュームの保護関係の表示"]
+* link:../reporting/task_create_report_to_view_available_volume_capacity_charts.html["使用可能なボリューム容量のグラフを表示するレポートの作成"]
+

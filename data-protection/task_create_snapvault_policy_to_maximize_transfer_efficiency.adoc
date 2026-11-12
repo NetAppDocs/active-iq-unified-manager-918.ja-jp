@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy,  maximize, transfer, efficiency 
+summary: 新しいSnapVaultポリシーを作成して、SnapVault転送の優先度を設定することができます。ポリシーを使用することで、保護関係におけるプライマリからセカンダリへの転送効率を最大化できます。 
+---
+= Active IQ Unified Manager で転送効率を最大化する SnapVault ポリシーを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新しいSnapVaultポリシーを作成して、SnapVault転送の優先度を設定することができます。ポリシーを使用することで、保護関係におけるプライマリからセカンダリへの転送効率を最大化できます。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* Workflow Automationのセットアップが完了している必要があります。
+* [保護設定]ダイアログ ボックスの[デスティネーション情報]領域に情報を入力しておく必要があります。
+
+
+.手順
+. *保護の設定*ダイアログボックスの *SnapVault* タブで、*関係設定*領域の *ポリシーの作成* リンクをクリックします。
++
+[SnapVault]タブが表示されます。
+
+. *ポリシー名*フィールドに、ポリシーに付ける名前を入力します。
+. *転送優先度*フィールドで、ポリシーに割り当てる転送優先度を選択します。
+. *オプション：* *コメント*欄に、ポリシーに関するコメントを入力してください。
+. 「レプリケーション ラベル」領域で、必要に応じてレプリケーション ラベルを追加または編集します。
+. *作成*をクリックします。
++
+新しいポリシーが[Create Policy]ドロップダウン リストに表示されます。
+
+

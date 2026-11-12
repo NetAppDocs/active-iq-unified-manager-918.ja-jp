@@ -1,0 +1,23 @@
+---
+permalink: health-checker/concept_what_does_not_compliant_mean.html 
+sidebar: sidebar 
+keywords: not compliant, compliant 
+summary: クラスタおよびストレージ仮想マシン（SVM）は、『NetApp Security Hardening Guide for ONTAP 9』で定義された推奨事項に対して評価されるセキュリティ基準のいずれかが満たされていない場合、準拠していないとみなされます。さらに、いずれかのSVMが準拠していないとフラグ付けされた場合、クラスタは準拠していないとみなされます。 
+---
+= Active IQ Unified Manager でのクラスターと SVM のコンプライアンスステータスについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クラスターおよびストレージ仮想マシン（SVM）は、_NetApp Security Hardening Guide for ONTAP 9_ で定義されている推奨事項に対して評価されているセキュリティ基準のいずれかが満たされていない場合、準拠していないとみなされます。さらに、いずれかの SVM が準拠していないとフラグ付けされた場合、そのクラスターは準拠していないとみなされます。
+
+セキュリティ カードの各ステータス アイコンとその意味は次のとおりです。
+
+* image:../media/sev_normal_um60.png["通常の緑色のチェックマークアイコン"] - パラメータは推奨どおりに設定されています。
+* image:../media/sev_warning_um60.png["警告アイコン"] - パラメータが推奨設定どおりに設定されていません。
+* image:../media/sev_information_um60.gif["情報アイコン"] - クラスター上で機能が有効になっていないか、パラメータが推奨どおりに設定されていないが、このパラメータはオブジェクトのコンプライアンスには寄与しない。
+
+
+ボリューム暗号化ステータスは、クラスタまたはSVMが準拠とみなされるかどうかには影響しません。

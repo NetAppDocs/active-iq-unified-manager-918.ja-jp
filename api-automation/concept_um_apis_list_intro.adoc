@@ -1,0 +1,32 @@
+---
+permalink: api-automation/concept_um_apis_list_intro.html 
+sidebar: sidebar 
+keywords: unified, manager, rest, api 
+summary: Active IQ Unified Manager の REST API は、カテゴリに基づいてこのセクションに一覧表示されています。 
+---
+= Active IQ Unified Manager REST API のカテゴリについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager の REST API は、カテゴリに基づいてこのセクションに一覧表示されています。
+
+Unified Manager インスタンスからオンラインドキュメントページを表示できます。このページには、すべての REST API 呼び出しの詳細が含まれています。このドキュメントでは、オンラインドキュメントの詳細を繰り返しません。ここに記載または説明されている各API呼び出しには、ドキュメント ページで呼び出しを検索するために必要な情報だけが含まれています。特定のAPI呼び出しを特定した後、入力パラメータ、出力形式、HTTPステータスコード、リクエスト処理タイプなど、その呼び出しの完全な詳細を確認できます。
+
+ワークフローで使用している各API呼び出しについて、ドキュメント ページで見つけるのに役立つように次の情報を示します。
+
+* カテゴリ
++
+ドキュメント ページのAPI呼び出しは、機能に関連する分野（カテゴリ）に分類されています。特定のAPI呼び出しを検索するには、ページの一番下までスクロールして、該当するAPIカテゴリをクリックします。
+
+* HTTP動詞（呼び出し）
++
+HTTP動詞は、リソースに対して実行する操作を示します。各API呼び出しは、単一のHTTP動詞を使用して実行されます。
+
+* パス
++
+このパスは、呼び出しの実行中に操作が使用する特定のリソースを指定します。コアのURLのあとにパス文字列を追加することで、リソースを識別する完全なURLが形成されます。
+
+

@@ -1,0 +1,16 @@
+---
+permalink: config/concept_login_banner.html 
+sidebar: sidebar 
+keywords: login banner, feature settings 
+summary: この機能により、組織はログイン時およびログアウト時に、システムへのアクセス権限を持つユーザーや利用規約などの情報を表示できます。 
+---
+= Active IQ Unified Manager にログインバナーを追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ログイン バナーを追加して、システムへのアクセスを許可されているユーザや利用条件などの情報をログインとログアウトの際に表示することができます。
+
+このログイン バナーのポップアップは、ストレージのオペレータや管理者などのすべてのユーザに対して、ログイン、ログアウト、セッション タイムアウトの際に表示されます。

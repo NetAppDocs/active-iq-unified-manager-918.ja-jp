@@ -1,0 +1,72 @@
+---
+permalink: install-vapp/qsg-vapp.html 
+sidebar: sidebar 
+keywords: quick start guide, getting started, QSG, VMWare QSG, vApp QSG, quick installation 
+summary: VMWare vSphereプラットフォーム上のUnified Managerのクイックスタートガイド。 
+---
+= VMware vSphere の Active IQ Unified Manager を使用開始する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ルート証明書、 `README`ファイル、および `OVA`ファイルを含む `.tar`ファイルをダウンロードし、Unified Manager を仮想アプライアンスとしてデプロイできます。
+
+
+
+[[system-requirements]]
+== システム要件
+
+* オペレーティングシステム：VMware ESXi 8.0
+* RAM：12 GB
+* CPU：合計9572MHz
+* 空きディスク容量：5 GB（シンプロビジョニング）、152 GB（シックプロビジョニング）
+
+
+詳細なシステム要件については、link:../install-vapp/concept_requirements_for_installing_unified_manager.html["Unified Managerをインストールするための要件"]およびlink:http://mysupport.netapp.com/matrix["Interoperability Matrix"]を参照してください。
+
+
+
+[[install-active-iq-unified-manager]]
+== Active IQ Unified Managerのインストール
+
+
+
+[[download-the-installer]]
+=== インストーラをダウンロードする
+
+. ルート証明書を含む `.tar`ファイル、 `README`ファイル、および `OVA`ファイルをダウンロードします。
+. vSphere Clientからアクセス可能なローカルまたはネットワークのディレクトリにファイルを保存します。
+. ダウンロードした `.tar`ファイルが格納されているディレクトリで、 `tar -xvzf ActiveIQUnifiedManager-<version>.tar.gz`コマンドを入力します。+ 必要な `OVA`ファイル、ルート証明書、および `README`ファイルがターゲットディレクトリに解凍されます。
+
+
+
+
+[[verify-integrity]]
+=== 整合性を検証する
+
+ `OVA`ファイルの整合性を確認するには、 `README`ファイルに記載されている手順に従ってください。
+
+
+
+[[install-unified-manager]]
+=== Unified Managerをインストールする
+
+. vSphere Client で、「ファイル」>「OVF テンプレートのデプロイ」をクリックします。
+. OVAファイルを検索し、ウィザードを使用してESXiサーバに仮想アプライアンスを導入します。
+. 「レビューの詳細」ページの「発行者」セクションに表示されるメッセージ `Entrust Code Signing - OVCS2 (Trusted certificate)`は、ダウンロードした `OVA`ファイルの整合性を確認します。メッセージ `Entrust Code Signing - OVCS2 (Invalid certificate)`が表示された場合は、VMware vCenter Server を 7.0U3E 以降のバージョンにアップグレードしてください。
+. [Customize Template]ページの[Properties]タブで、実行しているインストールのタイプに必要なフィールドを入力します。
++
+** 静的設定の場合は、すべてのフィールドに必要事項を入力してください。*セカンダリDNS* フィールドへの情報の追加は必須ではありません。
+** IPv4を使用するDHCPの場合、すべてのフィールドを空にしてください。
+** IPv6を使用するDHCPの場合、[Enable Auto IPv6 addressing]ボックスをオンにします。それ以外のフィールドはすべて空にしてください。
+
+
+. VMの電源をオンにします。
+. [Console]タブをクリックして最初のブート プロセスを確認します。
+. タイムゾーンを設定します。
+. Unified Managerメンテナンス ユーザの名前とパスワードを入力します。
+
+
+インストールが完了すると、Unified Manager Web UIへの接続方法が表示されます。

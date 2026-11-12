@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_introduction_to_unified_manager_performance_monitoring.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager, performance, monitoring 
+summary: Active IQ Unified Manager（旧OnCommand Unified Manager）は、NetApp ONTAPソフトウェアを実行するシステムを対象に、パフォーマンス監視機能とパフォーマンス イベントの根本原因分析機能を提供します。 
+---
+= Active IQ Unified Manager のパフォーマンス監視について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager（旧OnCommand Unified Manager）は、NetApp ONTAPソフトウェアを実行するシステムを対象に、パフォーマンス監視機能とパフォーマンス イベントの根本原因分析機能を提供します。
+
+Unified Managerは、クラスタコンポーネントを過剰に使用し、クラスタ上の他のワークロードのパフォーマンスを低下させているワークロードを特定するのに役立ちます。パフォーマンスしきい値ポリシーを定義することで、特定のパフォーマンスカウンタの最大値を指定し、しきい値を超えたときにイベントを生成することもできます。Unified Managerはこれらのパフォーマンスイベントを通知し、是正措置を講じてパフォーマンスを通常の動作レベルに戻すことができるようにします。Unified Managerのユーザーインターフェースでイベントを表示および分析できます。
+
+Unified Managerは、2種類のワークロードのパフォーマンスを監視します。
+
+* ユーザ定義のワークロード
++
+このワークロードは、クラスタに作成したFlexVolとFlexGroupボリュームで構成されます。
+
+* システム定義のワークロード
++
+このワークロードは、内部のシステム アクティビティで構成されます。
+
+

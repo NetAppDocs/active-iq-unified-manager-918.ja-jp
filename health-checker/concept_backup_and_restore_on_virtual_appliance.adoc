@@ -1,0 +1,29 @@
+---
+permalink: health-checker/concept_backup_and_restore_on_virtual_appliance.html 
+sidebar: sidebar 
+keywords: backup, restore, unified manager, virtual, appliance, snapshot copy, copies 
+summary: 仮想アプライアンスにインストールされたUnified Managerのバックアップ / リストア モデルでは、仮想アプリケーション全体のイメージをキャプチャしてリストアします。 
+---
+= 仮想アプライアンス上の Active IQ Unified Manager のバックアップとリストア
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+仮想アプライアンスにインストールされたUnified Managerのバックアップ / リストア モデルでは、仮想アプリケーション全体のイメージをキャプチャしてリストアします。
+
+仮想アプライアンスのバックアップを完了するには、次のタスクを実行します。
+
+. VMの電源をオフにし、Unified Manager仮想アプライアンスのVMwareスナップショットを取得します。
+. NetApp Snapshotコピーをデータストア上に作成して、VMwareスナップショットをキャプチャします。
++
+ONTAPソフトウェアを実行しているシステム以外でデータストアをホストしている場合は、ストレージ ベンダーのガイドラインに従ってVMwareスナップショットを作成します。
+
+. NetApp Snapshotコピー、またはスナップショットに相当するものを別のストレージにレプリケートします。
+. VMwareスナップショットを削除します。
+
+
+問題が発生した場合にUnified Manager仮想アプライアンスが保護されるように、これらのタスクを使用してバックアップスケジュールを実装する必要があります。
+
+VMをリストアする際は、作成したVMwareスナップショットを使用して、VMをバックアップの作成時点の状態に戻すことができます。

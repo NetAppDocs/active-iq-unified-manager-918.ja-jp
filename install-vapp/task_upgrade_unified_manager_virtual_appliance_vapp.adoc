@@ -1,0 +1,72 @@
+---
+permalink: install-vapp/task_upgrade_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager, virtual, appliance 
+summary: Unified Manager仮想アプライアンスをアップグレードできます 
+---
+= Active IQ Unified Manager 仮想アプライアンスのアップグレード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager仮想アプライアンスは、リリース9.14または9.16から9.18にアップグレードできます。
+
+.開始する前に
+以下を確認してください。
+
+* アップグレード ファイル、ISOイメージをNetAppサポート サイトからダウンロードしておく必要があります。
+* Unified Managerをアップグレードするシステムがシステムとソフトウェアの要件を満たしている必要があります。
++
+link:concept_virtual_infrastructure_or_hardware_system_requirements.html["仮想インフラストラクチャの要件"]を参照してください。
+
++
+link:reference_vmware_software_and_installation_requirements.html["VMwareソフトウェアとインストールの要件"]を参照してください。
+
+* vSphere 6.5以降を使用している場合は、VMware Remote Console（VMRC）をインストール済みであること。
+* アップグレードの実行中に、パフォーマンス データの保持期間について、以前のデフォルト設定である13カ月のままにするか6カ月に変更するかを確認するプロンプトが表示されることがあります。変更を確認すると、6カ月を過ぎた過去のパフォーマンス データはパージされます。
+* 次の情報を入手していること。
++
+** NetApp Support Site のログイン資格情報
+** VMware vCenter ServerおよびvSphere Web Clientにアクセスするためのクレデンシャル
+** Unified Managerメンテナンスユーザーの認証情報
+
+
+
+
+アップグレード プロセスの実行中は、Unified Managerを使用できなくなります。実行中の処理がある場合は、Unified Managerをアップグレードする前に完了しておいてください。
+
+Workflow AutomationとUnified Managerを連携させて使用している場合、Workflow Automationでホスト名を手動で更新する必要があります。
+
+.手順
+. vSphere Client で、「ホーム」>「インベントリ」>「VM とテンプレート」をクリックします。
+. Unified Manager仮想アプライアンスがインストールされている仮想マシン（VM）を選択します。
+. Unified Manager VM が実行されている場合は、「概要」>「コマンド」>「ゲストのシャットダウン」に移動します。
+. Unified Manager VMのバックアップ コピー（Snapshotやクローンなど）を作成して、アプリケーションと整合性のあるバックアップを作成します。
+. vSphere Clientで、Unified Manager VMの電源をオンにします。
+. VMware Remote Consoleを起動します。
+. 「CDROM」アイコンをクリックし、「Connect to Disk Image File (.iso)」を選択します。
+.  `ActiveIQUnifiedManager-<version>-virtual-update.iso`ファイルを選択し、*Open* をクリックします。
+. 「コンソール」タブをクリックします。
+. Unified Managerメンテナンス コンソールにログインします。
+. メインメニューで、*アップグレード*を選択します。
++
+アップグレード プロセスの実行中はUnified Managerを使用できなくなり、完了後に再開されることを示すメッセージが表示されます。
+
+. タイプ `y`続けてください。
++
+仮想アプライアンスが配置されている仮想マシンをバックアップするように通知する警告が表示されます。
+
+. タイプ `y`続けてください。
++
+アップグレード プロセスが完了してUnified Managerサービスが再起動されるまでに数分かかることがあります。
+
+. いずれかのキーを押して次に進みます。
++
+メンテナンス コンソールから自動的にログアウトされます。
+
+. *オプション：*メンテナンスコンソールにログインし、Unified Managerのバージョンを確認します。
+
+
+サポートされているWebブラウザの新しいウィンドウでWeb UIを起動し、アップグレード後のバージョンのUnified Managerにログインします。ただし、検出プロセスが完了まではUIでの作業を実行することはできません。

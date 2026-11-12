@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: 収集された健常性やパフォーマンスのデータに表示されるタイムスタンプ（イベントの検出時刻のタイムスタンプ）は、ONTAPクラスタの時刻に基づいており、Webブラウザで設定されているタイム ゾーンに応じて調整されます。 
+---
+= 収集されたデータとActive IQ Unified Managerのイベントのタイムスタンプについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+収集された健常性やパフォーマンスのデータに表示されるタイムスタンプ（イベントの検出時刻のタイムスタンプ）は、ONTAPクラスタの時刻に基づいており、Webブラウザで設定されているタイム ゾーンに応じて調整されます。
+
+Unified Manager サーバー、ONTAP クラスター、および Web ブラウザの時刻を同期するために、Network Time Protocol （NTP） サーバーを使用することを強くお勧めします。
+
+[NOTE]
+====
+特定のクラスタのタイムスタンプが正しく表示されない場合は、そのクラスタの時間が正しく設定されていることを確認してください。
+
+====

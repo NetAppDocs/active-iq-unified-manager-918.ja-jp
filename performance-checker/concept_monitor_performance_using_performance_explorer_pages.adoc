@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_monitor_performance_using_performance_explorer_pages.html 
+sidebar: sidebar 
+keywords: monitoring, performance, explorer, pages 
+summary: パフォーマンスエクスプローラーのページには、クラスター内の各オブジェクトのパフォーマンスに関する詳細情報が表示されます。このページでは、すべてのクラスタオブジェクトのパフォーマンスに関する詳細な情報が表示され、特定のオブジェクトのパフォーマンスデータをさまざまな期間にわたって選択および比較することができます。 
+---
+= Active IQ Unified Manager の Performance Explorer ページを使用してパフォーマンスを監視する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンスエクスプローラーのページには、クラスター内の各オブジェクトのパフォーマンスに関する詳細情報が表示されます。このページでは、すべてのクラスタオブジェクトのパフォーマンスに関する詳細な情報が表示され、特定のオブジェクトのパフォーマンスデータをさまざまな期間にわたって選択および比較することができます。
+
+すべてのオブジェクトの全体的なパフォーマンスを評価したり、オブジェクトのパフォーマンス データを並べて表示して比較したりできます。

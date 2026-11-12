@@ -1,0 +1,56 @@
+---
+permalink: api-automation/concept_async_run.html 
+sidebar: sidebar 
+keywords: job, objects, asynchronous, processes 
+summary: Active IQ Unified Managerは、他のAPIの実行中に実行されたジョブに関する情報を取得するジョブAPIを提供します。ジョブオブジェクトを使用した非同期処理の仕組みを理解しておく必要があります。 
+---
+= Active IQ Unified Manager が非同期処理にジョブオブジェクトを使用する方法を理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Managerは、他のAPIの実行中に実行されたジョブに関する情報を取得する `jobs` APIを提供します。Jobオブジェクトを使用した非同期処理の仕組みを理解しておく必要があります。
+
+一部のAPI呼び出し、特にリソースの追加や変更に使用されるAPI呼び出しは、他の呼び出しよりも完了に時間がかかることがあります。Unified Managerは、これらの長時間実行されるリクエストを非同期的に処理します。
+
+
+
+[[asynchronous-requests-described-using-job-object]]
+== ジョブ オブジェクトを使用して記述された非同期要求
+
+非同期的に実行されるAPI呼び出しを行うと、HTTP応答コード202が返されます。この応答コードは、要求が正常に検証され受け入れられたものの、まだ完了していないことを示します。要求はバックグラウンド タスクとして処理され、クライアントへの最初のHTTP応答後も引き続き実行されます。応答には、要求に対応するジョブ オブジェクトと、その一意の識別子が含まれます。
+
+
+
+[[query-the-job-object-associated-with-an-api-request]]
+== API リクエストに関連付けられた Job オブジェクトを照会する
+
+HTTP応答で返されるジョブ オブジェクトには、いくつかのプロパティが含まれています。状態プロパティを照会して、要求が正常に完了したかどうかを確認できます。ジョブ オブジェクトは次のいずれかの状態になります。
+
+* `NORMAL`
+* `WARNING`
+* `PARTIAL_FAILURES`
+* `ERROR`
+
+
+ジョブ オブジェクトをポーリングしてタスクの最終状態（成功または失敗）を検出するには、2つの方法があります。
+
+* 標準のポーリング要求：現在のジョブの状態が即座に返されます。
+* ロングポーリングリクエスト：ジョブの状態が `NORMAL, ERROR,`または `PARTIAL_FAILURES.`に移行したとき
+
+
+
+
+[[steps-in-an-asynchronous-request]]
+== 非同期要求の手順
+
+以下は、非同期API呼び出しを完了する手順の概要です。
+
+. 非同期API呼び出しを実行します。
+. 要求が正常に受け取られたことを示すHTTP応答202を受信します。
+. 応答の本文からジョブ オブジェクトの識別子を抽出します。
+. ループ内で、Jobオブジェクトが終了状態に達するまで待機します `NORMAL, ERROR,`または `PARTIAL_FAILURES.`
+. ジョブの最終状態を確認し、ジョブの結果を取得します。
+

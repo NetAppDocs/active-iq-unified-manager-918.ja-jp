@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: Workflow AutomationとUnified Managerの間の接続をサポートする場合や、データベース ビューにアクセスする場合は、まずUnified Manager Web UIで、統合スキーマ ロールまたはレポート スキーマ ロールを割り当てたデータベース ユーザを作成する必要があります。 
+---
+= Active IQ Unified Manager でデータベースユーザーを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Workflow AutomationとUnified Managerの間の接続をサポートする場合や、データベース ビューにアクセスする場合は、まずUnified Manager Web UIで、統合スキーマ ロールまたはレポート スキーマ ロールを割り当てたデータベース ユーザを作成する必要があります。
+
+.開始する前に
+アプリケーション管理者のロールが必要です。
+
+データベース ユーザは、Workflow Automationとの統合およびレポート固有のデータベース ビューへのアクセスを行えます。データベース ユーザは、Unified Manager Web UIやメンテナンス コンソールにはアクセスできず、API呼び出しも実行できません。
+
+.手順
+. 左側のナビゲーションペインで、*General* > *Users* をクリックします。
+. 「Users」ページで、*Add* をクリックします。
+. 「ユーザーの追加」ダイアログボックスで、*タイプ*ドロップダウンリストから*データベースユーザー*を選択します。
+. データベース ユーザの名前とパスワードを入力します。
+. *役割*ドロップダウンリストから、適切な役割を選択してください。
++
+[cols="2*"]
+|===
+| 状況 | この役割を選択してください 
+
+
+ a| 
+Unified ManagerをWorkflow Automationに接続する場合
+ a| 
+統合スキーマ
+
+
+
+ a| 
+レポートおよびその他のデータベース ビューにアクセスする場合
+ a| 
+レポート スキーマ
+
+|===
+. *[追加]*をクリックします。
+

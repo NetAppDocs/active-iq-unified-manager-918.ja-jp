@@ -1,0 +1,39 @@
+---
+permalink: config/task_disable_saml_authentication_from_maintenance_console_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication, maintenance, console 
+summary: Unified Manager GUIにアクセスできない場合は、必要に応じてメンテナンス コンソールからSAML認証を無効にすることができます。この状況は、設定に誤りがある場合やIdPにアクセスできない場合に発生します。 
+---
+= Active IQ Unified Manager メンテナンスコンソールから SAML 認証を無効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager GUIにアクセスできない場合は、必要に応じてメンテナンス コンソールからSAML認証を無効にすることができます。この状況は、設定に誤りがある場合やIdPにアクセスできない場合に発生します。
+
+.開始する前に
+メンテナンス コンソールにメンテナンス ユーザとしてアクセスできる必要があります。
+
+SAML認証が無効な場合は、Active DirectoryやLDAPなどの設定済みのディレクトリ サービス プロバイダによるサインオン認証が行われます。設定されているリモート ユーザに加え、ローカル ユーザとメンテナンス ユーザもグラフィカル ユーザ インターフェイスにアクセスできるようになります。
+
+SAML認証は、UIの[セットアップ / 認証]ページからも無効にできます。
+
+[NOTE]
+====
+SAML認証を無効にしたあと、Unified Managerが自動的に再起動されます。
+
+====
+.手順
+. メンテナンス コンソールにログインします。
+. *メインメニュー*で、*SAML認証を無効にする*オプションの番号を入力してください。
++
+SAML認証を無効にしてUnified Managerを再起動することの確認を求めるメッセージが表示されます。
+
+. 「y」と入力してEnterキーを押すと、Unified Managerが再起動されます。
+
+
+リモート ユーザがUnified Managerのグラフィカル インターフェイスにアクセスする際にクレデンシャルを入力するページが、次回からIdPのログイン ページではなくUnified Managerのログイン ページに変わります。
+
+必要に応じて、IdPにアクセスしてUnified ManagerサーバのURIとメタデータを削除します。

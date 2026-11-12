@@ -1,0 +1,16 @@
+---
+permalink: config/concept_manage_saml_authentication_settings_um.html 
+sidebar: sidebar 
+keywords: manage, saml, authentication, settings 
+summary: リモート認証を設定したあと、Security Assertion Markup Language（SAML）認証を有効にして、Unified ManagerのWeb UIにアクセスするリモート ユーザをセキュアなアイデンティティ プロバイダ（IdP）で認証するように設定できます。 
+---
+= Active IQ Unified Manager で SAML 認証を有効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+リモート認証を設定したあと、Security Assertion Markup Language（SAML）認証を有効にして、Unified ManagerのWeb UIにアクセスするリモート ユーザをセキュアなアイデンティティ プロバイダ（IdP）で認証するように設定できます。
+
+SAML認証を有効にした場合、Unified Managerのグラフィカル ユーザ インターフェイスにアクセスできるのはリモート ユーザのみです。ローカル ユーザとメンテナンス ユーザはUIにアクセスできません。この設定は、メンテナンス コンソールにアクセスするユーザには影響しません。

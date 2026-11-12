@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/reference_issue_with_ldap_using_other_authentication_services.html 
+sidebar: sidebar 
+keywords: issue, addi, ldap, use, other, authentication, services 
+summary: 他の認証サービスを使用して LDAP を追加する際の問題のトラブルシューティングを行います。 
+---
+= Active IQ Unified Manager で他の認証サービスを使用して LDAP を追加することによって発生した問題を解決する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+認証サービスに[その他]を選択した場合、[ユーザ オブジェクト クラス]と[グループ オブジェクト クラス]には前に選択したテンプレートの値が使用されます。LDAPサーバが同じ値を使用していない場合は、処理が失敗します。
+
+*原因*
+
+OpenLDAPでユーザが正しく設定されていません。
+
+*対処方法*
+
+この問題は、次のいずれかの対処方法によって手動で解決できます。
+
+LDAPのユーザ オブジェクト クラスとグループ オブジェクト クラスがそれぞれuserとgroupである場合は、次の手順を実行します。
+
+. 左側のナビゲーションペインで、**General** > *Remote Authentication* をクリックします。
+. 「認証サービス」ドロップダウンメニューで「Active Directory」を選択し、次に「その他」を選択します。
+. テキスト フィールドに値を入力します。
+
+
+LDAPのユーザ オブジェクト クラスとグループ オブジェクト クラスがそれぞれposixAccountとposixGroupである場合は、次の手順を実行します。
+
+. 左側のナビゲーションペインで、**一般** > *リモート認証*をクリックします。
+. 「Authentication Service」ドロップダウンメニューで「OpenLDAP」を選択し、次に「Others」を選択します。
+. テキスト フィールドに値を入力します。
+
+
+最初の 2 つの回避策が適用されない場合は、 `option-set` API を呼び出し、 `auth.ldap.userObjectClass` および  `auth.ldap.groupObjectClass` オプションを正しい値に設定します。

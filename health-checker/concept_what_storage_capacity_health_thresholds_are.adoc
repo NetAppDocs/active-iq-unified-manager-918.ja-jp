@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_what_storage_capacity_health_thresholds_are.html 
+sidebar: sidebar 
+keywords: storage, capacity, health, thresholds 
+summary: ストレージ容量の健全性しきい値とは、Unified Managerサーバーがストレージオブジェクトの容量問題を報告するためのイベントを生成するポイントのことです。このようなイベントが発生した際に通知を送信するようにアラートを設定できます。 
+---
+= Active IQ Unified Manager のストレージ容量の健全性しきい値について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ容量の健全性しきい値とは、Unified Managerサーバーがストレージオブジェクトの容量問題を報告するためのイベントを生成するポイントのことです。このようなイベントが発生した際に通知を送信するようにアラートを設定できます。
+
+すべてのアグリゲート、ボリューム、およびqtreeのストレージ容量の健常性しきい値がデフォルト値に設定されます。必要に応じて、オブジェクトまたはオブジェクトのグループに対するそれらの設定を変更できます。

@@ -1,0 +1,21 @@
+---
+permalink: storage-mgmt/concept_why_you_use_quotas.html 
+sidebar: sidebar 
+keywords: use, quotas 
+summary: クォータは、FlexVol内のリソース使用量を制限したり、リソース使用量が特定のレベルに達したときに通知したり、リソース使用量を追跡したりするために使用できます。 
+---
+= Active IQ Unified Manager のクォータについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クォータは、FlexVol内のリソース使用量を制限したり、リソース使用量が特定のレベルに達したときに通知したり、リソース使用量を追跡したりするために使用できます。
+
+次のような場合にクォータを指定します。
+
+* ユーザやグループが使用できる、またはqtreeに格納できる、ディスク スペースの容量やファイル数を制限する場合
+* 制限を適用せずに、ユーザ、グループ、またはqtreeによって使用されるディスク スペースの容量やファイル数を追跡する場合
+* ユーザが使用するディスク容量やファイル数が多いときにユーザに警告する場合
+

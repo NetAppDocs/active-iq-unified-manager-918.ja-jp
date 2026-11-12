@@ -1,0 +1,24 @@
+---
+permalink: events/task_configure_event_retention_settings.html 
+sidebar: sidebar 
+keywords: configure, event, retention, settings 
+summary: イベントが自動的に削除されるまでにUnified Managerサーバでイベントを保持する月数を指定できます。 
+---
+= Active IQ Unified Manager でイベント保持設定を構成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+イベントが自動的に削除されるまでにUnified Managerサーバでイベントを保持する月数を指定できます。
+
+.開始する前に
+アプリケーション管理者のロールが必要です。
+
+サーバのパフォーマンスに影響を及ぼす可能性があるため、イベントの保持期間を6カ月以上に設定することは推奨されません。
+
+.手順
+. 左側のナビゲーションペインで、*[全般]* > *[データ保持]* をクリックします。
+. 「データ保持」ページで、「イベント保持」エリアのスライダーを選択し、イベントを保持する月数まで移動させて、「保存」をクリックします。
+

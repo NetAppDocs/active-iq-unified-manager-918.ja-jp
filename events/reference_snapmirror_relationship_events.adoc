@@ -1,0 +1,195 @@
+---
+permalink: events/reference_snapmirror_relationship_events.html 
+sidebar: sidebar 
+keywords: snapmirror, relationship, events, impact area, protection 
+summary: SnapMirror関係イベントは、非同期SnapMirror関係と同期SnapMirror関係のステータス情報を提供します。これにより、潜在的な問題を監視できます。非同期SnapMirror関係イベントはStorage VMとボリュームの両方について生成されますが、同期SnapMirror関係イベントはボリューム関係についてのみ生成されます。Storage VMディザスタ リカバリ関係を構成するコンスティチュエント ボリュームについてはイベントは生成されません。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の SnapMirror 関係イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror関係イベントは、非同期SnapMirror関係と同期SnapMirror関係のステータス情報を提供します。これにより、潜在的な問題を監視できます。非同期SnapMirror関係イベントはStorage VMとボリュームの両方について生成されますが、同期SnapMirror関係イベントはボリューム関係についてのみ生成されます。Storage VMディザスタ リカバリ関係を構成するコンスティチュエント ボリュームについてはイベントは生成されません。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-protection]]
+== 影響範囲：保護
+
+アスタリスク（*）は、EMSイベントがUnified Managerイベントに変換されたことを示します。
+
+[NOTE]
+====
+SnapMirror関係イベントは、Storage VMディザスタ リカバリで保護されているStorage VMについて生成されますが、コンスティチュエント オブジェクトの関係については生成されません。
+
+====
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ミラー レプリケーションは正常でない（ocumEvtSnapmirrorRelationshipUnhealthy）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+ミラー レプリケーションを切断（ocumEvtSnapmirrorRelationshipStateBrokenoff）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+ミラー レプリケーションの初期化失敗（ocumEvtSnapmirrorRelationshipInitializeFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+ミラー レプリケーションの更新失敗（ocumEvtSnapmirrorRelationshipUpdateFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+ミラー レプリケーションの遅延エラー（ocumEvtSnapMirrorRelationshipLagError）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+ミラー レプリケーションの遅延警告（ocumEvtSnapMirrorRelationshipLagWarning）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+ミラー レプリケーションの再同期失敗（ocumEvtSnapmirrorRelationshipResyncFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+同期レプリケーションが同期していません *（syncSnapmirrorRelationshipOutofsync）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+警告
+
+
+
+ a| 
+同期レプリケーションが復元されました *（syncSnapmirrorRelationshipInSync）
+ a| 
+イベント
+ a| 
+SnapMirror関係
+ a| 
+情報
+
+
+
+ a| 
+同期レプリケーションの自動再同期が失敗しました *（syncSnapmirrorRelationshipAutoSyncRetryFailed）
+ a| 
+リスク
+ a| 
+SnapMirror関係
+ a| 
+エラー
+
+
+
+ a| 
+ONTAP Mediator をクラスタに追加（snapmirrorMediatorAdded）
+ a| 
+イベント
+ a| 
+クラスタ
+ a| 
+情報
+
+
+
+ a| 
+ONTAP Mediator をクラスタから削除（snapmirrorMediatorRemoved）
+ a| 
+イベント
+ a| 
+クラスタ
+ a| 
+情報
+
+
+
+ a| 
+ONTAP Mediator にクラスタから到達不能（snapmirrorMediatorUnreachable）
+ a| 
+リスク
+ a| 
+メディエーター
+ a| 
+警告
+
+
+
+ a| 
+ONTAP Mediator にクラスタからアクセス不能（snapmirrorMediatorMisconfigured）
+ a| 
+リスク
+ a| 
+メディエーター
+ a| 
+エラー
+
+
+
+ a| 
+ONTAP Mediator接続を再確立して再同期、SnapMirrorアクティブ同期の準備完了（snapmirrorMediatorInQuorum）
+ a| 
+イベント
+ a| 
+メディエーター
+ a| 
+情報
+
+|===

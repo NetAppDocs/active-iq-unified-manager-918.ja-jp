@@ -1,0 +1,26 @@
+---
+permalink: events/reference_add_script_dialog_box.html 
+sidebar: sidebar 
+keywords: add, script, dialog, box 
+summary: '[スクリプトの追加]ダイアログ ボックスで、Unified Managerにスクリプトを追加できます。スクリプトを使用して、ストレージ オブジェクトに対して生成されたイベントを自動的に解決するようにアラートを設定することができます。' 
+---
+= Active IQ Unified Manager の「スクリプトの追加」ダイアログボックス
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[スクリプトの追加]ダイアログ ボックスで、Unified Managerにスクリプトを追加できます。スクリプトを使用して、ストレージ オブジェクトに対して生成されたイベントを自動的に解決するようにアラートを設定することができます。
+
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+* *スクリプトファイルを選択*
++
+アラートに使用するスクリプトを選択できます。
+
+* *概要*
++
+スクリプトの説明を指定できます。
+
+

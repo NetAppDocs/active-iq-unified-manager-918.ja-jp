@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html 
+sidebar: sidebar 
+keywords: performance, event, analysis, metrocluster, configuration 
+summary: Unified Manager を使用して、MetroCluster 構成のパフォーマンス イベントを分析できます。イベントに関係するワークロードを特定し、解決のための推奨アクションを確認できます。 
+---
+= MetroCluster パフォーマンスイベントを Active IQ Unified Manager で分析する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager を使用して、MetroCluster 構成のパフォーマンス イベントを分析できます。イベントに関係するワークロードを特定し、解決のための推奨アクションを確認できます。
+
+MetroClusterパフォーマンスの問題は、クラスタ間のインタースイッチリンク（ISL）を過剰に利用する「過負荷」ワークロード、またはリンクの状態の問題が原因である可能性があります。Unified Manager は、MetroCluster構成内の各クラスタを、パートナークラスタのパフォーマンスイベントを考慮せずに独立して監視します。
+
+MetroCluster構成内の両方のクラスタのパフォーマンス イベントは、Unified Managerの[ダッシュボード]ページにも表示されます。Unified Managerのヘルス ページを表示して、各クラスタのヘルス状態を確認したり、それらの関係を表示したりすることもできます。

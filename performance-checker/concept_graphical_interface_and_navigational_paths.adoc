@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_graphical_interface_and_navigational_paths.html 
+sidebar: sidebar 
+keywords: graphical, interface, navigational, paths 
+summary: Unified Managerは非常に柔軟性が高く、さまざまな方法で複数のタスクを実行できます。Unified Managerで作業を進めるにつれて、多くのナビゲーションパスを発見することになるでしょう。ナビゲーションの可能な組み合わせすべてを示すことはできませんが、よくあるシナリオのいくつかについては理解しておく必要があります。 
+---
+= Active IQ Unified Manager のグラフィカルインターフェースとナビゲーションパスを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerは非常に柔軟性が高く、さまざまな方法で複数のタスクを実行できます。Unified Managerで作業を進めるにつれて、多くのナビゲーションパスを発見することになるでしょう。ナビゲーションの可能な組み合わせすべてを示すことはできませんが、よくあるシナリオのいくつかについては理解しておく必要があります。

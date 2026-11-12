@@ -1,0 +1,176 @@
+---
+section: storage-mgmt
+title: ストレージの監視と管理
+entries:
+- title: Active IQ Unified Managerの概要
+  entries:
+  - title: Active IQ Unified Manager について学ぶ
+    url: "/storage-mgmt/concept_introduction_to_unified_manager.html"
+  - title: Active IQ Unified Managerの健全性監視の概要
+    url: "/storage-mgmt/concept_introduction_to_unified_manager_health_monitoring.html"
+  - title: Active IQ Unified Managerによるパフォーマンス監視の概要
+    url: "/storage-mgmt/concept_introduction_to_unified_manager_performance_monitoring.html"
+  - title: Unified Manager REST APIを使用する
+    url: "/storage-mgmt/concept_use_unified_manager_rest_apis_ocum.html"
+  - title: Unified Managerサーバの機能
+    entries:
+    - title: Unified Manager サーバーについて
+      url: "/storage-mgmt/concept_what_unified_manager_server_does.html"
+    - title: 検出プロセスの仕組み
+      url: "/storage-mgmt/concept_how_discovery_process_works_tobe_rmvd.html"
+- title: ユーザーインターフェースを理解する
+  entries:
+  - title: ユーザーインターフェースについて説明します
+    url: "/storage-mgmt/concept_understand_user_interface.html"
+  - title: 一般的なウィンドウ レイアウト
+    url: "/storage-mgmt/concept_typical_window_layouts_um_6_x.html"
+  - title: ウィンドウ レイアウトのカスタマイズ
+    url: "/storage-mgmt/reference_window_layout_customization.html"
+  - title: Unified Managerのヘルプを使用する
+    url: "/storage-mgmt/task_use_unified_manager_help.html"
+  - title: お気に入りのヘルプトピックをブックマークする
+    url: "/storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html"
+  - title: ストレージオブジェクトを検索する
+    url: "/storage-mgmt/task_search_for_storage_objects.html"
+  - title: ストレージデータをレポートとしてエクスポートする
+    url: "/storage-mgmt/task_export_storage_data_as_reports.html"
+  - title: インベントリページのコンテンツをフィルタする
+    url: "/storage-mgmt/task_filter_inventory_page_content.html"
+  - title: 通知ベルからアクティブなイベントを表示します
+    url: "/storage-mgmt/task_view_active_events_from_notification_bell.html"
+- title: ダッシュボードからクラスタを監視および管理する
+  entries:
+  - title: ダッシュボードパネル
+    url: "/storage-mgmt/concept_monitor_and_manage_clusters_from_dashboard.html"
+  - title: "[ダッシュボード]ページ"
+    url: "/storage-mgmt/reference_dashboard_page.html"
+  - title: Unified Managerから直接ONTAPの問題を修正または管理する
+    entries:
+    - title: ONTAP の問題と機能を管理する
+      url: "/storage-mgmt/concept_fix_ontap_issues_directly_from_unified_manager.html"
+    - title: "[修正] / [すべて修正]ボタンが表示されたときの処理"
+      url: "/storage-mgmt/concept_what_options_do_i_have_in_fix_it_button.html"
+    - title: 修正対象として選択した管理アクションのステータスを表示します
+      url: "/storage-mgmt/task_view_status_of_management_actions_to_fix.html"
+    - title: Unified Managerで解決可能な問題
+      url: "/storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html"
+    - title: スクリプトを使用して管理アクションをオーバーライドする
+      url: "/storage-mgmt/concept_override_management_actions_through_scripts.html"
+- title: クラスタを管理します。
+  entries:
+  - title: クラスタ検出プロセスの仕組み
+    url: "/storage-mgmt/concept_how_discovery_process_works.html"
+  - title: 監視対象クラスタのリストの表示
+    url: "/storage-mgmt/task_view_list_of_monitored_clusters.html"
+  - title: クラスタを追加
+    url: "/storage-mgmt/task_add_clusters.html"
+  - title: クラスターを編集する
+    url: "/storage-mgmt/task_edit_clusters.html"
+  - title: クラスタの削除
+    url: "/storage-mgmt/task_remove_clusters.html"
+  - title: クラスタの再検出
+    url: "/storage-mgmt/task_rediscover_clusters.html"
+- title: VMware仮想インフラの監視
+  entries:
+  - title: VMware 仮想インフラ監視の詳細
+    url: "/storage-mgmt/concept_monitor_vmware_virtual_infrastructure.html"
+  - title: vCenter Serverの表示と追加
+    url: "/storage-mgmt/task_view_and_add_vcenter_servers.html"
+  - title: vCenter Serverの削除
+    url: "/storage-mgmt/task_remove_vcenter_server.html"
+  - title: 仮想マシンを監視する
+    url: "/storage-mgmt/concept_monitor_vms.html"
+  - title: ディザスタリカバリ構成の仮想インフラを表示する
+    url: "/storage-mgmt/concept_mcc_svmdr_vmawareness.html"
+- title: ワークロードのプロビジョニングと管理
+  entries:
+  - title: ワークロードのプロビジョニングと管理について学ぶ
+    url: "/storage-mgmt/concept_provision_and_manage_workloads.html"
+  - title: ワークロードの概要
+    entries:
+    - title: ワークロードダッシュボードについて
+      url: "/storage-mgmt/concept_workloads_dashboard.html"
+    - title: ワークロードを表示する
+      url: "/storage-mgmt/concept_all_workloads.html"
+    - title: ワークロードにポリシーを割り当てる
+      url: "/storage-mgmt/concept_assign_policies_on_workloads.html"
+    - title: ファイル共有ボリュームをプロビジョニングする
+      url: "/storage-mgmt/task_provision_fileshares.html"
+    - title: LUNのプロビジョニング
+      url: "/storage-mgmt/task_provision_luns.html"
+  - title: パフォーマンスサービスレベルの管理
+    entries:
+    - title: パフォーマンスサービスレベルについて
+      url: "/storage-mgmt/concept_manage_performance_service_levels.html"
+    - title: パフォーマンスサービスレベルの作成と編集
+      url: "/storage-mgmt/task_create_and_edit_psls.html"
+  - title: ストレージ効率ポリシーの管理
+    entries:
+    - title: ストレージ効率化ポリシーについて
+      url: "/storage-mgmt/concept_manage_storage_efficiency_policies.html"
+    - title: ストレージ効率ポリシーの作成と編集
+      url: "/storage-mgmt/task_create_and_edit_seps.html"
+- title: MetroCluster構成の管理と監視
+  entries:
+  - title: スイッチオーバーおよびスイッチバックの発生時のボリュームの動作
+    url: "/storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html"
+  - title: クラスタの接続ステータスの定義
+    url: "/storage-mgmt/reference_cluster_connectivity_status_definitions.html"
+  - title: データ ミラーリングのステータスの定義
+    url: "/storage-mgmt/reference_data_mirroring_status_definitions.html"
+  - title: MetroCluster構成の監視
+    url: "/storage-mgmt/task_monitor_metrocluster_configurations.html"
+  - title: MetroClusterレプリケーションの監視
+    url: "/storage-mgmt/task_monitor_metrocluster_replication.html"
+- title: クォータの管理
+  entries:
+  - title: クォータ制限とは
+    url: "/storage-mgmt/concept_what_quota_limits_are.html"
+  - title: ユーザーおよびユーザー グループ クォータを表示する
+    url: "/storage-mgmt/task_view_user_and_user_group_quotas.html"
+  - title: メールアドレスを生成するルールを作成する
+    url: "/storage-mgmt/task_create_rules_to_generate_email_addresses.html"
+  - title: ユーザー クォータおよびユーザー グループ クォータのメール通知フォーマットを作成する
+    url: "/storage-mgmt/task_create_an_email_notification_format.html"
+  - title: ユーザーおよびグループ クォータのメールアドレスを編集する
+    url: "/storage-mgmt/task_edit_user_and_group_quota_email_addresses.html"
+  - title: クォータの詳細
+    entries:
+    - title: クォータ プロセスの概要
+      url: "/storage-mgmt/concept_overview_of_quota_process_um_6_1.html"
+    - title: クォータについて
+      url: "/storage-mgmt/concept_about_quotas.html"
+    - title: クォータの使用目的
+      url: "/storage-mgmt/concept_why_you_use_quotas.html"
+  - title: クォータのダイアログ ボックスの説明
+    entries:
+    - title: クォータダイアログボックスを使用する
+      url: "/storage-mgmt/reference_description_of_quotas_dialog_boxes.html"
+    - title: "[Eメール通知の形式]ページ"
+      url: "/storage-mgmt/reference_email_notification_format_page.html"
+    - title: "[ユーザ クォータおよびグループ クォータの E メール アドレスを生成するルール]ページ"
+      url: "/storage-mgmt/reference_rules_to_generate_user_and_group_quota.html"
+- title: トラブルシューティング
+  entries:
+  - title: Unified Managerデータベースディレクトリにディスク容量を追加する
+    entries:
+    - title: データベースディレクトリへのディスク容量の追加について
+      url: "/storage-mgmt/concept_add_disk_space_to_um_database_directory.html"
+    - title: VMware仮想マシンのデータディスクに容量を追加する
+      url: "/storage-mgmt/task_add_space_to_data_disk_of_vmware.html"
+    - title: Linuxホストのデータディレクトリに空き容量を追加する
+      url: "/storage-mgmt/task_add_space_to_data_directory_of_um_linux_host.html"
+    - title: Microsoft Windowsサーバーの論理ドライブに空き容量を追加する
+      url: "/storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html"
+  - title: パフォーマンス統計の収集間隔を変更します
+    url: "/storage-mgmt/task_change_performance_statistics_collection_interval.html"
+  - title: Unified Manager がイベントおよびパフォーマンスデータを保持する期間の変更
+    url: "/storage-mgmt/task_change_time_um_retains_event_performance_data.html"
+  - title: 不明な認証エラー
+    url: "/storage-mgmt/reference_unknown_authentication_error.html"
+  - title: ユーザが見つからない
+    url: "/storage-mgmt/reference_user_not_found.html"
+  - title: その他の認証サービスを使用してLDAPを追加する場合の問題
+    url: "/storage-mgmt/reference_issue_with_ldap_using_other_authentication_services.html"
+  - title: WindowsシステムにおけるNetApp Manageability SDKのログローテーションの問題
+    url: "/storage-mgmt/task_resolve_windows_log_rotation_issue.html"

@@ -1,0 +1,18 @@
+---
+permalink: reporting/generaltask_um_rest_apis_that_can_be_used_for_reporting.html 
+sidebar: sidebar 
+keywords: unified manager ,rest api, reporting 
+summary: REST APIを使用すると、Unified Managerによって取得された健全性、容量、パフォーマンス、およびセキュリティ情報を表示することで、クラスターの管理を支援できます。 
+---
+= レポート作成のためのActive IQ Unified Manager REST APIの使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST APIを使用すると、Unified Managerによって取得された健全性、容量、パフォーマンス、およびセキュリティ情報を表示することで、クラスターの管理を支援できます。
+
+REST APIはSwagger Webページから利用できます。Swagger WebページにアクセスしてUnified Manager REST APIドキュメントを表示したり、API呼び出しを手動で行ったりすることができます。Unified ManagerのWeb UIのメニューバーで、「ヘルプ」ボタンをクリックし、「APIドキュメント」を選択します。Unified Manager REST API の詳細については、link:../api-automation/concept_get_started_with_um_apis.html["Active IQ Unified Manager REST APIでの作業の開始"]を参照してください。
+
+REST APIにアクセスするには、オペレータ、ストレージ管理者、アプリケーション管理者のいずれかのロールが必要です。

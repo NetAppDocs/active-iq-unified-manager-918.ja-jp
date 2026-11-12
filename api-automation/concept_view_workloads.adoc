@@ -1,0 +1,55 @@
+---
+permalink: api-automation/concept_view_workloads.html 
+sidebar: sidebar 
+keywords: view, storage, workloads 
+summary: ここに記載されている API を使用すると、データセンター内のすべての ONTAP クラスターのストレージワークロードの統合リストを表示できます。また、API は、Active IQ Unified Manager 環境でプロビジョニングされたストレージワークロードの数、およびその容量とパフォーマンス（IOPS）の統計情報の概要ビューも提供します。 
+---
+= Active IQ Unified Manager でAPIを使用してストレージワークロードを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ここに記載されている API を使用すると、データセンター内のすべての ONTAP クラスターのストレージワークロードの統合リストを表示できます。また、API は、Active IQ Unified Manager 環境でプロビジョニングされたストレージワークロードの数、およびその容量とパフォーマンス（IOPS）の統計情報の概要ビューも提供します。
+
+
+
+[[view-storage-workloads]]
+== ストレージ ワークロードの表示
+
+以下の方法を使用すると、データセンター内のすべてのクラスターにおけるすべてのストレージワークロードを表示できます。特定の列に基づいて応答をフィルタリングする方法については、Unified Managerインスタンスで利用できるAPIリファレンスドキュメントを参照してください。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/workloads`
+
+|===
+
+
+[[view-storage-workloads-summary]]
+== ストレージ ワークロードの概要の表示
+
+以下の方法を使用すると、各パフォーマンスサービスレベルによって管理されるストレージワークロードの使用容量、利用可能容量、使用IOPS、利用可能IOPS、およびストレージワークロードの数を評価できます。表示されるストレージワークロードは、任意のLUN、NFSファイル共有、またはCIFS共有に適用できます。APIは、ストレージワークロードの概要、Unified Managerによってプロビジョニングされたストレージワークロードの概要、データセンターの概要、割り当てられたパフォーマンスサービスレベルの観点から、データセンター内の合計、使用済み、および利用可能なスペースとIOPSの概要を提供します。このAPIへの応答として受信した情報は、Unified ManagerのUIにあるダッシュボードにデータを入力するために使用されます。
+
+[cols="3*"]
+|===
+| カテゴリ | HTTP動詞 | パス 
+
+
+ a| 
+storage-provider
+ a| 
+GET
+ a| 
+`/storage-provider/workloads-summary`
+
+|===

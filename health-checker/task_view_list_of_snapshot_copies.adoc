@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_list_of_snapshot_copies.html 
+sidebar: sidebar 
+keywords: view, list, Snapshot copies 
+summary: 選択したボリュームのSnapshotコピーのリストを表示できます。Snapshotコピーのリストを使用すると、1つ以上のSnapshotコピーが削除された場合に再利用可能なディスク スペースの量を計算できます。また、必要に応じてSnapshotコピーを削除できます。 
+---
+= Active IQ Unified Manager でSnapshotコピーのリストを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+選択したボリュームのSnapshotコピーのリストを表示できます。Snapshotコピーのリストを使用すると、1つ以上のSnapshotコピーが削除された場合に再利用可能なディスク スペースの量を計算できます。また、必要に応じてSnapshotコピーを削除できます。
+
+.開始する前に
+* オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+* Snapshotコピーを含むボリュームがオンラインになっている必要があります。
+
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* ＞ *ボリューム* をクリックします。
+. 「健全性：すべてのボリューム」ビューで、表示する Snapshot コピーが含まれているボリュームを選択します。
+. 「Volume / Health」の詳細ページで、「Capacity」タブをクリックします。
+. 「容量」タブの「詳細」ペインの「その他の詳細」セクションで、「Snapshot Copies」の横にあるリンクをクリックします。
++
+Snapshotコピーの数はリンクになっており、クリックするとSnapshotコピーのリストが表示されます。
+
+
+
+*関連情報*
+
+link:../health-checker/reference_health_volume_details_page.html["[健全性/ボリューム]ページ"]

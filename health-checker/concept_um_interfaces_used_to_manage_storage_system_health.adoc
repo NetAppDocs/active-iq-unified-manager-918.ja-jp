@@ -1,0 +1,34 @@
+---
+permalink: health-checker/concept_um_interfaces_used_to_manage_storage_system_health.html 
+sidebar: sidebar 
+keywords: unified manager, interfaces, manage, storage system, health 
+summary: このセクションでは、データストレージの容量、可用性、保護に関する問題のトラブルシューティングのためにActive IQ Unified Managerが提供する2つのユーザインターフェイスについて説明します。2つのUIとは、Unified Manager Web UIとメンテナンスコンソールです。 
+---
+= Active IQ Unified Manager インターフェースを使用してストレージシステムの健全性を管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead lead"]
+ここでは、Active IQ Unified Managerでデータ ストレージの容量、可用性、保護に関する問題をトラブルシューティングするための2種類のユーザ インターフェイスについて説明します。2 つの UI は、Unified Manager の Web UI とメンテナンスコンソールです。
+
+Unified Managerの保護機能を使用する場合は、OnCommand Workflow Automation（WFA）を併せてインストールし、設定する必要があります。
+
+
+
+[[unified-manager-web-ui]]
+== Unified Manager Web UI
+
+Unified ManagerのWeb UIを使用すると、管理者はデータストレージ容量、可用性、および保護に関連するクラスタの問題を監視およびトラブルシューティングできます。
+
+以降のセクションで、管理者がUnified Manager Web UIに表示されるストレージ容量、データの可用性、または保護に関する問題をトラブルシューティングする際に従う共通のワークフローについて説明します。
+
+
+
+[[maintenance-console]]
+== メンテナンス コンソール
+
+Unified Managerのメンテナンスコンソールを使用すると、管理者は、オペレーティングシステムの問題、バージョンアップグレードの問題、ユーザーアクセスの問題、およびUnified Managerサーバー自体に関連するネットワークの問題を監視、診断、および対処できます。Unified ManagerのWeb UIが利用できない場合、メンテナンスコンソールがUnified Managerへの唯一のアクセス手段となります。
+
+この情報は、メンテナンス コンソールにアクセスしてUnified Managerサーバの機能に関連する問題を解決するのに役立ちます。

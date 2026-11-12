@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: クラスターのインベントリを表示するには、「ヘルス」ページの「すべてのクラスター」ビューを使用し、ストレージ容量と使用状況の詳細を表示するには、「容量」ページの「すべてのクラスター」ビューを使用します。 
+---
+= Active IQ Unified Manager でクラスターリストと詳細を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「Health: All Clusters」ビューを使用すると、クラスターのインベントリを表示できます。「Capacity: All Clusters」ビューでは、すべてのクラスターにおけるストレージ容量と使用率に関する概要情報を表示できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+[クラスタ / 健全性の詳細]ページを使用して、個々のクラスタの健全性、容量、構成、LIF、ノード、ディスクなどの詳細を表示することもできます。
+
+「健全性：すべてのクラスタ」ビュー、「容量：すべてのクラスタ」ビュー、および「クラスタ／健全性の詳細」ページに表示される詳細情報は、ストレージの計画に役立ちます。例えば、新しいアグリゲートをプロビジョニングする前に、「健全性：すべてのクラスタ」ビューから特定のクラスタを選択し、容量の詳細を取得して、そのクラスタに必要なスペースがあるかどうかを確認できます。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* > *クラスター* をクリックします。
+. 「表示」メニューで、*健全性：すべてのクラスタ*ビューを選択すると健全性情報が表示され、*容量：すべてのクラスタ*ビューを選択するとすべてのクラスタのストレージ容量と使用率の詳細が表示されます。
+. クラスター名をクリックすると、「クラスター/ヘルス」詳細ページでそのクラスターの詳細情報が表示されます。
+
+
+*関連情報*
+
+* link:../health-checker/reference_health_cluster_details_page.html["[クラスタ / 健全性の詳細]ページ"]
+* link:../performance-checker/performance-view-all.html#performance-all-clusters-view["パフォーマンス：すべてのクラスターの表示"]
+* link:../storage-mgmt/task_monitor_metrocluster_configurations.html["MetroCluster構成の監視"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["クラスタとStorage VMのセキュリティ ステータスの表示"]
+* link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["評価されるセキュリティ条件"]
+

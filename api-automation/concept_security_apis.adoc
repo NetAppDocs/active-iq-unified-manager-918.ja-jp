@@ -1,0 +1,54 @@
+---
+permalink: api-automation/concept_security_apis.html 
+sidebar: sidebar 
+keywords: manage, user 
+summary: セキュリティカテゴリのAPIを使用して、Active IQ Unified Manager で選択したクラスタオブジェクトへのユーザーアクセスを制御できます。ローカルユーザーまたはデータベースユーザーを追加できます。認証サーバーに属するリモートユーザーまたはグループを追加することもできます。ユーザーに割り当てたロールの権限に基づいて、ユーザーは Unified Manager でストレージオブジェクトを管理したり、データを表示したりできます。 
+---
+= Active IQ Unified Manager でAPIを使用してユーザーを管理する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `security`カテゴリの API を使用して、Active IQ Unified Manager で選択したクラスタオブジェクトへのユーザーアクセスを制御できます。ローカルユーザーまたはデータベースユーザーを追加できます。認証サーバーに属するリモートユーザーまたはグループを追加することもできます。ユーザーに割り当てたロールの権限に基づいて、ユーザーは Unified Manager でストレージオブジェクトを管理したり、データを表示したりできます。
+
+[NOTE]
+====
+これらの処理を実行するには、アプリケーション管理者のロールが必要です。これらの設定は、Unified Manager Web UIでも実行できます。
+
+====
+ `security` カテゴリの API は、ユーザーエンティティの一意の識別子として、key パラメータではなく users パラメータ（つまりユーザー名）を使用します。
+
+[cols="3*"]
+|===
+| HTTP動詞 | パス | 説明 
+
+
+ a| 
+`GET`
+
+`POST`
+ a| 
+`/security/users`
+
+`/security/users`
+ a| 
+これらのメソッドを使用して、ユーザの詳細を取得したり、Unified Managerに新しいユーザを追加したりできます。
+
+ユーザのタイプに基づいて、ユーザに特定のロールを追加できます。ユーザを追加する際は、ローカル ユーザ、メンテナンス ユーザ、およびデータベース ユーザのパスワードを指定する必要があります。
+
+
+
+ a| 
+`GET`
+
+`PATCH`
+
+`DELETE`
+ a| 
+`/security/users/\{name}`
+ a| 
+GETメソッドで、名前、Eメール アドレス、ロール、認証タイプなど、ユーザのすべての詳細を取得できます。PATCHメソッドで詳細を更新できます。DELETEメソッドでユーザを削除できます。
+
+|===

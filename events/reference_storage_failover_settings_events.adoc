@@ -1,0 +1,100 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: ストレージ フェイルオーバー（SFO）の設定のイベントは、ストレージ フェイルオーバーが無効な状態または設定されていない状態に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のストレージフェイルオーバー設定イベントの詳細
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ フェイルオーバー（SFO）の設定のイベントは、ストレージ フェイルオーバーが無効な状態または設定されていない状態に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ストレージ フェイルオーバー インターコネクトの 1 つ以上のリンクが停止（ocumEvtSfoInterconnectOneOrMoreLinksDown）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+警告
+
+
+
+ a| 
+ストレージ フェイルオーバーが無効（ocumEvtSfoSettingsDisabled）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+ストレージ フェイルオーバーが未設定（ocumEvtSfoSettingsNotConfigured）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+ストレージ フェイルオーバーの状態 - テイクオーバー（ocumEvtSfoStateTakeover）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+警告
+
+
+
+ a| 
+ストレージ フェイルオーバーの状態 - 部分的なギブバック（ocumEvtSfoStatePartialGiveback）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+ストレージ フェイルオーバー ノード ステータス - 停止（ocumEvtSfoNodeStatusDown）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+
+
+ a| 
+ストレージ フェイルオーバーのテイクオーバー実行不可（ocumEvtSfoTakeoverNotPossible）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+|===

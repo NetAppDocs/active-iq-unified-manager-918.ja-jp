@@ -1,0 +1,19 @@
+---
+permalink: storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html 
+sidebar: sidebar 
+keywords: bookmark, favorite, help topics 
+summary: 「ヘルプのお気に入り」タブでは、よく使うヘルプトピックをブックマークできます。ブックマーク機能を使えば、お気に入りのトピックに素早くアクセスできます。 
+---
+= Active IQ Unified Manager でお気に入りのヘルプ トピックをブックマークする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「ヘルプのお気に入り」タブでは、よく使うヘルプトピックをブックマークできます。ブックマーク機能を使えば、お気に入りのトピックに素早くアクセスできます。
+
+.手順
+. お気に入りに登録するヘルプ トピックに移動します。
+. 「お気に入り」をクリックし、次に「追加」をクリックします。
+

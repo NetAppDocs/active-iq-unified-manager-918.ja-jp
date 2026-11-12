@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_what_unified_manager_server_does.html 
+sidebar: sidebar 
+keywords: unified manager, server 
+summary: Unified Managerサーバーのインフラストラクチャは、データ収集ユニット、データベース、およびアプリケーションサーバーで構成されています。検出、監視、ロールベースのアクセス制御（RBAC）、監査、およびログ記録などのインフラストラクチャサービスを提供します。 
+---
+= Active IQ Unified Manager サーバーの機能について
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerサーバーのインフラストラクチャは、データ収集ユニット、データベース、およびアプリケーションサーバーで構成されています。検出、監視、ロールベースのアクセス制御（RBAC）、監査、およびログ記録などのインフラストラクチャサービスを提供します。
+
+Unified Managerはクラスタ情報を収集し、そのデータをデータベースに保存し、データを分析してクラスタに問題がないかどうかを確認します。

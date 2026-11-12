@@ -1,0 +1,93 @@
+---
+permalink: config/reference_identity_provider_requirements_um.html 
+sidebar: sidebar 
+keywords: identity, provider, requirements 
+summary: Unified ManagerでIDプロバイダー（IdP）を使用してすべてのリモートユーザーのSAML認証を実行するように構成する場合、Unified Managerへの接続を成功させるために必要な構成設定について理解しておく必要があります。 
+---
+= Active IQ Unified Manager でIDプロバイダーを使用する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerでIDプロバイダー（IdP）を使用してすべてのリモートユーザーのSAML認証を実行するように構成する場合、Unified Managerへの接続を成功させるために必要な構成設定について理解しておく必要があります。
+
+Unified ManagerのURIとメタデータをIdPサーバーに入力する必要があります。この情報は、Unified ManagerのSAML認証ページからコピーできます。Unified Managerは、Security Assertion Markup Language （SAML）標準においてサービスプロバイダー（SP）と見なされます。
+
+
+
+[[supported-encryption-standards]]
+== サポートされる暗号化標準
+
+* Advanced Encryption Standard（AES）：AES-128およびAES-256
+* Secure Hash Algorithm（SHA）：SHA-1およびSHA-256
+
+
+
+
+[[validated-identity-providers]]
+== 検証済みのアイデンティティ プロバイダ
+
+* Shibboleth
+* Active Directoryフェデレーション サービス（ADFS）
+
+
+
+
+[[adfs-configuration-requirements]]
+== ADFSの設定要件
+
+* Unified Managerがこの証明書利用者信頼エントリのADFS SAML応答を解析するために必要な、3つのクレームルールを以下の順序で定義する必要があります。
++
+[cols="2*"]
+|===
+| 要求規則 | Value 
+
+
+ a| 
+SAM-account-name
+ a| 
+Name ID
+
+
+
+ a| 
+SAM-account-name
+ a| 
+urn:oid:0.9.2342.19200300.100.1.1
+
+
+
+ a| 
+Token groups – Unqualified Name
+ a| 
+urn:oid:1.3.6.1.4.1.5923.1.5.1.1
+
+|===
+* 認証方法を「`Forms Authentication`」に設定する必要があります。そうしないと、Unified Manager からログアウトする際にユーザーがエラーを受け取る可能性があります。以下の手順に従ってください。
++
+.. ADFS管理コンソールを開きます。
+.. 左側のツリー ビューで[認証ポリシー]フォルダをクリックします。
+.. 右側の[操作]で、[グローバル プライマリ認証ポリシーの編集]をクリックします。
+.. イントラネット認証方法を、デフォルトの「`Windows Authentication`」ではなく「`Forms Authentication`」に設定してください。
+
+
+* Unified Managerのセキュリティ証明書がCAによって署名されている場合、IdP経由のログインが拒否されることがあります。この問題を解決するには、2つの回避策があります。
++
+** 次のリンクの手順に従って、CA証明書チェーンの関連する証明書利用者についてのADFSサーバでの失効確認を無効にします。
++
+http://www.torivar.com/2016/03/22/adfs-3-0-disable-revocation-check-windows-2012-r2/["信頼当事者トラストごとの失効チェックを無効にする"]
+
+** Unified Managerサーバーの証明書要求に署名するために、CAサーバーをADFSサーバー内に配置してください。
+
+
+
+
+
+
+[[other-configuration-requirements]]
+== その他の設定要件
+
+* Unified Managerのクロックスキューは5分に設定されているため、IdPサーバーとUnified Managerサーバー間の時間差は5分を超えてはならず、超えると認証が失敗します。
+

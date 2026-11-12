@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: ヘルスページの「すべてのNFS共有」ビューを使用して、ステータス、ボリュームパス、クライアントアクセスレベル、エクスポートポリシーなど、NFS共有の詳細を表示します。 
+---
+= Active IQ Unified Manager での NFS 共有の詳細の表示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+すべてのNFS共有について、ステータス、ボリューム（FlexGroupボリュームまたはFlexVol）に関連付けられているパス、NFS共有に対するクライアントのアクセス レベル、エクスポートされているボリュームに定義されているエクスポート ポリシーなどの詳細情報を表示できます。「健全性：すべての NFS 共有」ビューを使用すると、監視対象のすべてのクラスタ上のすべての NFS 共有を表示できます。また、「ストレージ VM / 健全性の詳細」ページを使用すると、特定のストレージ仮想マシン（SVM）上のすべての NFS 共有を表示できます。
+
+.開始する前に
+* クラスタでNFSライセンスが有効になっている必要があります。
+* NFS共有を提供するネットワーク インターフェイスが設定されている必要があります。
+* オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+
+.手順
+. すべてのNFS共有を表示するか特定のSVMのNFS共有を表示するかに応じて、左側のナビゲーション ペインで次の手順を実行します。
++
+[cols="2*"]
+|===
+| 目的 | 次の手順に従ってください。 
+
+
+ a| 
+すべてのNFS共有を表示
+ a| 
+*ストレージ* ＞ *NFS 共有* をクリックします。
+
+
+
+ a| 
+単一のSVMのNFS共有を表示
+ a| 
+.. *ストレージ* ＞ *ストレージ VM* をクリックします。
+.. NFS共有の詳細を表示するSVMをクリックします。
+.. ストレージVM / ヘルス詳細ページで、*NFS共有*タブをクリックします。
+
+
+|===
+
+
+詳細については、link:../storage-mgmt/task_provision_fileshares.html["ファイル共有ボリュームのプロビジョニング"]およびlink:../api-automation/concept_provision_file_share.html["APIを使用したCIFSおよびNFSファイル共有のプロビジョニング"]を参照してください。

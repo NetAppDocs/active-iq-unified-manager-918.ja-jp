@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_understand_user_interface.html 
+sidebar: sidebar 
+keywords: understand, user, interface 
+summary: Unified Manager のユーザーインターフェースは、主に監視対象オブジェクトを一目で確認できるダッシュボードで構成されています。ユーザーインターフェースからは、クラスタ内のすべてのオブジェクトを表示することもできます。 
+---
+= Active IQ Unified Manager ユーザーインターフェースについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager のユーザーインターフェースは、主に監視対象オブジェクトを一目で確認できるダッシュボードで構成されています。ユーザーインターフェースからは、クラスタ内のすべてのオブジェクトを表示することもできます。
+
+必要に応じて、優先するビューを選択したり、操作ボタンを使用したりできます。画面設定はワークスペースに保存されるため、Unified Manager を起動すると必要なすべての機能が利用可能になります。ただし、あるビューから別のビューに移動してから元のビューに戻ると、ビューが同じにならない場合があります。

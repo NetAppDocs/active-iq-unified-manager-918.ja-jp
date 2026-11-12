@@ -1,0 +1,190 @@
+---
+permalink: events/reference_management_station_events.html 
+sidebar: sidebar 
+keywords: management, station, events, impact area, configuration, performance 
+summary: 管理ステーションのイベントは、Unified Manager がインストールされているサーバーの状態に関する情報を提供するため、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の管理ステーション イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理ステーションのイベントは、Unified Manager がインストールされているサーバーの状態に関する情報を提供するため、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+管理サーバのディスク スペースがほぼフル（ocumEvtUnifiedManagerDiskSpaceNearlyFull）
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+管理サーバのディスク スペースがフル（ocumEvtUnifiedManagerDiskSpaceFull）
+ a| 
+インシデント
+ a| 
+管理ステーション
+ a| 
+重大
+
+
+
+ a| 
+管理サーバのメモリが減少（ocumEvtUnifiedManagerMemoryLow）
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+管理サーバのメモリがほとんどなし（ocumEvtUnifiedManagerMemoryAlmostOut）
+ a| 
+インシデント
+ a| 
+管理ステーション
+ a| 
+重大
+
+
+
+ a| 
+MySQL ログ ファイルのサイズを拡張（再起動が必要）（ocumEvtMysqlLogFileSizeWarning）
+ a| 
+インシデント
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+監査ログの合計サイズがまもなく最大割り当てに到達
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+syslog サーバ証明書の有効期間がまもなく終了
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+syslog サーバ証明書の有効期間が終了
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+エラー
+
+
+
+ a| 
+監査ログ ファイルが改ざん
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+監査ログ ファイルが削除
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+syslog サーバ接続エラー
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+エラー
+
+
+
+ a| 
+syslog サーバ構成が変更
+ a| 
+イベント
+ a| 
+管理ステーション
+ a| 
+警告
+
+|===
+
+
+[[impact-area-performance]]
+== 影響範囲：パフォーマンス
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+パフォーマンス データ分析への影響（ocumEvtUnifiedManagerDataMissingAnalyze）
+ a| 
+リスク
+ a| 
+管理ステーション
+ a| 
+警告
+
+
+
+ a| 
+パフォーマンス データ収集への影響（ocumEvtUnifiedManagerDataMissingCollection）
+ a| 
+インシデント
+ a| 
+管理ステーション
+ a| 
+重大
+
+|===
+[NOTE]
+====
+最後の2つのパフォーマンス イベントは、Unified Manager 7.2でのみ使用されていたものです。これらのいずれかのイベントが新規の状態で存在している場合、Unified Managerソフトウェアを新しいバージョンにアップグレードしたときにイベントは自動的にパージされません。これらのイベントについては、手動で解決済みの状態にする必要があります。
+
+====

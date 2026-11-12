@@ -1,0 +1,25 @@
+---
+permalink: config/task_regenerate_client_certificate.html 
+sidebar: sidebar 
+keywords: client certificate, regenerate, validity, maintenance console 
+summary: メンテナンス コンソールを使用して、Unified Managerクライアント証明書を再生成できます。 
+---
+= Active IQ Unified Manager でクライアント証明書を再生成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メンテナンス コンソールを使用して、Unified Managerクライアント証明書を再生成できます。証明書の有効期間は5年間に延長されています。
+
+.手順
+. メンテナンス ユーザとしてログインします。
+. *Regenerate Client Certificate* を選択して、*Enter* キーを押します。
+. システムが認証を求めた場合は、必要な認証情報を入力してください。
+. *再生成の確認*を選択し、*Enter*を押します。
+. 証明書が再生成されたら、Unified Managerサービスを再起動して変更を適用してください。
+. 更新された証明書を確認するには、ONTAPにログインします。クライアント証明書のステータスと有効性ステータスを確認します。
+
+
+*関連情報*  https://docs.netapp.com/us-en/ontap/authentication/manage-certificates-sm-task.html["System ManagerでONTAP証明書を管理する"^]

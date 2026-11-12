@@ -1,0 +1,33 @@
+---
+permalink: health-checker/concept_what_database_restore_is.html 
+sidebar: sidebar 
+keywords: unified manager, database, restore 
+summary: MySQLデータベース リストアとは、Unified Managerの既存のバックアップ ファイルを同一または異なるUnified Managerサーバにリストアする処理です。リストア処理はUnified Managerメンテナンス コンソールから実行します。 
+---
+= Active IQ Unified Manager でのデータベースのリストアについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQLデータベース リストアとは、Unified Managerの既存のバックアップ ファイルを同一または異なるUnified Managerサーバにリストアする処理です。リストア処理はUnified Managerメンテナンス コンソールから実行します。
+
+同じ（ローカル）システムでリストア処理を実行する場合、バックアップ ファイルがすべてローカルに保存されていれば、デフォルトの場所を使用してリストア オプションを実行できます。別のUnified Managerシステム（リモート システム）でリストア処理を実行する場合は、リストア オプションを実行する前に、バックアップ ファイルをセカンダリ ストレージからローカル ディスクにコピーする必要があります。
+
+復元処理中は、Unified Managerからログアウトされます。復元処理が完了したら、システムにログインできます。
+
+バックアップ イメージを新しいサーバにリストアする場合は、リストア処理の完了後に新しいHTTPSセキュリティ証明書を生成してUnified Managerサーバを再起動する必要があります。また、バックアップ イメージを新しいサーバにリストアするときに求められた場合は、SAML認証を再設定する必要があります。
+
+[NOTE]
+====
+Unified Managerを新しいバージョンのソフトウェアにアップグレードした後は、古いバックアップファイルを使用してイメージを復元することはできません。容量を節約するため、Unified Managerをアップグレードすると、最新のファイルを除くすべての古いバックアップファイルが自動的に削除されます。
+
+====
+*関連情報*
+
+link:../config/task_generate_an_https_security_certificate_ocf.html["HTTPSセキュリティ証明書の生成"]
+
+link:../config/task_enable_saml_authentication_um.html["SAML認証の有効化"]
+
+link:../config/concept_authentication_with_active_directory_or_openldap.html["Active DirectoryまたはOpenLDAPによる認証"]

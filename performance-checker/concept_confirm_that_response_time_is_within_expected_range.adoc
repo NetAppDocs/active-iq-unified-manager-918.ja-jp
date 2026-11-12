@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_confirm_that_response_time_is_within_expected_range.html 
+sidebar: sidebar 
+keywords: confirm, latency, within, expected, range 
+summary: クラスタコンポーネントに競合が発生すると、それを使用するボリュームワークロードの応答時間（レイテンシ）が低下する可能性があります。競合しているコンポーネント上の各被害者ワークロードのレイテンシを確認することで、実際のレイテンシが想定範囲内にあることを確認できます。ボリューム名をクリックすると、そのボリュームの履歴データを表示できます。 
+---
+= Active IQ Unified Manager でレイテンシが想定範囲内であることを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クラスタコンポーネントに競合が発生すると、それを使用するボリュームワークロードの応答時間（レイテンシ）が低下する可能性があります。競合しているコンポーネント上の各被害者ワークロードのレイテンシを確認することで、実際のレイテンシが想定範囲内にあることを確認できます。ボリューム名をクリックすると、そのボリュームの履歴データを表示できます。
+
+パフォーマンス イベントが廃止状態の場合は、イベントに関連する各Victimのレイテンシが想定範囲内に戻った可能性があります。

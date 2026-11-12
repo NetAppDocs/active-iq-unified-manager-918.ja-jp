@@ -1,0 +1,83 @@
+---
+permalink: events/reference_metrocluster_switch_events.html 
+sidebar: sidebar 
+keywords: metrocluster, switch, events, impact area, availability 
+summary: MetroClusterスイッチ イベントは、MetroClusterスイッチのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= MetroCluster スイッチイベントについて Active IQ Unified Manager で学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster over FC構成についてのMetroClusterスイッチ イベントは、MetroClusterスイッチのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+スイッチの温度が異常（ocumEvtSwitchTemperatureAbnormal）
+ a| 
+インシデント
+ a| 
+MetroCluster スイッチ
+ a| 
+重大
+
+
+
+ a| 
+スイッチに到達不能（ocumEvtSwitchUnreachable）
+ a| 
+インシデント
+ a| 
+MetroCluster スイッチ
+ a| 
+重大
+
+
+
+ a| 
+スイッチのファンに障害（ocumEvtSwitchFansOneOrMoreFailed）
+ a| 
+インシデント
+ a| 
+MetroCluster スイッチ
+ a| 
+重大
+
+
+
+ a| 
+スイッチの電源装置に障害（ocumEvtSwitchPowerSuppliesOneOrMoreFailed）
+ a| 
+インシデント
+ a| 
+MetroCluster スイッチ
+ a| 
+重大
+
+
+
+ a| 
+スイッチの温度センサーに障害（ocumEvtSwitchTemperatureSensorFailed）
+
+[NOTE]
+====
+このイベントはCiscoスイッチにのみ関係します。
+
+==== a| 
+インシデント
+ a| 
+MetroCluster スイッチ
+ a| 
+重大
+
+|===

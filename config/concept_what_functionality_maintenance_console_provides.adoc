@@ -1,0 +1,26 @@
+---
+permalink: config/concept_what_functionality_maintenance_console_provides.html 
+sidebar: sidebar 
+keywords: functionality, maintenance, console 
+summary: Unified Managerメンテナンスコンソールを使用すると、Unified Managerシステムの設定を管理し、問題の発生を防ぐために必要な変更を行うことができます。 
+---
+= Active IQ Unified Manager のメンテナンスコンソールについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerメンテナンスコンソールを使用すると、Unified Managerシステムの設定を管理し、問題の発生を防ぐために必要な変更を行うことができます。
+
+Unified Managerをインストールしたオペレーティングシステムに応じて、メンテナンスコンソールには次の機能があります。
+
+* 仮想アプライアンスに関する問題、特にUnified Manager Webインターフェイスにアクセスできないときのトラブルシューティングを行います。
+* Unified Managerの新しいバージョンへのアップグレード
+* テクニカル サポートに送信するサポート バンドルの生成
+* ネットワークの設定
+* メンテナンス ユーザのパスワードの変更
+* パフォーマンス統計の送信を目的とした外部データ プロバイダへの接続
+* パフォーマンス データ収集の内部変更
+* 以前にバックアップしたバージョンから、Unified Managerのデータベースと構成設定を復元します。
+

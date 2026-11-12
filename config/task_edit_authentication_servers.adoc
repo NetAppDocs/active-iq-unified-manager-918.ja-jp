@@ -1,0 +1,25 @@
+---
+permalink: config/task_edit_authentication_servers.html 
+sidebar: sidebar 
+keywords: edit, authentication servers 
+summary: Unified Managerサーバが認証サーバとの通信に使用するポートを変更することができます。 
+---
+= Active IQ Unified Manager で認証サーバーを編集する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerサーバが認証サーバとの通信に使用するポートを変更することができます。
+
+.開始する前に
+アプリケーション管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*[全般]* > *[リモート認証]* をクリックします。
+. 「ネストされたグループ検索を無効にする」チェックボックスをオンにします。
+. 「Authentication Servers」エリアで、編集する認証サーバーを選択し、「Edit」をクリックします。
+. 「認証サーバーの編集」ダイアログボックスで、ポートの詳細を編集します。
+. *保存*をクリックします。
+

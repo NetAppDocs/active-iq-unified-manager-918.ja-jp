@@ -1,0 +1,62 @@
+---
+permalink: config/task_enable_saml_authentication_um.html 
+sidebar: sidebar 
+keywords: enable, saml, authentication 
+summary: Security Assertion Markup Language（SAML）認証を有効にして、Unified ManagerのWeb UIにアクセスするリモート ユーザをセキュアなアイデンティティ プロバイダ（IdP）で認証するように設定できます。 
+---
+= Active IQ Unified Manager で SAML 認証を有効にする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Security Assertion Markup Language（SAML）認証を有効にして、Unified ManagerのWeb UIにアクセスするリモート ユーザをセキュアなアイデンティティ プロバイダ（IdP）で認証するように設定できます。
+
+.開始する前に
+* リモート認証を設定し、正常に動作することを確認しておく必要があります。
+* アプリケーション管理者ロールが割り当てられたリモート ユーザまたはリモート グループを少なくとも1つ作成しておく必要があります。
+* アイデンティティ プロバイダ（IdP）がUnified Managerでサポートされ、設定が完了している必要があります。
+* IdPのURLとメタデータが必要です。
+* IdPサーバへのアクセスが必要です。
+
+
+Unified ManagerでSAML認証を有効にしたあと、Unified Managerサーバのホスト情報を使用してIdPを設定するまでは、ユーザはグラフィカル ユーザ インターフェイスにアクセスできません。そのため、設定プロセスを開始する前に、両方で接続の準備を完了しておく必要があります。IdPの設定は、Unified Managerの設定前にも設定後にも実行できます。
+
+SAML認証を有効にしたあとでUnified Managerのグラフィカル ユーザ インターフェイスにアクセスできるのはリモート ユーザのみです。ローカル ユーザとメンテナンス ユーザはUIにアクセスできません。この設定は、メンテナンス コンソール、Unified Managerコマンド、ZAPIにアクセスするユーザには影響しません。
+
+[NOTE]
+====
+このページでSAMLの設定を完了すると、Unified Managerが自動的に再起動されます。
+
+====
+.手順
+. 左側のナビゲーションペインで、*General* > *SAML Authentication* をクリックします。
+. 「SAML 認証を有効にする」チェックボックスを選択します。
++
+IdPの接続の設定に必要なフィールドが表示されます。
+
+. IdPのURIとUnified ManagerサーバをIdPに接続するために必要なIdPメタデータを入力します。
++
+IdP サーバーに Unified Manager サーバーから直接アクセスできる場合は、IdP URI を入力した後に *IdP メタデータの取得* ボタンをクリックすると、IdP メタデータフィールドに自動的に入力されます。
+
+. Unified Managerのホスト メタデータURIをコピーするか、ホスト メタデータをXMLテキスト ファイルに保存します。
++
+この情報を使用してIdPサーバを設定できます。
+
+. *保存*をクリックします。
++
+設定を完了してUnified Managerを再起動するかどうかの確認を求めるメッセージ ボックスが表示されます。
+
+. 「確認してログアウト」をクリックすると、Unified Manager が再起動されます。
+
+
+許可されたリモート ユーザがUnified Managerのグラフィカル インターフェイスにアクセスする際にクレデンシャルを入力するページが、次回からUnified Managerのログイン ページではなくIdPのログイン ページに変わります。
+
+まだ完了していない場合は、IdPにアクセスし、Unified ManagerサーバのURIとメタデータを入力して設定を完了します。
+
+[NOTE]
+====
+IDプロバイダとしてADFSを使用している場合、Unified ManagerのGUIにはADFSのタイムアウトが適用されず、Unified Managerのセッションタイムアウトに達するまで動作し続けます。GUIセッションのタイムアウトを変更するには、*一般* > *機能設定* > *非アクティブタイムアウト*をクリックします。
+
+====

@@ -1,0 +1,24 @@
+---
+permalink: data-protection/task_view_resource_pool_inventory.html 
+sidebar: sidebar 
+keywords: view, resource pools, inventory 
+summary: '[リソース プール]ページを使用すると、リソース プールのインベントリを表示したり、各リソース プールの残りの容量を監視したりできます。' 
+---
+= Active IQ Unified Manager でリソース プールのインベントリを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[リソース プール]ページを使用すると、リソース プールのインベントリを表示したり、各リソース プールの残りの容量を監視したりできます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*Protection* > *リソース プール*をクリックします。
++
+リソース プールのインベントリが表示されます。
+
+

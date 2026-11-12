@@ -1,0 +1,37 @@
+---
+permalink: config/reference_https_dialog_box_ocf.html 
+sidebar: sidebar 
+keywords: https certificate page 
+summary: '[HTTPS 証明書]ページでは、現在のセキュリティ証明書の表示、証明書署名要求のダウンロード、新しいHTTPS証明書の生成、新しいHTTPS証明書のインストールを行うことができます。' 
+---
+= Active IQ Unified Manager の HTTPS 証明書ページについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[HTTPS 証明書]ページでは、現在のセキュリティ証明書の表示、証明書署名要求のダウンロード、新しい自己署名HTTPS証明書の生成、新しいHTTPS証明書のインストールを行うことができます。
+
+新しい自己署名HTTPS証明書を生成していない場合は、インストール時に生成された証明書がこのページに表示されます。
+
+
+
+[[command-buttons]]
+== コマンド ボタン
+
+各コマンド ボタンを使用して次の処理を実行できます。
+
+* *HTTPS証明書署名要求をダウンロード*
++
+現在インストールされているHTTPS証明書の認証要求をダウンロードします。署名のために認証局に提供できるように、ブラウザで<hostname>.csrファイルを保存するよう求められます。
+
+* *HTTPS証明書をインストールする*
++
+認証局の署名を受けて返されたセキュリティ証明書を、アップロードしてインストールすることができます。新しい証明書は、管理サーバを再起動すると有効になります。
+
+* *HTTPS証明書を再生成する*
++
+新しい自己署名HTTPS証明書を生成して現在のセキュリティ証明書と置き換えることができます。新しい証明書は、Unified Managerを再起動すると有効になります。
+
+

@@ -1,0 +1,31 @@
+---
+permalink: health-checker/concept_what_security_criteria_is_being_evaluated.html 
+sidebar: sidebar 
+keywords: security criteria, evaluated 
+summary: 一般に、ONTAPクラスタ、ストレージ仮想マシン（SVM）、およびボリュームのセキュリティ基準は、『ONTAP 9向けNetAppセキュリティ強化ガイド』で定義されている推奨事項に照らして評価されます。 
+---
+= Active IQ Unified Manager がセキュリティ基準を評価する方法を理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一般的に、ONTAPクラスター、ストレージ仮想マシン（SVM）、およびボリュームのセキュリティ基準は、_NetApp Security Hardening Guide for ONTAP 9_で定義されている推奨事項に基づいて評価されています。
+
+セキュリティ チェックには、次のようなものがあります。
+
+* クラスタがSAMLなどのセキュアな認証方式を使用しているかどうか
+* ピア クラスタの通信が暗号化されているかどうか
+* Storage VMの監査ログが有効になっているかどうか
+* ボリュームでソフトウェアまたはハードウェアの暗号化が有効になっているかどうか
+
+
+コンプライアンスカテゴリと https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 セキュリティ強化ガイド"^]に関するトピックで詳細情報をご確認ください。
+
+[NOTE]
+====
+Active IQプラットフォームから報告されるアップグレード イベントもセキュリティ イベントとみなされます。これらのイベントは、ONTAPソフトウェア、ノード ファームウェア、またはオペレーティング システム ソフトウェア（セキュリティ アドバイザリ用）のアップグレードが必要な問題を示します。これらのイベントは[セキュリティ]パネルには表示されませんが、[イベント管理]インベントリ ページから確認できます。
+
+====
+詳細については、link:../health-checker/concept_manage_cluster_security_objectives.html["クラスタのセキュリティ目標の管理"]を参照してください。

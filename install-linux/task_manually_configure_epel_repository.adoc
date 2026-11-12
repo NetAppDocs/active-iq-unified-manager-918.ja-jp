@@ -1,0 +1,35 @@
+---
+permalink: install-linux/task_manually_configure_epel_repository.html 
+sidebar: sidebar 
+keywords: manually, configure, epel repository 
+summary: Unified ManagerをインストールするシステムがExtra Packages for Enterprise Linux（EPEL）リポジトリにアクセスできない場合、インストールが成功するためにはリポジトリを手動でダウンロードして設定する必要があります。 
+---
+= Active IQ Unified Manager の EPEL リポジトリを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerをインストールするシステムがExtra Packages for Enterprise Linux（EPEL）リポジトリにアクセスできない場合、インストールが成功するためにはリポジトリを手動でダウンロードして設定する必要があります。
+
+EPELリポジトリは、システムにインストールする必要があるサードパーティ ユーティリティへのアクセスを提供します。Unified ManagerをRed Hat Enterprise Linuxシステムにインストールするには、EPELリポジトリを使用します。
+
+.手順
+. インストールに対応するEPELリポジトリをダウンロードします。バージョン8の場合は、次のサイトからダウンロードしてください。
++
+`+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm+`
+
++
+バージョン9の場合は、次のサイトからダウンロードしてください。
+
++
+`wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm`
+
+. EPELリポジトリを設定します。
++
+`yum install epel-release-latest-<version>.noarch.rpm`
+
+
+
+Red Hat Enterprise Linux 8 システムの場合、モジュール RPM パッケージを含む内部リポジトリ（たとえば、 `_javapackages-filesystem-<version>.module.rpm_`）がある場合は、モジュールパッケージのメタデータも同じリポジトリで利用できるようにしてください。

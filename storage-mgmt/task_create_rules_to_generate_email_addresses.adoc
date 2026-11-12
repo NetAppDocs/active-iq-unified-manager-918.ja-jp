@@ -1,0 +1,40 @@
+---
+permalink: storage-mgmt/task_create_rules_to_generate_email_addresses.html 
+sidebar: sidebar 
+keywords: create, rules, generate, email, addresses 
+summary: クラスタ、Storage Virtual Machine（SVM）、ボリューム、qtree、ユーザ、またはユーザ グループに関連付けられたユーザ クォータに基づいて、Eメール アドレスを指定するルールを作成できます。クォータに違反が発生すると、指定したEメール アドレスに通知が送信されます。 
+---
+= Active IQ Unified Manager でメールアドレスを生成するルールを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クラスタ、Storage Virtual Machine（SVM）、ボリューム、qtree、ユーザ、またはユーザ グループに関連付けられたユーザ クォータに基づいて、Eメール アドレスを指定するルールを作成できます。クォータに違反が発生すると、指定したEメール アドレスに通知が送信されます。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* [ユーザ クォータおよびグループ クォータの E メール アドレスを生成するルール]ページのガイドラインを確認しておく必要があります。
+
+
+クォータのEメール アドレスのルールを定義して、実行順にそれらを入力する必要があります。たとえば、abcでのクォータ違反に関する通知をEメール アドレス「abc@xyz.com」で受信し、それ以外のグループについてはEメール アドレス「dl-$GROUP@$DOMAIN」を使用する場合は、次の順序でルールを指定する必要があります。
+
+* if ( $USER == 'abc' ) then abc@xyz.com
+* if ( $GROUP == * ) then dl-$GROUP@$DOMAIN
+
+
+指定したどのルールの条件も満たされなかった場合は、デフォルトのルールが使用されます。
+
+if ( $USER_OR_GROUP == * ) then $USER_OR_GROUP@$DOMAIN
+
+.手順
+. 左側のナビゲーションペインで、*General* > *Quota Email Rules* をクリックします。
+. 条件に基づいてルールを入力します。
+. *検証*をクリックして、ルールの構文を検証してください。
++
+ルールの構文が間違っている場合は、エラーメッセージが表示されます。構文を修正して、もう一度 *Validate* をクリックしてください。
+
+. *保存*をクリックします。
+. 作成したメールアドレスが、Storage VM / Healthの詳細ページの「User and Group Quotas」タブに表示されていることを確認してください。
+

@@ -1,0 +1,53 @@
+---
+permalink: config/concept_security_dashboard.html 
+sidebar: sidebar 
+keywords: security compliance settings, security feature settings, ONTAP hardening guide, AutoSupport settings, authentication settings 
+summary: Unified Managerでは、コンプライアンス監視のためのセキュリティパラメータを有効または無効にすることができます。 
+---
+= Active IQ Unified Manager でコンプライアンスのためのセキュリティ設定を有効化および無効化する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+機能設定ページの*セキュリティダッシュボード*パネルにある*カスタマイズ*ボタンを使用すると、Unified Managerのコンプライアンス監視に関するセキュリティパラメータを有効または無効にすることができます。
+
+このページから有効または無効にする設定は、Unified Manager上のクラスターおよびストレージVMの全体的なコンプライアンス状態を制御します。選択内容に基づいて、対応する列がクラスターインベントリページの*セキュリティ：すべてのクラスター*ビューと、ストレージVMインベントリページの*セキュリティ：すべてのストレージVM*ビューに表示されます。
+
+[NOTE]
+====
+これらの設定を編集できるのは、管理者ロールのユーザだけです。
+
+====
+お客様のONTAPクラスター、ストレージVM、ボリュームのセキュリティ基準は、link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9セキュリティ設定ガイド"]で定義されている推奨事項に照らして評価されます。ダッシュボードのセキュリティパネルとセキュリティページには、クラスター、ストレージVM、およびボリュームのデフォルトのセキュリティ準拠ステータスが表示されます。セキュリティ違反が発生したクラスターおよびストレージVMに対しては、セキュリティイベントが生成され、管理アクションが有効になります。
+
+
+
+[[customize-security-settings]]
+== セキュリティ設定のカスタマイズ
+
+ONTAP環境に応じてコンプライアンス監視の設定をカスタマイズするには、次の手順を実行します。
+
+.手順
+. *一般 > 機能設定 > セキュリティダッシュボード > カスタマイズ*をクリックします。*セキュリティダッシュボード設定のカスタマイズ*ポップアップが表示されます。
++
+[NOTE]
+====
+有効または無効にしたセキュリティ コンプライアンス パラメータは、[クラスタ]ページと[Storage VM]ページのデフォルトのセキュリティ ビュー、レポート、およびスケジュール済みレポートに直接影響します。これらのページからExcelレポートをアップロードしたあとにセキュリティ パラメータを変更した場合、ダウンロードしたExcelレポートに誤った情報が含まれることがあります。
+
+====
+. ONTAPクラスタのカスタム設定を有効または無効にするには、*Cluster*の下にある必要な一般設定を選択します。クラスタコンプライアンスをカスタマイズするオプションの詳細については、link:../health-checker/reference_cluster_compliance_categories.html["クラスタ コンプライアンスのカテゴリ"]を参照してください。
+. ストレージVMのカスタム設定を有効または無効にするには、*ストレージVM*の下にある必要な一般設定を選択してください。ストレージVMのコンプライアンスをカスタマイズするためのオプションについては、link:../health-checker/reference_svm_compliance_categories.html["Storage VMのコンプライアンス カテゴリ"]を参照してください。
+
+
+
+
+[[customize-autosupport-and-authentication-settings]]
+== AutoSupportと認証設定のカスタマイズ
+
+*AutoSupport設定*セクションでは、ONTAPからAutoSupportメッセージを送信するためにHTTPSトランスポートを使用するかどうかを指定できます。
+
+*認証設定*セクションから、デフォルトのONTAP管理者ユーザーに対してUnified Managerアラートが生成されるように有効にできます。
+
+'''

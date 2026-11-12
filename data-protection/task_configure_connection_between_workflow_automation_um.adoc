@@ -1,0 +1,50 @@
+---
+permalink: data-protection/task_configure_connection_between_workflow_automation_um.html 
+sidebar: sidebar 
+keywords: configure, connection, workflow, automation, unified manager 
+summary: OnCommand Workflow Automation（WFA）とUnified Managerの間でセキュアな接続を確立することができます。Workflow Automationに接続することで、SnapMirrorやSnapVaultの設定ワークフロー、SnapMirror関係の管理用コマンドなどの保護機能を使用できるようになります。 
+---
+= Workflow Automation と Active IQ Unified Manager の間の接続を設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation（WFA）とUnified Managerの間でセキュアな接続を確立することができます。Workflow Automationに接続することで、SnapMirrorやSnapVaultの設定ワークフロー、SnapMirror関係の管理用コマンドなどの保護機能を使用できるようになります。
+
+.開始する前に
+* Workflow Automationのバージョンが5.1.1P6以降である必要があります。
++
+[NOTE]
+====
+「`WFA pack for managing Clustered Data ONTAP`」は WFA 5.1.1P6 に含まれているため、以前のように NetAppStorage Automation Store からこのパックをダウンロードして WFA サーバーに個別にインストールする必要はありません。 https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["WFAダウンロード"^]
+
+====
+* WFAとUnified Managerの接続をサポートするためにUnified Managerで作成したデータベース ユーザの名前を確認しておく必要があります。
++
+このデータベース ユーザには統合スキーマ ユーザ ロールが割り当てられている必要があります。
+
+* Workflow AutomationでAdministratorロールまたはArchitectのロールが割り当てられている必要があります。
+* ホスト アドレス、ポート番号443、およびWorkflow Automationセットアップのユーザ名とパスワードが必要です。
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+
+.手順
+. 左側のナビゲーションペインで、*General* > *Workflow Automation* をクリックします。
+. *Workflow Automation*ページの*Database User*領域で、Unified ManagerとWorkflow Automationの接続をサポートするために作成したデータベース ユーザーの名前を選択し、パスワードを入力します。
+. ページの *Workflow Automation Credentials* 欄に、ホスト名または IP アドレス（IPv4 または IPv6）、および Workflow Automation 設定用のユーザー名とパスワードを入力します。
++
+Unified Managerサーバのポート（ポート443）を使用する必要があります。
+
+. *保存*をクリックします。
+. 自己署名証明書を使用する場合は、*[はい]* をクリックしてセキュリティ証明書を承認してください。
++
+[Workflow Automation]ページが表示されます。
+
+. 「はい」をクリックしてWeb UIを再読み込みし、Workflow Automation機能を追加します。
+
+
+*関連情報*
+
+http://mysupport.netapp.com/documentation/productlibrary/index.html?productID=61550["NetAppのマニュアル：OnCommand Workflow Automation（現在のリリース）"]

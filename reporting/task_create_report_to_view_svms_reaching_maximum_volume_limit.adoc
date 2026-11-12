@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_view_svms_reaching_maximum_volume_limit.html 
+sidebar: sidebar 
+keywords: create, report, view, storage VMs, volume, limit 
+summary: ボリューム数が上限に達しているSVMを検出するレポートを作成できます。 
+---
+= Active IQ Unified Manager で最大ボリューム制限に達しているストレージ VM を表示するレポートを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム数が上限に達しているSVMを検出するレポートを作成できます。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+
+次の手順に従って、ボリューム数が上限に達しているStorage VMを表示するカスタム ビューを作成し、そのビューのレポートを生成するようにスケジュール設定します。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* > *ストレージVM* をクリックします。
+. レポートに表示したくない列を削除するには、*表示/非表示*を選択してください。
+. 「`Volume Count`」列と「`Maximum Allowed Volumes`」列を「`Storage VM`」列の近くにドラッグします。
+. 「`Maximum Allowed Volumes`」列の一番上をクリックすると、ボリューム数の多い順に結果を並べ替えることができます。
+. ビューが表示している内容を反映した特定の名前でビューを保存します。たとえば「`SVMs reaching max volumes`」と入力し、チェックマーク（image:../media/blue_check.gif[""]）をクリックします。
+. インベントリページの「スケジュール済みレポート」ボタンをクリックします。
+. *スケジュールの追加*をクリックして、*レポートスケジュール*ページに新しい行を追加し、新しいレポートのスケジュール特性を定義します。
+. レポートスケジュールの名前を入力し、その他のレポートフィールドへの入力を完了したら、行の最後にあるチェックマーク（image:../media/blue_check.gif[""]）をクリックします。
++
+テスト レポートがすぐに送信されます。以降、指定した頻度でレポートが生成され、リスト内の受信者にEメールで送信されます。
+
+
+
+レポートに表示された結果を基に、Storage VMに割り当てるボリュームを調整できます。また、可能であれば、ONTAP System Managerを使用して許容される最大ボリューム数を変更することができます。

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/task_specify_correlated_objects_time_range.html 
+sidebar: sidebar 
+keywords: specify, time range, correlated objects 
+summary: '[パフォーマンス エクスプローラ]ページの[期間]セレクタを使用して、オブジェクト データを比較する期間を指定できます。期間を指定すると、[パフォーマンス エクスプローラ]ページの内容が絞り込まれ、指定した期間内のオブジェクト データだけが表示されます。' 
+---
+= Active IQ Unified Manager で相関オブジェクトの時間範囲を指定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[パフォーマンス エクスプローラ]ページの[期間]セレクタを使用して、オブジェクト データを比較する期間を指定できます。期間を指定すると、[パフォーマンス エクスプローラ]ページの内容が絞り込まれ、指定した期間内のオブジェクト データだけが表示されます。
+
+期間を絞り込むと、関心のあるパフォーマンス データだけを効率的に表示できます。事前定義の期間を選択するか、またはカスタムの期間を指定できます。デフォルトの期間は過去72時間です。

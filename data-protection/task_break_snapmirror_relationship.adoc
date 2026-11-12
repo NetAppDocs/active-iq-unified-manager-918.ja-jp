@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: 保護関係を解除して、SnapMirror関係にあるソース ボリュームとデスティネーション ボリュームの間のデータ転送を停止することができます。関係の解除は、データを移行する場合のほか、ディザスタ リカバリやアプリケーションのテストなどの目的で行うことがあります。デスティネーション ボリュームは読み書き可能ボリュームに変わります。SnapVault関係を解除することはできません。 
+---
+= Active IQ Unified Manager のボリューム関係ページから SnapMirror 関係を解除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護関係を解除して、SnapMirror関係にあるソース ボリュームとデスティネーション ボリュームの間のデータ転送を停止することができます。関係の解除は、データを移行する場合のほか、ディザスタ リカバリやアプリケーションのテストなどの目的で行うことがあります。デスティネーション ボリュームは読み書き可能ボリュームに変わります。SnapVault関係を解除することはできません。
+
+.開始する前に
+* アプリケーション管理者またはストレージ管理者のロールが必要です。
+* Workflow Automationのセットアップが完了している必要があります。
+
+
+.手順
+. 「ボリューム関係」ページで、データ転送を停止する保護関係を持つボリュームを 1 つ以上選択し、ツールバーの「中断」をクリックします。
++
+[関係の解除]ダイアログ ボックスが表示されます。
+
+. 関係を解消するには、*続行*をクリックしてください。
+. 「Volume Relationships」ページで、「Relationship State」列で、関係が切断されていることを確認します。
++
+「関係状態」列はデフォルトでは非表示になっているため、表示/非表示列リストで選択する必要がある場合があります image:../media/icon_columnshowhide_sm_onc.gif[""]。
+
+

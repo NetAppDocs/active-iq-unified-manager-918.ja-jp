@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_analyze_performance_events.html 
+sidebar: sidebar 
+keywords: analyze, performance, events 
+summary: パフォーマンス イベントを分析して、イベントが検出されたタイミング、アクティブなイベント（新規または確認済みのイベント）か廃止のイベントか、関連するワークロードとクラスタ コンポーネント、およびイベントを解決するためのオプションを特定できます。 
+---
+= Active IQ Unified Manager でパフォーマンスイベントを分析する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンス イベントを分析して、イベントが検出されたタイミング、アクティブなイベント（新規または確認済みのイベント）か廃止のイベントか、関連するワークロードとクラスタ コンポーネント、およびイベントを解決するためのオプションを特定できます。

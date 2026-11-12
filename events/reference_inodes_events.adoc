@@ -1,0 +1,45 @@
+---
+permalink: events/reference_inodes_events.html 
+sidebar: sidebar 
+keywords: inodes, events, impact area, capacity 
+summary: inodeイベントは、inodeがフルまたはほぼフルになったことを通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の inode イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+inodeイベントは、inodeがフルまたはほぼフルになったことを通知します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-capacity]]
+== 影響範囲：容量
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+inode がほぼフル（ocumEvtInodesAlmostFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+警告
+
+
+
+ a| 
+inode がフル（ocumEvtInodesFull）
+ a| 
+リスク
+ a| 
+Volume
+ a| 
+エラー
+
+|===

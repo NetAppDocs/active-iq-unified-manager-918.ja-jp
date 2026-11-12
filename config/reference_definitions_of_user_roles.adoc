@@ -1,0 +1,54 @@
+---
+permalink: config/reference_definitions_of_user_roles.html 
+sidebar: sidebar 
+keywords: definitions, user roles 
+summary: メンテナンス ユーザまたはアプリケーション管理者が、各ユーザにロールを割り当てます。各役割には、それぞれ特定の権限が付与されています。Unified Manager で実行できるアクティビティの範囲は、割り当てられた役割と、その役割に含まれる権限によって異なります。 
+---
+= Active IQ Unified Manager のユーザーロールについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+メンテナンス ユーザまたはアプリケーション管理者が、各ユーザにロールを割り当てます。各役割には、それぞれ特定の権限が付与されています。Unified Manager で実行できるアクティビティの範囲は、割り当てられた役割と、その役割に含まれる権限によって異なります。
+
+Unified Managerには、以下の事前定義されたユーザーロールが含まれています。
+
+* *オペレーター*
++
+Unified Managerによって収集されたストレージシステム情報やその他のデータ（履歴や容量傾向など）を表示します。この役割により、ストレージオペレーターはイベントの表示、割り当て、確認、解決、およびメモの追加を行うことができます。
+
+* *ストレージ管理者*
++
+Unified Manager内でストレージ管理操作を設定します。この役割により、ストレージ管理者はしきい値の設定、アラートの作成、その他ストレージ管理固有のオプションやポリシーの作成を行うことができます。
+
+* *アプリケーション管理者*
++
+ストレージ管理以外の設定を行います。ユーザ、セキュリティ証明書、データベース アクセスのほか、認証、SMTP、ネットワーク、AutoSupportなどの管理オプションの設定が可能です。
+
++
+[NOTE]
+====
+Unified ManagerがLinuxシステムにインストールされると、アプリケーション管理者ロールを持つ最初のユーザーは自動的に「`umadmin`」という名前になります。
+
+====
+* *統合スキーマ*
++
+Unified ManagerとOnCommand Workflow Automation（WFA）の統合用にUnified Managerのデータベース ビューにアクセスするための読み取り専用アクセスが許可されます。
+
+* *レポートスキーマ*
++
+この役割により、Unified Manager データベースからレポートやその他のデータベースビューへの読み取り専用アクセスが可能になります。閲覧可能なデータベースは以下のとおりです。
+
++
+** netapp_model_view
+** netapp_performance
+** ocum
+** ocum_report
+** ocum_report_birt
+** opm
+** scalemonitor
+
+
+

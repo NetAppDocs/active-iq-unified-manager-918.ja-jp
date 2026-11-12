@@ -1,0 +1,160 @@
+---
+permalink: events/reference_logical_interface_events.html 
+sidebar: sidebar 
+keywords: network, interface, lif events, impact area, availability, configuration, performance 
+summary: ネットワーク インターフェイス（LIF）イベントは、LIFのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のネットワークインターフェイスイベント
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットワーク インターフェイス（LIF）イベントは、LIFのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ネットワーク インターフェイスのステータス - 停止（ocumEvtLifStatusDown）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+エラー
+
+
+
+ a| 
+FC / FCoE ネットワーク インターフェイスのステータス - 停止（ocumEvtFCLifStatusDown）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+エラー
+
+
+
+ a| 
+ネットワーク インターフェイスのフェイルオーバー実行不可（ocumEvtLifFailoverNotPossible）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+警告
+
+
+
+ a| 
+ネットワーク インターフェイスがホーム ポートにない（ocumEvtLifNotAtHomePort）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+警告
+
+|===
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ネットワーク インターフェイスのルートが未設定（該当なし）
+ a| 
+イベント
+ a| 
+インターフェイス
+ a| 
+情報
+
+|===
+
+
+[[impact-area-performance]]
+== 影響範囲：パフォーマンス
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ネットワーク インターフェイス MBps の重大しきい値を超過（ocumNetworkLifMbpsIncident）
+ a| 
+インシデント
+ a| 
+インターフェイス
+ a| 
+重大
+
+
+
+ a| 
+ネットワーク インターフェイス MBps の警告しきい値を超過（ocumNetworkLifMbpsWarning）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+警告
+
+
+
+ a| 
+FC ネットワーク インターフェイス MBps の重大しきい値を超過（ocumFcpLifMbpsIncident）
+ a| 
+インシデント
+ a| 
+インターフェイス
+ a| 
+重大
+
+
+
+ a| 
+FC ネットワーク インターフェイス MBps の警告しきい値を超過（ocumFcpLifMbpsWarning）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+警告
+
+
+
+ a| 
+NVMf FC ネットワーク インターフェイス MBps の重大しきい値を超過（ocumNvmfFcLifMbpsIncident）
+ a| 
+インシデント
+ a| 
+インターフェイス
+ a| 
+重大
+
+
+
+ a| 
+NVMf FC ネットワーク インターフェイス MBps の警告しきい値を超過（ocumNvmfFcLifMbpsWarning）
+ a| 
+リスク
+ a| 
+インターフェイス
+ a| 
+警告
+
+|===

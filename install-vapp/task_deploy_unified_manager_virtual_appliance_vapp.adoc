@@ -1,0 +1,118 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager, virtual appliance 
+summary: インストール ファイルをダウンロードしたら、Unified Managerを仮想アプライアンスとして導入します。ESXiサーバに仮想アプライアンスを導入するには、vSphere Web Clientを使用します。仮想アプライアンスを導入すると、仮想マシンが作成されます。 
+---
+= Active IQ Unified Manager 仮想アプライアンスの導入
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストール ファイルをダウンロードしたら、Unified Managerを仮想アプライアンスとして導入します。ESXiサーバに仮想アプライアンスを導入するには、vSphere Web Clientを使用します。仮想アプライアンスを導入すると、仮想マシンが作成されます。
+
+.開始する前に
+システム要件を確認しておく必要があります。Unified Manager仮想アプライアンスを導入する前に、必要な変更を行ってください。
+
+link:concept_virtual_infrastructure_or_hardware_system_requirements.html["仮想インフラストラクチャの要件"]を参照してください。
+
+link:reference_vmware_software_and_installation_requirements.html["VMwareソフトウェアとインストールの要件"]を参照してください。
+
+動的ホスト構成プロトコル（DHCP）を使用する場合は、DHCPサーバが使用可能で、DHCPと仮想マシン（VM）のネットワーク アダプタが正しく構成されていることを確認します。デフォルトでは、DHCPを使用するように設定されています。
+
+静的なネットワーク設定を使用する場合は、IPアドレスが同じサブネット内で重複していないこと、DNSサーバの適切なエントリが設定されていることを確認します。
+
+仮想アプライアンスを導入する前に、次の情報を入手します。
+
+* VMware vCenter ServerおよびvSphere Web Clientにアクセスするためのクレデンシャル
+* Unified Manager仮想アプライアンスをデプロイするESXiサーバーのIPアドレス
+* データセンターの詳細（使用可能なストレージ スペースなど）
+* DHCPを使用しない場合は、接続先のネットワーク デバイスのIPv4またはIPv6アドレスを取得します。
++
+** ホストの完全修飾ドメイン名（FQDN）
+** ホストのIPアドレス
+** ネットワーク マスク
+** デフォルト ゲートウェイのIPアドレス
+** プライマリDNSとセカンダリDNSのアドレス
+** 検索ドメイン
+
+
+
+
+Unified Manager 9.8以降、VMware ToolsはOpen VM Tools  `_open-vm-tools_`）に置き換えられました。 `_open-vm-tools_`がUnified Managerのインストールパッケージに含まれているため、インストールプロセスの一環としてVMware Toolsをインストールする必要はありません。
+
+仮想アプライアンスを導入すると、HTTPSアクセス用に独自の自己署名証明書が生成されます。Unified ManagerのWeb UIにアクセスする際に、信頼されていない証明書に関するブラウザの警告が表示される場合があります。
+
+Unified Manager仮想アプライアンスでは、VMware High Availabilityがサポートされます。
+
+.手順
+. vSphere Client で、「ファイル」>「OVF テンプレートのデプロイ」をクリックします。
+. Unified Manager仮想アプライアンスをデプロイするには、OVFテンプレートのデプロイウィザードを完了してください。
++
+[Review Details]ページで次の操作を行います。
+
++
+** 発行者セクションの詳細を確認してください。*Entrust Code Signing - OVCS2 (Trusted certificate)*というメッセージにより、ダウンロードした `OVA`ファイルの整合性が確認されます。+ *Entrust Code Signing - OVCS2 (Invalid certificate)*というメッセージが表示された場合は、VMware vCenter Serverを7.0U3E以降のバージョンにアップグレードしてください。
++
+[Customize Template]ページで次の操作を行います。
+
+** DHCPとIPv4アドレスを使用する場合は、すべてのフィールドを空白のままにします。
+** DHCPとIPv6アドレスを使用する場合は、「`Enable Auto IPv6 addressing`」のチェックボックスをオンにし、その他のフィールドはすべて空白のままにしてください。
+** 静的なネットワーク設定を使用する場合は、各フィールドに値を指定します。ここで指定した値が導入時に適用されます。導入先のホストで一意で、使用されておらず、有効なDNSエントリが割り当てられたIPアドレスを指定してください。
+
+
+. Unified Manager仮想アプライアンスをESXiサーバーにデプロイしたら、VMを右クリックして「Power On」を選択し、VMの電源をオンにします。
++
+[NOTE]
+====
+リソースが十分でないために電源投入に失敗した場合は、リソースを追加してからインストールを再試行してください。
+
+====
+. 「コンソール」タブをクリックします。
++
+初回のブート プロセスには数分かかります。
+
+. タイムゾーンを設定するには、VM Consoleウィンドウのプロンプトに従って、地理的な地域と都市または地域を入力してください。
++
+表示されるすべての日付情報は、管理対象デバイスのタイムゾーン設定に関係なく、Unified Manager に設定されているタイムゾーンを使用します。ストレージ システムと管理サーバで同じNTPサーバが設定されている場合、違う時間が表示された場合でも、それぞれが表しているのは同じ時刻です。たとえば、管理サーバとは異なるタイム ゾーンが設定されたデバイスでSnapshotコピーを作成した場合も、タイム スタンプは管理サーバの時刻になります。
+
+. 使用可能なDHCPサービスがない場合、または静的なネットワーク設定に誤りがある場合は、次のいずれかを実行します。
++
+[cols="2*"]
+|===
+| インターフェイス | 操作 
+
+
+ a| 
+DHCP
+ a| 
+「DHCPを再試行」を選択してください。DHCPを使用する場合は、正しく設定されていることを確認してください。
+
+DHCPが有効になっているネットワークを使用している場合、FQDNとDNSサーバーのエントリは仮想アプライアンスに自動的に割り当てられます。DHCPがDNSと正しく構成されていない場合、ホスト名「`UnifiedManager`」は自動的に割り当てられ、セキュリティ証明書に関連付けられます。DHCP対応のネットワークをセットアップしていない場合は、ネットワーク設定の情報を手動で入力する必要があります。
+
+
+
+ a| 
+静的なネットワーク設定
+ a| 
+.. 「静的ネットワーク構成の詳細を入力」を選択します。
++
+設定プロセスが完了するまでに数分かかります。
+
+.. 入力した値を確認し、*Y* を選択してください。
+
+
+|===
+. プロンプトで、メンテナンスユーザー名を入力し、*Enter* をクリックします。
++
+メンテナンス ユーザの名前は、1文字目を小文字のアルファベット（a～z）、2文字目以降をハイフン（-）、a～z、0～9を任意に組み合わせて指定する必要があります。
+
+. プロンプトでパスワードを入力し、*Enter*をクリックします。
++
+VMコンソールには、Unified ManagerのWeb UIへのURLが表示されます。
+
+
+
+ウェブ UI にアクセスして Unified Manager の初期設定を行うことができます。詳細については、link:../config/concept_configure_unified_manager.html["Active IQ Unified Managerの設定"]を参照してください。

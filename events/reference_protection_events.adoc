@@ -1,0 +1,45 @@
+---
+permalink: events/reference_protection_events.html 
+sidebar: sidebar 
+keywords: protection, events, impact area, protection 
+summary: 保護イベントは、ジョブの失敗や中止を通知して、問題を監視できるようにします。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の保護イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+保護イベントは、ジョブの失敗や中止を通知して、問題を監視できるようにします。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-protection]]
+== 影響範囲：保護
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+保護ジョブ失敗（ocumEvtProtectionJobTaskFailed）
+ a| 
+インシデント
+ a| 
+ボリュームまたはストレージ サービス
+ a| 
+重大
+
+
+
+ a| 
+保護ジョブ中止（ocumEvtProtectionJobAborted）
+ a| 
+リスク
+ a| 
+ボリュームまたはストレージ サービス
+ a| 
+警告
+
+|===

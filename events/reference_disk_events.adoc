@@ -1,0 +1,67 @@
+---
+permalink: events/reference_disk_events.html 
+sidebar: sidebar 
+keywords: disks, events, impact area, availability 
+summary: ディスクのイベントは、ディスクのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のディスクイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ディスクのイベントは、ディスクのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+フラッシュ ディスク - スペア ブロックをほぼ使用（ocumEvtClusterFlashDiskFewerSpareBlockError）
+ a| 
+リスク
+ a| 
+クラスタ
+ a| 
+エラー
+
+
+
+ a| 
+フラッシュ ディスク - スペア ブロックなし（ocumEvtClusterFlashDiskNoSpareBlockCritical）
+ a| 
+インシデント
+ a| 
+クラスタ
+ a| 
+重大
+
+
+
+ a| 
+未割り当てディスクあり（ocumEvtClusterUnassignedDisksSome）
+ a| 
+リスク
+ a| 
+クラスタ
+ a| 
+警告
+
+
+
+ a| 
+障害ディスクあり（ocumEvtDisksSomeFailed）
+ a| 
+インシデント
+ a| 
+クラスタ
+ a| 
+重大
+
+|===

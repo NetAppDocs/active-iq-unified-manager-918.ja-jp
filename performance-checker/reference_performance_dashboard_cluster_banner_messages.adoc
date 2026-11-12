@@ -1,0 +1,38 @@
+---
+permalink: performance-checker/reference_performance_dashboard_cluster_banner_messages.html 
+sidebar: sidebar 
+keywords: performance, banner, messages, descriptions 
+summary: 'Unified Managerの[通知]ページ（通知ベルからアクセス）には、特定のクラスタで発生しているステータスの問題を知らせるバナー メッセージが表示される場合があります。' 
+---
+= Active IQ Unified Manager でパフォーマンスバナーメッセージを解釈する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerの[通知]ページ（通知ベルからアクセス）には、特定のクラスタで発生しているステータスの問題を知らせるバナー メッセージが表示される場合があります。
+
+|===
+| バナーメッセージ | 説明 | 解決策 
+
+
+ a| 
+`No performance data is being collected from cluster _cluster_name_. Restart Unified Manager to correct this issue.`
+ a| 
+Unified Managerのデータ収集サービスが停止しており、どのクラスターからもパフォーマンスデータが収集されていません。
+ a| 
+この問題を解決するには、Unified Managerを再起動します。それでも問題が解決しない場合は、テクニカル サポートにお問い合わせください。
+
+
+
+ a| 
+`More than x hour(s) of historical data is being collected from cluster _cluster_name_. Current data collections will start after all historical data is collected.`
+ a| 
+リアルタイムのクラスタ パフォーマンス収集サイクル以外に、データの継続性収集サイクルによるパフォーマンス データの収集が実行中です。
+ a| 
+対処は不要です。現在のパフォーマンス データは、データの継続性収集サイクルの完了後に収集されます。
+
+データ継続性収集サイクルは、新しいクラスターが追加された場合、またはUnified Managerが何らかの理由で最新のパフォーマンスデータを収集できなかった場合に実行されます。
+
+|===

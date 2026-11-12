@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: クォータ関連の問題が発生したとき（ソフト リミットを超えたとき、またはハード リミットに達したとき）にユーザまたはユーザ グループに送信するEメール通知の形式を作成できます。 
+---
+= Active IQ Unified Manager でユーザーおよびユーザーグループ クォータのメール通知フォーマットを作成する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クォータ関連の問題が発生したとき（ソフト リミットを超えたとき、またはハード リミットに達したとき）にユーザまたはユーザ グループに送信するEメール通知の形式を作成できます。
+
+.開始する前に
+アプリケーション管理者またはストレージ管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*General* ＞ *Quota Email Format* をクリックします。
+. 「差出人」、「件名」、「メール詳細」の各欄に詳細を入力または変更してください。
+. *プレビュー* をクリックすると、メール通知のプレビューが表示されます。
+. プレビューウィンドウを閉じるには、*Close* をクリックしてください。
+. 必要に応じてEメール通知の内容を変更します。
+. *保存*をクリックします。
+

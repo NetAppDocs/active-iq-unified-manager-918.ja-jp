@@ -1,0 +1,16 @@
+---
+permalink: install-linux/concept_overview_of_installation_process_on_red_hat.html 
+sidebar: sidebar 
+keywords: overview, installation process 
+summary: インストールワークフローには、Unified Manager を使用する前に実行する必要があるタスクが記載されています。 
+---
+= Red Hat Enterprise Linux への Active IQ Unified Manager のインストール手順を理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールワークフローには、Unified Manager を使用する前に実行する必要があるタスクが記載されています。
+
+image::../media/install_flow_on_rhel_2026.png[Red Hat Linux 上での前提条件、Unified Manager のインストール、および初期構成のワークフローを示す図]

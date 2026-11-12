@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/task_rediscover_clusters.html 
+sidebar: sidebar 
+keywords: rediscover clusters, 
+summary: '[クラスタ セットアップ]ページでクラスタを手動で再検出することで、クラスタの健全性、監視ステータス、パフォーマンス ステータスに関する最新情報を得られます。' 
+---
+= Active IQ Unified Manager でクラスターを再検出する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[クラスタ セットアップ]ページでクラスタを手動で再検出することで、クラスタの健全性、監視ステータス、パフォーマンス ステータスに関する最新情報を得られます。
+
+クラスタを更新し（スペースが不足しているためにアグリゲートのサイズを増やす場合など）、その変更をUnified Managerで検出するには、クラスタを手動で再検出します。
+
+Unified ManagerとOnCommand Workflow Automation（WFA）を連携させている場合は、WFAでキャッシュされたデータの再取得がトリガーされます。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ管理* > *クラスタ設定*をクリックします。
+. 「クラスター設定」ページで、「再検出」をクリックします。
++
+Unified Managerは選択されたクラスターを再検出し、最新の健全性およびパフォーマンスステータスを表示します。
+
+
+
+*関連情報*
+
+link:../health-checker/task_view_cluster_list_and_details.html["クラスタ リストおよび詳細の表示"]

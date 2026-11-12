@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference_description_of_cluster_object_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, cluster, object, windows, dialog boxes 
+summary: すべてのクラスタおよびクラスタ オブジェクトを、それぞれのストレージ オブジェクトのページで表示できます。対応するストレージ オブジェクトの詳細ページで詳細を確認することもできます。インベントリのストレージと保護の次の各セクションからは、System Managerユーザ インターフェイスを起動できるようになりました。 
+---
+= Active IQ Unified Manager のクラスタオブジェクトウィンドウとダイアログボックスについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+すべてのクラスタおよびクラスタ オブジェクトを、それぞれのストレージ オブジェクトのページで表示できます。対応するストレージ オブジェクトの詳細ページで詳細を確認することもできます。インベントリのストレージと保護の次の各セクションからは、System Managerユーザ インターフェイスを起動できるようになりました。
+
+* [クラスタのインベントリ]ページ、[クラスタの健全性]ページ、[クラスタのパフォーマンス]ページ
+* [アグリゲートのインベントリ]ページ、[アグリゲートの健全性]ページ、[アグリゲートのパフォーマンス]ページ
+* [ボリュームのインベントリ]ページ、[ボリュームの健全性]ページ、[ボリュームのパフォーマンス]ページ
+* [ノードのインベントリ]ページ、[ノードのパフォーマンス]ページ
+* [StorageVM のインベントリ]ページ、[StorageVM の健全性]ページ、[StorageVM のパフォーマンス]ページ
+* [保護関係]ページ
+

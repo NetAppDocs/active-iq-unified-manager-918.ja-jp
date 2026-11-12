@@ -1,0 +1,103 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: エンクロージャのイベントは、データセンター内のディスク シェルフ エンクロージャのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のエンクロージャーイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+エンクロージャのイベントは、データセンター内のディスク シェルフ エンクロージャのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ディスク シェルフのファンに障害（ocumEvtShelfFanFailed）
+ a| 
+インシデント
+ a| 
+ストレージ シェルフ
+ a| 
+重大
+
+
+
+ a| 
+ディスク シェルフの電源装置に障害（ocumEvtShelfPowerSupplyFailed）
+ a| 
+インシデント
+ a| 
+ストレージ シェルフ
+ a| 
+重大
+
+
+
+ a| 
+ディスク シェルフ マルチパス未設定（ocumDiskShelfConnectivityNotInMultiPath）
+
+このイベントの適用対象外：
+
+* MetroCluster構成のクラスタ
+* 以下のプラットフォーム：FAS2554、FAS2552、FAS2520、およびFAS2240
+
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+警告
+
+
+
+ a| 
+ディスク シェルフ パス障害（ocumDiskShelfConnectivityPathFailure）
+ a| 
+リスク
+ a| 
+ストレージ シェルフ
+ a| 
+警告
+
+|===
+
+
+[[impact-area-configuration]]
+== 影響範囲：構成
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+ディスク シェルフを検出（該当なし）
+ a| 
+イベント
+ a| 
+ノード
+ a| 
+情報
+
+
+
+ a| 
+ディスク シェルフを削除（該当なし）
+ a| 
+イベント
+ a| 
+ノード
+ a| 
+情報
+
+|===

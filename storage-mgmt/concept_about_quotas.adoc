@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_about_quotas.html 
+sidebar: sidebar 
+keywords: about, quotas 
+summary: クォータを使用すると、ユーザ、グループ、またはqtreeによって使用されるディスク スペースやファイル数を制限したり、追跡したりできます。クォータは/etc/quotasファイルを使用して指定します。クォータは特定のボリュームまたはqtreeに適用されます。 
+---
+= Active IQ Unified Manager のクォータについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クォータを使用すると、ユーザ、グループ、またはqtreeによって使用されるディスク スペースやファイル数を制限したり、追跡したりできます。クォータを指定するには、 `/etc/quotas`ファイルを使用します。クォータは特定のボリュームまたはqtreeに適用されます。

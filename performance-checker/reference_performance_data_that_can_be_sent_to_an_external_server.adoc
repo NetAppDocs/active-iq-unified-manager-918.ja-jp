@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_performance_data_that_can_be_sent_to_an_external_server.html 
+sidebar: sidebar 
+keywords: performance, data, external, server 
+summary: Unified Managerは、監視対象のすべてのクラスタからさまざまなパフォーマンス データを収集します。収集されたデータのうち、特定のデータ グループを外部サーバに送信することができます。 
+---
+= Active IQ Unified Manager のパフォーマンスデータを外部サーバーに送信する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerは、監視対象のすべてのクラスタからさまざまなパフォーマンス データを収集します。収集されたデータのうち、特定のデータ グループを外部サーバに送信することができます。
+
+グラフ化するパフォーマンス データに応じて、次のいずれかの統計グループを選択して送信できます。
+
+|===
+| 統計グループ | 含まれるデータ | 詳細 
+
+
+ a| 
+パフォーマンス モニタ
+ a| 
+以下のオブジェクトのパフォーマンスに関する総合的な統計データ。
+
+* LUN
+* ボリューム
+
+ a| 
+このグループは、監視対象の全クラスタ内のすべてのLUNとボリュームの合計IOPS / レイテンシを提供します。
+
+提供する統計データが最も少ないグループです。
+
+
+
+ a| 
+リソース利用率
+ a| 
+以下のオブジェクトのリソース利用率の統計データ。
+
+* ノード
+* アグリゲート
+
+ a| 
+このグループは、監視対象の全クラスタのノードおよびアグリゲートの物理リソースの利用率に関する統計データを提供します。
+
+また、[パフォーマンス モニタ]グループで収集された統計データも提供します。
+
+
+
+ a| 
+ドリルダウン
+ a| 
+以下の全追跡対象オブジェクトの読み取り / 書き込み、およびプロトコルごとの詳細な統計データ。
+
+* ノード
+* アグリゲート
+* LUN
+* ボリューム
+* ディスク
+* LIF
+* ポート / NIC
+
+ a| 
+このグループは、監視対象の全クラスタで追跡される7つのオブジェクト タイプのすべてについて、読み取り / 書き込みおよびプロトコルごとの内訳データを提供します。
+
+また、[パフォーマンス モニタ]グループと[リソース利用率]グループで収集された統計データも提供します。
+
+提供する統計データが最も多いグループです。
+
+|===
+[NOTE]
+====
+ストレージシステム上でクラスターまたはクラスターオブジェクトの名前が変更された場合、古いオブジェクトと新しいオブジェクトの両方に、外部サーバー上のパフォーマンスデータ（「`metric_path`」と呼ばれる）が含まれます。この2つのオブジェクトは、同一のオブジェクトとして関連付けられていません。例えば、ボリューム名を「`volume1_acct`」から「`acct_vol1`」に変更すると、古いボリュームの古いパフォーマンスデータと、新しいボリュームの新しいパフォーマンスデータが表示されます。
+
+====
+外部データ プロバイダに送信可能なすべてのパフォーマンス カウンタの一覧については、ナレッジ ベースの記事30096を参照してください。
+
+https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FActive_IQ_Unified_Manager%2FWhat_are_the_ActiveIQ_Unified_Manager_performance_counters_that_can_be_exported_to_an_External_Data_Provider%253F["What are the ActiveIQ Unified Manager performance counters that can be exported to an External Data Provider?"]

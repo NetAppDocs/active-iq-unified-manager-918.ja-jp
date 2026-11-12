@@ -1,0 +1,111 @@
+---
+permalink: api-automation/reference_authentication_errors.html 
+sidebar: sidebar 
+keywords: http, status, code, active iq, unified manager 
+summary: API を実行したり、問題をトラブルシューティングしたりする際に、Active IQ Unified Manager API で使用されるさまざまな HTTP ステータス コードとエラー コードについて知っておく必要があります。 
+---
+= Active IQ Unified Manager の HTTP ステータスコードについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+API を実行したり、問題をトラブルシューティングしたりする際に、Active IQ Unified Manager API で使用されるさまざまな HTTP ステータス コードとエラー コードについて知っておく必要があります。
+
+次の表は、認証に関連するエラー コードを示しています。
+
+[cols="3*"]
+|===
+| HTTPステータス コード | ステータスコードタイトル | 説明 
+
+
+ a| 
+200
+ a| 
+OK
+ a| 
+同期API呼び出しの実行に成功した場合に返されます。
+
+
+
+ a| 
+201
+ a| 
+Created
+ a| 
+Active Directoryの設定など、同期呼び出しによって新しいリソースが作成されたことを示します。
+
+
+
+ a| 
+202
+ a| 
+Accepted
+ a| 
+LUNやファイル共有の作成など、プロビジョニング機能の非同期呼び出しの実行が成功したときに返されます。
+
+
+
+ a| 
+400
+ a| 
+Invalid request
+ a| 
+入力検証に失敗したことを示します。ユーザは、要求本文に有効なキーを指定するなど、入力を修正する必要があります。
+
+
+
+ a| 
+401
+ a| 
+Unauthorized request
+ a| 
+リソースの表示を許可されていません/権限がありません。
+
+
+
+ a| 
+403
+ a| 
+Forbidden request
+ a| 
+接続しようとしたリソースへのアクセスは禁止されています。
+
+
+
+ a| 
+404
+ a| 
+Resource not found
+ a| 
+アクセスしようとしたリソースが見つかりません。
+
+
+
+ a| 
+405
+ a| 
+Method Not Allowed
+ a| 
+許可されていないメソッドです。
+
+
+
+ a| 
+429
+ a| 
+Too Many Requests
+ a| 
+ユーザから一定の時間内に送信された要求が多すぎる場合に返されます。
+
+
+
+ a| 
+500
+ a| 
+Internal server error
+ a| 
+内部サーバーエラー。サーバーからの応答を取得できませんでした。この内部サーバーエラーは、永続的なものとは限りません。例えば、 `GET`または `GET ALL`操作中にこのエラーが発生した場合は、最低5回は操作を繰り返すことをお勧めします。永続的なエラーの場合は、返されるステータスコードは引き続き500になります。操作が成功した場合、返されるステータスコードは200です。
+
+|===

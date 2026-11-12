@@ -1,0 +1,36 @@
+---
+permalink: data-protection/task_resolve_protection_job_failure.html 
+sidebar: sidebar 
+keywords: resolve, protection, job failure 
+summary: このワークフローでは、Unified Managerのダッシュボードで保護ジョブの失敗を特定して解決する方法の例を示します。 
+---
+= Active IQ Unified Manager で保護ジョブの失敗を解決する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このワークフローでは、Unified Managerのダッシュボードで保護ジョブの失敗を特定して解決する方法の例を示します。
+
+.開始する前に
+このワークフローの一部のタスクは、管理者ロールでのログインを必要とするため、各種機能を使用するために必要なロールを把握しておく必要があります。
+
+このシナリオでは、[ダッシュボード]ページにアクセスして保護ジョブに問題がないかどうかを確認します。[保護インシデント]領域に「ジョブ停止」インシデントが表示されており、ボリュームで「保護ジョブ失敗」エラーが発生したことがわかります。このエラーを調べて、考えられる原因と解決策を特定します。
+
+.手順
+. ダッシュボードの「未解決のインシデントとリスク」領域の「保護インシデント」パネルで、*保護ジョブが失敗しました*イベントをクリックします。
++
+[TIP]
+====
+イベントのリンクテキストは `object_name:/object_name - Error Name`の形式で記述されます。例： `cluster2_src_svm:/cluster2_src_vol2 - Protection Job Failed`。
+
+====
++
+失敗した保護ジョブの[イベントの詳細]ページが表示されます。
+
+. *概要*エリアの「原因」フィールドのエラーメッセージを確認し、問題を特定して、考えられる是正措置を評価します。
++
+link:task_identify_problem_for_failed_protection_job.html["保護ジョブが失敗した場合の問題の特定と対処策の実施"]を参照してください。
+
+

@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_on_demand_backup_for_unified_manger.html 
+sidebar: sidebar 
+keywords: backup, on-demand, unified manager 
+summary: Active IQ Unified Managerのユーザ インターフェイスを使用して、必要なときにいつでもオンデマンド バックアップを生成することができます。オンデマンド バックアップを使用すると、既存のバックアップ方法で瞬時にバックアップを作成できます。オンデマンド バックアップでは、MySQLベースとNetApp Snapshotベースのバックアップが区別されません。 
+---
+= Active IQ Unified Manager のオンデマンドバックアップについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Managerのユーザ インターフェイスを使用して、必要なときにいつでもオンデマンド バックアップを生成することができます。オンデマンド バックアップを使用すると、既存のバックアップ方法で瞬時にバックアップを作成できます。オンデマンド バックアップでは、MySQLベースとNetApp Snapshotベースのバックアップが区別されません。
+
+データベースバックアップページの*Backup Now*ボタンを使用して、オンデマンドバックアップを実行できます。オンデマンドバックアップは、Active IQ Unified Managerで設定したスケジュールには依存しません。

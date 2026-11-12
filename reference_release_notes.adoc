@@ -1,0 +1,16 @@
+---
+permalink: reference_release_notes.html 
+sidebar: sidebar 
+keywords: release notes, active iq unified manager 
+summary: Active IQ Unified Manager 9.18 の新機能、制限事項、既知の問題の概要を説明します。 
+---
+= Active IQ Unified Manager のリリースノート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Active IQ Unified Manager 9.18 の新機能、制限事項、既知の問題の概要を説明します。
+
+詳細については、 https://library.netapp.com/ecm/ecm_download_file/ECMLP3362664["Active IQ Unified Manager リリースノート"]を参照してください。

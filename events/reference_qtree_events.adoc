@@ -1,0 +1,100 @@
+---
+permalink: events/reference_qtree_events.html 
+sidebar: sidebar 
+keywords: qtree, events, impact area, capacity 
+summary: qtreeイベントは、qtreeの容量やファイルとディスクの制限に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の Qtree イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+qtreeイベントは、qtreeの容量やファイルとディスクの制限に関する情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-capacity]]
+== 影響範囲：容量
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+qtree スペースがほぼフル（ocumEvtQtreeSpaceNearlyFull）
+ a| 
+リスク
+ a| 
+qtree
+ a| 
+警告
+
+
+
+ a| 
+qtree スペースがフル（ocumEvtQtreeSpaceFull）
+ a| 
+リスク
+ a| 
+qtree
+ a| 
+エラー
+
+
+
+ a| 
+qtree のスペースが正常（ocumEvtQtreeSpaceThresholdOk）
+ a| 
+イベント
+ a| 
+qtree
+ a| 
+情報
+
+
+
+ a| 
+qtree のファイル数がハード リミットに到達（ocumEvtQtreeFilesHardLimitReached）
+ a| 
+インシデント
+ a| 
+qtree
+ a| 
+重大
+
+
+
+ a| 
+qtree のファイル数がソフト リミットを超過（ocumEvtQtreeFilesSoftLimitBreached）
+ a| 
+リスク
+ a| 
+qtree
+ a| 
+警告
+
+
+
+ a| 
+qtree のスペースがハード リミットに到達（ocumEvtQtreeSpaceHardLimitReached）
+ a| 
+インシデント
+ a| 
+qtree
+ a| 
+重大
+
+
+
+ a| 
+qtree のスペースがソフト リミットを超過（ocumEvtQtreeSpaceSoftLimitBreached）
+ a| 
+リスク
+ a| 
+qtree
+ a| 
+警告
+
+|===

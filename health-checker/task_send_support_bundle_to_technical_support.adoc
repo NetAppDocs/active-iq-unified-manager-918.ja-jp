@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: 問題についてAutoSupportメッセージよりも詳細な診断情報とトラブルシューティング情報が必要である場合は、テクニカル サポートにサポート バンドルを送信します。 
+---
+= Active IQ Unified Manager からテクニカルサポートにサポートバンドルを送信する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+問題についてAutoSupportメッセージよりも詳細な診断情報とトラブルシューティング情報が必要である場合は、テクニカル サポートにサポート バンドルを送信します。
+
+.開始する前に
+テクニカル サポートに送信するには、サポート バンドルへのアクセス権が必要です。
+
+テクニカル サポートのWebサイトで生成されたケース番号が必要です。
+
+.手順
+. NetAppサポート サイトにログインします。
+. ファイルをアップロードします。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["How to upload a file to NetApp"]
+
+

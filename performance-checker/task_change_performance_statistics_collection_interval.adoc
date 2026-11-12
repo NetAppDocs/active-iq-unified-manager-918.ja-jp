@@ -1,0 +1,40 @@
+---
+permalink: performance-checker/task_change_performance_statistics_collection_interval.html 
+sidebar: sidebar 
+keywords: unified manager, change, performance, statistics, collection, interval 
+summary: パフォーマンス統計のデフォルトの収集間隔は5分です。大規模なクラスタからの収集がデフォルトの時間内に完了しない場合は、この間隔を10分または15分に変更できます。この設定は、このUnified Managerインスタンスで監視しているすべてのクラスタからの統計の収集に適用されます。 
+---
+= Active IQ Unified Manager でパフォーマンス統計の収集間隔を変更する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンス統計のデフォルトの収集間隔は5分です。大規模なクラスタからの収集がデフォルトの時間内に完了しない場合は、この間隔を10分または15分に変更できます。この設定は、このUnified Managerインスタンスで監視しているすべてのクラスタからの統計の収集に適用されます。
+
+.開始する前に
+Unified Managerサーバのメンテナンス コンソールへのログインが許可されているユーザIDとパスワードが必要です。
+
+パフォーマンス統計情報の収集が時間内に完了しない問題は、バナーメッセージ `Unable to consistently collect from cluster <cluster_name>`または `Data collection is taking too long on cluster <cluster_name>`によって示されます。
+
+収集間隔の変更が必要になるのは、統計の収集に問題がある場合のみです。それ以外の場合は変更しないでください。
+
+[NOTE]
+====
+この値をデフォルト設定の5分から変更すると、Unified Managerでレポートされるパフォーマンス イベントの数や頻度に影響する可能性があります。たとえば、システム定義のパフォーマンスしきい値ポリシーでは、ポリシーを超えた状態が30分続くとイベントがトリガーされます。これは、収集間隔が5分であれば、6回の収集で連続してポリシーの違反が検出された場合に相当します。一方、収集間隔が15分の場合は、2回の収集期間のみでポリシーの違反と判断されます。
+
+====
+統計データの現在の収集間隔は、[クラスタ セットアップ]ページの下部のメッセージに表示されます。
+
+.手順
+. SSHを使用して、Unified Managerホストにメンテナンス ユーザとしてログインします。
++
+Unified Managerメンテナンス コンソールのプロンプトが表示されます。
+
+. 「Performance Polling Interval Configuration」というラベルの付いたメニューオプションの番号を入力し、Enter キーを押してください。
+. プロンプトが表示されたら、メンテナンス ユーザのパスワードをもう一度入力します。
+. 設定する新しいポーリング間隔の値を入力し、Enterキーを押します。
+
+
+外部データ プロバイダ（Graphiteなど）への接続を現在設定してある場合は、Unified Managerの収集間隔を10分または15分に変更したあと、データ プロバイダの送信間隔もUnified Managerの収集間隔以上に変更する必要があります。

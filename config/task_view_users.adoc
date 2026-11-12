@@ -1,0 +1,21 @@
+---
+permalink: config/task_view_users.html 
+sidebar: sidebar 
+keywords: view, users 
+summary: '[ユーザ]ページでは、Unified Managerを使用してストレージ オブジェクトとデータを管理するユーザのリストを表示できます。ユーザに関する詳細（ユーザ名、ユーザのタイプ、Eメール アドレス、ユーザに割り当てられているロールなど）を参照できます。' 
+---
+= Active IQ Unified Manager でユーザーを表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+[ユーザ]ページでは、Unified Managerを使用してストレージ オブジェクトとデータを管理するユーザのリストを表示できます。ユーザに関する詳細（ユーザ名、ユーザのタイプ、Eメール アドレス、ユーザに割り当てられているロールなど）を参照できます。
+
+.開始する前に
+アプリケーション管理者のロールが必要です。
+
+.手順
+. 左側のナビゲーションペインで、*General* > *Users* をクリックします。
+

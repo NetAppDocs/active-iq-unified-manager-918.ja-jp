@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_resolve_storage_failover_interconnect_link_down_condition.html 
+sidebar: sidebar 
+keywords: scan, resolve, storage, failover, interconnect link, conditions 
+summary: このワークフローでは、ストレージ フェイルオーバー インターコネクト リンクの停止状態をスキャンし、評価して解決する方法の例を示します。このシナリオでは、管理者が、ノードでONTAPバージョンのアップグレードを開始する前にUnified Managerを使用してストレージ フェイルオーバーのリスクがないかをスキャンします。 
+---
+= Active IQ Unified Manager でストレージフェイルオーバー相互接続リンクダウン状態をスキャンして解決する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このワークフローでは、ストレージ フェイルオーバー インターコネクト リンクの停止状態をスキャンし、評価して解決する方法の例を示します。このシナリオでは、管理者が、ノードでONTAPバージョンのアップグレードを開始する前にUnified Managerを使用してストレージ フェイルオーバーのリスクがないかをスキャンします。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+無停止アップグレードの実行中にHAペア ノード間のストレージ フェイルオーバー インターコネクトで障害が発生すると、アップグレードは失敗します。このため、一般的には、管理者がアップグレードの開始前にアップグレード対象のクラスタ ノードでストレージ フェイルオーバーの信頼性を監視して確認します。
+
+.手順
+. 左側のナビゲーションペインで、*イベント管理*をクリックします。
+. 「イベント管理」インベントリページで、「アクティブな可用性イベント」を選択します。
+. *イベント管理*インベントリページの*名前*列の上部で、image:../media/filtericon_um60.png["列フィルターのアイコン"]をクリックし、テキストボックスに `*failover`と入力して、表示するイベントをストレージフェイルオーバー関連のイベントに限定します。
++
+ストレージ フェイルオーバーの状態に関連する過去のイベントがすべて表示されます。
+
++
+このシナリオでは、Unified Manager の可用性インシデントセクションに「`Storage Failover Interconnect One or More Links Down`」というイベントが表示されます。
+
+. ストレージのフェイルオーバーに関連するイベントが*Event Management*インベントリページに1つ以上表示されている場合は、以下の手順を実行してください。
++
+.. イベント タイトルのリンクをクリックして、そのイベントの詳細情報を表示します。
++
+この例では、イベントタイトル「`Storage Failover Interconnect One or More Links Down`」をクリックします。
+
++
+そのイベントの[イベントの詳細]ページが表示されます。
+
+.. [イベントの詳細]ページで、次のタスクを1つ以上実行できます。
++
+*** [原因]フィールドでエラー メッセージを確認し、問題を評価します。
+*** イベントを管理者に割り当てます。
+*** イベントに応答します。
+
+
+
+
+
+
+*関連情報*
+
+link:../events/reference_event_details_page.html["[イベントの詳細]ページ"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Managerのユーザ ロールと機能"]

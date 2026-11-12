@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: パフォーマンスクラスタ概要ページには、クラスタのアクティブなイベント、IOPSパフォーマンス、およびMB/sパフォーマンスの概要が表示されます。このページには、クラスタ内のストレージオブジェクトの総数も表示されます。 
+---
+= Active IQ Unified Manager のパフォーマンスクラスタサマリページを確認する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+パフォーマンスクラスタ概要ページには、クラスタのアクティブなイベント、IOPSパフォーマンス、およびMB/sパフォーマンスの概要が表示されます。このページには、クラスタ内のストレージオブジェクトの総数も表示されます。

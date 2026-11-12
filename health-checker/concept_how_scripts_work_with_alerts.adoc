@@ -1,0 +1,53 @@
+---
+permalink: health-checker/concept_how_scripts_work_with_alerts.html 
+sidebar: sidebar 
+keywords: scripts, work, alerts 
+summary: Unified Managerでイベントに対するアラートが発生したときにスクリプトが実行されるように、アラートにスクリプトを関連付けることができます。スクリプトを使用して、ストレージ オブジェクトの問題を解決したり、イベントの生成元のストレージ オブジェクトを特定したりできます。 
+---
+= Active IQ Unified Manager でスクリプトがアラートとどのように連携するかを理解する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerでイベントに対するアラートが発生したときにスクリプトが実行されるように、アラートにスクリプトを関連付けることができます。スクリプトを使用して、ストレージ オブジェクトの問題を解決したり、イベントの生成元のストレージ オブジェクトを特定したりできます。
+
+Unified Managerでイベントに関するアラートが生成されると、指定された受信者にアラートメールが送信されます。アラートにスクリプトを関連付けている場合、そのスクリプトが実行されます。スクリプトに渡された引数の詳細は、アラートメールから確認できます。
+
+[NOTE]
+====
+カスタムスクリプトを作成し、特定のイベントタイプのアラートに関連付けた場合、そのイベントタイプに対してカスタムスクリプトに基づいてアクションが実行され、デフォルトでは「管理アクション」ページまたはUnified Managerダッシュボードで*Fix it*アクションは利用できません。
+
+====
+スクリプトの実行には次の引数が使用されます。
+
+* `-eventID`
+* `-eventName`
+* `-eventSeverity`
+* `-eventSourceID`
+* `-eventSourceName`
+* `-eventSourceType`
+* `-eventState`
+* `-eventArgs`
+
+
+これらの引数をスクリプトで使用して、関連するイベントの情報を収集したり、ストレージ オブジェクトを変更したりできます。
+
+
+
+[[example-for-obtaining-arguments-from-scripts]]
+== スクリプトから引数を取得する例
+
+[listing]
+----
+print "$ARGV[0] : $ARGV[1]\n"
+print "$ARGV[7] : $ARGV[8]\n"
+----
+アラートが生成されると、このスクリプトが実行されて次のような出力が表示されます。
+
+[listing]
+----
+-eventID : 290
+-eventSourceID : 4138
+----

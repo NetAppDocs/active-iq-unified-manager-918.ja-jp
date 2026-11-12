@@ -1,0 +1,55 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html 
+sidebar: sidebar 
+keywords: add space, logica, drive, microsoft windows server 
+summary: Unified Managerデータベースのディスク スペースを増やす必要がある場合は、Unified Managerがインストールされている論理ドライブに容量を追加できます。 
+---
+= Active IQ Unified Manager でMicrosoft Windowsサーバーの論理ドライブに空き容量を追加する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerデータベースのディスク スペースを増やす必要がある場合は、Unified Managerがインストールされている論理ドライブに容量を追加できます。
+
+.開始する前に
+Windowsの管理者権限が必要です。
+
+ディスク スペースを追加する前にUnified Managerデータベースをバックアップすることを推奨します。
+
+.手順
+. ディスク スペースを追加するWindowsサーバに管理者としてログインします。
+. スペースを追加する方法に応じて、該当する手順を実行します。
++
+|===
+| オプション | 説明 
+
+
+ a| 
+物理サーバで、Unified Managerサーバがインストールされている論理ドライブに容量を追加する。
+ a| 
+Microsoftの次のトピックの手順に従います。
+
+https://technet.microsoft.com/en-us/library/cc771473(v=ws.11).aspx["Extend a Basic Volume"^]
+
+
+
+ a| 
+物理サーバで、ハード ディスク ドライブを追加する。
+ a| 
+Microsoftの次のトピックの手順に従います。
+
+https://msdn.microsoft.com/en-us/library/dd163551.aspx["Adding Hard Disk Drives"^]
+
+
+
+ a| 
+仮想マシンで、ディスク パーティションのサイズを拡張する。
+ a| 
+VMwareの次のトピックの手順に従います。
+
+https://knowledge.broadcom.com/external/article/323136/increasing-the-size-of-a-virtual-disk-pa.html["Increasing the size of a disk partition"^]
+
+|===
+

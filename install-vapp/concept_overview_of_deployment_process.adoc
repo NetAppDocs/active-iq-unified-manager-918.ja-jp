@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_overview_of_deployment_process.html 
+sidebar: sidebar 
+keywords: overview, deployment, process 
+summary: 導入ワークフローでは、Unified Managerを使用する前に実行する必要のあるタスクについて説明します。 
+---
+= Active IQ Unified Manager の導入プロセスについて学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+導入ワークフローでは、Unified Managerを使用する前に実行する必要のあるタスクについて説明します。
+
+image::../media/deployment_sequence_oc_6_0.gif[Unified Managerの展開前提条件、アプライアンスの展開、および初期構成手順を示す図]

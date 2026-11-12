@@ -1,0 +1,51 @@
+---
+permalink: install-vapp/reference_vmware_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: vmware, software, installation, requirements 
+summary: Unified ManagerをインストールするVMware vSphereシステムには、特定のバージョンのオペレーティングシステムと特定のバージョンのサポートソフトウェアが必要です。 
+---
+= Active IQ Unified Manager のVMwareソフトウェアとインストール要件について説明します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified ManagerをインストールするVMware vSphereシステムには、特定のバージョンのオペレーティングシステムと特定のバージョンのサポートソフトウェアが必要です。
+
+
+
+[[operating-system-software]]
+== オペレーティング システム ソフトウェア
+
+サポートされているオペレーティングシステムはVMware ESXi 8.0です。
+
+[NOTE]
+====
+VMware vSphere システム上の Unified Manager OVA は、内部で Debian OS 13（Trixie）を実行します。サポートされている ESXi サーバーのバージョンがサポートできる仮想マシンハードウェアのバージョンについては、VMware のドキュメントを参照してください。
+
+====
+サポートされるvSphereのバージョンは次のとおりです。
+
+* VMware vCenter Server 7.0および8.0
+
+
+サポートされているESXiのバージョンの最新のリストについては、Interoperability Matrixを参照してください。
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+仮想アプライアンスが正しく動作するには、VMware ESXiサーバの時刻がNTPサーバの時刻と同じになっている必要があります。VMware ESXiサーバの時刻をNTPサーバの時刻と同期すると、時刻に関する障害は発生しなくなります。
+
+
+
+[[installation-requirements]]
+== インストールの要件
+
+Unified Manager仮想アプライアンスでは、VMware High Availabilityがサポートされます。
+
+ONTAPソフトウェアを実行しているストレージ システムにNFSデータストアを導入する場合は、NetApp NFS Plug-in for VMware VAAIを使用してシックプロビジョニングを使用します。
+
+リソースが十分でないために導入環境でハイアベイラビリティを有効にできない場合は、[Cluster Features]の[Virtual Machine Options]の変更が必要な可能性があります。[VM Restart Priority]を無効にし、[Host Isolation Response]を[Leave Powered On]に設定します。
+
+
+NOTE: Unified Managerのインストールまたはアップグレード中、必要なサードパーティ製ソフトウェアとセキュリティ パッチがVMware vSphereシステムに自動的にインストールまたはアップグレードされます。これらのコンポーネントはUnified Managerのインストールおよびアップグレード プロセスで制御されるため、サードパーティ製コンポーネントを単独でインストールまたはアップグレードすることは避けてください。

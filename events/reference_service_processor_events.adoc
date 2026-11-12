@@ -1,0 +1,45 @@
+---
+permalink: events/reference_service_processor_events.html 
+sidebar: sidebar 
+keywords: service, processor, events, impact area, availability 
+summary: サービス プロセッサ イベントは、プロセッサのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager のサービスプロセッサイベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+サービス プロセッサ イベントは、プロセッサのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+サービス プロセッサが未設定（ocumEvtServiceProcessorNotConfigured）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+警告
+
+
+
+ a| 
+サービス プロセッサはオフライン（ocumEvtServiceProcessorOffline）
+ a| 
+リスク
+ a| 
+ノード
+ a| 
+エラー
+
+|===

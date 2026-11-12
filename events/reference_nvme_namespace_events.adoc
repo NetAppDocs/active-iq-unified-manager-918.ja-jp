@@ -1,0 +1,187 @@
+---
+permalink: events/reference_nvme_namespace_events.html 
+sidebar: sidebar 
+keywords: nvme, namespace, events, impact area, availability, performance 
+summary: NVMeネームスペース イベントは、ネームスペースのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。 
+---
+= Active IQ Unified Manager の NVMe 名前空間イベントについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVMeネームスペース イベントは、ネームスペースのステータス情報を提供します。これにより、潜在的な問題を監視できます。影響範囲別にイベントがまとめられ、イベント名とトラップ名、影響レベル、ソース タイプ、および重大度が表示されます。
+
+アスタリスク（*）は、EMSイベントがUnified Managerイベントに変換されたことを示します。
+
+
+
+[[impact-area-availability]]
+== 影響範囲：可用性
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+NVMeNS オフライン *（nvmeNamespaceStatusOffline）
+ a| 
+イベント
+ a| 
+ネームスペース
+ a| 
+情報
+
+
+
+ a| 
+NVMeNSオンライン*（nvmeNamespaceStatusOnline）
+ a| 
+イベント
+ a| 
+ネームスペース
+ a| 
+情報
+
+
+
+ a| 
+NVMeNS 容量不足 *（nvmeNamespaceSpaceOutOfSpace）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+NVMeNS を破棄します *（nvmeNamespaceDestroy）
+ a| 
+イベント
+ a| 
+ネームスペース
+ a| 
+情報
+
+|===
+
+
+[[impact-area-performance]]
+== 影響範囲：パフォーマンス
+
+|===
+| イベント名（トラップ名） | 影響レベル | ソース タイプ | 重大度 
+
+
+ a| 
+NVMe ネームスペース IOPS の重大しきい値を超過（ocumNvmeNamespaceIopsIncident）
+ a| 
+インシデント
+ a| 
+ネームスペース
+ a| 
+重大
+
+
+
+ a| 
+NVMe ネームスペース IOPS の警告しきい値を超過（ocumNvmeNamespaceIopsWarning）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+NVMe ネームスペース MBps の重大しきい値を超過（ocumNvmeNamespaceMbpsIncident）
+ a| 
+インシデント
+ a| 
+ネームスペース
+ a| 
+重大
+
+
+
+ a| 
+NVMe ネームスペース MBps の警告しきい値を超過（ocumNvmeNamespaceMbpsWarning）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ（ミリ秒/処理）の重大しきい値を超過（ocumNvmeNamespaceLatencyIncident）
+ a| 
+インシデント
+ a| 
+ネームスペース
+ a| 
+重大
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ（ミリ秒/処理）の警告しきい値を超過（ocumNvmeNamespaceLatencyWarning）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ / IOPS の重大しきい値を超過（ocumNvmeNamespaceLatencyIopsIncident）
+ a| 
+インシデント
+ a| 
+ネームスペース
+ a| 
+重大
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ / IOPS の警告しきい値を超過（ocumNvmeNamespaceLatencyIopsWarning）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ / MBps の重大しきい値を超過（ocumNvmeNamespaceLatencyMbpsIncident）
+ a| 
+インシデント
+ a| 
+ネームスペース
+ a| 
+重大
+
+
+
+ a| 
+NVMe ネームスペース レイテンシ / MBps の警告しきい値を超過（ocumNvmeNamespaceLatencyMbpsWarning）
+ a| 
+リスク
+ a| 
+ネームスペース
+ a| 
+警告
+
+|===

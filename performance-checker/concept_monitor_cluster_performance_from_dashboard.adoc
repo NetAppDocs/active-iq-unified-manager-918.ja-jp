@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, dashboard 
+summary: Unified Managerダッシュボードには、このUnified Managerインスタンスによって監視されているすべてのクラスターのパフォーマンスステータスの概要を表示するパネルがいくつかあります。これにより、管理対象クラスターの全体的なパフォーマンスを評価し、特定されたイベントを迅速に記録、特定、または解決のために割り当てることができます。 
+---
+= Active IQ Unified Manager のダッシュボードからクラスターのパフォーマンスを監視する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerダッシュボードには、このUnified Managerインスタンスによって監視されているすべてのクラスターのパフォーマンスステータスの概要を表示するパネルがいくつかあります。これにより、管理対象クラスターの全体的なパフォーマンスを評価し、特定されたイベントを迅速に記録、特定、または解決のために割り当てることができます。

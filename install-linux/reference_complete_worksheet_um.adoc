@@ -1,0 +1,217 @@
+---
+permalink: install-linux/reference_complete_worksheet_um.html 
+sidebar: sidebar 
+keywords: complete, worksheet, cluster, information, unified manager 
+summary: Unified Managerをインストールおよび構成する前に、ご使用の環境に関する具体的な情報を準備しておく必要があります。その情報はワークシートに記録できます。 
+---
+= Active IQ Unified Manager でワークシートを完成させてください
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerをインストールおよび構成する前に、ご使用の環境に関する具体的な情報を準備しておく必要があります。その情報はワークシートに記録できます。
+
+
+
+[[unified-manager-installation-information]]
+== Unified Managerのインストール情報
+
+Unified Managerをインストールするために必要な詳細情報。
+
+[cols="2*"]
+|===
+| ソフトウェアが展開されるシステム | あなたの価値 
+
+
+ a| 
+ホストの完全修飾ドメイン名
+ a| 
+
+
+
+ a| 
+ホストのIPアドレス
+ a| 
+
+
+
+ a| 
+ネットワーク マスク
+ a| 
+
+
+
+ a| 
+ゲートウェイのIPアドレス
+ a| 
+
+
+
+ a| 
+プライマリDNSアドレス
+ a| 
+
+
+
+ a| 
+セカンダリDNSアドレス
+ a| 
+
+
+
+ a| 
+検索ドメイン
+ a| 
+
+
+
+ a| 
+メンテナンス ユーザのユーザ名
+ a| 
+
+
+
+ a| 
+メンテナンス ユーザのパスワード
+ a| 
+
+|===
+
+
+[[unified-manager-configuration-information]]
+== Unified Managerの設定情報
+
+Unified Managerのインストール後に設定するための詳細情報。設定によっては、一部の値は省略可能です。
+
+[cols="2*"]
+|===
+| 設定 | あなたの価値 
+
+
+ a| 
+メンテナンス ユーザのEメール アドレス
+ a| 
+
+
+
+ a| 
+SMTPサーバのホスト名またはIPアドレス
+ a| 
+
+
+
+ a| 
+SMTPのユーザ名
+ a| 
+
+
+
+ a| 
+SMTPのパスワード
+ a| 
+
+
+
+ a| 
+SMTP ポート
+ a| 
+25（デフォルト値）
+
+
+
+ a| 
+アラート通知の送信元Eメール アドレス
+ a| 
+
+
+
+ a| 
+認証サーバのホスト名またはIPアドレス
+ a| 
+
+
+
+ a| 
+Active Directoryの管理者名またはLDAPバインド識別名
+ a| 
+
+
+
+ a| 
+Active DirectoryのパスワードまたはLDAPバインド パスワード
+ a| 
+
+
+
+ a| 
+認証サーバのベース識別名
+ a| 
+
+
+
+ a| 
+アイデンティティ プロバイダ（IdP）のURL
+ a| 
+
+
+
+ a| 
+アイデンティティ プロバイダ（IdP）のメタデータ
+ a| 
+
+
+
+ a| 
+SNMPトラップの送信先ホストのIPアドレス
+ a| 
+
+
+
+ a| 
+SNMP ポート
+ a| 
+
+|===
+
+
+[[cluster-information]]
+== クラスタ情報
+
+Unified Managerを使用して管理するストレージ システムの情報を記入します。
+
+[cols="2*"]
+|===
+| N個中のクラスタ1 | あなたの価値 
+
+
+ a| 
+ホスト名またはクラスタ管理IPアドレス
+ a| 
+
+
+
+ a| 
+ONTAP管理者のユーザ名
+
+[NOTE]
+====
+管理者には「`admin`」ロールが割り当てられている必要があります。
+
+==== a| 
+
+
+
+ a| 
+ONTAP管理者のパスワード
+ a| 
+
+
+
+ a| 
+Protocol
+ a| 
+HTTPS
+
+|===

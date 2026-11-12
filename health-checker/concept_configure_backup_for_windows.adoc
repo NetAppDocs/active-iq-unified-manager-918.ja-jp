@@ -1,0 +1,157 @@
+---
+permalink: health-checker/concept_configure_backup_for_windows.html 
+sidebar: sidebar 
+keywords: backup, restore, windows, netapp, snapshot copy, copies, configure, backup 
+summary: Active IQ Unified Managerは、Windowsオペレーティング システムでのNetApp Snapshotを使用したバックアップとリストアを、iSCSIプロトコルを使用するLUNを利用してサポートします。 
+---
+= Active IQ Unified Manager で Windows のバックアップを設定する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Managerは、Windowsオペレーティング システムでのNetApp Snapshotを使用したバックアップとリストアを、iSCSIプロトコルを使用するLUNを利用してサポートします。
+
+Snapshotベースのバックアップは、Unified Managerのすべてのサービスの実行中に作成できます。このバックアップでは、データベース全体にグローバルな読み取りロックが適用されて同時書き込みが回避されるため、Snapshotには整合性が取れた状態のデータベースがキャプチャされます。Windows OSにインストールされたUnified ManagerでNetApp Snapshotを使用したバックアップとリストアを実行するには、まずメンテナンス コンソールを使用してUnified ManagerのバックアップをSnapshotベースに設定します。
+
+Unified ManagerでSnapshotコピーの作成を設定する前に、次の設定タスクを実行する必要があります。
+
+* ONTAPクラスタの設定
+* Windowsホスト マシンの設定
+
+
+
+
+[[configure-a-backup-location-for-active-iq-unified-manager-on-windows]]
+== Windows 上の Active IQ Unified Manager のバックアップ場所を設定する
+
+WindowsでUnified ManagerをバックアップしたあとにSnapshotコピーを格納するためのボリュームを設定する必要があります。
+
+.開始する前に
+クラスタ、Storage VM、およびボリュームが次の要件を満たしている必要があります。
+
+* クラスタの要件：
++
+** ONTAP 9.3以降がインストールされている必要があります
+** 地理的にUnified Managerサーバに近い場所に設置する必要があります
+** Unified Managerが監視しています
+
+
+* Storage VMの要件：
++
+** ONTAPクラスタでのiSCSI接続
+** 設定対象のマシンではiSCSIプロトコルを有効にする必要があります
+** バックアップ構成には、専用のボリュームとLUNを用意する必要があります。選択したボリュームには、1つのLUNのみを含め、他のものは含めないでください。
+** LUNのサイズは、9.9 Active IQ Unified Managerで処理されると予想されるデータサイズの少なくとも2倍である必要があります。
++
+これにより、ボリュームにも同じサイズ要件が設定されます。
+
+** 「すべての読み取り/書き込みアクセス」が選択されていることを確認してください
+** エクスポートポリシーでスーパーユーザーアクセスが「`any`」に設定されていることを確認してください
+
+
+* ボリュームとLUNの要件：
++
+** ボリュームのサイズは、Unified ManagerのMySQLデータディレクトリの少なくとも2倍である必要があります。
+** セキュリティスタイルはWindowsに設定する必要があります
+** ローカルスナップショットポリシーを無効にする必要があります
+** ボリュームの自動サイズ調整を有効にする必要があります
+** パフォーマンスサービスレベルは、「`Extreme`」のように、IOPSが高くレイテンシが低いポリシーに設定する必要があります。
+
+
+
+
+
+
+[[configure-an-ontap-cluster-for-backup-and-restore-in-active-iq-unified-manager]]
+== Active IQ Unified Manager でバックアップとリストア用の ONTAP クラスターを設定する
+
+WindowsシステムでSnapshotコピーを使用してActive IQ Unified Managerをバックアップおよびリストアするには、事前にいくつかの設定手順をONTAPクラスタで実行する必要があります。
+
+ONTAPクラスタは、コマンド プロンプトまたはSystem Managerユーザ インターフェイスを使用して設定できます。ONTAPクラスタの設定では、Storage VMにiSCSI LIFとして割り当てることができるようにデータLIFを設定します。次に、System Managerユーザ インターフェイスを使用してiSCSI対応のStorage VMを設定します。このStorage VMに静的ネットワーク ルートを設定し、LIFが発信トラフィックにネットワークを使用する方法を制御する必要があります。
+
+[NOTE]
+====
+バックアップ設定専用のボリュームとLUNが必要です。使用するボリュームにはLUNを1つだけ配置します。LUNのサイズは、Active IQ Unified Managerでの処理が想定されるデータ サイズの2倍以上にする必要があります。
+
+====
+次の設定を行う必要があります。
+
+.手順
+. iSCSI対応のStorage VMを設定するか、同じ設定の既存のStorage VMを使用します。
+. 設定したStorage VMにネットワーク ルートを設定します。
+. 単一のLUNを含むボリュームを適切な容量で設定し、そのLUN専用になるようにします。
++
+
+NOTE: System Managerで作成されたLUNの場合、LUNのマッピングを解除するとigroupが削除されてリストアが失敗することがあります。この状況を回避するには、LUNを明示的に作成し、LUNのマッピングが解除されても削除されないようにします。
+
+. Storage VMにイニシエータ グループを設定します。
+. ポートセットを設定します。
+. igroupをポートセットと統合します。
+. LUNをigroupにマップします。
+
+
+
+
+[[configure-a-windows-host-machine-in-active-iq-unified-manager]]
+== Active IQ Unified Manager で Windows ホストマシンを設定する
+
+NetApp Snapshotを使用してActive IQ Unified Managerをバックアップおよびリストアする前に、Windowsホストマシンを構成する必要があります。WindowsホストマシンでMicrosoft iSCSIイニシエータを起動するには、検索バーに「`iscsi`」と入力し、*iSCSIイニシエータ*をクリックします。
+
+.開始する前に
+ホスト マシン上の以前の設定をすべて消去する必要があります。
+
+Windowsの新規インストール時にiSCSIイニシエータを起動しようとすると、確認のプロンプトが表示され、確認すると[iSCSIイニシエーターのプロパティ]ダイアログ ボックスが表示されます。既存のWindowsインストールの場合は、[iSCSIイニシエーターのプロパティ]ダイアログ ボックスが開き、非アクティブまたは接続しようとしているターゲットが表示されます。そのため、Windowsホスト上の以前の設定をすべて削除する必要があります。
+
+.手順
+. ホスト マシン上の以前の設定をすべて消去します。
+. ターゲット ポータルを検出します。
+. ターゲット ポータルに接続します。
+. マルチパスを使用してターゲット ポータルに接続します。
+. 両方のLIFを検出します。
+. Windowsマシンでデバイスとして設定されているLUNを検出します。
+. 検出されたLUNをWindowsで新しいボリューム ドライブとして設定します。
+
+
+
+
+[[specify-the-destination-location-for-snapshot-copies-on-windows-in-active-iq-unified-manager]]
+== Active IQ Unified Manager で Windows における Snapshot コピーの保存先を指定する
+
+Active IQ Unified Manager Snapshotコピーのデスティネーションには、いずれかのONTAPクラスタですでに設定済みのボリュームを指定する必要があります。デスティネーションはメンテナンス コンソールを使用して定義します。
+
+* Active IQ Unified ManagerがインストールされているWindowsホストの管理者権限が必要です。
+* Unified Managerサーバのメンテナンス コンソールへのログインが許可されているユーザIDとパスワードが必要です。
+* クラスタ管理IPアドレス、Storage VMの名前、ボリュームの名前、LUNの名前、およびストレージ システムのユーザ名とパスワードが必要です。
+* ボリュームをネットワーク ドライブとしてActive IQ Unified Managerホストにマウントし、マウント ドライブを用意しておく必要があります。
+
+
+.手順
+. Power Shellを使用して、Active IQ Unified ManagerシステムのIPアドレスまたは完全修飾ドメイン名に接続します。
+. メンテナンス ユーザ（umadmin）の名前とパスワードでシステムにログインします。
+. コマンド `maintenance_console`を入力し、Enterキーを押します。
+. メンテナンスコンソールの*Main Menu*で、*Backup Restore*オプションの番号を入力します。
+. *NetApp Snapshotバックアップの設定*の番号を入力してください。
+. iSCSIを設定するオプションの番号を入力します。
+. 必要な情報を確認してから、「バックアップ構成の詳細を入力」の欄に番号を入力してください。
+. Snapshotを書き込むボリュームを指定するには、クラスタ管理インターフェイスのIPアドレス、Storage VMの名前、ボリュームの名前、LUNの名前、ストレージ システムのユーザ名とパスワード、およびマウント ドライブを入力します。
+. この情報を確認して、 `y` を入力します。
++
+システムで次のタスクが実行されます。
+
++
+** ストレージVMが検証されました
+** ボリュームは検証済みです
+** ドライブのマウントとステータスが検証されました
+** LUNの存在と状態
+** ネットワークドライブの存在
+** マウントされたボリュームに推奨容量（mysqlデータディレクトリの2倍以上）が存在することが検証されます
+** ボリューム内の専用LUNに対応するLUNパス
+** igroup名
+** ネットワークドライブがマウントされているボリュームのGUID
+** ONTAPとの通信に使用されるiSCSIイニシエータ
+
+
+. メンテナンス コンソールを終了してActive IQ Unified Managerインターフェイスを起動し、Snapshotコピーのスケジュールを作成します。
+

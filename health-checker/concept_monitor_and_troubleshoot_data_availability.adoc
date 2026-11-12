@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_monitor_and_troubleshoot_data_availability.html 
+sidebar: sidebar 
+keywords: monitor, troubleshoot, data availability 
+summary: Unified Manager は、承認されたユーザーが保存されたデータにアクセスできる信頼性を監視し、アクセスをブロックまたは阻害する状況を警告し、それらの状況を診断して解決策を割り当て、追跡できるようにします。 
+---
+= Active IQ Unified Manager でデータの可用性を監視およびトラブルシューティングする
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager は、承認されたユーザーが保存されたデータにアクセスできる信頼性を監視し、アクセスをブロックまたは阻害する状況を警告し、それらの状況を診断して解決策を割り当て、追跡できるようにします。
+
+このセクションの可用性ワークフローに関するトピックでは、ストレージ管理者がUnified ManagerのWeb UIを使用して、データの可用性に悪影響を与えるハードウェアおよびソフトウェアの状態を検出、診断し、解決のために担当者を割り当てる方法の例について説明します。

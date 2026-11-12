@@ -1,0 +1,42 @@
+---
+permalink: health-checker/task_view_svm_list_and_details.html 
+sidebar: sidebar 
+keywords: view, storage vm list, details 
+summary: SVM のインベントリを監視するには、ヘルス ページの「すべてのストレージ VM」ビューを使用し、SVM の詳細情報については、ストレージ VM ヘルスの詳細ページを使用してください。 
+---
+= Active IQ Unified Manager でストレージ VM のリストと詳細を表示する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「健全性：すべてのストレージVM」ビューから、ストレージ仮想マシン（SVM）のインベントリを監視できます。ストレージVM / ヘルス詳細ページを使用すると、監視対象のSVMに関する詳細情報を表示できます。
+
+.開始する前に
+オペレータ、アプリケーション管理者、またはストレージ管理者のロールが必要です。
+
+SVMの容量、効率、構成など、SVMの詳細を表示できます。また、そのSVMに関連するデバイスやアラートに関する情報も参照できます。
+
+.手順
+. 左側のナビゲーションペインで、*ストレージ* > *ストレージVM* をクリックします。
+. 次のいずれかの方法を選択してSVMの詳細を表示します。
++
+** すべてのクラスタ内のすべてのSVMの状態に関する情報を表示するには、「表示」メニューで「状態：すべてのストレージVM」ビューを選択します。
+** すべての詳細を表示するには、Storage VM名をクリックします。
++
+最小限の詳細情報ダイアログボックスで「詳細を表示」をクリックすると、詳細情報をすべて表示することもできます。
+
+
+
+. 最小限の詳細ダイアログボックスで*View Related*をクリックすると、SVMに関連するオブジェクトが表示されます。
+
+
+*関連情報*
+
+* link:../health-checker/reference_health_svm_details_page.html["ストレージVM：ヘルス詳細ページ"]
+* link:../performance-checker/performance-view-all.html#performance-all-storage-vms-view["パフォーマンス：すべてのストレージVMの表示"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["セキュリティ：ランサムウェア対策ビュー"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["クラスタとStorage VMのセキュリティ ステータスの表示"]
+* link:../data-protection/reference_relationship_all_relationships_view.html["関係：すべての関係を表示"]
+

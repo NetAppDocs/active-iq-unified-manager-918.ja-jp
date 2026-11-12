@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/concept_introduction_to_unified_manager.html 
+sidebar: sidebar 
+keywords: introduction, active iq unified manager 
+summary: Active IQ Unified Manager（旧OnCommand Unified Manager）では、ONTAPストレージ システムの健全性とパフォーマンスを一元的に監視および管理することができます。 
+---
+= Active IQ Unified Manager について学ぶ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager（旧OnCommand Unified Manager）では、ONTAPストレージ システムの健全性とパフォーマンスを一元的に監視および管理することができます。
+
+Unified Managerは以下の機能を提供します：
+
+* ONTAPソフトウェアがインストールされたシステムの検出、監視、通知を行います。
+* 容量、セキュリティ、パフォーマンスなど、環境の健全性をダッシュボードに表示します。
+* アラート、イベント、およびしきい値インフラが強化されています。
+* ワークロードのアクティビティを時系列でプロットした詳細なグラフを表示します。これには、IOPS（操作数）、MBps（スループット）、レイテンシ（応答時間）、利用率、パフォーマンス容量、キャッシュ比率が含まれます。
+* クラスタコンポーネントを過剰に使用しているワークロードと、アクティビティの増加によってパフォーマンスに影響を受けているワークロードを特定します。
+* 特定のインシデントやイベントに対し、実行できる対処方法を提案します。一部のイベントには[修正]ボタンが表示され、問題をただちに解決できます。
+* OnCommand Workflow Automation と統合して、自動化された保護ワークフローを実行します。
+* LUNやファイル共有などの新しいワークロードをUnified Managerから直接作成し、パフォーマンス サービス レベルを割り当てて、そのワークロードを使用してアプリケーションにアクセスするユーザ向けにパフォーマンスとストレージの目標を定義することができます。
+

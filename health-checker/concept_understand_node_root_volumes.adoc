@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: Unified Managerを使用して、ノードのルート ボリュームを監視できます。ノードの停止を防ぐための十分な容量をノードのルート ボリュームに確保しておくことを推奨します。 
+---
+= Active IQ Unified Manager でのノードルートボリュームについて
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Managerを使用して、ノードのルート ボリュームを監視できます。ノードの停止を防ぐための十分な容量をノードのルート ボリュームに確保しておくことを推奨します。
+
+ノードのルート ボリュームの使用容量がノードのルート ボリュームの合計容量の80%を超えると、「ノードのルート ボリュームのスペースがほぼフル」イベントが生成されます。通知を受け取るようにこのイベントのアラートを設定することができます。ONTAP System ManagerまたはONTAP CLIを使用して、ノードの停止を防ぐための適切な処置を行うことができます。
+
+
+NOTE: クラスタでONTAP 9.14.1バージョン以降が実行されている場合、ノードのルート ボリュームの監視機能は使用できません。
